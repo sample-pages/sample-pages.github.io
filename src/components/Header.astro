@@ -1,0 +1,71 @@
+---
+import ThemeIcon from "./ThemeIcon.astro";
+---
+
+<header class="text-color font-body">
+  <div class="mx-auto flex flex-wrap p-5 flex-row items-center">
+    <a class="flex title-font font-medium items-center text-gray-900 mb-0">
+      <img src="/171685639.png" class="w-8 h-8 rounded-full" />
+      <a class="ml-3 text-xl text-color font-bold" href="/">luetsrr.com</a>
+    </a>
+
+    <script>
+      const burger = document.querySelector("#burger");
+      const close = document.querySelector("#close");
+      const menu = document.querySelector("#menu");
+
+      if (burger) {
+        burger.addEventListener("click", () => {
+          burger.classList.toggle("is-active");
+          close.classList.toggle("is-active");
+          menu.classList.toggle("is-active");
+        });
+      }
+
+      if (close) {
+        close.addEventListener("click", () => {
+          burger.classList.remove("is-active");
+          close.classList.remove("is-active");
+          menu.classList.remove("is-active");
+        });
+      }
+    </script>
+
+    <nav class="ml-auto flex flex-wrap items-center text-base justify-center">
+      <div class="menu_header">
+        <a class="mr-5 hover-color" href="/posts/">Posts</a>
+        <a class="mr-5 hover-color" href="/tags/">Tags</a>
+        <a class="mr-5 hover-color" href="/search/">Search</a>
+        <a class="mr-5 hover-color" href="/about/">About</a>
+      </div>
+      <button
+        type="button"
+        id="theme-btn"
+        class=""
+        style="margin: 0px;"
+        title="Toggles light & dark"
+        aria-label="auto"
+        aria-live="polite"
+      >
+        <div style="font-size: 24px;">
+          <i id="moon-icon" class="ri-moon-line"></i>
+          <i id="sun-icon" class="ri-sun-line"></i>
+        </div>
+      </button>
+      <div class="del" style="width: 20px;"></div>
+      <button class="del ml-auto">
+        <div style="width: 20px;"></div>
+        <div style="font-size: 24px;">
+          <i class="ri-menu-3-line burger" id="burger"></i>
+          <i class="ri-close-large-line close" id="close"></i>
+        </div>
+      </button>
+    </nav>
+  </div>
+  <nav class="menu" id="menu">
+    <a class="m-4 hover-color" href="/posts/">Posts</a>
+    <a class="m-4 hover-color" href="/tags/">Tags</a>
+    <a class="m-4 hover-color" href="/search/">Search</a>
+    <a class="m-4 hover-color" href="/about/">About</a>
+  </nav>
+</header>
