@@ -2,10 +2,6 @@
   "name": "users-yikeda-documents-website",
   "type": "module",
   "version": "0.0.1",
-  "packageManager": {
-    "name": "pnpm",
-    "version": "6"
-  },
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
