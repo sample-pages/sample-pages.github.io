@@ -20,6 +20,10 @@ jobs:
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v4
+      - name: Clear npm and pnpm cache
+        run: |
+          npm cache clean --force
+          pnpm cache clear --force
       - name: Install, build, and upload your site
         uses: withastro/action@v1
       - name: Install dependencies
