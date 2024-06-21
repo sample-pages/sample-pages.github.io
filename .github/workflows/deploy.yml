@@ -25,9 +25,10 @@ jobs:
       - name: Install dependencies
         run: pnpm install
       - name: Setup pnpm
-        uses: pnpm/action-setup@v2
+        uses: actions/setup-node@v2
         with:
-          pnpm-version: 9.4.0
+          node-version: "14"
+          package-manager: pnpm@9.4.0
         # with:
         # path: . # リポジトリ内のAstroプロジェクトのルートロケーション。(オプション)
         # node-version: 18 # サイト構築に使用するNodeのバージョン。デフォルトは18です。（オプション）
