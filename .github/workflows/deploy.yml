@@ -28,7 +28,7 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: "14"
-          package-manager: pnpm@9.4.0
+          package-manager: pnpm@6
         # with:
         # path: . # リポジトリ内のAstroプロジェクトのルートロケーション。(オプション)
         # node-version: 18 # サイト構築に使用するNodeのバージョン。デフォルトは18です。（オプション）
