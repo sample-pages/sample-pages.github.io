@@ -16,17 +16,17 @@
 
       if (burger) {
         burger.addEventListener("click", () => {
-          burger.classList.toggle("is-active");
-          close.classList.toggle("is-active");
-          menu.classList.toggle("is-active");
+          burger?.classList.toggle("is-active");
+          close?.classList.toggle("is-active");
+          menu?.classList.toggle("is-active");
         });
       }
 
       if (close) {
         close.addEventListener("click", () => {
-          burger.classList.remove("is-active");
-          close.classList.remove("is-active");
-          menu.classList.remove("is-active");
+          burger?.classList.remove("is-active");
+          close?.classList.remove("is-active");
+          menu?.classList.remove("is-active");
         });
       }
     </script>
