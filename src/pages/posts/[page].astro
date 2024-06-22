@@ -1,11 +1,13 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 
-export async function getStaticPaths({ paginate }) {
-  const allPosts = await Astro.glob("./*.md");
-  const nonDraftPosts = allPosts.filter((post) => !post.frontmatter.draft);
+export async function getStaticPaths({ paginate: any }) {
+  const allPosts: any = await Astro.glob("./*.md");
+  const nonDraftPosts: any = allPosts.filter(
+    (post: any) => !post.frontmatter.draft
+  );
 
-  const sortedPosts = nonDraftPosts.sort((a, b) => {
+  const sortedPosts: any = nonDraftPosts.sort((a: any, b: any) => {
     const aDate = new Date(a.frontmatter.pubDate);
     const bDate = new Date(b.frontmatter.pubDate);
     return bDate.getTime() - aDate.getTime();
