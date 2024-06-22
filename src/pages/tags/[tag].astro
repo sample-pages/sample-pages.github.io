@@ -1,6 +1,23 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 
+type Frontmatter = {
+  tags: string[];
+  title: string;
+  update?: string;
+  date: string;
+  description: string;
+};
+
+type Post = {
+  frontmatter: Frontmatter;
+  url: string;
+};
+
+type PageProps = {
+  posts: Post[];
+};
+
 export async function getStaticPaths() {
   const allPosts: any = await Astro.glob("../posts/*.md");
   const uniqueTags: any = [
@@ -18,7 +35,7 @@ export async function getStaticPaths() {
 }
 
 const { tag } = Astro.params as { tag: string };
-const { posts } = Astro.props;
+const { posts } = Astro.props as PageProps;
 
 const filteredPosts: any = posts.filter((post: any) =>
   post.frontmatter.tags.includes(tag)
@@ -31,7 +48,7 @@ const filteredPosts: any = posts.filter((post: any) =>
     <div style="height: 20px;"></div>
     <ul>
       {
-        filteredPosts.map((post) => (
+        filteredPosts.map((post: any) => (
           <li>
             <a class="text-lg font-medium hover-color" href={post.url}>
               {post.frontmatter.title}
