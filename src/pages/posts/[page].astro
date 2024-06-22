@@ -1,7 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 
-export async function getStaticPaths({ paginate: any }) {
+export async function getStaticPaths({ paginate }) {
   const allPosts: any = await Astro.glob("./*.md");
   const nonDraftPosts: any = allPosts.filter(
     (post: any) => !post.frontmatter.draft
