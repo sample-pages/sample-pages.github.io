@@ -1,6 +1,18 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 
+type Post = {
+  frontmatter: {
+    draft: boolean;
+    pubDate: string;
+    title: string;
+    date: string;
+    update: string;
+    description: string;
+  };
+  url: string;
+};
+
 export async function getStaticPaths({ paginate }) {
   const allPosts = await Astro.glob("./*.md");
   const nonDraftPosts = allPosts.filter((post) => !post.frontmatter.draft);
