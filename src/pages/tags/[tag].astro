@@ -17,7 +17,7 @@ export async function getStaticPaths() {
   });
 }
 
-const { tag } = Astro.params;
+const { tag } = Astro.params as { tag: string };
 const { posts } = Astro.props;
 
 const filteredPosts: any = posts.filter((post: any) =>
