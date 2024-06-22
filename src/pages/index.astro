@@ -1,5 +1,51 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+const allPosts = await Astro.glob("./posts/*.md");
+const nonDraftPosts = allPosts.filter((post) => !post.frontmatter.draft);
+
+const sortedPosts = nonDraftPosts.sort((a, b) => {
+  const aDate = new Date(a.frontmatter.pubDate);
+  const bDate = new Date(b.frontmatter.pubDate);
+  return bDate.getTime() - aDate.getTime();
+});
+
+const latestPosts = sortedPosts.slice(0, 3);
 ---
 
-<Layout />
+<Layout>
+  <div class="margin-contents text-color text-font">
+    <span class="midashi mb-4">Recent Posts</span>
+    <div style="height: 15px;"></div>
+    <p class="italic">直近3つの記事を表示しています。</p>
+    <div style="height: 30px;"></div>
+    <ul>
+      {
+        latestPosts.map((post) => (
+          <li>
+            <a class="text-lg font-medium hover-color" href={post.url}>
+              {post.frontmatter.title}
+            </a>
+            <br />
+            {post.frontmatter.update ? (
+              <div class="update-content">
+                <i class="ri-calendar-2-line" />
+                <a class="text-sm italic">{post.frontmatter.date}</a>
+                &nbsp;
+                <i class="ri-loop-left-line" />
+                <a class="text-sm italic">{post.frontmatter.update}</a>
+              </div>
+            ) : (
+              <div class="no-update-content">
+                <i class="ri-calendar-2-line" />
+                <a class="text-sm italic">{post.frontmatter.date}</a>
+              </div>
+            )}
+            <a class="text-base">{post.frontmatter.description}</a>
+            <div style="height: 24px;" />
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</Layout>

@@ -1,24 +1,39 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from "../../layouts/Layout.astro";
 
-const allPosts = await Astro.glob("../pages/posts/*.md");
-const nonDraftPosts = allPosts.filter((post) => !post.frontmatter.draft);
-const sortedPosts = nonDraftPosts.sort((a, b) => {
-  const aDate = new Date(a.frontmatter.pubDate);
-  const bDate = new Date(b.frontmatter.pubDate);
-  return bDate.getTime() - aDate.getTime();
-});
+export async function getStaticPaths() {
+  const allPosts = await Astro.glob("../posts/*.md");
+  const uniqueTags = [
+    ...new Set(allPosts.map((post) => post.frontmatter.tags).flat()),
+  ];
+  return uniqueTags.map((tag) => {
+    const filteredPosts = allPosts.filter((post) =>
+      post.frontmatter.tags.includes(tag)
+    );
+    return {
+      params: { tag },
+      props: { posts: filteredPosts },
+    };
+  });
+}
+
+const { tag } = Astro.params;
+const { posts } = Astro.props;
+
+const filteredPosts = posts.filter((post) =>
+  post.frontmatter.tags.includes(tag)
+);
 ---
 
-<Layout>
+<Layout title=`Tag: ${tag}｜luetsrr.com`>
   <div class="margin-contents text-color text-font">
-    <span class="midashi mb-4">Posts</span>
+    <span class="midashi mb-4">Tag: {tag}</span>
     <div style="height: 20px;"></div>
     <ul>
       {
-        sortedPosts.map((post) => (
+        filteredPosts.map((post) => (
           <li>
-            <a class="text-lg font-medium" href={post.url}>
+            <a class="text-lg font-medium hover-color" href={post.url}>
               {post.frontmatter.title}
             </a>
             <br />
