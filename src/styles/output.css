@@ -801,7 +801,7 @@ html[data-theme="dark"] .text-color {
 }
 
 .respt{
-  padding-top: 1rem;
+  padding-top: 0.75rem;
 }
 
 @media (min-width: 640px){
