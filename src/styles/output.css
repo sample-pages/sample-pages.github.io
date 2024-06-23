@@ -690,6 +690,10 @@ html[data-theme="dark"] .text-color {
   font-weight: 500;
 }
 
+.font-normal{
+  font-weight: 400;
+}
+
 .italic{
   font-style: italic;
 }
