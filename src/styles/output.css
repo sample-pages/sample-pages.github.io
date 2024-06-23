@@ -622,12 +622,24 @@ html[data-theme="dark"] .text-color {
   height: 2rem;
 }
 
+.min-h-screen{
+  min-height: 100vh;
+}
+
 .w-8{
   width: 2rem;
 }
 
+.grow{
+  flex-grow: 1;
+}
+
 .flex-row{
   flex-direction: row;
+}
+
+.flex-col{
+  flex-direction: column;
 }
 
 .flex-wrap{
@@ -804,12 +816,42 @@ html[data-theme="dark"] .text-color {
   margin-bottom: 15px;
 }
 
-.respt{
+.respt-h{
   padding-top: 0.5rem;
 }
 
 @media (min-width: 640px){
-  .respt{
+  .respt-h{
     padding-top: 1.25rem;
+  }
+}
+
+.respt-f{
+  padding-bottom: 0.5rem;
+}
+
+@media (min-width: 640px){
+  .respt-f{
+    padding-bottom: 1.25rem;
+  }
+}
+
+.resp-pc-f{
+  display: none;
+}
+
+@media (min-width: 640px){
+  .resp-pc-f{
+    display: flex;
+  }
+}
+
+.resp-sm-f{
+  display: block;
+}
+
+@media (min-width: 640px){
+  .resp-sm-f{
+    display: none;
   }
 }

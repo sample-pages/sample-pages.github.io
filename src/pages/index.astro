@@ -13,7 +13,7 @@ const sortedPosts = nonDraftPosts.sort((a, b) => {
 const latestPosts = sortedPosts.slice(0, 3);
 ---
 
-<Layout>
+<Layout title="Home｜luetsrr.com">
   <div class="margin-contents text-color text-font">
     <span class="midashi mb-4">Recent Posts</span>
     <div style="height: 15px;"></div>
@@ -47,5 +47,13 @@ const latestPosts = sortedPosts.slice(0, 3);
         ))
       }
     </ul>
+    <br />
+    <a href="/posts/1" class="hover-color"
+      ><span class="flex items-center justify-center"
+        >All posts&nbsp;&nbsp; <i
+          class="ri-arrow-right-line"
+          style="font-size: 24px;"></i></span
+      ></a
+    >
   </div>
 </Layout>

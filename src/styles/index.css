@@ -134,6 +134,20 @@
     margin-bottom: 15px;
 }
 
-.respt {
+.respt-h {
     @apply pt-2 sm:pt-5;
+}
+
+.respt-f {
+    @apply pb-2 sm:pb-5;
+}
+
+.resp-pc-f {
+    @apply hidden;
+    @apply sm:flex;
+}
+
+.resp-sm-f {
+    @apply block;
+    @apply sm:hidden;
 }
