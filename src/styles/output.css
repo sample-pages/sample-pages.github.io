@@ -646,8 +646,8 @@ html[data-theme="dark"] .text-color {
   border-radius: 9999px;
 }
 
-.p-3{
-  padding: 0.75rem;
+.p-2{
+  padding: 0.5rem;
 }
 
 .text-base{
@@ -722,13 +722,17 @@ html[data-theme="dark"] .text-color {
   max-width: 50rem;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem
 }
 
 @media (min-width: 640px){
+  .margin-contents{
+    padding: 1rem;
+  }
+
   .del{
     display: none;
   }
