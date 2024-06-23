@@ -686,12 +686,12 @@ html[data-theme="dark"] .text-color {
   font-weight: 700;
 }
 
-.font-medium{
-  font-weight: 500;
+.font-light{
+  font-weight: 300;
 }
 
-.font-normal{
-  font-weight: 400;
+.font-medium{
+  font-weight: 500;
 }
 
 .italic{
