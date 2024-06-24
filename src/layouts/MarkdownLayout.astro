@@ -4,4 +4,72 @@ import Layout from "../layouts/Layout.astro";
 const { frontmatter } = Astro.props;
 ---
 
-<Layout title=`${frontmatter.title}｜luetsrr.com` />
+<Layout title=`${frontmatter.title}｜luetsrr.com`>
+  <div class="text-color">
+    <a
+      href="#"
+      onclick="history.back(); return false;"
+      class="font-body hover-color"
+      style="margin-left: 10px; margin-right: 10px; display: flex; align-items: center;"
+      ><i class="ri-arrow-left-line" style="font-size: 24px;"></i>&nbsp;&nbsp;Go
+      back</a
+    >
+    <div style="height: 15px;"></div>
+    <div class="text-font text-xl margin-post">
+      <span class="font-medium">
+        {frontmatter.title}
+      </span>
+      <div style="height: 5px;"></div>
+      <span>
+        {
+          frontmatter.update ? (
+            <div class="update-content">
+              <i class="ri-calendar-2-line" />
+              <a class="text-base italic">{frontmatter.date}</a>
+              &nbsp;
+              <i class="ri-loop-left-line" />
+              <a class="text-base italic">{frontmatter.update}</a>
+              <div style="height: 5px;" />
+              {frontmatter.tags && frontmatter.tags.length > 0 && (
+                <>
+                  {frontmatter.tags.map((tag: any) => (
+                    <a
+                      href={`/tags/${tag}`}
+                      class="text-base hover-color"
+                      style="padding-right: 3px;"
+                    >
+                      ＃{tag}
+                    </a>
+                  ))}
+                </>
+              )}
+            </div>
+          ) : (
+            <div class="no-update-content">
+              <i class="ri-calendar-2-line" />
+              <a class="text-base italic">{frontmatter.date}</a>
+              <div style="height: 5px;" />
+              {frontmatter.tags && frontmatter.tags.length > 0 && (
+                <>
+                  {frontmatter.tags.map((tag: any) => (
+                    <a
+                      href={`/tags/${tag}`}
+                      class="text-base hover-color"
+                      style="padding-right: 3px;"
+                    >
+                      ＃{tag}
+                    </a>
+                  ))}
+                </>
+              )}
+            </div>
+          )
+        }
+      </span>
+      <div style="height: 24px;"></div>
+      <div class="text-base">
+        <slot />
+      </div>
+    </div>
+  </div>
+</Layout>

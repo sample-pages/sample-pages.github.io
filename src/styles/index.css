@@ -74,6 +74,11 @@
     @apply sm:p-4
 }
 
+.margin-post {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
 .del {
     @apply sm:hidden;
     height: 56px;
@@ -127,7 +132,7 @@
 }
 
 .divider-horizontal {
-    border-top: 1px solid #d2d2d2;
+    border-top: 0.5px solid #d2d2d2;
     max-width: 50rem;
     height: 1px;
     margin-top: 5px;

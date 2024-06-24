@@ -686,10 +686,6 @@ html[data-theme="dark"] .text-color {
   font-weight: 700;
 }
 
-.font-light{
-  font-weight: 300;
-}
-
 .font-medium{
   font-weight: 500;
 }
@@ -748,7 +744,14 @@ html[data-theme="dark"] .text-color {
   .margin-contents{
     padding: 1rem;
   }
+}
 
+.margin-post {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+@media (min-width: 640px){
   .del{
     display: none;
   }
@@ -813,28 +816,18 @@ html[data-theme="dark"] .text-color {
 }
 
 .divider-horizontal {
-  border-top: 1px solid #d2d2d2;
+  border-top: 0.5px solid #d2d2d2;
   max-width: 50rem;
   height: 1px;
   margin-top: 5px;
   margin-bottom: 15px;
 }
 
-.respt-h{
-  padding-top: 0.5rem;
-}
-
 @media (min-width: 640px){
   .respt-h{
     padding-top: 1.25rem;
   }
-}
 
-.respt-f{
-  padding-bottom: 0.5rem;
-}
-
-@media (min-width: 640px){
   .respt-f{
     padding-bottom: 1.25rem;
   }

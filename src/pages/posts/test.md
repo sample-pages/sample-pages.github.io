@@ -5,5 +5,7 @@ date: "2024年6月21日"
 pubDate: "2024-06-21"
 update: "2024年6月22日"
 description: "テストです。"
-tags: ["test"]
+tags: ["test", "post"]
 ---
+
+テストです。
