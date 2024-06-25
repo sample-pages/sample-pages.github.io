@@ -823,13 +823,35 @@ html[data-theme="dark"] .text-color {
   margin-bottom: 15px;
 }
 
+.respt-h {
+  padding-top: 0.75rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
 @media (min-width: 640px){
   .respt-h{
     padding-top: 1.25rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
+}
 
+.respt-f {
+  padding-top: 0.5rem;
+  padding-bottom: 0.75rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+@media (min-width: 640px){
   .respt-f{
     padding-bottom: 1.25rem;
+    padding-top: 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
 }
 

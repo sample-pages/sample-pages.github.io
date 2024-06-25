@@ -140,11 +140,19 @@
 }
 
 .respt-h {
-    @apply sm:pt-5;
+    padding-top: 0.75rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    @apply sm:pt-5 sm:pb-2 sm:pl-2 sm:pr-2;
 }
 
 .respt-f {
-    @apply sm:pb-5;
+    padding-top: 0.5rem;
+    padding-bottom: 0.75rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    @apply sm:pb-5 sm:pt-2 sm:pl-2 sm:pr-2;
 }
 
 .resp-pc-f {
