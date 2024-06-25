@@ -140,7 +140,7 @@
 }
 
 .respt-h {
-    padding-top: 0.75rem;
+    padding-top: 1rem;
     padding-bottom: 0.5rem;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
@@ -149,7 +149,7 @@
 
 .respt-f {
     padding-top: 0.5rem;
-    padding-bottom: 0.75rem;
+    padding-bottom: 1rem;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
     @apply sm:pb-5 sm:pt-2 sm:pl-2 sm:pr-2;
