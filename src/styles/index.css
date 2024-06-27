@@ -164,3 +164,12 @@
     @apply block;
     @apply sm:hidden;
 }
+
+.link a {
+    color: #0066ff;
+    border-bottom: 2px dashed;
+}
+
+.link a:hover{
+    color: #80a2c0;
+}

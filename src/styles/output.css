@@ -690,6 +690,10 @@ html[data-theme="dark"] .text-color {
   font-weight: 500;
 }
 
+.font-normal{
+  font-weight: 400;
+}
+
 .italic{
   font-style: italic;
 }
@@ -873,4 +877,13 @@ html[data-theme="dark"] .text-color {
   .resp-sm-f{
     display: none;
   }
+}
+
+.link a {
+  color: #0066ff;
+  border-bottom: 2px dashed;
+}
+
+.link a:hover{
+  color: #80a2c0;
 }
