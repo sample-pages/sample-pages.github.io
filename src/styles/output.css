@@ -887,3 +887,7 @@ html[data-theme="dark"] .text-color {
 .link a:hover{
   color: #80a2c0;
 }
+
+html {
+  scroll-behavior: smooth;
+}

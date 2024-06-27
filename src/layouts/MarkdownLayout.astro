@@ -69,10 +69,17 @@ const { frontmatter } = Astro.props;
       <div style="height: 24px;"></div>
       <div
         class="text-base link"
-        style="letter-spacing: .025em; font-size: 1rem;"
+        style="letter-spacing: .025em; font-size: 1rem; margin-bottom: 30px;"
       >
         <slot />
       </div>
+      <a
+        href="#page-top"
+        class="flex items-center justify-center font-body font-medium page-top hover-color"
+        style="margin-bottom: 30px; font-size: 16px;"
+        ><i class="ri-arrow-turn-forward-line" style="font-size: 20px;"
+        ></i>&nbsp;&nbsp;Back to top</a
+      >
     </div>
   </div>
 </Layout>
