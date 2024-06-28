@@ -8,10 +8,12 @@ description: "よろしくお願いします。"
 tags: ["2024"]
 ---
 
-このサイトは Astro.js を用いて制作しました。そのコードを GitHub に push して GitHub Pages にてホスティングしています。リポジトリは[ここ](https://github.com/luetsrr/luetsrr.com)にあります。
+時間があったのでブログ的なサイトを作ってみました。
 <br><br>
-Astro の仕組みを理解するのに苦戦しました。（まだまだ分からない部分も多い）
+コードは Astro.js を使用しています。また、GitHub Pages を用いてホスティングしています。リポジトリは[ここ](https://github.com/luetsrr/luetsrr.com)にあります。
+<br><br>
+Astro の仕組みを理解するのに苦戦しました。サイトのレイアウトなど今後も修正していく予定です。
 
-サイトのレイアウトなど今後も修正していく予定です。ちなみに GitHub Pages は独自ドメインを無料で https 化できるのでおすすめです。
+GitHub Pages は独自ドメインを無料で https 化できるのでおすすめです。
 <br><br>
 個人的な記録用の投稿が多いかもしれませんが、よろしくお願いします。
