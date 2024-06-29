@@ -12,7 +12,7 @@ tags: ["2024"]
 <br><br>
 コードは Astro.js を使用しています。また、GitHub Pages を用いてホスティングしています。リポジトリは[ここ](https://github.com/luetsrr/luetsrr.com)にあります。
 <br><br>
-Astro の仕組みを理解するのに苦戦しました。サイトのレイアウトなど今後も修正していく予定です。
+Astro の仕組みを理解するのに時間がかかりました。サイトのレイアウトなど今後も修正していく予定です。
 
 GitHub Pages は独自ドメインを無料で https 化できるのでおすすめです。
 <br><br>
