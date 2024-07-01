@@ -12,7 +12,7 @@ tags: ["大学受験", "数学", "2024"]
 
 家庭教師をやりたいと思ってリハビリ程度に解いてみたやつです。
 <br><br><br>
-![五月祭準備中の東大本郷キャンパス安田講堂前](/_astro/IMG_4662.Bd564jiw_Z1t8InT.webp)
+![五月祭準備中の東大本郷キャンパス安田講堂前](../../assets/images/IMG_4662.Bd564jiw_Z1t8InT.webp)
 
 <span class="img-des" style="margin-top: 10px;"><i class="ri-arrow-up-line"></i>&nbsp;五月祭準備中の東大本郷キャンパス安田講堂前</span>
 <br><br><br>
