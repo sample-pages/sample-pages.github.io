@@ -654,10 +654,6 @@ html[data-theme="dark"] .text-color {
   justify-content: center;
 }
 
-.rounded-full{
-  border-radius: 9999px;
-}
-
 .p-2{
   padding: 0.5rem;
 }
@@ -890,4 +886,14 @@ html[data-theme="dark"] .text-color {
 
 html {
   scroll-behavior: smooth;
+}
+
+img {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.img-des {
+  display: inline-block;
+  margin-left: 5%;
 }
