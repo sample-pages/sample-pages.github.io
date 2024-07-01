@@ -14,7 +14,7 @@
     "@astrojs/check": "^0.7.0",
     "@astrojs/markdown-remark": "^5.1.1",
     "@astrojs/mdx": "^3.1.2",
-    "astro": "^4.10.3",
+    "astro": "^4.11.3",
     "katex": "^0.16.10",
     "rehype-katex": "^7.0.0",
     "remark-math": "^6.0.0",
