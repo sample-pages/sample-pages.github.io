@@ -5,7 +5,7 @@ import rehypeKatex from 'rehype-katex';
 
 // https://astro.build/config
 export default defineConfig({
-    site: 'https://luetsrr.com',
+    site: 'https://luetsrr.github.io/ut-stuttering/',
     integrations: [mdx()],
     markdown: {
         remarkPlugins: [remarkMath],
