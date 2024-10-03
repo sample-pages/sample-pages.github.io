@@ -1,5 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { Image } from 'astro:assets';
+import logo from "../assets/images/logo.png";
 
 const allPosts = await Astro.glob("./posts/*.md");
 const nonDraftPosts = allPosts.filter((post) => !post.frontmatter.draft);
@@ -15,7 +17,7 @@ const latestPosts = sortedPosts.slice(0, 3);
 
 <Layout title="ホーム｜ut-stuttering.com">
   <div class="margin-contents text-color text-font">
-    <img src="src/assets/images/logo.png">
+    <Image src={logo} alt=""/>
     <br>
     <br>
     <span class="midashi mb-4">次回の活動</span>
