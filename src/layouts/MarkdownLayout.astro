@@ -5,7 +5,7 @@ const { frontmatter } = Astro.props;
 ---
 
 <Layout title=`${frontmatter.title}｜ut-stuttering.com`>
-  <div class="text-color">
+  <div class="text-color blog-width">
     <div style="height: 9px;"></div>
     <div class="flex">
       <a
@@ -71,7 +71,7 @@ const { frontmatter } = Astro.props;
       </span>
       <div style="height: 24px;"></div>
       <div
-        class="text-base link"
+        class="text-base link blog-width"
         style="letter-spacing: .025em; font-size: 1.05rem; margin-bottom: 50px; line-height: 2.05;"
       >
         <slot />

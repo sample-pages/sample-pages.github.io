@@ -903,3 +903,12 @@ img {
   display: inline-block;
   margin-left: 5%;
 }
+
+.blog-width {
+  max-width: 62rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
