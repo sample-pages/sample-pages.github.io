@@ -1,6 +1,6 @@
 ---
 layout: "../../layouts/MarkdownLayout.astro"
-title: "サークル設立記念第1回吃音学生交流会 活動報告"
+title: "サークル設立記念 第1回吃音学生交流会 活動報告"
 date: "2015年04月25日"
 pubDate: "2015-04-25"
 update: ""
