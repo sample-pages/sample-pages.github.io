@@ -20,18 +20,15 @@ jobs:
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v4
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 18
-      - name: Install pnpm
-        run: npm install -g pnpm@8
-      - name: Check pnpm
-        run: pnpm --version
+      - name: Install, build, and upload your site
+        uses: withastro/action@v1
       - name: Install dependencies
         run: pnpm install
-      - name: Build site
-        run: pnpm run build
+      - name: Setup pnpm
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+          package-manager: pnpm@7
         # with:
         # path: . # リポジトリ内のAstroプロジェクトのルートロケーション。(オプション)
         # node-version: 18 # サイト構築に使用するNodeのバージョン。デフォルトは18です。（オプション）
@@ -40,8 +37,10 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v2
-        with:
-          artifact_name: ''
+        id: deployment
+        uses: actions/deploy-pages@v1
