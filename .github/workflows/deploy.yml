@@ -16,20 +16,18 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      # Node.js セットアップ
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20 # ← Node20の方が安定
-
-      # withastro/action に任せる
-      - name: Build and Deploy
-        uses: withastro/action@v3
-        with:
-          node-version: 20
-          package-manager: pnpm
-          path: .
-          deploy-to: github-pages
+          node-version: 18
+      - name: Install pnpm
+        run: npm install -g pnpm@8
+      - name: Check pnpm
+        run: pnpm --version
+      - name: Install dependencies
+        run: pnpm install
+      - name: Build site
+        run: pnpm run build
   deploy:
     needs: build
     runs-on: ubuntu-latest
