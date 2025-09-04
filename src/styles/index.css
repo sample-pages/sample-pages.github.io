@@ -175,11 +175,11 @@
 }
 
 .respt-h {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    @apply lg:pt-2 lg:pb-2 lg:pl-2 lg:pr-2;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    @apply lg:pt-3 lg:pb-3 lg:pl-3 lg:pr-3;
 }
 
 .respt-f {
