@@ -29,9 +29,7 @@ jobs:
       - name: Check pnpm
         run: pnpm --version
       - name: Install dependencies
-        run: |
-          pnpm store prune
-          pnpm install --frozen-lockfile
+        run: pnpm install --frozen-lockfile
       - name: Build site
         run: pnpm run build
         # with:
