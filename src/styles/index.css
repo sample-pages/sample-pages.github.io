@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Noto+Sans+JP:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Mochiy+Pop+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=M+PLUS+Rounded+1c&family=Mochiy+Pop+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Opti&family=Kiwi+Maru&family=M+PLUS+Rounded+1c&family=Mochiy+Pop+One&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -9,32 +13,66 @@
 
     :root,
     html[data-theme="light"] {
-      background-color: #fbfefb;
+      background-color: #ffffff;
     }
 
     html[data-theme="light"] .text-color {
-        color: #1a1a1c;
-    }
-  
-    html[data-theme="dark"] {
-      background-color: #1a1a1c;
+        color: #000000;
     }
 
-    html[data-theme="dark"] .text-color {
-        color: #fbfefb;
-      }
-  
-    #sun-icon,
-    html[data-theme="dark"] #moon-icon {
-      display: none;
-    }
-  
-    #moon-icon,
-    html[data-theme="dark"] #sun-icon {
-      display: block;
-    }
-  
   }
+
+.kaisei-opti-regular {
+  font-family: "Kaisei Opti", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.back-blur {
+  -webkit-text-stroke: 0px #ffffff;
+  text-shadow:0px 0px 10px #ffffff;
+  text-shadow:0px 0px 10px #ffffff;
+  text-shadow:0px 0px 10px #ffffff;
+}
+
+.kiwi-maru-regular {
+  font-family: "Kiwi Maru", serif;
+  font-weight: 400;
+  font-style: normal;
+  -webkit-text-stroke: 0px #ffffff;
+  text-shadow:0px 0px 10px #ffffff;
+  text-shadow:0px 0px 10px #ffffff;
+  text-shadow:0px 0px 10px #ffffff;
+}
+
+.mochiy-pop-one-regular {
+  font-family: "Mochiy Pop One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.m-plus-rounded-1c-regular {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  -webkit-text-stroke: 0px #ffffff;
+  text-shadow:0px 0px 10px #ffffff;
+  text-shadow:0px 0px 10px #ffffff;
+  text-shadow:0px 0px 10px #ffffff;
+}
+
+.position {
+    position: sticky;
+    top: 0;
+}
+
+.header_bcolor {
+  background-color: #d17171;
+}
+
+.header_tcolor {
+  color: #e6f499;
+}
 
 .font-body {
     font-family: "Inter", sans-serif;
@@ -55,12 +93,8 @@
 }
 
 .margin-body {
-    max-width: 50rem;
     margin-left: auto;
     margin-right: auto;
-    padding-bottom: 1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
 }
 
 .margin-contents {
@@ -144,7 +178,7 @@
     padding-bottom: 0.5rem;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
-    @apply sm:pt-5 sm:pb-2 sm:pl-2 sm:pr-2;
+    @apply sm:pt-4 sm:pb-4 sm:pl-2 sm:pr-2;
 }
 
 .respt-f {
@@ -186,4 +220,64 @@ img {
 .img-des {
     display: inline-block;
     margin-left: 5%;
+}
+
+.img-frame{
+   position: relative;
+   width: 100%;
+   height: 500px;
+   overflow: hidden;
+   margin: 0 auto;
+}
+
+@media screen and (max-width: 767px) {
+   .img-frame {
+      width: 100%;
+      height: 200px;
+   }
+}
+
+.img-01, .img-02, .img-03{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+.img-01{
+   background-image: url('/GtFcDSubkAAeYmu-2.jpeg');
+   animation: slide-animation-01 24s infinite;
+}
+.img-02{
+   background-image: url('GYFsma4b0AMhqPv-2.jpeg');
+   animation: slide-animation-02 24s infinite;
+}
+.img-03{
+   background-image: url('GVPL3lxaEAAgoiI.jpeg');
+   animation: slide-animation-03 24s infinite;
+}
+
+@keyframes slide-animation-01 {
+    0% {opacity: 1; transform: scale(1.0);}
+  30% {opacity: 1;}
+  40% {opacity: 0; transform: scale(1.15);}
+  90% {opacity: 0}
+100% {opacity: 1; transform: scale(1.0);}
+}
+@keyframes slide-animation-02 {
+    0% {opacity: 0;}
+  30% {opacity: 0; transform: scale(1.1);}
+  40% {opacity: 1;}
+  60% {opacity: 1;}
+  70% {opacity: 0; transform: scale(1.0);}
+100% {opacity: 0;}
+}
+@keyframes slide-animation-03 {
+    0% {opacity: 0;}
+  60% {opacity: 0;  transform: scale(1.0);}
+  70% {opacity: 1;}
+  90% {opacity: 1;}
+100% {opacity: 0; transform: scale(1.1);}
 }
