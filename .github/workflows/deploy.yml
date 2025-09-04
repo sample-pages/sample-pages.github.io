@@ -21,11 +21,11 @@ jobs:
       - name: Checkout your repository using git
         uses: actions/checkout@v4
       - name: Install, build, and upload your site
-        uses: withastro/action@v1
+        uses: withastro/action@v2
       - name: Install dependencies
         run: pnpm install
       - name: Setup pnpm
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
           node-version: "14"
           package-manager: pnpm@7
@@ -43,4 +43,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v2
