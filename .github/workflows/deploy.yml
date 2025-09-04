@@ -22,16 +22,12 @@ jobs:
         with:
           node-version: 20 # ← Node20の方が安定
 
-      # pnpm を最新版に更新
-      - name: Setup pnpm
-        run: npm install -g pnpm@8.15.6
-
-      # Astro公式アクションでビルド
-      - name: Build with Astro
+      # withastro/action に任せる
+      - name: Build and Deploy
         uses: withastro/action@v3
         with:
-          package-manager: pnpm
           node-version: 20
+          package-manager: pnpm
           path: .
           deploy-to: github-pages
   deploy:
