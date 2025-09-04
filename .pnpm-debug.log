@@ -1,0 +1,18 @@
+{
+  "0 debug pnpm:scope": {
+    "selected": 1
+  },
+  "1 info pnpm:global": "Removed all cached metadata files",
+  "2 error pnpm": {
+    "errno": -2,
+    "code": "ENOENT",
+    "syscall": "scandir",
+    "path": "/Users/yumaikeda/Library/pnpm/store/v3/files",
+    "err": {
+      "name": "pnpm",
+      "message": "ENOENT: no such file or directory, scandir '/Users/yumaikeda/Library/pnpm/store/v3/files'",
+      "code": "ENOENT",
+      "stack": "pnpm: ENOENT: no such file or directory, scandir '/Users/yumaikeda/Library/pnpm/store/v3/files'\n    at async Object.readdir (node:internal/fs/promises:958:18)\n    at async prune (/Users/yumaikeda/Library/pnpm/.tools/pnpm/7.0.0/node_modules/pnpm/dist/pnpm.cjs:91717:21)\n    at async default_1 (/Users/yumaikeda/Library/pnpm/.tools/pnpm/7.0.0/node_modules/pnpm/dist/pnpm.cjs:172377:7)\n    at async /Users/yumaikeda/Library/pnpm/.tools/pnpm/7.0.0/node_modules/pnpm/dist/pnpm.cjs:175391:21\n    at async run (/Users/yumaikeda/Library/pnpm/.tools/pnpm/7.0.0/node_modules/pnpm/dist/pnpm.cjs:175365:34)\n    at async runPnpm (/Users/yumaikeda/Library/pnpm/.tools/pnpm/7.0.0/node_modules/pnpm/dist/pnpm.cjs:175583:5)\n    at async /Users/yumaikeda/Library/pnpm/.tools/pnpm/7.0.0/node_modules/pnpm/dist/pnpm.cjs:175575:7"
+    }
+  }
+}
