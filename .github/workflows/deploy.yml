@@ -16,9 +16,24 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Install, build, and upload your site
-        # v1→v2
+      # Node.js セットアップ
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20 # ← Node20の方が安定
+
+      # pnpm を最新版に更新
+      - name: Setup pnpm
+        run: npm install -g pnpm@8.15.6
+
+      # Astro公式アクションでビルド
+      - name: Build with Astro
         uses: withastro/action@v3
+        with:
+          package-manager: pnpm
+          node-version: 20
+          path: .
+          deploy-to: github-pages
   deploy:
     needs: build
     runs-on: ubuntu-latest
