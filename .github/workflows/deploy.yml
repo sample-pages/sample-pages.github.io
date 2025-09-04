@@ -32,6 +32,11 @@ jobs:
         run: pnpm install
       - name: Build site
         run: pnpm run build
+      - name: Upload site artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: site
+          path: dist/
         # with:
         # path: . # リポジトリ内のAstroプロジェクトのルートロケーション。(オプション)
         # node-version: 18 # サイト構築に使用するNodeのバージョン。デフォルトは18です。（オプション）
@@ -41,5 +46,10 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
+      - name: Download site artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: site
+          path: ./dist
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v2
