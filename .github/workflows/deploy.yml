@@ -50,6 +50,8 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: site
-          path: ./dist
+          path: ./site
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v2
+        with:
+          artifact-path: ./site
