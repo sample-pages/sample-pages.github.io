@@ -123,12 +123,27 @@
     height: 56px;
 }
 
-.burger {
+.burger span {
     display: block;
-    &.is-active {
-        display: none;
-    }
-}
+    height: 3px;
+    width: 25px;
+    background: #e6f499;
+    margin: 5px 0;
+    transition: all 0.3s ease; /* ここがアニメーション */
+  }
+  
+  .burger.is-active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .burger.is-active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .burger.is-active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
 
 .close {
     display: none;
@@ -199,6 +214,10 @@
     @apply xl:flex;
 }
 
+.resp-pc-g {
+    @apply xl:hidden;
+}
+
 .resp-xl-f {
     @apply block;
     @apply xl:hidden max-sm:hidden;
@@ -239,7 +258,7 @@ img {
 .img-frame{
    position: relative;
    width: 100%;
-   height: 300px;
+   height: 400px;
    display: flex;
    overflow: hidden;
    margin: 0 auto;
