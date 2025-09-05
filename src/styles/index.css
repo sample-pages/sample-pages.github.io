@@ -125,7 +125,8 @@
 
 .burger {
     position: relative;
-    width: 30px;
+    padding: 0.2rem;
+    width: 24px;
     height: 24px;
     cursor: pointer;
   }
@@ -135,7 +136,7 @@
     left: 0;
     top: 50%;
     width: 100%;
-    height: 3px;
+    height: 2.5px;
     background: #000;
     border-radius: 2px;
     transition: all 0.3s ease;
@@ -143,7 +144,7 @@
   }
   
   .burger span:nth-child(1) {
-    transform: translateY(-10px); /* 上の線 */
+    transform: translateY(-8px); /* 上の線 */
   }
   
   .burger span:nth-child(2) {
@@ -151,7 +152,7 @@
   }
   
   .burger span:nth-child(3) {
-    transform: translateY(10px); /* 下の線 */
+    transform: translateY(8px); /* 下の線 */
   }
   
   /* バツ印 */
@@ -178,7 +179,7 @@
 
 .menu {
     position: fixed;
-    top: 50%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 300px;
@@ -265,12 +266,11 @@
 }
 
 .resp-pc-f {
-    @apply hidden;
-    @apply xl:flex;
+    @apply hidden xl:flex;
 }
 
 .resp-pc-g {
-    @apply xl:hidden;
+    @apply flex xl:hidden;
 }
 
 .resp-xl-f {
@@ -409,6 +409,7 @@ img {
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
     border-radius: 1rem;
     backdrop-filter: blur(10px);
+    @apply max-xl:p-0.5;
   }
 
 .card-image {
@@ -426,8 +427,7 @@ img {
     color: inherit;       /* 文字色を親から継承 */
 }
 
-.card-header {
-    display: block;       /* aタグをブロック化 */
+.card-header {     /* aタグをブロック化 */
     text-decoration: none; /* リンクの下線消す */
     color: inherit;       /* 文字色を親から継承 */
 }
@@ -439,6 +439,7 @@ img {
     padding-right: 1rem;
     color: #000000;
     text-align: center;
+    @apply max-xl:p-2.5;
 }
 
 .card-title {

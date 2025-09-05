@@ -819,7 +819,8 @@ html[data-theme="light"] .text-color {
 
 .burger {
   position: relative;
-  width: 30px;
+  padding: 0.2rem;
+  width: 24px;
   height: 24px;
   cursor: pointer;
 }
@@ -829,7 +830,7 @@ html[data-theme="light"] .text-color {
   left: 0;
   top: 50%;
   width: 100%;
-  height: 3px;
+  height: 2.5px;
   background: #000;
   border-radius: 2px;
   transition: all 0.3s ease;
@@ -837,7 +838,7 @@ html[data-theme="light"] .text-color {
 }
 
 .burger span:nth-child(1) {
-  transform: translateY(-10px);
+  transform: translateY(-8px);
   /* 上の線 */
 }
 
@@ -847,7 +848,7 @@ html[data-theme="light"] .text-color {
 }
 
 .burger span:nth-child(3) {
-  transform: translateY(10px);
+  transform: translateY(8px);
   /* 下の線 */
 }
 
@@ -874,7 +875,7 @@ html[data-theme="light"] .text-color {
 
 .menu {
   position: fixed;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 300px;
@@ -994,7 +995,13 @@ html[data-theme="light"] .text-color {
   .resp-pc-f{
     display: flex;
   }
+}
 
+.resp-pc-g{
+  display: flex;
+}
+
+@media (min-width: 1280px){
   .resp-pc-g{
     display: none;
   }
@@ -1220,6 +1227,12 @@ img {
           backdrop-filter: blur(10px);
 }
 
+@media not all and (min-width: 1280px){
+  .card-logo{
+    padding: 0.125rem;
+  }
+}
+
 .card-image {
   margin: 2rem;
   width: 120px;
@@ -1241,7 +1254,6 @@ img {
 }
 
 .card-header {
-  display: block;
   /* aタグをブロック化 */
   text-decoration: none;
   /* リンクの下線消す */
@@ -1256,6 +1268,12 @@ img {
   padding-right: 1rem;
   color: #000000;
   text-align: center;
+}
+
+@media not all and (min-width: 1280px){
+  .card-box{
+    padding: 0.625rem;
+  }
 }
 
 .card-title {
