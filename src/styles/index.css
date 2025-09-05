@@ -339,7 +339,7 @@ img {
 /* スマホ時は右寄せ */
 @media (max-width: 640px) {
  .img-01 {
-   background-position: 38% center; /* ← スマホで右寄せトリミング */
+   background-position: 42% center; /* ← スマホで右寄せトリミング */
  }
 }
 

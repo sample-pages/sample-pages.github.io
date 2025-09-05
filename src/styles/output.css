@@ -1107,7 +1107,7 @@ img {
 
 @media (max-width: 640px) {
   .img-01 {
-    background-position: 38% center;
+    background-position: 42% center;
     /* ← スマホで右寄せトリミング */
   }
 }
