@@ -49,7 +49,7 @@ const filteredPosts: any = posts.filter((post: any) =>
 );
 ---
 
-<Layout title=`タグ: ${tag}・東京大学スタタリング`>
+<Layout title=`タグ: ${tag}｜第8回うぃーすた全国交流会`>
   <div class="margin-contents text-color text-font">
     <span class="midashi mb-4">タグ: {tag}</span>
     <div style="height: 20px;"></div>
@@ -57,24 +57,24 @@ const filteredPosts: any = posts.filter((post: any) =>
       {
         filteredPosts.map((post: any) => (
           <li>
-            <a class="text-lg font-medium hover-color" href={post.url}>
-              {post.frontmatter.title}
-            </a>
-            <br />
             {post.frontmatter.update ? (
               <div class="update-content">
                 <i class="ri-calendar-2-line" />
-                <a class="text-sm italic">{post.frontmatter.date}</a>
+                <a class="text-sm">{post.frontmatter.date}</a>
                 &nbsp;
                 <i class="ri-loop-left-line" />
-                <a class="text-sm italic">{post.frontmatter.update}</a>
+                <a class="text-sm">{post.frontmatter.update}</a>
               </div>
             ) : (
               <div class="no-update-content">
                 <i class="ri-calendar-2-line" />
-                <a class="text-sm italic">{post.frontmatter.date}</a>
+                <a class="text-sm">{post.frontmatter.date}</a>
               </div>
             )}
+            <a class="text-lg font-medium hover-color" href={post.url}>
+              {post.frontmatter.title}
+            </a>
+            <br />
             <a class="text-base">{post.frontmatter.description}</a>
             <div style="height: 24px;" />
           </li>

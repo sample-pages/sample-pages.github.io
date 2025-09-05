@@ -16,18 +16,18 @@
         </div>
       </a>
       -->
-      <a class="card-header resp-pc-f" style="margin-top: 0.5rem; margin-left: 1rem;" href="/">
+      <a class="card-header resp-pc-f" style="margin-top: 0.75rem; margin-left: 2rem;" href="/">
         <div class="card-logo">
-            <img src='/images/IMG_4067.PNG' alt="" class="w-10 h-10" style="margin-left: 0.75rem;"/>
+            <img src='/images/IMG_4067.PNG' alt="" class="w-10 h-10" style="margin-left: 0.7rem;"/>
             <div class="card-box flex flex-col">
-              <span class="text-lg font-bold text-start">第8回</span>
+              <span class="text-xl font-bold text-start">第8回</span>
               <span class="text-xl font-bold text-start">うぃーすた全国交流会</span>
             </div>
         </div>
       </a>
-      <a class="card-header resp-pc-g" style="margin-top: 0.5rem; margin-left: 1rem;" href="/">
+      <a class="card-header resp-pc-g" style="margin-top: 0.75rem; margin-left: 1rem;" href="/">
         <div class="card-logo">
-            <img src='/images/IMG_4067.PNG' alt="" class="w-10 h-10" style="margin-left: 0.75rem;"/>
+            <img src='/images/IMG_4067.PNG' alt="" class="w-10 h-10" style="margin-left: 0.7rem;"/>
             <div class="card-box flex flex-col">
               <span class="text-sm font-bold text-start">第8回</span>
               <span class="text-lg font-bold text-start">うぃーすた全国交流会</span>
@@ -56,45 +56,75 @@
           menu?.classList.remove("is-active");
         });
       }
+
+      // 全てのサブメニューのリンクにイベントを追加
+      document.querySelectorAll('.dropdown-content a').forEach(link => {
+        link.addEventListener('click', () => {
+          const dropdown = link.closest('.dropdown') as HTMLElement | null;
+          if (!dropdown) return;
+
+          const content = dropdown.querySelector('.dropdown-content') as HTMLElement | null;
+          if (!content) return;
+
+          content.style.display = 'none'; // OK
+        });
+      });
+
+
+        // 親のホバーで再表示
+        document.querySelectorAll('.dropdown').forEach(dropdown => {
+        const dropdownEl = dropdown as HTMLElement; // 型を明示
+        dropdownEl.addEventListener('mouseenter', () => {
+          const content = dropdownEl.querySelector('.dropdown-content') as HTMLElement | null;
+          if (!content) return;
+          content.style.display = 'block';
+        });
+
+        dropdownEl.addEventListener('mouseleave', () => {
+          const content = dropdownEl.querySelector('.dropdown-content') as HTMLElement | null;
+          if (!content) return;
+          content.style.display = 'none';
+        });
+      });
+
     </script>
 
-    <nav class="ml-auto flex flex-wrap items-center text-base justify-center back-blur" style="margin-top: 0.5rem; margin-right: 0.75rem;">
+    <nav class="ml-auto flex flex-wrap items-center text-base justify-center back-blur max-xl:mr-4 xl:mr-8" style="margin-top: 0.5rem;">
       <div class="menu_header header_tcolor header_container">
-        <a class="card-header" href="/about/">
-          <div class="card pic-image">
-              <div class="card-box">
-                  <p class="card-title">うぃーすた全国交流会とは</p>
-              </div>
+        <div class="card-header pic-image dropdown">
+          <a class="card" href="/about/">
+            <div class="card-box">
+              <p class="card-title">うぃーすたについて</p>
+            </div>
+          </a>
+          <div class="dropdown-content">
+            <a href="/about/#stutter">吃音とは</a>
+            <a href="/about/#westu">うぃーすたプロジェクトとは</a>
+            <a href="/about/#westu_koryu">うぃーすた全国交流会とは</a>
           </div>
-        </a>
-        <a class="card-header" href="/news/">
+        </div>
+        
+        <a class="card-header" href="/posts/1">
           <div class="card pic-image">
               <div class="card-box">
                   <p class="card-title">お知らせ</p>
               </div>
           </div>
         </a>
-        <a class="card-header" href="/activities/">
+        <a class="card-header" href="/programs/">
           <div class="card pic-image">
               <div class="card-box">
-                  <p class="card-title">活動紹介</p>
+                  <p class="card-title">日程・プログラム</p>
               </div>
           </div>
         </a>
-        <a class="card-header" href="/achievements/">
+        <a class="card-header" href="/register/">
           <div class="card pic-image">
               <div class="card-box">
-                  <p class="card-title">活動実績</p>
+                  <p class="card-title">お申し込み</p>
               </div>
           </div>
-        </a>
-        <a class="card-header" href="/posts/1">
-          <div class="card pic-image">
-              <div class="card-box">
-                  <p class="card-title">ブログ</p>
-              </div>
-          </div>
-        </a>   
+        </a> 
         <a class="card-header" href="/contact/">
           <div class="card pic-image">
               <div class="card-box">
@@ -104,7 +134,7 @@
         </a>
       </div>
       <div class="del" style="width: 20px;"></div>
-      <a class="card-heade resp-pc-g">
+      <a class="card-header resp-pc-g">
         <div class="card pic-image flex items-center justify-center">
             <div class="card-box">
               <button id="burger" class="burger">
@@ -117,13 +147,48 @@
       </a>
     </nav>
   </div>
-  <nav class="menu header_tcolor back-blur" id="menu">
-    <a class="m-4 hover-color font-medium text-base menu-item" href="/about/">うぃーすた全国交流会とは</a>
-    <a class="m-4 hover-color font-medium text-base menu-item" href="/news/">お知らせ</a>
-    <a class="m-4 hover-color font-medium text-base menu-item" href="/activities/">活動紹介</a>
-    <a class="m-4 hover-color font-medium text-base menu-item" href="/achievements/">活動実績</a>
-    <a class="m-4 hover-color font-medium text-base menu-item" href="/posts/1">ブログ</a>
-    <a class="m-4 hover-color font-medium text-base menu-item" href="/contact/">お問い合わせ</a>
+  <nav class="menu back-blur" id="menu">
+    <div class="card-header pic-image dropdown">
+      <a class="card" href="/about/">
+        <div class="card-box">
+          <p class="card-title">うぃーすたについて</p>
+        </div>
+      </a>
+      <div class="dropdown-content">
+        <a href="/about/#stutter">吃音とは</a>
+        <a href="/about/#westu">うぃーすたプロジェクトとは</a>
+        <a href="/about/#westu_koryu">うぃーすた全国交流会とは</a>
+      </div>
+    </div>
+    <a class="card-header" href="/posts/1">
+      <div class="card pic-image">
+          <div class="card-box">
+              <p class="card-title">お知らせ</p>
+          </div>
+      </div>
+    </a>
+    <a class="card-header" href="/programs/">
+      <div class="card pic-image">
+          <div class="card-box">
+              <p class="card-title">日程・プログラム</p>
+          </div>
+      </div>
+    </a>
+    <a class="card-header" href="/register/">
+      <div class="card pic-image">
+          <div class="card-box">
+              <p class="card-title">お申し込み</p>
+          </div>
+      </div>
+    </a> 
+    <a class="card-header" href="/contact/">
+      <div class="card pic-image">
+          <div class="card-box">
+              <p class="card-title">お問い合わせ</p>
+          </div>
+      </div>
+    </a>
+  </div>
     <div style="height: 10px;"></div>
   </nav>
 </header>

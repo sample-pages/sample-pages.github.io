@@ -84,9 +84,9 @@
 }
 
 .midashi {
-    font-family: "Inter", sans-serif;
+    font-family: "Kaisei Opti", sans-serif;
     font-weight: 500;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
 }
 
 .hover-color:hover {
@@ -103,13 +103,13 @@
 }
 
 .margin-contents {
-    max-width: 60rem;
+    max-width: 54rem;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
     @apply xl:p-4
 }
 
@@ -185,7 +185,8 @@
     flex-direction: column;
     align-items: stretch;
     text-align: center;
-    width: 200px;
+    gap: 1.5rem;
+    width: 240px;
     z-index: 999;
     opacity: 0;                  /* 初期状態は透明 */
     pointer-events: none;        /* 非表示時はクリック無効 */
@@ -199,6 +200,7 @@
   
   .menu-item {
     border: 1px solid rgba(255, 255, 255, .3);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
     background: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(10px);
     margin: 0.75rem 0;
@@ -207,11 +209,12 @@
     font-size: 1.2rem;
     text-decoration: none;
     color: #000;
-    transition: background 0.3s;
+    transition: background 0.3s, transform 0.2s ease-in-out;
   }
   
   .menu-item:hover {
     background: rgba(255, 255, 255, 1);
+    transform: scale(1.1);
   }
   
   
@@ -242,7 +245,7 @@
 
 .divider-horizontal {
     border-top: 0.5px solid #d2d2d2;
-    max-width: 50rem;
+    max-width: 54rem;
     margin: 5px auto 15px;
     width: 100%;
     height: 0;
@@ -269,7 +272,8 @@
 }
 
 .resp-pc-g {
-    @apply flex xl:hidden;
+    @apply flex;
+    @apply xl:hidden;
 }
 
 .resp-xl-f {
@@ -424,11 +428,13 @@ img {
     width: 320px;         /* カードの幅 */
     text-decoration: none; /* リンクの下線消す */
     color: inherit;       /* 文字色を親から継承 */
+    @apply max-lg:w-72;
 }
 
 .card-header {     /* aタグをブロック化 */
     text-decoration: none; /* リンクの下線消す */
     color: inherit;       /* 文字色を親から継承 */
+    transition: transform 0.15s ease-in-out; /* アニメーション速度 */
 }
 
 .card-box {
@@ -441,12 +447,89 @@ img {
     @apply max-xl:p-2.5;
 }
 
+.sche-box {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+    color: #000000;
+    text-align: center;
+}
+
 .card-title {
     font-size: 1.2rem;
     font-weight: bold;
 }
 
 .card-description {
+    margin-top: 0.5rem;
     margin-bottom: 0.5rem;
     line-height: 1.5;
 }
+
+  
+  .dropdown {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ホバー判定用の透明エリア */
+.dropdown::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 10px; /* サブメニューとの間の余白分 */
+  }
+
+  
+  .card-header:hover {
+    transform: scale(1.1); /* 10%拡大 */
+  }
+  
+  /* ▼ サブメニュー部分 */
+  .dropdown-content {
+    display: none; /* 初期は非表示 */
+    position: absolute;
+    top: 120%; /* 親要素の下に配置 */
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    padding: 8px 0;
+  }
+  
+  /* サブメニュー項目 */
+  .dropdown-content a {
+    display: block;
+    padding: 10px 16px;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.2s;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #d7d7d7; /* ホバー時に薄い青に */
+  }
+  
+  /* ▼ 親にホバーしたらサブメニュー表示 */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  #stutter {
+    scroll-margin-top: 150px; /* 上から80px下にスクロールさせる */
+  }
+
+  #westu {
+    scroll-margin-top: 150px; /* 上から80px下にスクロールさせる */
+  }
+
+  #westu_koryu {
+    scroll-margin-top: 150px; /* 上から80px下にスクロールさせる */
+  }
+  
