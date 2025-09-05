@@ -1071,12 +1071,13 @@ img {
   margin-left: 5%;
 }
 
-.img-frame{
+.img-frame {
   position: relative;
   width: 100%;
   height: 400px;
   display: flex;
   overflow: hidden;
+  /* はみ出した部分をカット */
   margin: 0 auto;
 }
 
@@ -1086,13 +1087,9 @@ img {
   }
 }
 
-@media (max-width: 560px){
-  .img-frame{
-    height: 550px;
-  }
-}
+/* 共通設定 */
 
-.img-01, .img-02, .img-03{
+.img-01, .img-02, .img-03 {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1100,39 +1097,52 @@ img {
   width: 100%;
   height: 100%;
   background-size: cover;
+  /* ← 縦横比を維持してカバー表示 */
   background-repeat: no-repeat;
   background-position: center center;
+  /* デフォルトは中央 */
 }
 
-.img-01{
+/* スマホ時は右寄せ */
+
+@media (max-width: 640px) {
+  .img-01 {
+    background-position: 40% center;
+    /* ← スマホで右寄せトリミング */
+  }
+}
+
+/* アニメーション */
+
+.img-01 {
   animation: slide-animation-01 24s infinite;
 }
 
-.img-02{
+.img-02 {
   animation: slide-animation-02 24s infinite;
 }
 
-.img-03{
+.img-03 {
   animation: slide-animation-03 24s infinite;
 }
 
 @keyframes slide-animation-01 {
-  0% {
+  0%   {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1.0);
   }
 
-  30%   {
+  30%  {
     opacity: 1;
   }
 
-  40% {
+  40%  {
     opacity: 0;
     transform: translate(-50%, -50%) scale(1.12);
   }
 
-  90% {
-    opacity: 0
+  90%  {
+    opacity: 0;
   }
 
   100% {
@@ -1142,24 +1152,24 @@ img {
 }
 
 @keyframes slide-animation-02 {
-  0% {
+  0%   {
     opacity: 0;
   }
 
-  30% {
+  30%  {
     opacity: 0;
     transform: translate(-50%, -50%) scale(1.1);
   }
 
-  40% {
+  40%  {
     opacity: 1;
   }
 
-  60% {
+  60%  {
     opacity: 1;
   }
 
-  70% {
+  70%  {
     opacity: 0;
     transform: translate(-50%, -50%) scale(1.0);
   }
@@ -1170,20 +1180,20 @@ img {
 }
 
 @keyframes slide-animation-03 {
-  0% {
+  0%   {
     opacity: 0;
   }
 
-  60% {
+  60%  {
     opacity: 0;
     transform: translate(-50%, -50%) scale(1.0);
   }
 
-  70% {
+  70%  {
     opacity: 1;
   }
 
-  90% {
+  90%  {
     opacity: 1;
   }
 
