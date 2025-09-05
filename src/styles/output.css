@@ -1398,6 +1398,14 @@ img {
     height: 0.75rem;
   }
 
+  .max-lg\:h-2\.5{
+    height: 0.625rem;
+  }
+
+  .max-lg\:h-2{
+    height: 0.5rem;
+  }
+
   .max-lg\:gap-10{
     gap: 2.5rem;
   }
