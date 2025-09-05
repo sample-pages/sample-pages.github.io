@@ -183,14 +183,14 @@
     padding-bottom: 0.75rem;
     padding-left: 0.50rem;
     padding-right: 0.75rem;
-    @apply xl:pt-3 xl:pb-3 xl:pl-2 xl:pr-3;
+    @apply xl:pt-4 xl:pb-4 xl:pl-3 xl:pr-4;
 }
 
 .respt-f {
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     @apply xl:pb-3 xl:pt-3 xl:pl-3 xl:pr-3;
 }
 
@@ -202,6 +202,10 @@
 .resp-xl-f {
     @apply block;
     @apply xl:hidden max-sm:hidden;
+}
+
+.resp-xl-g {
+    @apply xl:hidden;
 }
 
 .resp-sm-f {

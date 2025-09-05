@@ -666,10 +666,6 @@ html[data-theme="light"] .text-color {
   padding: 0.5rem;
 }
 
-.text-center{
-  text-align: center;
-}
-
 .text-base{
   font-size: 1rem;
   line-height: 1.5rem;
@@ -701,10 +697,6 @@ html[data-theme="light"] .text-color {
 
 .font-medium{
   font-weight: 500;
-}
-
-.font-normal{
-  font-weight: 400;
 }
 
 .italic{
@@ -896,18 +888,18 @@ html[data-theme="light"] .text-color {
 
 @media (min-width: 1280px){
   .respt-h{
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-    padding-left: 0.5rem;
-    padding-right: 0.75rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 0.75rem;
+    padding-right: 1rem;
   }
 }
 
 .respt-f {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 @media (min-width: 1280px){
@@ -941,6 +933,10 @@ html[data-theme="light"] .text-color {
 
 @media (min-width: 1280px){
   .resp-xl-f{
+    display: none;
+  }
+
+  .resp-xl-g{
     display: none;
   }
 }
