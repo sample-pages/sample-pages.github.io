@@ -900,6 +900,7 @@ html[data-theme="light"] .text-color {
 }
 
 .menu-item {
+  border: 1px solid rgba(255, 255, 255, .3);
   background: rgba(255, 255, 255, 0.3);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
@@ -1200,11 +1201,10 @@ img {
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  border: 2px solid rgba(255, 255, 255, .3);
+  border: 1px solid rgba(255, 255, 255, .3);
   background: rgba(255, 255, 255, 0.3);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
   background-clip: border-box;
-  border: 0;
   border-radius: 1rem;
   backdrop-filter: blur(13px);
   -webkit-backdrop-filter: blur(13px);
@@ -1219,6 +1219,7 @@ img {
   padding: 0.2rem;
   gap: 0rem;
   /* 画像と文字の間隔 */
+  border: 1px solid rgba(255, 255, 255, .3);
   background: rgba(255,255,255,0.3);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
   border-radius: 1rem;
