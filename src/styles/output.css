@@ -859,7 +859,7 @@ html[data-theme="light"] .text-color {
 .respt-h {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  padding-left: 0.75rem;
+  padding-left: 0.50rem;
   padding-right: 0.75rem;
 }
 
@@ -959,17 +959,17 @@ img {
 }
 
 .img-01{
-  background-image: url('GtFcDSubkAAeYmu-2.jpg');
+  background-image: url('images/GtFcDSubkAAeYmu-2.jpg');
   animation: slide-animation-01 24s infinite;
 }
 
 .img-02{
-  background-image: url('GYFsma4b0AMhqPv-2.jpg');
+  background-image: url('images/GYFsma4b0AMhqPv-2.jpg');
   animation: slide-animation-02 24s infinite;
 }
 
 .img-03{
-  background-image: url('GVPL3lxaEAAgoiI.jpg');
+  background-image: url('images/GVPL3lxaEAAgoiI.jpg');
   animation: slide-animation-03 24s infinite;
 }
 
