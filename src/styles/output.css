@@ -720,6 +720,21 @@ html[data-theme="light"] .text-color {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
+html, body {
+  margin: 0;
+  /* デフォルト余白を削除 */
+  padding: 0;
+  /* デフォルト余白を削除 */
+  width: 100vw;
+  /* 横幅を画面幅に固定 */
+  height: 100vh;
+  /* 高さを画面に固定 */
+  overflow-x: hidden;
+  /* 横スクロール禁止 */
+  overflow-y: auto;
+  /* 縦スクロールは必要に応じて */
+}
+
 .kaisei-opti-regular {
   font-family: "Kaisei Opti", serif;
   font-weight: 400;
