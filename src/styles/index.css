@@ -126,7 +126,7 @@
 .burger {
     position: relative;
     width: 24px;
-    height: 26px;
+    height: 30px;
     cursor: pointer;
   }
   
@@ -406,6 +406,24 @@ img {
     backdrop-filter: blur(13px);
     -webkit-backdrop-filter: blur(13px);
     transition: .5s;
+}
+
+.sche-card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  border: 1px solid rgba(255, 255, 255, .3);
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+  background-clip: border-box;
+  border-radius: 1rem;
+  backdrop-filter: blur(13px);
+  -webkit-backdrop-filter: blur(13px);
+  transition: .5s;
 }
 
 .card-logo {
