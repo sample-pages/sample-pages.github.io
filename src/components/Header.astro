@@ -3,19 +3,26 @@
 ---
 
 <header class="kaisei-opti-regular position">
-  <div class="mx-auto flex flex-wrap p-2 respt-h flex-row items-center header_bcolor">
+  <div class="mx-auto flex flex-wrap p-2 flex-row items-center">
     <a class="flex flex-row items-center text-gray-900 mb-0">
-      <img src='/images/IMG_4067.PNG' alt="" class="w-10 h-10 mr-3" style="margin-left: 0.5rem;"/>
-      <a href="/">
-        <div class="flex flex-col resp-pc-f">
-          <span class="text-lg font-bold header_tcolor">第8回</span>
-          <span class="text-xl font-bold header_tcolor">うぃーすた全国交流会</span>
+      <!--
+      <a href="/" class="">
+        <div class="flex items-center gap-3 p-2 header_bcolor">
+          <img src='/images/IMG_4067.PNG' alt="" class="w-10 h-10" />
+          <div class="flex flex-col">
+            <span class="text-lg font-bold header_tcolor">第8回</span>
+            <span class="text-xl font-bold header_tcolor">うぃーすた全国交流会</span>
+          </div>
         </div>
       </a>
-      <a href="/">
-        <div class="flex flex-col resp-xl-g">
-          <span class="text-base font-bold header_tcolor">第8回</span>
-          <span class="text-lg font-bold header_tcolor">うぃーすた全国交流会</span>
+      -->
+      <a class="card-header" style="margin-top: 0.5rem; margin-left: 1rem;" href="/">
+        <div class="card-logo resp-pc-f">
+            <img src='/images/IMG_4067.PNG' alt="" class="w-10 h-10" style="margin-left: 0.75rem;"/>
+            <div class="card-box flex flex-col">
+              <span class="text-lg font-bold text-start">第8回</span>
+              <span class="text-xl font-bold text-start">うぃーすた全国交流会</span>
+            </div>
         </div>
       </a>
     </a>
@@ -42,56 +49,72 @@
       }
     </script>
 
-    <nav class="ml-auto flex flex-wrap items-center text-base justify-center back-blur">
-      <div class="menu_header header_tcolor">
-        <a
-          class="mr-5 hover-color font-medium text-lg"
-          style="padding-right: 5px; padding-left: 5px;"
-          href="/about/">うぃーすた全国交流会とは</a
-        >
-        <a
-          class="mr-5 hover-color font-medium text-lg"
-          style="padding-right: 5px; padding-left: 5px;"
-          href="/news/">お知らせ</a
-        >
-        <a
-          class="mr-5 hover-color font-medium text-lg"
-          style="padding-right: 5px; padding-left: 5px;"
-          href="/activities/">活動紹介</a
-        >
-        <a
-          class="mr-5 hover-color font-medium text-lg"
-          style="padding-right: 5px; padding-left: 5px;"
-          href="/achievements/">活動実績</a
-        >
-        <a
-          class="mr-5 hover-color font-medium text-lg"
-          style="padding-right: 5px; padding-left: 5px;"
-          href="/posts/1">ブログ</a
-        >
-        
-        <a
-          class="mr-5 hover-color font-medium text-lg"
-          style="padding-right: 5px; padding-left: 5px;"
-          href="/contact/">お問い合わせ</a
-        >
-        
+    <nav class="ml-auto flex flex-wrap items-center text-base justify-center back-blur" style="margin-top: 0.5rem; margin-right: 0.75rem;">
+      <div class="menu_header header_tcolor header_container">
+        <a class="card-header" href="/about/">
+          <div class="card pic-image">
+              <div class="card-box">
+                  <p class="card-title">うぃーすた全国交流会とは</p>
+              </div>
+          </div>
+        </a>
+        <a class="card-header" href="/news/">
+          <div class="card pic-image">
+              <div class="card-box">
+                  <p class="card-title">お知らせ</p>
+              </div>
+          </div>
+        </a>
+        <a class="card-header" href="/activities/">
+          <div class="card pic-image">
+              <div class="card-box">
+                  <p class="card-title">活動紹介</p>
+              </div>
+          </div>
+        </a>
+        <a class="card-header" href="/achievements/">
+          <div class="card pic-image">
+              <div class="card-box">
+                  <p class="card-title">活動実績</p>
+              </div>
+          </div>
+        </a>
+        <a class="card-header" href="/posts/1">
+          <div class="card pic-image">
+              <div class="card-box">
+                  <p class="card-title">ブログ</p>
+              </div>
+          </div>
+        </a>   
+        <a class="card-header" href="/contact/">
+          <div class="card pic-image">
+              <div class="card-box">
+                  <p class="card-title">お問い合わせ</p>
+              </div>
+          </div>
+        </a>
       </div>
       <div class="del" style="width: 20px;"></div>
-    <button id="burger" class="burger mr-1.5 resp-pc-g">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+      <a class="card-heade resp-pc-g">
+        <div class="card pic-image flex items-center justify-center">
+            <div class="card-box">
+              <button id="burger" class="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+            </div>
+        </div>
+      </a>
     </nav>
   </div>
-  <nav class="menu header_tcolor header_bcolor back-blur" id="menu">
-    <a class="m-4 hover-color font-medium text-base" href="/about/">うぃーすた全国交流会とは</a>
-    <a class="m-4 hover-color font-medium text-base" href="/news/">お知らせ</a>
-    <a class="m-4 hover-color font-medium text-base" href="/activities/">活動紹介</a>
-    <a class="m-4 hover-color font-medium text-base" href="/achievements/">活動実績</a>
-    <a class="m-4 hover-color font-medium text-base" href="/posts/1">ブログ</a>
-    <a class="m-4 hover-color font-medium text-base" href="/contact/">お問い合わせ</a>
+  <nav class="menu header_tcolor back-blur" id="menu">
+    <a class="m-4 hover-color font-medium text-base menu-item" href="/about/">うぃーすた全国交流会とは</a>
+    <a class="m-4 hover-color font-medium text-base menu-item" href="/news/">お知らせ</a>
+    <a class="m-4 hover-color font-medium text-base menu-item" href="/activities/">活動紹介</a>
+    <a class="m-4 hover-color font-medium text-base menu-item" href="/achievements/">活動実績</a>
+    <a class="m-4 hover-color font-medium text-base menu-item" href="/posts/1">ブログ</a>
+    <a class="m-4 hover-color font-medium text-base menu-item" href="/contact/">お問い合わせ</a>
     <div style="height: 10px;"></div>
   </nav>
 </header>
