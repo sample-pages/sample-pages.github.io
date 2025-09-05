@@ -316,11 +316,11 @@ img {
 .img-frame{
    position: relative;
    width: 100%;
-   height: 550px;
+   height: 400px;
    display: flex;
    overflow: hidden;
    margin: 0 auto;
-   @apply xl:h-[700px];
+   @apply xl:h-[600px];
 }
 
 @media (max-width: 560px){
@@ -438,10 +438,10 @@ img {
 }
 
 .card-box {
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
     color: #000000;
     text-align: center;
     @apply max-xl:p-2.5;
@@ -457,7 +457,7 @@ img {
 }
 
 .card-title {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: bold;
 }
 
