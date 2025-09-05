@@ -444,7 +444,6 @@ img {
     padding-right: 0.75rem;
     color: #000000;
     text-align: center;
-    @apply max-xl:p-2.5;
 }
 
 .sche-box {

@@ -1289,12 +1289,6 @@ img {
   text-align: center;
 }
 
-@media not all and (min-width: 1280px){
-  .card-box{
-    padding: 0.625rem;
-  }
-}
-
 .sche-box {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
