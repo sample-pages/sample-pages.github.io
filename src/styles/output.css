@@ -1387,6 +1387,11 @@ img {
   /* 上から80px下にスクロールさせる */
 }
 
+#burger {
+  touch-action: manipulation;
+  /* ダブルタップズームやピンチズームを防ぐ */
+}
+
 @media not all and (min-width: 1280px){
   .max-xl\:mr-4{
     margin-right: 1rem;
@@ -1394,14 +1399,6 @@ img {
 }
 
 @media not all and (min-width: 1024px){
-  .max-lg\:h-3{
-    height: 0.75rem;
-  }
-
-  .max-lg\:h-2\.5{
-    height: 0.625rem;
-  }
-
   .max-lg\:h-2{
     height: 0.5rem;
   }

@@ -533,3 +533,7 @@ img {
     scroll-margin-top: 150px; /* 上から80px下にスクロールさせる */
   }
   
+  #burger {
+    touch-action: manipulation; /* ダブルタップズームやピンチズームを防ぐ */
+  }
+  
