@@ -16,8 +16,8 @@ const latestPosts = sortedPosts.slice(0, 3);
 <Layout title="ホーム・東京大学スタタリング">
   <div class="img-frame">
       <div class="img-01" style="background-image: url('/images/GtFcDSubkAAeYmu-2.jpg');"></div>
-      <div class="img-02" style="background-image: url('images/GYFsma4b0AMhqPv-2.jpg');"></div>
-      <div class="img-03" style="background-image: url('images/GVPL3lxaEAAgoiI.jpg');"></div>
+      <div class="img-02" style="background-image: url('/images/GYFsma4b0AMhqPv-2.jpg');"></div>
+      <div class="img-03" style="background-image: url('/images/GVPL3lxaEAAgoiI.jpg');"></div>
   </div>
   <div class="margin-contents text-color text-font">
     <div style="height: 35px;"></div>
@@ -45,10 +45,8 @@ const latestPosts = sortedPosts.slice(0, 3);
     &emsp;参加方法：参加を希望される方は、こちらの問い合わせフォームにご連絡ください。今回は、本郷キャンパスの周辺の施設にて開催をします。場所代として、参加費一人300円を徴収します。開催場所等の詳細はメールにてご連絡いたします。</p>
 
     <div style="height: 50px;"></div>
-    <span class="midashi mb-4">直近のブログ</span>
-    <div style="height: 10px;"></div>
-    <p class="italic">直近3つの記事を表示しています。</p>
-    <div style="height: 30px;"></div>
+    <span class="midashi mb-4">お知らせ</span>
+    <div style="height: 20px;"></div>
     <ul>
       {
         latestPosts.map((post) => (
@@ -80,7 +78,7 @@ const latestPosts = sortedPosts.slice(0, 3);
     <br />
     <div class="flex items-center justify-center" style="margin-bottom: 80px;">
       <a href="/posts/1" class="flex items-center justify-center hover-color"
-        >All posts&nbsp;<i class="ri-arrow-right-line" style="font-size: 24px;"
+        >すべて見る&nbsp;<i class="ri-arrow-right-line" style="font-size: 24px;"
         ></i></a
       >
     </div>
