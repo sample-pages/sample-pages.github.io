@@ -575,6 +575,10 @@ html[data-theme="light"] .text-color {
   color: #000000;
 }
 
+.visible{
+  visibility: visible;
+}
+
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
@@ -1260,12 +1264,18 @@ img {
   border-radius: 1rem;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
+  transition: transform 0.3s ease;
 }
 
 @media not all and (min-width: 1280px){
   .card-logo{
     padding: 0.125rem;
   }
+}
+
+.card-header:hover .card-logo {
+  transform: scale(1.05);
+  /* カード全体を拡大 */
 }
 
 .card-image {
@@ -1367,7 +1377,7 @@ img {
   background-color: #fff;
   width: 100%;
   border: 1px solid #ddd;
-  border-radius: 8px;
+  border-radius: 1rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   z-index: 999;
   padding: 8px 0;
@@ -1384,7 +1394,7 @@ img {
 }
 
 .dropdown-content a:hover {
-  background-color: #d7d7d7;
+  background-color: #ededed;
   /* ホバー時に薄い青に */
 }
 
@@ -1412,6 +1422,85 @@ img {
 #burger {
   touch-action: manipulation;
   /* ダブルタップズームやピンチズームを防ぐ */
+}
+
+.topbar {
+  opacity: 0;
+  transform: translateY(-20px);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* visible クラスが付いたら表示 */
+
+.topbar.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.msg{
+  font-size: 20px;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+}
+
+.scroll_down{
+  position:absolute;
+  bottom: 1%;
+  right: 10%;
+  animation: arrowmove 1s ease-in-out infinite;
+}
+
+.scroll_down a{
+  position: absolute;
+  left: -24px;
+  bottom: 17px;
+  color: #000;
+  font-size: 14px;
+  font-family: 'Josefin Sans', sans-serif;
+  letter-spacing: .2em;
+  writing-mode: vertical-rl;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.scroll_down:before {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  right: -6px;
+  width: 2px;
+  height: 20px;
+  background: #000;
+  transform: skewX(-31deg);
+}
+
+.scroll_down:after{
+  content:"";
+  position: absolute;
+  bottom: 5px;
+  right: 0;
+  width: 2px;
+  height: 85px;
+  background:#000;
+}
+
+@keyframes arrowmove{
+  0%{
+    bottom:1%;
+  }
+
+  50%{
+    bottom:5%;
+  }
+
+  00%{
+    bottom:1%;
+  }
 }
 
 @media not all and (min-width: 1280px){
@@ -1451,4 +1540,3 @@ img {
     margin-right: 2rem;
   }
 }
-  
