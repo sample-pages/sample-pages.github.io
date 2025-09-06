@@ -51,6 +51,16 @@ const filteredPosts: any = posts.filter((post: any) =>
 
 <Layout title=`タグ: ${tag}｜第8回うぃーすた全国交流会`>
   <div class="margin-contents text-color text-font">
+    <div class="flex">
+      <a
+        href="#"
+        onclick="history.back(); return false;"
+        class="font-body font-medium hover-color"
+        style="margin-left: 10px; margin-right: 10px; display: flex; align-items: center; font-size: 15px;"
+        ><i class="ri-arrow-left-line" style="font-size: 20px;"></i>&nbsp;戻る</a
+      >
+    </div>
+    <div style="height: 20px;"></div>
     <span class="midashi mb-4">タグ: {tag}</span>
     <div style="height: 20px;"></div>
     <ul>
@@ -71,7 +81,7 @@ const filteredPosts: any = posts.filter((post: any) =>
                 <a class="text-sm">{post.frontmatter.date}</a>
               </div>
             )}
-            <a class="text-lg font-medium hover-color" href={post.url}>
+            <a class="text-base font-medium hover-color" href={post.url}>
               {post.frontmatter.title}
             </a>
             <br />
