@@ -662,10 +662,6 @@ html[data-theme="light"] .text-color {
   padding: 0.5rem;
 }
 
-.text-center{
-  text-align: center;
-}
-
 .text-start{
   text-align: start;
 }
@@ -798,15 +794,15 @@ html[data-theme="light"] .text-color {
   max-width: 54rem;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem
 }
 
-@media (min-width: 1280px){
+@media (min-width: 640px){
   .margin-contents{
-    padding: 1rem;
+    padding: 2rem;
   }
 }
 
@@ -828,7 +824,7 @@ html[data-theme="light"] .text-color {
 .burger {
   position: relative;
   width: 24px;
-  height: 30px;
+  height: 32px;
   cursor: pointer;
 }
 
@@ -1437,6 +1433,16 @@ img {
 @media (min-width: 1024px){
   .lg\:h-6{
     height: 1.5rem;
+  }
+
+  .lg\:text-base{
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .lg\:text-lg{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 }
 

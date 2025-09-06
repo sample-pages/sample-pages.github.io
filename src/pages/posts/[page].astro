@@ -53,13 +53,13 @@ const uniqueTags = [
   <div class="margin-contents text-color text-font" style="margin-bottom: 80px;">
     <div class="lg:h-6 max-lg:h-2"></div>
     <span class="midashi">お知らせ</span>
-    <div style="height: 20px;"></div>
+    <div style="height: 10px;"></div>
     {
       uniqueTags.map((tag) => (
         <>
           <a class="text-lg">＃</a>
           <a
-            class="text-base hover-color"
+            class="text-sm hover-color lg:text-base"
             style="margin-left:0px; margin-right: 10px; border-bottom: 2px dashed;"
             href={`/tags/${tag}`}
           >
@@ -68,7 +68,7 @@ const uniqueTags = [
         </>
       ))
     }
-    <div style="height: 30px;"></div>
+    <div style="height: 20px;"></div>
     <ul>
       {
         page.data.map((post: any) => (
@@ -107,7 +107,7 @@ const uniqueTags = [
             <a
               href={page.url.prev}
               class="hover-color"
-              style="margin-left: 10px; margin-right: 10px; display: flex; align-items: center;"
+              style="margin-left: 10px; margin-right: 10px; display: flex; align-items: center; font-size: 15px;"
             >
               <i class="ri-arrow-left-line" style="font-size: 24px;" />
               &nbsp;&nbsp;Prev
@@ -117,7 +117,7 @@ const uniqueTags = [
           <>
             <a
               class="null-color"
-              style="margin-left: 10px; margin-right: 10px; display: flex; align-items: center;"
+              style="margin-left: 10px; margin-right: 10px; display: flex; align-items: center; font-size: 15px;"
             >
               <i class="ri-arrow-left-line" style="font-size: 24px;" />
               &nbsp;&nbsp;Prev
@@ -125,7 +125,7 @@ const uniqueTags = [
           </>
         )
       }
-      <div style="margin-left: 10px; margin-right: 10px;">
+      <div style="margin-left: 10px; margin-right: 10px; font-size: 15px;">
         {page.currentPage}&nbsp;/&nbsp;{page.lastPage}
       </div>
       {
@@ -134,7 +134,7 @@ const uniqueTags = [
             <a
               href={page.url.next}
               class="hover-color"
-              style="margin-left: 10px; margin-right: 10px; display: flex; align-items: center;"
+              style="margin-left: 10px; margin-right: 10px; display: flex; align-items: center; font-size: 15px;"
             >
               Next&nbsp;&nbsp;
               <i class="ri-arrow-right-line" style="font-size: 24px;" />
@@ -143,7 +143,7 @@ const uniqueTags = [
         ) : (
           <a
             class="null-color"
-            style="margin-left: 10px; margin-right: 10px; display: flex; align-items: center;"
+            style="margin-left: 10px; margin-right: 10px; display: flex; align-items: center; font-size: 15px;"
           >
             Next&nbsp;&nbsp;
             <i class="ri-arrow-right-line" style="font-size: 24px;" />
