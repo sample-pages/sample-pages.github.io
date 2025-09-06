@@ -57,6 +57,16 @@
         });
       }
 
+      // サブメニュー内のリンククリックでメニューを閉じる
+const dropdownLinks = document.querySelectorAll(".dropdown-content a");
+dropdownLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    burger?.classList.remove("is-active");
+    close?.classList.remove("is-active");
+    menu?.classList.remove("is-active");
+  });
+});
+
       // 全てのサブメニューのリンクにイベントを追加
       document.querySelectorAll('.dropdown-content a').forEach(link => {
         link.addEventListener('click', () => {
