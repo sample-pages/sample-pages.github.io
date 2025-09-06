@@ -1507,6 +1507,21 @@ img {
   .max-xl\:mr-4{
     margin-right: 1rem;
   }
+
+  .max-xl\:text-sm{
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  .max-xl\:text-lg{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .max-xl\:text-base{
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
 }
 
 @media not all and (min-width: 1024px){
@@ -1538,5 +1553,15 @@ img {
 @media (min-width: 1280px){
   .xl\:mr-8{
     margin-right: 2rem;
+  }
+
+  .xl\:text-lg{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .xl\:text-base{
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
