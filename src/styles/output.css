@@ -724,6 +724,10 @@ html[data-theme="light"] .text-color {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
+html, body {
+  overscroll-behavior-y: none;
+}
+
 .kaisei-opti-regular {
   font-family: "Kaisei Opti", serif;
   font-weight: 400;
@@ -946,7 +950,7 @@ html[data-theme="light"] .text-color {
   /* 初期は非表示 */
   pointer-events: none;
   transition: opacity 0.3s ease;
-  background-color: rgba(255, 255, 255, .7);
+  background-color: rgba(255, 255, 255);
 }
 
 .menu.is-active {
