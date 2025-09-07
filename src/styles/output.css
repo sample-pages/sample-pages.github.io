@@ -703,10 +703,6 @@ html[data-theme="light"] .text-color {
   font-weight: 500;
 }
 
-.italic{
-  font-style: italic;
-}
-
 .leading-none{
   line-height: 1;
 }
@@ -747,7 +743,6 @@ html, body {
     0 0 10px #fff,
     0 0 15px #fff,
     0 0 20px #fff,
-    0 0 30px #fff;
 }
 
 .kiwi-maru-regular {
@@ -1611,20 +1606,12 @@ img {
 }
 
 @media not all and (min-width: 1024px){
-  .max-lg\:h-2{
-    height: 0.5rem;
-  }
-
   .max-lg\:gap-10{
     gap: 2.5rem;
   }
 }
 
 @media (min-width: 1024px){
-  .lg\:h-6{
-    height: 1.5rem;
-  }
-
   .lg\:text-base{
     font-size: 1rem;
     line-height: 1.5rem;
