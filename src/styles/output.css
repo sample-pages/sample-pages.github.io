@@ -662,6 +662,10 @@ html[data-theme="light"] .text-color {
   margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
+.p-1{
+  padding: 0.25rem;
+}
+
 .p-2{
   padding: 0.5rem;
 }
@@ -756,11 +760,18 @@ html[data-theme="light"] .text-color {
 .position {
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 100000;
 }
 
 .header_bcolor {
-  background-color: #d28080;
+  background-color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, .3);
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+  background-clip: border-box;
+  backdrop-filter: blur(13px);
+  -webkit-backdrop-filter: blur(13px);
+  transition: .5s;
 }
 
 .footer_bcolor {
@@ -769,6 +780,10 @@ html[data-theme="light"] .text-color {
 
 .header_tcolor {
   color: #e6f499;
+}
+
+.menu_bcolor {
+  background-color: #efe5c0;
 }
 
 .font-body {
@@ -830,6 +845,7 @@ html[data-theme="light"] .text-color {
   width: 24px;
   height: 34px;
   cursor: pointer;
+  z-index: 10000;
 }
 
 .burger span {
@@ -842,6 +858,8 @@ html[data-theme="light"] .text-color {
   border-radius: 2px;
   transition: all 0.3s ease;
   transform-origin: center;
+  -webkit-text-stroke: 0px #ffffff;
+  box-shadow:0px 0px 10px #ffffff;
 }
 
 .burger span:nth-child(1) {
@@ -873,38 +891,68 @@ html[data-theme="light"] .text-color {
   transform: rotate(-45deg);
 }
 
-.close {
-  display: none;
-  &.is-active {
-    display: block;
-  }
+#close {
+  position: absolute;
+  top: 1rem;
+  /* ヘッダーと同じ上からの位置 */
+  right: 1rem;
+  /* ヘッダーの右端と同じ */
+  width: 40px;
+  /* サイズ調整 */
+  height: 40px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 999;
+  /* メニューより前面 */
+}
+
+#close span {
+  display: block;
+  width: 100%;
+  height: 4px;
+  margin: 6px 0;
+  background-color: #000;
+  transition: 0.3s;
+}
+
+#close.is-active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+#close.is-active span:nth-child(2) {
+  opacity: 0;
+}
+
+#close.is-active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
 }
 
 .menu {
+  top: 0;
   position: fixed;
-  top: 55%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   display: flex;
-  /* displayは常にflexに */
   flex-direction: column;
-  align-items: stretch;
+  justify-content: flex-start;
+  /* 縦方向中央寄せ */
+  align-items: center;
+  /* 横方向中央寄せ */
   text-align: center;
   gap: 1.5rem;
-  width: 240px;
+  width: 100vw;
+  height: 100vh;
   z-index: 999;
   opacity: 0;
-  /* 初期状態は透明 */
+  /* 初期は非表示 */
   pointer-events: none;
-  /* 非表示時はクリック無効 */
   transition: opacity 0.3s ease;
-  /* フェードイン/アウト */
+  background-color: rgba(255, 255, 255, .7);
 }
 
 .menu.is-active {
   opacity: 1;
   /* 表示時は不透明 */
-  pointer-events: all;
+  pointer-events: auto;
   /* クリック可能に */
 }
 
@@ -1356,7 +1404,7 @@ img {
   top: 100%;
   left: 0;
   width: 100%;
-  height: 50px;
+  height: 10px;
   /* サブメニューとの間の余白分 */
 }
 
@@ -1371,10 +1419,10 @@ img {
   display: none;
   /* 初期は非表示 */
   position: absolute;
-  top: 120%;
+  top: 105%;
   /* 親要素の下に配置 */
   left: 0;
-  background-color: #fff;
+  background-color: #b94047;
   width: 100%;
   border: 1px solid #ddd;
   border-radius: 1rem;
@@ -1388,13 +1436,13 @@ img {
 .dropdown-content a {
   display: block;
   padding: 10px 16px;
-  color: #333;
+  color: #ffffff;
   text-decoration: none;
   transition: background-color 0.2s;
 }
 
 .dropdown-content a:hover {
-  background-color: #ededed;
+  background-color: #c66565;
   /* ホバー時に薄い青に */
 }
 
