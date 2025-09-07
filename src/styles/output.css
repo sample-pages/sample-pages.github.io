@@ -732,17 +732,7 @@ html, body {
     0 0 5px #fff,
     0 0 10px #fff,
     0 0 15px #fff,
-    0 0 20px #fff,
-    0 0 30px #fff;
-}
-
-.box-blur {
-  -webkit-text-stroke: 0px #ffffff;
-  box-shadow:
-    0 0 5px #fff,
-    0 0 10px #fff,
-    0 0 15px #fff,
-    0 0 20px #fff,
+    0 0 20px #fff;
 }
 
 .kiwi-maru-regular {
