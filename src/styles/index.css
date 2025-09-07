@@ -34,10 +34,24 @@ html, body {
 
 .back-blur {
   -webkit-text-stroke: 0px #ffffff;
-  text-shadow:0px 0px 10px #ffffff;
-  text-shadow:0px 0px 10px #ffffff;
-  text-shadow:0px 0px 10px #ffffff;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 15px #fff,
+    0 0 20px #fff,
+    0 0 30px #fff;
 }
+
+.box-blur {
+  -webkit-text-stroke: 0px #ffffff;
+  box-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 15px #fff,
+    0 0 20px #fff,
+    0 0 30px #fff;
+}
+
 
 .kiwi-maru-regular {
   font-family: "Kiwi Maru", serif;
@@ -156,10 +170,12 @@ html, body {
     border-radius: 2px;
     transition: all 0.3s ease;
     transform-origin: center;
-    -webkit-text-stroke: 0px #ffffff;
-    box-shadow:0px 0px 10px #ffffff;
-    box-shadow:0px 0px 10px #ffffff;
-    box-shadow:0px 0px 10px #ffffff;
+    box-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 15px #fff,
+    0 0 20px #fff,
+    0 0 30px #fff;
   }
   
   .burger span:nth-child(1) {
