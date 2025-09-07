@@ -662,10 +662,6 @@ html[data-theme="light"] .text-color {
   margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
-.p-1{
-  padding: 0.25rem;
-}
-
 .p-2{
   padding: 0.5rem;
 }
@@ -968,7 +964,9 @@ html, body {
   /* 初期は非表示 */
   pointer-events: none;
   transition: opacity 0.3s ease;
-  background-color: rgba(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
   margin: 0;
   /* ← 追加 */
   padding: 0;
@@ -1429,7 +1427,7 @@ img {
   top: 100%;
   left: 0;
   width: 100%;
-  height: 10px;
+  height: 15px;
   /* サブメニューとの間の余白分 */
 }
 
@@ -1444,7 +1442,7 @@ img {
   display: none;
   /* 初期は非表示 */
   position: absolute;
-  top: 105%;
+  top: 130%;
   /* 親要素の下に配置 */
   left: 0;
   background-color: #b94047;
@@ -1453,7 +1451,14 @@ img {
   border-radius: 1rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   z-index: 999;
-  padding: 8px 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+@media not all and (min-width: 1280px){
+  .dropdown-content{
+    top: 105%;
+  }
 }
 
 /* サブメニュー項目 */
@@ -1475,6 +1480,20 @@ img {
 
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+/* ▼ 一番上の項目をホバーしたとき → 上だけ角丸 */
+
+.dropdown-content a:first-child:hover {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+/* ▼ 一番下の項目をホバーしたとき → 下だけ角丸 */
+
+.dropdown-content a:last-child:hover {
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
 }
 
 #stutter {
@@ -1577,8 +1596,8 @@ img {
 }
 
 @media not all and (min-width: 1280px){
-  .max-xl\:mr-4{
-    margin-right: 1rem;
+  .max-xl\:mr-2\.5{
+    margin-right: 0.625rem;
   }
 
   .max-xl\:text-sm{

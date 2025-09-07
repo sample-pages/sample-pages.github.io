@@ -57,7 +57,7 @@ const uniqueTags = [
     {
       uniqueTags.map((tag) => (
         <>
-          <a class="text-lg">＃</a>
+          <a class="text-lg" style="padding-left: 0.25rem">＃</a>
           <a
             class="text-base hover-color"
             style="margin-left:0px; margin-right: 10px; border-bottom: 2px dashed;"
@@ -69,7 +69,7 @@ const uniqueTags = [
       ))
     }
     <div style="height: 20px;"></div>
-    <ul>
+    <ul style="padding-left: 0.25rem">
       {
         page.data.map((post: any) => (
           <li>

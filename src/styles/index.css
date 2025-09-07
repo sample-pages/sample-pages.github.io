@@ -250,7 +250,8 @@ html, body {
   opacity: 0;               /* 初期は非表示 */
   pointer-events: none;     
   transition: opacity 0.3s ease;
-  background-color: rgba(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(20px);
   margin: 0;      /* ← 追加 */
   padding: 0;
 }
@@ -570,7 +571,7 @@ img {
     top: 100%;
     left: 0;
     width: 100%;
-    height: 10px; /* サブメニューとの間の余白分 */
+    height: 15px; /* サブメニューとの間の余白分 */
   }
 
   
@@ -582,7 +583,7 @@ img {
   .dropdown-content {
     display: none; /* 初期は非表示 */
     position: absolute;
-    top: 105%; /* 親要素の下に配置 */
+    top: 130%; /* 親要素の下に配置 */
     left: 0;
     background-color: #b94047;
     width: 100%;
@@ -590,7 +591,9 @@ img {
     border-radius: 1rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     z-index: 999;
-    padding: 8px 0;
+    padding: 0;
+    overflow: hidden;
+    @apply max-xl:top-[105%];
   }
   
   /* サブメニュー項目 */
@@ -610,6 +613,18 @@ img {
   .dropdown:hover .dropdown-content {
     display: block;
   }
+
+  /* ▼ 一番上の項目をホバーしたとき → 上だけ角丸 */
+.dropdown-content a:first-child:hover {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+/* ▼ 一番下の項目をホバーしたとき → 下だけ角丸 */
+.dropdown-content a:last-child:hover {
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
 
   #stutter {
     scroll-margin-top: 150px; /* 上から80px下にスクロールさせる */
