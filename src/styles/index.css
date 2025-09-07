@@ -595,6 +595,10 @@ img {
     overflow: hidden;
     @apply max-xl:top-[105%];
   }
+
+  .dropdown-content.is-active {
+    display: block;
+  }
   
   /* サブメニュー項目 */
   .dropdown-content a {

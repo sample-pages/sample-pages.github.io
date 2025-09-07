@@ -97,6 +97,29 @@ dropdownLinks.forEach(link => {
         });
       });
 
+      document.addEventListener("DOMContentLoaded", () => {
+  const dropdown = document.querySelector(".dropdown");
+  const dropdownContent = dropdown?.querySelector(".dropdown-content");
+
+  // dropdownがない場合は何もしない
+  if (!dropdown || !dropdownContent) return;
+
+  // ▼ 親メニュークリックでサブメニュー開閉
+  dropdown.addEventListener("click", (e) => {
+    e.stopPropagation();
+    dropdownContent.classList.toggle("is-active");
+  });
+
+  // ▼ 画面クリックでサブメニューを閉じる
+  document.addEventListener("click", (e) => {
+  if (!dropdown.contains(e.target as Node)) {
+    dropdownContent.classList.remove("is-active");
+  }
+});
+});
+
+
+
 
       document.addEventListener("DOMContentLoaded", () => {
   const topbars = document.querySelectorAll(".topbar");
