@@ -74,13 +74,15 @@ html, body {
 }
 
 .header_bcolor {
-  background-color: #ffffff;
-  background: rgba(255, 255, 255, 0.3);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
-  background-clip: border-box;
-  backdrop-filter: blur(13px);
-  -webkit-backdrop-filter: blur(13px);
-  transition: .5s;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0.9) 20%,
+    rgba(255, 255, 255, 0.7) 40%,
+    rgba(255, 255, 255, 0.4) 65%,
+    rgba(255, 255, 255, 0.15) 85%,
+    rgba(255, 255, 255, 0) 100%
+  );
 }
 
 
