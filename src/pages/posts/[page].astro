@@ -74,15 +74,12 @@ const uniqueTags = [
           <li>
             {post.frontmatter.update ? (
               <div class="update-content">
-                <i class="ri-calendar-2-line" />
                 <a class="text-sm">{post.frontmatter.date}</a>
                 &nbsp;
-                <i class="ri-loop-left-line" />
                 <a class="text-sm">{post.frontmatter.update}</a>
               </div>
             ) : (
               <div class="no-update-content">
-                <i class="ri-calendar-2-line" />
                 <a class="text-sm">{post.frontmatter.date}</a>
               </div>
             )}

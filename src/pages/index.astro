@@ -61,24 +61,21 @@ const latestPosts = sortedPosts.slice(0, 3);
   </div>
   -->
 
-    <div style="height: 1030px;"></div>
+    <div style="height: 100px;"></div>
     <span class="midashi mb-4">お知らせ</span>
     <div style="height: 10px;"></div>
-    <ul style="padding-left: 0.25rem">
+    <ul style="margin-left: 0.25rem; margin-right: 0.25rem;">
       {
         latestPosts.map((post) => (
           <li>
             {post.frontmatter.update ? (
               <div class="update-content">
-                <i class="ri-calendar-2-line" />
                 <a class="text-sm">{post.frontmatter.date}</a>
                 &nbsp;
-                <i class="ri-loop-left-line" />
                 <a class="text-sm">{post.frontmatter.update}</a>
               </div>
             ) : (
               <div class="no-update-content">
-                <i class="ri-calendar-2-line" />
                 <a class="text-sm">{post.frontmatter.date}</a>
               </div>
             )}

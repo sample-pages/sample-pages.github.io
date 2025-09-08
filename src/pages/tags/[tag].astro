@@ -69,7 +69,6 @@ const filteredPosts: any = posts.filter((post: any) =>
           <li>
             {post.frontmatter.update ? (
               <div class="update-content">
-                <i class="ri-calendar-2-line" />
                 <a class="text-sm">{post.frontmatter.date}</a>
                 &nbsp;
                 <i class="ri-loop-left-line" />
@@ -77,7 +76,6 @@ const filteredPosts: any = posts.filter((post: any) =>
               </div>
             ) : (
               <div class="no-update-content">
-                <i class="ri-calendar-2-line" />
                 <a class="text-sm">{post.frontmatter.date}</a>
               </div>
             )}

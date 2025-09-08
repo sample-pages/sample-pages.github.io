@@ -25,10 +25,8 @@ const { frontmatter } = Astro.props;
         {
           frontmatter.update ? (
             <div class="update-content">
-              <i class="ri-calendar-2-line" />
               <a class="text-sm lg:text-base">{frontmatter.date}</a>
               &nbsp;
-              <i class="ri-loop-left-line" />
               <a class="text-sm lg:text-base">{frontmatter.update}</a>
               <div style="height: 5px;" />
               {frontmatter.tags && frontmatter.tags.length > 0 && (
@@ -47,7 +45,6 @@ const { frontmatter } = Astro.props;
             </div>
           ) : (
             <div class="no-update-content">
-              <i class="ri-calendar-2-line" />
               <a class="text-sm lg:text-base">{frontmatter.date}</a>
               <div style="height: 5px;" />
               {frontmatter.tags && frontmatter.tags.length > 0 && (
