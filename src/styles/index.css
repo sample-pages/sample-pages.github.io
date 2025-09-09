@@ -121,6 +121,7 @@ html, body {
     font-family: "Zen Kaku Gothic New", sans-serif;
     font-weight: 500;
     font-size: 1.6rem;
+    @apply max-lg:text-xl;
 }
 
 .hover-color:hover {
