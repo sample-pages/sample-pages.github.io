@@ -720,6 +720,12 @@ html, body {
   overscroll-behavior-y: none;
 }
 
+.inter {
+  font-family: "Inter", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .kaisei-opti-regular {
   font-family: "Kaisei Opti", serif;
   font-weight: 400;
@@ -727,12 +733,13 @@ html, body {
 }
 
 .back-blur {
-  -webkit-text-stroke: 0px #ffffff;
+  /*-webkit-text-stroke: 0px #ffffff;
   text-shadow:
     0 0 5px #fff,
     0 0 10px #fff,
     0 0 15px #fff,
     0 0 20px #fff;
+  */
 }
 
 .kiwi-maru-regular {
@@ -764,7 +771,8 @@ html, body {
 }
 
 .header_bcolor {
-  background: linear-gradient(
+  background-color: rgba(230, 82, 42, 1);
+  /*background: linear-gradient(
     to bottom,
     rgba(255, 255, 255, 1) 0%,
     rgba(255, 255, 255, 0.9) 20%,
@@ -772,7 +780,7 @@ html, body {
     rgba(255, 255, 255, 0.4) 65%,
     rgba(255, 255, 255, 0.15) 85%,
     rgba(255, 255, 255, 0) 100%
-  );
+  );*/
 }
 
 .footer_bcolor {
@@ -1377,7 +1385,7 @@ img {
   padding-bottom: 0.5rem;
   padding-left: 0.75rem;
   padding-right: 0.75rem;
-  color: #000000;
+  color: #ffffff;
   text-align: center;
 }
 
