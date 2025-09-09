@@ -622,6 +622,18 @@ html[data-theme="light"] .text-color {
   width: 2.5rem;
 }
 
+.w-\[120vw\]{
+  width: 120vw;
+}
+
+.w-\[100vw\]{
+  width: 100vw;
+}
+
+.max-w-none{
+  max-width: none;
+}
+
 .grow{
   flex-grow: 1;
 }
@@ -662,6 +674,10 @@ html[data-theme="light"] .text-color {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.5rem * var(--tw-space-x-reverse));
   margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.overflow-x-hidden{
+  overflow-x: hidden;
 }
 
 .p-2{
@@ -1607,6 +1623,34 @@ img {
     margin-right: 0.625rem;
   }
 
+  .max-xl\:ml-\[-10vw\]{
+    margin-left: -10vw;
+  }
+
+  .max-xl\:ml-\[-40vw\]{
+    margin-left: -40vw;
+  }
+
+  .max-xl\:ml-\[-30vw\]{
+    margin-left: -30vw;
+  }
+
+  .max-xl\:w-\[120vw\]{
+    width: 120vw;
+  }
+
+  .max-xl\:w-\[200vw\]{
+    width: 200vw;
+  }
+
+  .max-xl\:w-\[150vw\]{
+    width: 150vw;
+  }
+
+  .max-xl\:w-\[160vw\]{
+    width: 160vw;
+  }
+
   .max-xl\:text-sm{
     font-size: 0.875rem;
     line-height: 1.25rem;
@@ -1614,12 +1658,24 @@ img {
 }
 
 @media not all and (min-width: 1024px){
+  .max-lg\:ml-\[-30vw\]{
+    margin-left: -30vw;
+  }
+
+  .max-lg\:w-\[160vw\]{
+    width: 160vw;
+  }
+
   .max-lg\:gap-10{
     gap: 2.5rem;
   }
 }
 
 @media (min-width: 1024px){
+  .lg\:w-\[100vw\]{
+    width: 100vw;
+  }
+
   .lg\:text-base{
     font-size: 1rem;
     line-height: 1.5rem;
@@ -1634,6 +1690,10 @@ img {
 @media (min-width: 1280px){
   .xl\:mr-8{
     margin-right: 2rem;
+  }
+
+  .xl\:w-\[100vw\]{
+    width: 100vw;
   }
 
   .xl\:text-base{
