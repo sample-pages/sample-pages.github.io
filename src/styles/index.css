@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Mochiy+Pop+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=M+PLUS+Rounded+1c&family=Mochiy+Pop+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kaisei+Opti&family=Kiwi+Maru&family=M+PLUS+Rounded+1c&family=Mochiy+Pop+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Zen+Kaku+Gothic+New:wght@500;700&family=Zen+Maru+Gothic&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -13,7 +14,7 @@
 
     :root,
     html[data-theme="light"] {
-      background-color: #f3f3f3;
+      background-color: #ffebeb;
     }
 
     html[data-theme="light"] .text-color {
@@ -24,6 +25,12 @@
 
 html, body {
     overscroll-behavior-y: none;
+}
+
+.zen-kaku-gothic-new {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 500;
+  font-style: normal;
 }
 
 .inter {
@@ -81,7 +88,7 @@ html, body {
 }
 
 .header_bcolor {
-  background-color: rgba(230, 82, 42, 1);
+  background-color: rgb(255, 255, 255);
   /*background: linear-gradient(
     to bottom,
     rgba(255, 255, 255, 1) 0%,
@@ -111,7 +118,7 @@ html, body {
 }
 
 .midashi {
-    font-family: "Kaisei Opti", sans-serif;
+    font-family: "Zen Kaku Gothic New", sans-serif;
     font-weight: 500;
     font-size: 1.6rem;
 }
@@ -532,7 +539,7 @@ img {
     padding-bottom: 0.5rem;
     padding-left: 0.75rem;
     padding-right: 0.75rem;
-    color: #ffffff;
+    color: #3e3b3b;
     text-align: center;
 }
 
@@ -581,9 +588,9 @@ img {
   .dropdown-content {
     display: none; /* 初期は非表示 */
     position: absolute;
-    top: 130%; /* 親要素の下に配置 */
+    top: 110%; /* 親要素の下に配置 */
     left: 0;
-    background-color: #b94047;
+    background-color: #bd343a;
     width: 100%;
     border: 1px solid #ddd;
     border-radius: 1rem;
