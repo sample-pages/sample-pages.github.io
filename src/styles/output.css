@@ -614,6 +614,22 @@ html[data-theme="light"] .text-color {
   height: 2.5rem;
 }
 
+.h-80{
+  height: 20rem;
+}
+
+.h-\[600px\]{
+  height: 600px;
+}
+
+.h-\[540px\]{
+  height: 540px;
+}
+
+.h-\[500px\]{
+  height: 500px;
+}
+
 .min-h-screen{
   min-height: 100vh;
 }
@@ -1637,6 +1653,18 @@ img {
     margin-left: -70vw;
   }
 
+  .max-lg\:h-80{
+    height: 20rem;
+  }
+
+  .max-lg\:h-\[500px\]{
+    height: 500px;
+  }
+
+  .max-lg\:h-\[300px\]{
+    height: 300px;
+  }
+
   .max-lg\:w-\[240vw\]{
     width: 240vw;
   }
@@ -1657,6 +1685,10 @@ img {
 }
 
 @media (min-width: 1024px){
+  .lg\:h-\[500px\]{
+    height: 500px;
+  }
+
   .lg\:w-\[100vw\]{
     width: 100vw;
   }
