@@ -6,17 +6,22 @@ const { frontmatter } = Astro.props;
 
 <Layout title=`${frontmatter.title}｜第8回うぃーすた全国交流会`>
   <div class="text-color margin-contents">
+    <div style="height: 10px;"></div>
+    <div
+      class="text-color margin-contents bg-white rounded-3xl shadow-md"
+      style="padding: 30px; max-width: 900px; width: 100%;"
+    >
     <div class="flex">
       <a
         href="#"
         onclick="history.back(); return false;"
-        class="font-body font-medium hover-color"
+        class="zen-kaku-gothic-new font-medium hover-color"
         style="margin-left: 10px; margin-right: 10px; display: flex; align-items: center; font-size: 15px;"
         ><i class="ri-arrow-left-line" style="font-size: 20px;"></i>&nbsp;戻る</a
       >
     </div>
     <div style="height: 20px;"></div>
-    <div class="text-font text-base lg:text-lg">
+    <div class="zen-kaku-gothic-new text-base lg:text-lg">
       <span class="font-medium">
         {frontmatter.title}
       </span>
@@ -74,12 +79,14 @@ const { frontmatter } = Astro.props;
       <div class="flex items-center justify-center">
         <a
           href="#page-top"
-          class="flex items-center justify-center font-body font-medium page-top hover-color"
-          style="margin-bottom: 80px; font-size: 15px;"
+          class="flex items-center justify-center zen-kaku-gothic-new font-medium page-top hover-color"
+          style="margin-bottom: 10px; font-size: 15px;"
           ><i class="ri-arrow-turn-forward-line" style="font-size: 20px;"
           ></i>&nbsp;&nbsp;トップに戻る</a
         >
       </div>
     </div>
   </div>
+  </div>
+  <div style="height: 70px;"></div>
 </Layout>
