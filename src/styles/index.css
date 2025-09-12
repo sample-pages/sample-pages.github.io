@@ -363,6 +363,14 @@ body {
     @apply sm:hidden;
 }
 
+.resp-lg-g {
+  @apply lg:hidden;
+}
+
+.resp-lg-f {
+  @apply max-lg:hidden;
+}
+
 .link a {
     color: #0066ff;
     border-bottom: 2px dashed;
@@ -546,6 +554,16 @@ img {
     padding-right: 0.75rem;
     color: #3e3b3b;
     text-align: center;
+}
+
+.sche-card-box {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0rem;
+  padding-right: 0.75rem;
+  gap: 0.3rem;
+  color: #3e3b3b;
+  text-align: center;
 }
 
 .sche-box {
