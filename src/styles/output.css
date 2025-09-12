@@ -606,24 +606,12 @@ html[data-theme="light"] .text-color {
   margin-right: 1rem;
 }
 
-.mr-6{
-  margin-right: 1.5rem;
-}
-
-.mt-2{
-  margin-top: 0.5rem;
+.mr-8{
+  margin-right: 2rem;
 }
 
 .mt-4{
   margin-top: 1rem;
-}
-
-.mt-3{
-  margin-top: 0.75rem;
-}
-
-.mt-3\.5{
-  margin-top: 0.875rem;
 }
 
 .block{
@@ -674,22 +662,12 @@ html[data-theme="light"] .text-color {
   align-items: center;
 }
 
-.justify-start{
-  justify-content: flex-start;
-}
-
 .justify-center{
   justify-content: center;
 }
 
 .gap-3{
   gap: 0.75rem;
-}
-
-.space-x-2 > :not([hidden]) ~ :not([hidden]){
-  --tw-space-x-reverse: 0;
-  margin-right: calc(0.5rem * var(--tw-space-x-reverse));
-  margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .space-y-2 > :not([hidden]) ~ :not([hidden]){
@@ -1576,7 +1554,7 @@ img {
   top: 110%;
   /* 親要素の下に配置 */
   left: 0;
-  background-color: #bd343a;
+  background-color: #cd545a;
   width: 100%;
   border: 1px solid #ddd;
   border-radius: 1rem;
@@ -1607,7 +1585,7 @@ img {
 }
 
 .dropdown-content a:hover {
-  background-color: #c66565;
+  background-color: #e38f8f;
   /* ホバー時に薄い青に */
 }
 
@@ -1740,14 +1718,14 @@ img {
     margin-right: 0.625rem;
   }
 
-  .max-xl\:text-sm{
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
-
   .max-xl\:text-base{
     font-size: 1rem;
     line-height: 1.5rem;
+  }
+
+  .max-xl\:text-sm{
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -1790,11 +1768,6 @@ img {
 @media (min-width: 1280px){
   .xl\:mr-8{
     margin-right: 2rem;
-  }
-
-  .xl\:text-base{
-    font-size: 1rem;
-    line-height: 1.5rem;
   }
 
   .xl\:text-lg{

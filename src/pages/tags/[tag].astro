@@ -50,7 +50,7 @@ const filteredPosts: any = posts.filter((post: any) =>
 ---
 
 <Layout title=`タグ: ${tag}｜第8回うぃーすた全国交流会`>
-  <div class="margin-contents text-color text-font">
+  <div class="margin-contents text-color zen-kaku-gothic-new">
     <div class="flex">
       <a
         href="#"
@@ -61,7 +61,7 @@ const filteredPosts: any = posts.filter((post: any) =>
       >
     </div>
     <div style="height: 20px;"></div>
-    <span class="midashi mb-4">タグ: {tag}</span>
+    <span class="midashi">タグ: {tag}</span>
     <div style="height: 20px;"></div>
     <ul style="padding-left: 0.25rem">
       {
@@ -76,10 +76,10 @@ const filteredPosts: any = posts.filter((post: any) =>
               </div>
             ) : (
               <div class="no-update-content">
-                <a class="text-sm">{post.frontmatter.date}</a>
+                <a class="text-base max-lg:text-sm">{post.frontmatter.date}</a>
               </div>
             )}
-            <a class="text-base font-medium hover-color" href={post.url}>
+            <a class="text-lg max-lg:text-base font-medium hover-color" href={post.url}>
               {post.frontmatter.title}
             </a>
             <br />

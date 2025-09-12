@@ -613,7 +613,7 @@ img {
     position: absolute;
     top: 110%; /* 親要素の下に配置 */
     left: 0;
-    background-color: #bd343a;
+    background-color: #cd545a;
     width: 100%;
     border: 1px solid #ddd;
     border-radius: 1rem;
@@ -638,7 +638,7 @@ img {
   }
   
   .dropdown-content a:hover {
-    background-color: #c66565; /* ホバー時に薄い青に */
+    background-color: #e38f8f; /* ホバー時に薄い青に */
   }
   
   /* ▼ 親にホバーしたらサブメニュー表示 */
