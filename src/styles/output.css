@@ -1201,6 +1201,12 @@ body {
   }
 }
 
+@media not all and (min-width: 640px){
+  .resp-sm-g{
+    display: none;
+  }
+}
+
 .resp-sm-f{
   display: block;
 }

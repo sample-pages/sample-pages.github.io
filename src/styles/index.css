@@ -352,6 +352,10 @@ body {
     @apply xl:hidden;
 }
 
+.resp-sm-g {
+  @apply max-sm:hidden;
+}
+
 .resp-sm-f {
     @apply block;
     @apply sm:hidden;
