@@ -180,12 +180,6 @@ body {
     border-radius: 2px;
     transition: all 0.3s ease;
     transform-origin: center;
-    box-shadow:
-    0 0 5px #fff,
-    0 0 10px #fff,
-    0 0 15px #fff,
-    0 0 20px #fff,
-    0 0 30px #fff;
   }
   
   .burger span:nth-child(1) {

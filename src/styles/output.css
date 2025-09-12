@@ -959,12 +959,6 @@ body {
   border-radius: 2px;
   transition: all 0.3s ease;
   transform-origin: center;
-  box-shadow:
-    0 0 5px #fff,
-    0 0 10px #fff,
-    0 0 15px #fff,
-    0 0 20px #fff,
-    0 0 30px #fff;
 }
 
 .burger span:nth-child(1) {
@@ -1716,14 +1710,6 @@ img {
 @media not all and (min-width: 1280px){
   .max-xl\:mr-2\.5{
     margin-right: 0.625rem;
-  }
-
-  .max-xl\:mr-2{
-    margin-right: 0.5rem;
-  }
-
-  .max-xl\:mt-2\.5{
-    margin-top: 0.625rem;
   }
 
   .max-xl\:mt-0\.5{
