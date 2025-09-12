@@ -1489,7 +1489,7 @@ img {
   padding-bottom: 0.5rem;
   padding-left: 0.75rem;
   padding-right: 0.75rem;
-  color: #3e3b3b;
+  color: #000000;
   text-align: center;
 }
 
@@ -1718,6 +1718,18 @@ img {
     margin-right: 0.625rem;
   }
 
+  .max-xl\:mr-2{
+    margin-right: 0.5rem;
+  }
+
+  .max-xl\:mt-2\.5{
+    margin-top: 0.625rem;
+  }
+
+  .max-xl\:mt-0\.5{
+    margin-top: 0.125rem;
+  }
+
   .max-xl\:text-base{
     font-size: 1rem;
     line-height: 1.5rem;
@@ -1768,6 +1780,10 @@ img {
 @media (min-width: 1280px){
   .xl\:mr-8{
     margin-right: 2rem;
+  }
+
+  .xl\:mt-1{
+    margin-top: 0.25rem;
   }
 
   .xl\:text-lg{
