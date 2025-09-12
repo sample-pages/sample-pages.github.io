@@ -106,7 +106,7 @@ body {
 
 
 .footer_bcolor {
-    background-color: #efe5c0;
+    background-color: #ffd7d7;
 }
 
 .header_tcolor {
@@ -317,7 +317,7 @@ body {
 }
 
 .divider-horizontal {
-    border-top: 0.5px solid #d2d2d2;
+    border-top: 0.5px solid rgb(156 163 175);
     max-width: 54rem;
     margin: 5px auto 15px;
     width: 100%;
