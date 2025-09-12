@@ -2058,6 +2058,14 @@ img {
     bottom: 2rem;
   }
 
+  .max-sm\:right-4{
+    right: 1rem;
+  }
+
+  .max-sm\:bottom-4{
+    bottom: 1rem;
+  }
+
   .max-sm\:mt-4{
     margin-top: 1rem;
   }
