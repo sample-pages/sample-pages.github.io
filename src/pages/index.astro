@@ -92,10 +92,10 @@ const latestPosts = sortedPosts.slice(0, 3);
               </div>
             ) : (
               <div class="no-update-content">
-                <a class="text-base max-lg:text-sm">{post.frontmatter.date}</a>
+                <a class="text-base max-lg:text-xs">{post.frontmatter.date}</a>
               </div>
             )}
-            <a class="text-lg max-lg:text-base font-medium hover-color" href={post.url}>
+            <a class="text-lg max-lg:text-sm font-medium hover-color" href={post.url}>
               {post.frontmatter.title}
             </a>
             <br />
@@ -109,9 +109,9 @@ const latestPosts = sortedPosts.slice(0, 3);
     <div class="flex items-center justify-center" style="margin-bottom: 10px;">
       <a href="/posts/1"
          class="text-base max-xl:text-sm flex items-center justify-center 
-                bg-black text-white rounded-3xl px-6 py-3 hover:bg-gray-500 transition">
+                bg-black text-white rounded-3xl px-5 py-3 hover:bg-gray-500 transition">
         すべて見る&nbsp;
-        <i class="ri-arrow-right-line" style="font-size: 24px;"></i>
+        <i class="ri-arrow-right-line" style="font-size: 20px;"></i>
       </a>
     </div>
     </div>

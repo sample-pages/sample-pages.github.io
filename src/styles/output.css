@@ -746,6 +746,16 @@ html[data-theme="light"] .text-color {
   padding-bottom: 0.75rem;
 }
 
+.px-4{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.px-5{
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
 .text-center{
   text-align: center;
 }
@@ -944,7 +954,7 @@ body {
 
 @media not all and (min-width: 1024px){
   .midashi{
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     line-height: 1.75rem;
   }
 }
@@ -1813,6 +1823,11 @@ img {
   .max-lg\:text-sm{
     font-size: 0.875rem;
     line-height: 1.25rem;
+  }
+
+  .max-lg\:text-xs{
+    font-size: 0.75rem;
+    line-height: 1rem;
   }
 }
 
