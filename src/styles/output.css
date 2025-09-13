@@ -696,6 +696,22 @@ html[data-theme="light"] .text-color {
   border-radius: 9999px;
 }
 
+.rounded-\[50px\]{
+  border-radius: 50px;
+}
+
+.rounded-\[px\]{
+  border-radius: px;
+}
+
+.rounded-\[30px\]{
+  border-radius: 30px;
+}
+
+.rounded-\[40px\]{
+  border-radius: 40px;
+}
+
 .border-b{
   border-bottom-width: 1px;
 }
@@ -736,24 +752,14 @@ html[data-theme="light"] .text-color {
   padding: 1rem;
 }
 
-.px-6{
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+.px-5{
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
 .py-3{
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-}
-
-.px-4{
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-.px-5{
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
 }
 
 .text-center{
@@ -976,7 +982,7 @@ body {
   max-width: 56rem;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 1.5rem;
+  padding-top: 1rem;
   padding-bottom: 1rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem
@@ -1813,11 +1819,6 @@ img {
 
   .max-lg\:gap-10{
     gap: 2.5rem;
-  }
-
-  .max-lg\:text-base{
-    font-size: 1rem;
-    line-height: 1.5rem;
   }
 
   .max-lg\:text-sm{
