@@ -745,3 +745,38 @@ img {
    50%{bottom:5%;}
    00%{bottom:1%;}
 }
+
+/* CSS */
+/* 基本（共通） */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 600ms ease, transform 600ms ease;
+  will-change: opacity, transform;
+}
+
+/* 発火時のクラス */
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* バリエーション例 */
+.reveal.fade-up { /* デフォルトで下からフェードイン */ }
+.reveal.slide-left {
+  transform: translateX(-30px);
+}
+.reveal.slide-left.is-visible {
+  transform: none;
+}
+
+/* ゆっくりにしたい・速くしたいは transition-duration を変更 */
+
+/* prefers-reduced-motion 対応（アニメーションを無効に） */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
+}

@@ -13,6 +13,28 @@ const sortedPosts = nonDraftPosts.sort((a, b) => {
 const latestPosts = sortedPosts.slice(0, 3);
 ---
 
+<script>
+  const revealElements = document.querySelectorAll('.reveal');
+
+const io = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('is-visible');
+      // 一度だけアニメーションさせるなら unobserve（コメントアウトすると何度でも発火）
+      observer.unobserve(entry.target);
+    } else {
+      // もしスクロールで再度非表示→再表示したいならこの行を有効化
+      // entry.target.classList.remove('is-visible');
+    }
+  });
+}, {
+  threshold: 0.15,           // 15% 見えたら発火
+  rootMargin: '0px 0px -10% 0px' // 少し早めに発火させたい場合
+});
+
+revealElements.forEach(el => io.observe(el));
+</script>
+
 <Layout title="ホーム｜第8回うぃーすた全国交流会">
   <a href="/register/"
   class="fixed sm:right-14 sm:bottom-14 max-sm:right-4 max-sm:bottom-4 sm:w-32 sm:h-32 max-sm:w-24 max-sm:h-24 rounded-full bg-red-700 text-white shadow-xl flex flex-col items-center justify-center z-50
@@ -75,8 +97,8 @@ const latestPosts = sortedPosts.slice(0, 3);
   -->
 
     <div
-      class="text-color margin-contents bg-white rounded-[40px] shadow-md"
-      style="padding: 24px; max-width: 900px; width: 100%;"
+      class="reveal fade-up max-lg:p-6 lg:p-8 text-color margin-contents bg-white rounded-[40px] shadow-md"
+      style="max-width: 900px; width: 100%;"
     >
     <span class="midashi mb-4">お知らせ</span>
     <div style="height: 10px;"></div>
