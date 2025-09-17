@@ -1863,6 +1863,18 @@ img {
     padding: 1.5rem;
   }
 
+  .max-lg\:pb-6{
+    padding-bottom: 1.5rem;
+  }
+
+  .max-lg\:pb-5{
+    padding-bottom: 1.25rem;
+  }
+
+  .max-lg\:pb-4{
+    padding-bottom: 1rem;
+  }
+
   .max-lg\:text-sm{
     font-size: 0.875rem;
     line-height: 1.25rem;
