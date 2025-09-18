@@ -1874,6 +1874,14 @@ img {
     right: 1.5rem;
   }
 
+  .max-lg\:right-5{
+    right: 1.25rem;
+  }
+
+  .max-lg\:bottom-5{
+    bottom: 1.25rem;
+  }
+
   .max-lg\:mt-4{
     margin-top: 1rem;
   }
