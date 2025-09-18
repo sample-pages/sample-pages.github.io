@@ -53,6 +53,7 @@
           burger?.classList.toggle("is-active");
           close?.classList.toggle("is-active");
           menu?.classList.toggle("is-active");
+          document.body.classList.toggle("no-scroll"); // ← ここ追加
         });
       }
 
@@ -61,6 +62,7 @@
           burger?.classList.remove("is-active");
           close?.classList.remove("is-active");
           menu?.classList.remove("is-active");
+          document.body.classList.remove("no-scroll"); // ← ここ追加
         });
       }
 
@@ -230,9 +232,9 @@ dropdownLinks.forEach(link => {
       </a>
     </nav>
   </div>
-  <nav class="menu" id="menu">
+  <nav class="menu" style="padding-top: 120px; padding-bottom: 120px;" id="menu">
     <button id="close" class="burger is-active"></button>
-    <div class="card-header pic-image dropdown" style="padding-top: 115px;">
+    <div class="card-header pic-image dropdown">
       <a class="back-blur" href="/about/">
         <div class="card-box">
           <p class="card-title" style="padding: 0.5rem;">うぃーすたについて</p>

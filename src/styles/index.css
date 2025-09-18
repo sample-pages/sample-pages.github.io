@@ -252,6 +252,7 @@ body {
   gap: 1.5rem;
   width: 100vw;
   height: 100vh;
+  overflow-y: auto; /* メニュー内だけスクロール可能 */
   z-index: 999;
   opacity: 0;               /* 初期は非表示 */
   pointer-events: none;     
@@ -779,4 +780,10 @@ img {
     opacity: 1;
     transform: none;
   }
+}
+
+/* body のスクロールを止める用クラス */
+.no-scroll {
+  overflow: hidden;
+  height: 100vh; /* 念のため高さも固定 */
 }

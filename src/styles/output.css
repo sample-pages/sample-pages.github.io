@@ -1096,6 +1096,8 @@ body {
   gap: 1.5rem;
   width: 100vw;
   height: 100vh;
+  overflow-y: auto;
+  /* メニュー内だけスクロール可能 */
   z-index: 999;
   opacity: 0;
   /* 初期は非表示 */
@@ -1808,10 +1810,12 @@ img {
   }
 }
 
-.hover\:scale-105:hover{
-  --tw-scale-x: 1.05;
-  --tw-scale-y: 1.05;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+/* body のスクロールを止める用クラス */
+
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+  /* 念のため高さも固定 */
 }
 
 .hover\:scale-110:hover{
@@ -1863,16 +1867,8 @@ img {
     padding: 1.5rem;
   }
 
-  .max-lg\:pb-6{
-    padding-bottom: 1.5rem;
-  }
-
   .max-lg\:pb-5{
     padding-bottom: 1.25rem;
-  }
-
-  .max-lg\:pb-4{
-    padding-bottom: 1rem;
   }
 
   .max-lg\:text-sm{
