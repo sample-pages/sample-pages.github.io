@@ -589,6 +589,18 @@ html[data-theme="light"] .text-color {
   z-index: 50;
 }
 
+.z-\[999\]{
+  z-index: 999;
+}
+
+.z-\[1000\]{
+  z-index: 1000;
+}
+
+.z-\[100000\]{
+  z-index: 100000;
+}
+
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
@@ -908,7 +920,6 @@ body {
 .position {
   position: sticky;
   top: 0;
-  z-index: 100000;
 }
 
 .header_bcolor {
@@ -1098,9 +1109,9 @@ body {
   height: 100vh;
   overflow-y: auto;
   /* メニュー内だけスクロール可能 */
-  z-index: 999;
   opacity: 0;
   /* 初期は非表示 */
+  z-index: 999;
   pointer-events: none;
   transition: opacity 0.3s ease;
   background-color: rgba(255, 255, 255, 0.3);
@@ -1855,8 +1866,28 @@ img {
 }
 
 @media not all and (min-width: 1024px){
+  .max-lg\:bottom-6{
+    bottom: 1.5rem;
+  }
+
+  .max-lg\:right-6{
+    right: 1.5rem;
+  }
+
+  .max-lg\:mt-4{
+    margin-top: 1rem;
+  }
+
+  .max-lg\:h-24{
+    height: 6rem;
+  }
+
   .max-lg\:h-\[300px\]{
     height: 300px;
+  }
+
+  .max-lg\:w-24{
+    width: 6rem;
   }
 
   .max-lg\:gap-10{
@@ -1871,86 +1902,62 @@ img {
     padding-bottom: 1.25rem;
   }
 
+  .max-lg\:text-\[12px\]{
+    font-size: 12px;
+  }
+
   .max-lg\:text-sm{
     font-size: 0.875rem;
     line-height: 1.25rem;
+  }
+
+  .max-lg\:text-xl{
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 
   .max-lg\:text-xs{
     font-size: 0.75rem;
     line-height: 1rem;
   }
-}
 
-@media not all and (min-width: 640px){
-  .max-sm\:bottom-4{
-    bottom: 1rem;
-  }
-
-  .max-sm\:right-4{
-    right: 1rem;
-  }
-
-  .max-sm\:mt-4{
-    margin-top: 1rem;
-  }
-
-  .max-sm\:h-24{
-    height: 6rem;
-  }
-
-  .max-sm\:w-24{
-    width: 6rem;
-  }
-
-  .max-sm\:text-\[12px\]{
-    font-size: 12px;
-  }
-
-  .max-sm\:text-xl{
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-  }
-
-  .max-sm\:font-semibold{
+  .max-lg\:font-semibold{
     font-weight: 600;
   }
 }
 
-@media (min-width: 640px){
-  .sm\:bottom-14{
+@media (min-width: 1024px){
+  .lg\:bottom-14{
     bottom: 3.5rem;
   }
 
-  .sm\:right-14{
+  .lg\:right-14{
     right: 3.5rem;
   }
 
-  .sm\:mt-6{
+  .lg\:mt-6{
     margin-top: 1.5rem;
   }
 
-  .sm\:h-32{
+  .lg\:h-32{
     height: 8rem;
   }
 
-  .sm\:w-32{
-    width: 8rem;
-  }
-
-  .sm\:text-2xl{
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-}
-
-@media (min-width: 1024px){
   .lg\:h-\[500px\]{
     height: 500px;
   }
 
+  .lg\:w-32{
+    width: 8rem;
+  }
+
   .lg\:p-8{
     padding: 2rem;
+  }
+
+  .lg\:text-2xl{
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 
   .lg\:text-base{

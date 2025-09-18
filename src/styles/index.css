@@ -90,7 +90,6 @@ body {
 .position {
     position: sticky;
     top: 0;
-    z-index: 100000;
 }
 
 .header_bcolor {
@@ -253,8 +252,8 @@ body {
   width: 100vw;
   height: 100vh;
   overflow-y: auto; /* メニュー内だけスクロール可能 */
-  z-index: 999;
   opacity: 0;               /* 初期は非表示 */
+  z-index: 999;
   pointer-events: none;     
   transition: opacity 0.3s ease;
   background-color: rgba(255, 255, 255, 0.3);
