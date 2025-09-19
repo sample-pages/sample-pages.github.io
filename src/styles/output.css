@@ -589,16 +589,8 @@ html[data-theme="light"] .text-color {
   z-index: 50;
 }
 
-.z-\[999\]{
-  z-index: 999;
-}
-
 .z-\[1000\]{
   z-index: 1000;
-}
-
-.z-\[100000\]{
-  z-index: 100000;
 }
 
 .mx-auto{
@@ -954,7 +946,7 @@ body {
 .midashi {
   font-family: "Zen Kaku Gothic New", sans-serif;
   font-weight: 500;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
 
 @media not all and (min-width: 1024px){
@@ -1866,20 +1858,12 @@ img {
 }
 
 @media not all and (min-width: 1024px){
-  .max-lg\:bottom-6{
-    bottom: 1.5rem;
-  }
-
-  .max-lg\:right-6{
-    right: 1.5rem;
+  .max-lg\:bottom-5{
+    bottom: 1.25rem;
   }
 
   .max-lg\:right-5{
     right: 1.25rem;
-  }
-
-  .max-lg\:bottom-5{
-    bottom: 1.25rem;
   }
 
   .max-lg\:mt-4{
