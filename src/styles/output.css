@@ -928,6 +928,27 @@ html[data-theme="light"] .text-color {
   font-size: 32px;
 }
 
+.text-2xl{
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-\[28px\]{
+  font-size: 28px;
+}
+
+.text-\[24px\]{
+  font-size: 24px;
+}
+
+.text-\[22px\]{
+  font-size: 22px;
+}
+
+.text-\[23px\]{
+  font-size: 23px;
+}
+
 .font-bold{
   font-weight: 700;
 }
