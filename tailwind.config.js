@@ -8,3 +8,8 @@ export default {
   plugins: [],
 }
 
+const config = {
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
+};
