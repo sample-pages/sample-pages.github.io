@@ -2147,6 +2147,54 @@ img {
   transition: opacity 0.5s ease, transform 0.3s ease;
 }
 
+.footer {
+  position: relative;
+  padding: 20px;
+}
+
+.back-to-top {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s, border-color 0.3s, transform 0.3s;
+  /* transform を追加 */
+  border: 1.5px solid #000000;
+  /* ← 黒い縁を追加 */
+}
+
+.back-to-top:hover {
+  background-color: #ffffff;
+  transform: scale(1.2);
+  /* 1.2倍に拡大 */
+}
+
+.back-to-top svg {
+  width: 24px;
+  height: 24px;
+}
+
+.footer-topback {
+  width: 100%;
+  height: 70px;
+  /* ボタン部分の高さ */
+  display: flex;
+  justify-content: flex-end;
+  /* 右上にボタン */
+  align-items: center;
+  background: linear-gradient(to bottom, #ffebeb 50%, #ffd7d7 50%);
+  /* 上半分 #333、下半分 #555 */
+  position: relative;
+}
+
 .hover\:scale-110:hover{
   --tw-scale-x: 1.1;
   --tw-scale-y: 1.1;
@@ -2185,11 +2233,6 @@ img {
   .max-xl\:text-sm{
     font-size: 0.875rem;
     line-height: 1.25rem;
-  }
-
-  .max-xl\:text-xs{
-    font-size: 0.75rem;
-    line-height: 1rem;
   }
 }
 

@@ -2,10 +2,16 @@
 
 ---
 
-<footer class="text-color footer_bcolor zen-kaku-gothic-new">
+<div class="footer-topback">
+  <button id="backToTop" class="back-to-top">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="6 15 12 9 18 15"></polyline>
+    </svg>
+  </button>
+</div>
+<footer class="footer text-color footer_bcolor zen-kaku-gothic-new">
   <div class="flex-col resp-pc-f">
-    <div style="height: 15px;"></div>
-    <div class="flex justify-center items-center p-4">
+    <div class="flex justify-center items-center p-4" style="padding-top: 0px">
       <!-- SNSテキスト -->
       <p class="text-xl mr-5 font-bold">OFFICIAL SNS</p>
     
@@ -58,7 +64,7 @@
   > -->
   <div class="flex-col resp-xl-f">
     <div style="height: 10px;"></div>
-    <div class="flex justify-center items-center p-4">
+    <div class="flex justify-center items-center p-4" style="padding-top: 0px">
       <!-- SNSテキスト -->
       <p class="text-lg mr-4 font-bold">OFFICIAL SNS</p>
     
@@ -103,7 +109,7 @@
     <div style="height: 40px;"></div>
   </div>
 
-  <div class="flex flex-col items-center p-4 space-y-2 resp-sm-f">
+  <div class="flex flex-col items-center p-4 space-y-2 resp-sm-f" style="padding-top: 0px">
     <div style="height: 5px;"></div>
     <!-- 1段目：SNSテキスト -->
     <div>
@@ -153,3 +159,15 @@
   </div>
   
 </footer>
+
+<script>
+  const backToTopButton = document.getElementById('backToTop');
+
+backToTopButton?.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+
+</script>
