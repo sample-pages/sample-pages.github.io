@@ -180,7 +180,7 @@ body {
   font-weight: 600;
   color: #000000;
   overflow: visible; /* はみ出し防止（任意） */
-  @apply max-md:text-[1.4rem];
+  @apply max-md:text-[18px];
 }
 
 .headline-bg {
