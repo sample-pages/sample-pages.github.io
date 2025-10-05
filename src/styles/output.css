@@ -2073,8 +2073,14 @@ img {
   filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.8));
 }
 
-.swiper-button-prev {
-  left: -10px !important;
+@media (max-width: 768px) {
+  .swiper-button-prev {
+    left: -6px !important;
+  }
+
+  .swiper-button-next {
+    right: -6px !important;
+  }
 }
 
 /* Swiperのデフォルト矢印を小さめに */
