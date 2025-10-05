@@ -913,7 +913,7 @@ img {
 .swiper-button-next:active,
 .swiper-button-prev.touch-hover,
 .swiper-button-next.touch-hover {
-  transform: scale(1.2);
+  transform: scale(1.3);
   filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.8));
 }
 
