@@ -650,6 +650,10 @@ html[data-theme="light"] .text-color {
   margin-top: 128px;
 }
 
+.mr-7{
+  margin-right: 1.75rem;
+}
+
 .block{
   display: block;
 }
@@ -947,6 +951,10 @@ html[data-theme="light"] .text-color {
 
 .text-\[23px\]{
   font-size: 23px;
+}
+
+.text-\[20px\]{
+  font-size: 20px;
 }
 
 .font-bold{
