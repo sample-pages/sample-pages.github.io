@@ -91,7 +91,7 @@ const latestPosts = sortedPosts.slice(0, 3);
     <div style="height: 36px;" />
     <div
         class="max-lg:p-6 lg:p-8 text-color margin-contents header_bcolor rounded-[40px] shadow-md"
-        style="max-width: 900px; width: 100%;"
+        style="letter-spacing: .025em; line-height: 1.5; max-width: 900px; width: 100%;"
     >
       <!-- <span class="midashi mb-4">お知らせ</span> -->
     <ul style="margin-left: 0.25rem; margin-right: 0.25rem;">
@@ -109,7 +109,7 @@ const latestPosts = sortedPosts.slice(0, 3);
                   <a class="text-base max-lg:text-[14px]">{post.frontmatter.date}</a>
                 </div>
               )}
-              <a class="text-lg max-lg:text-base font-medium hover-color" href={post.url}>
+              <a class="text-base max-xl:text-sm font-medium hover-color" href={post.url}>
                 {post.frontmatter.title}
               </a>
               <br />
