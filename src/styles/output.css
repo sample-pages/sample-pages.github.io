@@ -1185,9 +1185,9 @@ body {
   /* はみ出し防止（任意） */
 }
 
-@media not all and (min-width: 1024px){
+@media not all and (min-width: 768px){
   .headline2{
-    font-size: 20px;
+    font-size: 1.4rem;
   }
 }
 
