@@ -901,7 +901,9 @@ img {
   }
 
   .swiper-button-prev:hover,
-.swiper-button-next:hover {
+.swiper-button-next:hover,
+.swiper-button-prev:active,
+.swiper-button-next:active {
   transform: scale(1.2);
   filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.8));
 }

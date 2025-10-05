@@ -2066,7 +2066,9 @@ img {
 }
 
 .swiper-button-prev:hover,
-.swiper-button-next:hover {
+.swiper-button-next:hover,
+.swiper-button-prev:active,
+.swiper-button-next:active {
   transform: scale(1.2);
   filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.8));
 }
@@ -2233,24 +2235,12 @@ img {
 }
 
 @media not all and (min-width: 768px){
-  .max-md\:h-\[\]{
-    height: ;
-  }
-
-  .max-md\:h-\[50px\]{
-    height: 50px;
-  }
-
   .max-md\:h-\[60px\]{
     height: 60px;
   }
 }
 
 @media (min-width: 768px){
-  .md\:h-\[80px\]{
-    height: 80px;
-  }
-
   .md\:h-\[90px\]{
     height: 90px;
   }
