@@ -678,6 +678,10 @@ html[data-theme="light"] .text-color {
   height: 2rem;
 }
 
+.h-14{
+  height: 3.5rem;
+}
+
 .min-h-screen{
   min-height: 100vh;
 }
@@ -704,6 +708,14 @@ html[data-theme="light"] .text-color {
 
 .w-full{
   width: 100%;
+}
+
+.w-16{
+  width: 4rem;
+}
+
+.w-14{
+  width: 3.5rem;
 }
 
 .max-w-\[900px\]{
@@ -899,6 +911,23 @@ html[data-theme="light"] .text-color {
   line-height: 1rem;
 }
 
+.text-4xl{
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.text-\[30px\]{
+  font-size: 30px;
+}
+
+.text-\[36px\]{
+  font-size: 36px;
+}
+
+.text-\[32px\]{
+  font-size: 32px;
+}
+
 .font-bold{
   font-weight: 700;
 }
@@ -929,6 +958,10 @@ html[data-theme="light"] .text-color {
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.text-\[\]{
+  color: ;
 }
 
 .opacity-0{
