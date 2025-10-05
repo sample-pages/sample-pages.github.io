@@ -20,8 +20,8 @@
         <div style="display: flex; align-items: center;">
             <img src='/images/logo.png' alt="" class="w-10 h-10" style="margin-left: 0.7rem;"/>
             <div class="card-box flex flex-col leading-none" style="margin-top: 0.25rem;">
-              <span class="font-bold text-start" style="font-size: 16px; margin-left: 0.1rem;">第8回</span>
-              <span class="font-bold text-lg  text-start">うぃーすた全国交流会</span>
+              <span class="font-bold text-start" style="font-size: 17px; margin-left: 0.9rem; line-height: 1.2;">第8回</span>
+              <span class="font-bold text-lg text-start" style="font-size: 18px; margin-left: 0.8rem; line-height: 1.5;">うぃーすた全国交流会</span>
             </div>
             <!--
             <div class="sche-card-box flex flex-col leading-none" style="margin-top: 0.25rem;">
@@ -36,35 +36,50 @@
         <div style="display: flex; align-items: center;">
             <img src='/images/logo.png' alt="" class="w-10 h-10" style="margin-left: 0.7rem;"/>
             <div class="card-box flex flex-col">
-              <span class="text-sm font-bold text-start" style="font-size: 14px; margin-left: 0.1rem;">第8回</span>
-              <span class="text-base font-bold text-start">うぃーすた全国交流会</span>
+              <span class="text-sm font-bold text-start" style="font-size: 14px; margin-left: 0.7rem;">第8回</span>
+              <span class="text-base font-bold text-start" style="font-size: 15px; margin-left: 0.6rem;">うぃーすた全国交流会</span>
             </div>
         </div>
       </a>
     </a>
 
     <script>
-      const burger = document.querySelector("#burger");
-      const close = document.querySelector("#close");
-      const menu = document.querySelector("#menu");
+      const burger = document.querySelector("#burger") as HTMLElement | null;
+      const close = document.querySelector("#close") as HTMLElement | null;
+      const menu = document.querySelector("#menu") as HTMLElement | null;
+      const contactButton = document.querySelector("#contactButton") as HTMLElement | null;
 
       if (burger) {
         burger.addEventListener("click", () => {
-          burger?.classList.toggle("is-active");
+          const isActive = menu?.classList.toggle("is-active"); // メニュー開閉
+          burger.classList.toggle("is-active");
           close?.classList.toggle("is-active");
-          menu?.classList.toggle("is-active");
-          document.body.classList.toggle("no-scroll"); // ← ここ追加
+          document.body.classList.toggle("no-scroll");
+
+          // お問い合わせボタンの表示切替
+          if (contactButton) {
+            if (isActive) {
+              contactButton.style.display = "none";
+            } else {
+              contactButton.style.display = "flex";
+            }
+          }
         });
       }
 
       if (close) {
         close.addEventListener("click", () => {
+          menu?.classList.remove("is-active");
           burger?.classList.remove("is-active");
           close?.classList.remove("is-active");
-          menu?.classList.remove("is-active");
-          document.body.classList.remove("no-scroll"); // ← ここ追加
+          document.body.classList.remove("no-scroll");
+
+          // 閉じたらボタンを再表示
+          if (contactButton) contactButton.style.display = "flex";
         });
       }
+
+
 
       // サブメニュー内のリンククリックでメニューを閉じる
 const dropdownLinks = document.querySelectorAll(".dropdown-content a");
@@ -182,12 +197,31 @@ dropdownLinks.forEach(link => {
             <a href="/about/#westu_koryu">うぃーすた全国交流会とは</a>
           </div>
         </div>
-        
+        <a>
+          <div class="card-box no-select">
+            <p>／</p>
+          </div>
+        </a>
+        <a class="card-header" href="/chukosei/">
+          <div class="card-box">
+            <p class="card-title" style="padding: 0.15rem;">中高生交流会について</p>
+          </div>
+        </a>
+        <a>
+          <div class="card-box no-select">
+            <p>／</p>
+          </div>
+        </a>
         <a class="card-header" href="/posts/1">
           <div class="pic-image">
               <div class="card-box">
                   <p class="card-title" style="padding: 0.15rem;">お知らせ</p>
               </div>
+          </div>
+        </a>
+        <a>
+          <div class="card-box no-select">
+            <p>／</p>
           </div>
         </a>
         <a class="card-header" href="/programs/">
@@ -197,11 +231,21 @@ dropdownLinks.forEach(link => {
               </div>
           </div>
         </a>
+        <a>
+          <div class="card-box no-select">
+            <p>／</p>
+          </div>
+        </a>
         <a class="card-header" href="/attentions/">
           <div class="pic-image">
               <div class="card-box">
                   <p class="card-title" style="padding: 0.15rem;">注意事項</p>
               </div>
+          </div>
+        </a>
+        <a>
+          <div class="card-box no-select">
+            <p>／</p>
           </div>
         </a>
         <a class="card-header" href="/register/">
@@ -211,6 +255,11 @@ dropdownLinks.forEach(link => {
               </div>
           </div>
         </a> 
+        <a>
+          <div class="card-box no-select">
+            <p>／</p>
+          </div>
+        </a>
         <a class="card-header" href="/contact/">
           <div class="pic-image">
               <div class="card-box">
@@ -220,8 +269,8 @@ dropdownLinks.forEach(link => {
         </a>
       </div>
       <a class="resp-pc-g">
-        <div class="pic-image flex items-center justify-center">
-            <div class="card-box">
+        <div class="pic-image flex items-center justify-center" style="margin-right: 0.5rem;">
+            <div class="card-box" >
               <button id="burger" class="burger">
                 <span></span>
                 <span></span>
@@ -232,7 +281,7 @@ dropdownLinks.forEach(link => {
       </a>
     </nav>
   </div>
-  <nav class="menu" style="padding-top: 120px; padding-bottom: 120px;" id="menu">
+  <nav class="menu" style="padding-top: 90px; padding-bottom: 120px;" id="menu">
     <button id="close" class="burger is-active"></button>
     <div class="card-header pic-image dropdown">
       <a class="back-blur" href="/about/">
@@ -246,6 +295,13 @@ dropdownLinks.forEach(link => {
         <a href="/about/#westu_koryu">うぃーすた全国交流会とは</a>
       </div>
     </div>
+    <a class="card-header back-blur" href="/chukosei/">
+      <div class="pic-image">
+          <div class="card-box">
+              <p class="card-title" style="padding: 0.5rem;">中高生交流会について</p>
+          </div>
+      </div>
+    </a>
     <a class="card-header back-blur" href="/posts/1">
       <div class="pic-image">
           <div class="card-box">
