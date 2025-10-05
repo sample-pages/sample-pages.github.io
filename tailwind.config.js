@@ -8,8 +8,11 @@ export default {
   plugins: [],
 }
 
+/** @type {import('tailwindcss').Config} */
 const config = {
   future: {
     hoverOnlyWhenSupported: true,
   },
 };
+
+module.exports = config;
