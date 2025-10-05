@@ -900,8 +900,15 @@ img {
     transition: transform 0.25s ease, filter 0.25s ease;
   }
 
+  /* PC用 hover */
+@media (hover: hover) and (pointer: fine) {
   .swiper-button-prev:hover,
-.swiper-button-next:hover,
+  .swiper-button-next:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.8));
+  }
+}
+
 .swiper-button-prev:active,
 .swiper-button-next:active,
 .swiper-button-prev.touch-hover,
