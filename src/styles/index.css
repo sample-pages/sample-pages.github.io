@@ -961,3 +961,7 @@ img {
 
   -webkit-touch-callout: none; /* iOSの長押しメニュー無効 */
 }
+
+#contactButton {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}

@@ -577,6 +577,10 @@ html[data-theme="light"] .text-color {
   color: #000000;
 }
 
+.pointer-events-none{
+  pointer-events: none;
+}
+
 .visible{
   visibility: visible;
 }
@@ -908,6 +912,14 @@ html[data-theme="light"] .text-color {
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.opacity-0{
+  opacity: 0;
+}
+
+.opacity-100{
+  opacity: 1;
 }
 
 .shadow-md{
@@ -2129,6 +2141,10 @@ img {
   user-drag: none;
   -webkit-touch-callout: none;
   /* iOSの長押しメニュー無効 */
+}
+
+#contactButton {
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .hover\:scale-110:hover{

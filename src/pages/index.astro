@@ -19,7 +19,8 @@ const latestPosts = sortedPosts.slice(0, 3);
   <a id="contactButton" href="/register/"
   class="fixed lg:right-14 lg:bottom-14 max-lg:right-5 max-lg:bottom-5 lg:w-32 lg:h-32 max-lg:w-24 max-lg:h-24 rounded-full bg-red-700 text-white shadow-xl flex flex-col items-center justify-center z-50
    zen-kaku-gothic-new
-  hover:bg-red-800 hover:scale-110 transition-transform transition-all duration-200"
+  hover:bg-red-800 hover:scale-110 transition-transform transition-all duration-200
+  opacity-0 pointer-events-none"
 >
 <span class="lg:mt-6 max-lg:mt-4 max-lg:text-[12px] max-lg:font-semibold">お申し込みは</span>
 <span class="max-lg:text-[12px] max-lg:font-semibold">こちら</span>
@@ -274,6 +275,24 @@ const io = new IntersectionObserver((entries, observer) => {
 });
 
 revealElements.forEach(el => io.observe(el));
+
+const contactButton = document.getElementById('contactButton');
+const scrollThreshold = 100; // このpxを超えたら表示
+
+// 初期状態は非表示
+contactButton?.classList.add('opacity-0', 'pointer-events-none');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > scrollThreshold) {
+    // 表示
+    contactButton?.classList.remove('opacity-0', 'pointer-events-none');
+    contactButton?.classList.add('opacity-100');
+  } else {
+    // 非表示
+    contactButton?.classList.add('opacity-0', 'pointer-events-none');
+    contactButton?.classList.remove('opacity-100');
+  }
+});
 </script>
 
 <script>
