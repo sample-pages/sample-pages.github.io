@@ -2264,6 +2264,10 @@ img {
   .max-md\:h-\[60px\]{
     height: 60px;
   }
+
+  .max-md\:h-\[64px\]{
+    height: 64px;
+  }
 }
 
 @media (min-width: 768px){
