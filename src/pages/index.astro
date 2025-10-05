@@ -291,13 +291,17 @@ const io = new IntersectionObserver((entries, observer) => {
 revealElements.forEach(el => io.observe(el));
 
 const contactButton = document.getElementById('contactButton');
-const scrollThreshold = 100; // このpxを超えたら表示
+
+const minThreshold = 100; // このpxを超えたら表示開始
+const maxThreshold = 1200; // このpxを超えたら非表示
 
 // 初期状態は非表示
 contactButton?.classList.add('opacity-0', 'pointer-events-none');
 
 window.addEventListener('scroll', () => {
-  if (window.scrollY > scrollThreshold) {
+  const scrollY = window.scrollY;
+
+  if (scrollY > minThreshold && scrollY < maxThreshold) {
     // 表示
     contactButton?.classList.remove('opacity-0', 'pointer-events-none');
     contactButton?.classList.add('opacity-100');
@@ -307,6 +311,7 @@ window.addEventListener('scroll', () => {
     contactButton?.classList.remove('opacity-100');
   }
 });
+
 </script>
 
 <script>
