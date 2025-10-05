@@ -7,20 +7,3 @@ export default {
   },
   plugins: [],
 }
-
-/** @type {import('tailwindcss').Config} */
-const config = {
-  future: {
-    hoverOnlyWhenSupported: true,
-  },
-  content: [
-    "./src/**/*.{html,js,ts,jsx,tsx,astro}",
-  ],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-};
-
-module.exports = config;
-
