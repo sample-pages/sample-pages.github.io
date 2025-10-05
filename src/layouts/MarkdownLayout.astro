@@ -78,15 +78,28 @@ const { frontmatter } = Astro.props;
       </div>
       <div class="flex items-center justify-center">
         <a
-          href="#page-top"
-          class="text-sm lg:text-[17px] flex items-center justify-center zen-kaku-gothic-new font-medium page-top hover-color text-sm lg:text-[17px]"
-          style="margin-bottom: 8px;"
-          ><i class="ri-arrow-turn-forward-line" style="font-size: 20px;"
-          ></i>&nbsp;&nbsp;トップに戻る</a
-        >
+  id="backToTop"
+  href="#"
+  class="text-sm lg:text-[17px] flex items-center justify-center zen-kaku-gothic-new font-medium page-top hover-color text-sm lg:text-[17px]"
+  style="margin-bottom: 8px;"
+>
+  <i class="ri-arrow-turn-forward-line" style="font-size: 20px;"></i>&nbsp;&nbsp;トップに戻る
+</a>
       </div>
     </div>
   </div>
   </div>
   <div style="height: 70px;"></div>
 </Layout>
+
+<script>
+  const backToTopButton = document.getElementById('backToTop');
+
+  backToTopButton?.addEventListener('click', (event) => {
+    event.preventDefault(); // ← ← これが重要（デフォルトの # へのジャンプを防止）
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+</script>
