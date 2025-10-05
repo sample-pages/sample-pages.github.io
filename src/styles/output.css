@@ -2186,6 +2186,11 @@ img {
     font-size: 0.875rem;
     line-height: 1.25rem;
   }
+
+  .max-xl\:text-xs{
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
 }
 
 @media not all and (min-width: 1024px){
