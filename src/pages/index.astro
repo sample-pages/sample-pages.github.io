@@ -316,4 +316,16 @@ revealElements.forEach(el => io.observe(el));
 
 new Swiper('.swiper', swiperConfig);
 
+const buttons = document.querySelectorAll('.swiper-button-prev, .swiper-button-next');
+
+buttons.forEach(btn => {
+  btn.addEventListener('touchstart', () => {
+    btn.classList.add('touch-hover'); // タップ開始で拡大
+  });
+  btn.addEventListener('touchend', () => {
+    btn.classList.remove('touch-hover'); // タップ終了で戻す
+  });
+});
+
+
 </script>
