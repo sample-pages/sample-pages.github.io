@@ -1015,3 +1015,20 @@ img {
   /* 上半分 #333、下半分 #555 */
   position: relative;
 }
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px); /* 下から少し浮かび上がるように */
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
