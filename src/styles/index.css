@@ -1005,7 +1005,7 @@ img {
 
 .footer-topback {
   width: 100%;
-  height: 70px; /* ボタン部分の高さ */
+  height: 66px; /* ボタン部分の高さ */
   display: flex;
   justify-content: flex-end; /* 右上にボタン */
   align-items: center;
