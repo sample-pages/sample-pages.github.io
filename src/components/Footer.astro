@@ -163,11 +163,22 @@
 <script>
   const backToTopButton = document.getElementById('backToTop');
 
-backToTopButton?.addEventListener('click', () => {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
-});
+  // クリック（またはタップ）でスムーズスクロール
+  backToTopButton?.addEventListener('click', (e) => {
+    e.preventDefault();
 
+    // スクロールアニメーション
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+
+    // モバイル用：タップ時に一瞬拡大 → 元に戻す
+    backToTopButton.style.transform = 'scale(1.2)';
+    backToTopButton.style.transition = 'transform 0.3s ease';
+    setTimeout(() => {
+      backToTopButton.style.transform = 'scale(1)';
+    }, 200); // 0.2秒後に戻す
+  });
 </script>
+

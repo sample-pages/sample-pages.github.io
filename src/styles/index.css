@@ -988,9 +988,15 @@ img {
   border: 1.5px solid #000000; /* ← 黒い縁を追加 */
 }
 
+@media (hover: hover) and (pointer: fine) {
 .back-to-top:hover {
   background-color: #ffffff;
   transform: scale(1.2); /* 1.2倍に拡大 */
+}
+}
+
+.back-to-top:active {
+  transform: scale(1.2);
 }
 
 .back-to-top svg {
