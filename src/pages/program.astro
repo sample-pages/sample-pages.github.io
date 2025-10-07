@@ -93,7 +93,7 @@ const venueWidths = [150, 150, 150, 150];
     };
 
     let currentDate = "10/12";
-    let eventsList = [];
+    let eventsList: any[] = [];
 
     // イベントブロックを生成
     function renderEvents() {
@@ -135,14 +135,14 @@ const venueWidths = [150, 150, 150, 150];
 
         let baseRow = rows[0]!;
         for (let row of rows) {
-          const rowMinutes = row.dataset.time.split(":").map(Number).reduce((h,m)=>h*60+m);
+          const rowMinutes = row.dataset.time!.split(":").map(Number).reduce((h,m)=>h*60+m);
           if (rowMinutes <= startMinutes) baseRow = row;
           else break;
         }
         const nextRow = baseRow.nextElementSibling || baseRow;
         const baseRect = baseRow.getBoundingClientRect();
         const nextRect = nextRow.getBoundingClientRect();
-        const rowStartMinutes = baseRow.dataset.time.split(":").map(Number).reduce((h,m)=>h*60+m);
+        const rowStartMinutes = baseRow.dataset.time!.split(":").map(Number).reduce((h,m)=>h*60+m);
         const ratio = (startMinutes - rowStartMinutes)/60;
         const topPx = baseRect.top - containerRect.top + ratio*(nextRect.top - baseRect.top) + container.scrollTop;
         const heightPx = (endMinutes - startMinutes)/60 * baseRect.height;
@@ -187,13 +187,13 @@ const venueWidths = [150, 150, 150, 150];
       const rows = [...tbody.querySelectorAll("tr")] as HTMLTableRowElement[];
       let visible = false;
       for (let i=0; i<rows.length-1; i++) {
-        const [sh,sm] = rows[i].dataset.time.split(":").map(Number);
-        const [eh,em] = rows[i+1].dataset.time.split(":").map(Number);
-        const startM = sh*60 + sm;
-        const endM = eh*60 + em;
+        const [sh,sm] = rows[i]!.dataset.time!.split(":").map(Number);
+        const [eh,em] = rows[i+1]!.dataset.time!.split(":").map(Number);
+        const startM = sh!*60 + sm!;
+        const endM = eh!*60 + em!;
         if (currentMinutes >= startM && currentMinutes < endM) {
-          const startRect = rows[i].getBoundingClientRect();
-          const endRect = rows[i+1].getBoundingClientRect();
+          const startRect = rows[i]!.getBoundingClientRect();
+          const endRect = rows[i+1]!.getBoundingClientRect();
           const parentRect = container.getBoundingClientRect();
           const ratio = (currentMinutes - startM)/(endM - startM);
           const offset = startRect.top + ratio*(endRect.top - startRect.top);
@@ -217,13 +217,17 @@ const venueWidths = [150, 150, 150, 150];
 
     // 🔸 日付切り替えボタン処理
     document.querySelectorAll(".date-btn").forEach(btn => {
-      btn.addEventListener("click", () => {
-        document.querySelectorAll(".date-btn").forEach(b => b.classList.remove("bg-blue-300", "text-blue-800"));
-        btn.classList.add("bg-blue-300", "text-blue-800");
-        currentDate = btn.dataset.date;
-        renderEvents();
-      });
-    });
+  const button = btn as HTMLButtonElement;
+  button.addEventListener("click", () => {
+    document.querySelectorAll(".date-btn").forEach(b =>
+      (b as HTMLButtonElement).classList.remove("bg-blue-300", "text-blue-800")
+    );
+    button.classList.add("bg-blue-300", "text-blue-800");
+    currentDate = button.dataset.date!;
+    renderEvents();
+  });
+});
+
 
     const toggle = document.getElementById("dateToggle")! as HTMLInputElement;;
 
