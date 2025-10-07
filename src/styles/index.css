@@ -997,7 +997,7 @@ img {
   align-items: center;
   justify-content: center;
   transition: background-color 0.3s, border-color 0.3s, transform 0.3s; /* transform を追加 */
-  border: 1.5px solid #979797; /* ← 黒い縁を追加 */
+  border: 1.5px solid #000000; /* ← 黒い縁を追加 */
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -1046,7 +1046,7 @@ img {
 }
 
 #currentTimeBar {
-  z-index: 15; /* ヘッダーより低く */
+  z-index: 10; /* ヘッダーより低く */
 }
 
 /* 列の右側に縦線を引く */
@@ -1089,16 +1089,16 @@ td:not(:last-child)::after {
 
 .toggle-button-4 {
   position: relative;
-  width: 260px;       /* 全体も少し広げる */
-  height: 50px;
+  width: 262px;       /* 全体も少し広げる */
+  height: 52px;
   border-radius: 25px;
-  background-color: #75bbff33;
+  background-color: #f9fafb;
   cursor: pointer;
   transition: background-color 0.4s;
 }
 
 .toggle-button-4:has(:checked) {
-  background-color: #ff8d8d33;
+  background-color: #f9fafb;
 }
 
 /* スライダー部分 */
