@@ -1,0 +1,235 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const times = ["11:00","12:00","13:00","14:00","15:00","16:00","17:00","18:00","19:00","20:00","21:00","22:00","23:00"];
+const venues = ["研修室AB", "研修室C", "羽衣青少年センター", "バーベキューガーデン羽衣"];
+const venueWidths = [150, 150, 150, 150];
+---
+
+<Layout title="日程・プログラム｜第8回うぃーすた全国交流会">
+  <div class="text-sm lg:text-base margin-contents text-color zen-kaku-gothic-new" style="margin-bottom: 80px;">
+    <div class="max-lg:p-8 lg:p-10 mt-[128px] lg:mt-[115px] text-color margin-contents header_bcolor rounded-[40px] shadow-md relative" style="max-width: 900px; width: 100%;">
+      <span class="midashi">日程・プログラム</span>
+      <div style="height: 20px;"></div>
+
+      <span class="midashi" id="timetable">タイムテーブル</span>
+      <div style="height: 20px;"></div>
+
+      <div class="flex justify-center my-4">
+        <label class="toggle-button-4 flex items-center">
+          <input type="checkbox" id="dateToggle">
+        </label>
+      </div>
+      
+
+      <div id="tableContainer" class="overflow-auto max-h-[80vh] border rounded-md shadow-md bg-gray-50 relative">
+        <div class="min-w-[600px] relative z-0">
+
+          <table id="timetable" class="border-collapse w-full text-sm relative table-fixed">
+            <thead class="table_color sticky top-0 z-[50]">
+              <tr>
+                <th class="sticky left-0 table_color z-[60] border-b px-4 py-2 text-left text-center w-14"></th>
+                {venues.map((venue, i) => (
+                  <th class="px-4 py-2 text-center text-white font-medium relative border-b"
+                      style={`width: ${venueWidths[i]}px;`}>
+                    {venue}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {times.map(time => (
+                <tr data-time={time} class="h-[60px] border-gray-200">
+                  <td class="absolute sticky text-black text-center left-0 z-[10] px-2 py-2 font-medium">{time}</td>
+                  {venues.map((_, i) => (
+                    <td class="border-t relative px-4 py-2" style={`width: ${venueWidths[i]}px;`}></td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+
+          <!-- イベントブロックレイヤー -->
+          <div id="eventsLayer" class="absolute top-0 left-0 w-full h-full"></div>
+
+          <!-- 現在時刻バー -->
+          <div id="currentTimeBar" class="absolute left-0 right-0 h-[2px] bg-red-500 z-[9999]" style="top:0;"></div>
+          <div id="currentTimeLabel" class="absolute left-1/2 -translate-y-1/2 bg-red-500 text-xs text-white px-2 py-[2px] rounded-full shadow z-[10000]" style="top:0;">現在 --</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- モーダル -->
+  <div id="eventModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-[20000]">
+    <div class="bg-white p-6 rounded-xl shadow-lg max-w-sm w-full relative">
+      <button id="modalClose" class="absolute top-2 right-5 text-gray-500 hover:text-black text-[24px]">&times;</button>
+      <h3 id="modalTitle" class="font-bold text-lg mb-2"></h3>
+      <p id="modalDescription" class="text-sm text-gray-600 whitespace-pre-wrap"></p>
+      <p id="modalTime" class="text-xs text-gray-400 mt-2"></p>
+    </div>
+  </div>
+
+  <script>
+    const container = document.getElementById("tableContainer");
+    const tbody = document.querySelector("#timetable tbody");
+    const eventsLayer = document.getElementById("eventsLayer");
+
+    // 🔸 日付ごとのイベント一覧
+    const eventsData = {
+      "10/12": [
+        { start: "12:30", end: "13:30", venue: "研修室AB", name: "受付", description: "" },
+        { start: "13:30", end: "13:45", venue: "研修室AB", name: "開会式", description: "" },
+        { start: "13:50", end: "16:00", venue: "研修室AB", name: "グループトーク", description: "" },
+        { start: "16:00", end: "17:00", venue: "羽衣青少年センター", name: "チェックイン", description: "" },
+        { start: "17:00", end: "20:00", venue: "バーベキューガーデン羽衣", name: "BBQ", description: "" },
+        { start: "20:00", end: "22:00", venue: "研修室AB", name: "フリータイム", description: "" },
+      ],
+      "10/13": [
+        { start: "08:00", end: "09:00", venue: "羽衣青少年センター", name: "朝食", description: "" },
+        { start: "09:30", end: "11:00", venue: "研修室C", name: "ワークショップ", description: "" },
+        { start: "11:00", end: "12:00", venue: "研修室AB", name: "閉会式", description: "" },
+      ]
+    };
+
+    let currentDate = "10/12";
+    let eventsList = [];
+
+    // イベントブロックを生成
+    function renderEvents() {
+      eventsLayer.innerHTML = "";
+      eventsList = eventsData[currentDate].map(ev => {
+        const div = document.createElement("div");
+        div.className = "absolute bg-white border border-gray-300 text-black px-2 py-2 z-[0] flex flex-col cursor-pointer";
+        const title = document.createElement("div");
+        title.className = "font-medium text-sm";
+        title.textContent = ev.name;
+        const time = document.createElement("div");
+        time.className = "text-xs text-gray-500 mt-1";
+        time.textContent = `${ev.start}〜${ev.end}`;
+        div.appendChild(title);
+        div.appendChild(time);
+        eventsLayer.appendChild(div);
+        ev.div = div;
+        return ev;
+      });
+      positionEvents();
+      setupModal();
+    }
+
+    function positionEvents() {
+      const containerRect = container.getBoundingClientRect();
+      const rows = [...tbody.querySelectorAll("tr")];
+
+      eventsList.forEach(ev => {
+        const venueIndex = ["研修室AB","研修室C","羽衣青少年センター","バーベキューガーデン羽衣"].indexOf(ev.venue);
+        if (venueIndex === -1) return;
+
+        const td = tbody.querySelectorAll("tr:first-child td")[venueIndex + 1];
+        const tdRect = td.getBoundingClientRect();
+
+        const [sh, sm] = ev.start.split(":").map(Number);
+        const [eh, em] = ev.end.split(":").map(Number);
+        const startMinutes = sh*60 + sm;
+        const endMinutes = eh*60 + em;
+
+        let baseRow = rows[0];
+        for (let row of rows) {
+          const rowMinutes = row.dataset.time.split(":").map(Number).reduce((h,m)=>h*60+m);
+          if (rowMinutes <= startMinutes) baseRow = row;
+          else break;
+        }
+        const nextRow = baseRow.nextElementSibling || baseRow;
+        const baseRect = baseRow.getBoundingClientRect();
+        const nextRect = nextRow.getBoundingClientRect();
+        const rowStartMinutes = baseRow.dataset.time.split(":").map(Number).reduce((h,m)=>h*60+m);
+        const ratio = (startMinutes - rowStartMinutes)/60;
+        const topPx = baseRect.top - containerRect.top + ratio*(nextRect.top - baseRect.top) + container.scrollTop;
+        const heightPx = (endMinutes - startMinutes)/60 * baseRect.height;
+        const widthPx = tdRect.width;
+        ev.div.style.top = `${topPx}px`;
+        ev.div.style.left = `${tdRect.left - containerRect.left + container.scrollLeft - 1.5}px`;
+        ev.div.style.width = `${widthPx}px`;
+        ev.div.style.height = `${heightPx}px`;
+      });
+    }
+
+    // モーダル
+    function setupModal() {
+      const modal = document.getElementById("eventModal");
+      const modalTitle = document.getElementById("modalTitle");
+      const modalDescription = document.getElementById("modalDescription");
+      const modalTime = document.getElementById("modalTime");
+      const modalClose = document.getElementById("modalClose");
+
+      eventsList.forEach(ev => {
+        ev.div.addEventListener("click", () => {
+          modalTitle.textContent = ev.name;
+          modalDescription.textContent = ev.description || "詳細情報なし";
+          modalTime.textContent = `時間: ${ev.start}〜${ev.end}`;
+          modal.classList.remove("hidden");
+          modal.classList.add("flex");
+        });
+      });
+
+      modalClose.addEventListener("click", () => modal.classList.add("hidden"));
+      modal.addEventListener("click", e => {
+        if (e.target === modal) modal.classList.add("hidden");
+      });
+    }
+
+    // 現在時刻バー更新
+    const bar = document.getElementById("currentTimeBar");
+    const label = document.getElementById("currentTimeLabel");
+    function updateTimeBar() {
+      const now = new Date();
+      const currentMinutes = now.getHours()*60 + now.getMinutes();
+      const rows = [...tbody.querySelectorAll("tr")];
+      let visible = false;
+      for (let i=0; i<rows.length-1; i++) {
+        const [sh,sm] = rows[i].dataset.time.split(":").map(Number);
+        const [eh,em] = rows[i+1].dataset.time.split(":").map(Number);
+        const startM = sh*60 + sm;
+        const endM = eh*60 + em;
+        if (currentMinutes >= startM && currentMinutes < endM) {
+          const startRect = rows[i].getBoundingClientRect();
+          const endRect = rows[i+1].getBoundingClientRect();
+          const parentRect = container.getBoundingClientRect();
+          const ratio = (currentMinutes - startM)/(endM - startM);
+          const offset = startRect.top + ratio*(endRect.top - startRect.top);
+          const topPos = offset - parentRect.top + container.scrollTop;
+          bar.style.top = `${topPos}px`;
+          label.style.top = `${topPos}px`;
+          label.textContent = `現在 ${String(now.getHours()).padStart(2,"0")}:${String(now.getMinutes()).padStart(2,"0")}`;
+          visible = true;
+          break;
+        }
+      }
+      if (!visible) { bar.style.top = "-9999px"; label.style.top = "-9999px"; }
+    }
+
+    // 初期描画
+    renderEvents();
+    updateTimeBar();
+    setInterval(updateTimeBar, 30000);
+    container.addEventListener("scroll", positionEvents);
+    window.addEventListener("resize", positionEvents);
+
+    // 🔸 日付切り替えボタン処理
+    document.querySelectorAll(".date-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll(".date-btn").forEach(b => b.classList.remove("bg-blue-300", "text-blue-800"));
+        btn.classList.add("bg-blue-300", "text-blue-800");
+        currentDate = btn.dataset.date;
+        renderEvents();
+      });
+    });
+
+    const toggle = document.getElementById("dateToggle");
+
+toggle.addEventListener("change", () => {
+  currentDate = toggle.checked ? "10/13" : "10/12";
+  renderEvents();
+});
+  </script>
+</Layout>

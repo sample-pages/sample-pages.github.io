@@ -742,6 +742,10 @@ img {
     touch-action: manipulation; /* ダブルタップズームやピンチズームを防ぐ */
     position: relative;
   }
+
+  #timetable {
+    scroll-margin-top: 140px; /* 上から80px下にスクロールさせる */
+  }
   
 
   .topbar {
@@ -1039,4 +1043,117 @@ img {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+#currentTimeBar {
+  z-index: 15; /* ヘッダーより低く */
+}
+
+/* 列の右側に縦線を引く */
+th:not(:last-child)::after,
+td:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;                   /* セルの右端に配置 */
+  width: 1px;                 /* 線の太さ */
+  height: 100%;               /* セルの高さいっぱい */
+  background-color: #D1D5DB;  /* Tailwind gray-300 */
+  z-index: -20;                /* 横線より前面に表示 */
+  pointer-events: none;
+}
+
+.sticky-time {
+  position: sticky;
+  left: 0;
+  z-index: 10;
+  background-color: #f9fafb;
+}
+
+/* 横線用の擬似要素 */
+.sticky-time::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;          /* td 下端に配置 */
+  width: 100vw;       /* ビューポート幅いっぱい */
+  height: 1px;        /* 線の太さ */
+  background-color: #e5e7eb;
+  pointer-events: none;
+  z-index: 20;        /* セルの背面に */
+}
+
+.table_color {
+  background-color: #000000;
+}
+
+.toggle-button-4 {
+  position: relative;
+  width: 260px;       /* 全体も少し広げる */
+  height: 50px;
+  border-radius: 25px;
+  background-color: #75bbff33;
+  cursor: pointer;
+  transition: background-color 0.4s;
+}
+
+.toggle-button-4:has(:checked) {
+  background-color: #ff8d8d33;
+}
+
+/* スライダー部分 */
+.toggle-button-4::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 130px;       /* 幅を広げる */
+  height: 42px;
+  border-radius: 21px;
+  background-color: #75bbff;
+  transition: left 0.4s, background-color 0.4s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-button-4:has(:checked)::before {
+  left: 126px;        /* 横幅 - スライダー幅 - 左余白 */
+  background-color: #ff8d8d;
+}
+
+/* 日付表示 */
+.toggle-button-4::after {
+  content: '7月18日(土)';
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  width: 130px;       /* スライダー幅と同じ */
+  height: 42px;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: #fff;
+  transition: left 0.4s, content 0.4s;
+}
+
+.toggle-button-4:has(:checked)::after {
+  content: '7月19日(日)';
+  left: 126px;        /* スライダー右端中央に合わせる */
+  width: 130px;
+}
+
+/* チェックボックス非表示 */
+.toggle-button-4 input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  display: none;
+  margin: 0;
+  padding: 0;
+  width: 0;
+  height: 0;
+  border: none;
 }
