@@ -30,7 +30,7 @@ dependencies:
     specifier: ^0.33.4
     version: 0.33.5
   swiper:
-    specifier: ^8.4.6
+    specifier: ^8.4.7
     version: 8.4.7
   typescript:
     specifier: ^5.4.5

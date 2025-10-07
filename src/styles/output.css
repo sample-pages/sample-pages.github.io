@@ -615,10 +615,6 @@ html[data-theme="light"] .text-color {
   pointer-events: none;
 }
 
-.pointer-events-auto{
-  pointer-events: auto;
-}
-
 .\!visible{
   visibility: visible !important;
 }
@@ -1039,6 +1035,11 @@ html[data-theme="light"] .text-color {
   background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
 }
 
+.bg-blue-300{
+  --tw-bg-opacity: 1;
+  background-color: rgb(147 197 253 / var(--tw-bg-opacity, 1));
+}
+
 .bg-gray-50{
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity, 1));
@@ -1059,18 +1060,9 @@ html[data-theme="light"] .text-color {
   background-color: rgb(185 28 28 / var(--tw-bg-opacity, 1));
 }
 
-.bg-transparent{
-  background-color: transparent;
-}
-
 .bg-white{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
-}
-
-.bg-blue-300{
-  --tw-bg-opacity: 1;
-  background-color: rgb(147 197 253 / var(--tw-bg-opacity, 1));
 }
 
 .bg-opacity-50{
@@ -1199,6 +1191,11 @@ html[data-theme="light"] .text-color {
   color: rgb(0 0 0 / var(--tw-text-opacity, 1));
 }
 
+.text-blue-800{
+  --tw-text-opacity: 1;
+  color: rgb(30 64 175 / var(--tw-text-opacity, 1));
+}
+
 .text-gray-400{
   --tw-text-opacity: 1;
   color: rgb(156 163 175 / var(--tw-text-opacity, 1));
@@ -1227,11 +1224,6 @@ html[data-theme="light"] .text-color {
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
-}
-
-.text-blue-800{
-  --tw-text-opacity: 1;
-  color: rgb(30 64 175 / var(--tw-text-opacity, 1));
 }
 
 .opacity-0{
@@ -2526,7 +2518,7 @@ img {
   justify-content: center;
   transition: background-color 0.3s, border-color 0.3s, transform 0.3s;
   /* transform を追加 */
-  border: 1.5px solid #000000;
+  border: 1.5px solid #979797;
   /* ← 黒い縁を追加 */
 }
 
