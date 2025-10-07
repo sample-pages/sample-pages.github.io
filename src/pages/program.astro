@@ -71,9 +71,9 @@ const venueWidths = [150, 150, 150, 150];
   </div>
 
   <script>
-    const container = document.getElementById("tableContainer");
-    const tbody = document.querySelector("#timetable tbody");
-    const eventsLayer = document.getElementById("eventsLayer");
+    const container = document.getElementById("tableContainer")!;
+    const tbody = document.querySelector("#timetable tbody")!;
+    const eventsLayer = document.getElementById("eventsLayer")!;
 
     // 🔸 日付ごとのイベント一覧
     const eventsData = {
@@ -125,7 +125,7 @@ const venueWidths = [150, 150, 150, 150];
         const venueIndex = ["研修室AB","研修室C","羽衣青少年センター","バーベキューガーデン羽衣"].indexOf(ev.venue);
         if (venueIndex === -1) return;
 
-        const td = tbody.querySelectorAll("tr:first-child td")[venueIndex + 1];
+        const td = tbody.querySelectorAll("tr:first-child td")[venueIndex + 1]!;
         const tdRect = td.getBoundingClientRect();
 
         const [sh, sm] = ev.start.split(":").map(Number);
@@ -133,7 +133,7 @@ const venueWidths = [150, 150, 150, 150];
         const startMinutes = sh*60 + sm;
         const endMinutes = eh*60 + em;
 
-        let baseRow = rows[0];
+        let baseRow = rows[0]!;
         for (let row of rows) {
           const rowMinutes = row.dataset.time.split(":").map(Number).reduce((h,m)=>h*60+m);
           if (rowMinutes <= startMinutes) baseRow = row;
@@ -156,11 +156,11 @@ const venueWidths = [150, 150, 150, 150];
 
     // モーダル
     function setupModal() {
-      const modal = document.getElementById("eventModal");
-      const modalTitle = document.getElementById("modalTitle");
-      const modalDescription = document.getElementById("modalDescription");
-      const modalTime = document.getElementById("modalTime");
-      const modalClose = document.getElementById("modalClose");
+      const modal = document.getElementById("eventModal")!;
+      const modalTitle = document.getElementById("modalTitle")!;
+      const modalDescription = document.getElementById("modalDescription")!;
+      const modalTime = document.getElementById("modalTime")!;
+      const modalClose = document.getElementById("modalClose")!;
 
       eventsList.forEach(ev => {
         ev.div.addEventListener("click", () => {
@@ -179,12 +179,12 @@ const venueWidths = [150, 150, 150, 150];
     }
 
     // 現在時刻バー更新
-    const bar = document.getElementById("currentTimeBar");
-    const label = document.getElementById("currentTimeLabel");
+    const bar = document.getElementById("currentTimeBar")!;
+    const label = document.getElementById("currentTimeLabel")!;
     function updateTimeBar() {
       const now = new Date();
       const currentMinutes = now.getHours()*60 + now.getMinutes();
-      const rows = [...tbody.querySelectorAll("tr")];
+      const rows = [...tbody.querySelectorAll("tr")] as HTMLTableRowElement[];
       let visible = false;
       for (let i=0; i<rows.length-1; i++) {
         const [sh,sm] = rows[i].dataset.time.split(":").map(Number);
@@ -225,7 +225,7 @@ const venueWidths = [150, 150, 150, 150];
       });
     });
 
-    const toggle = document.getElementById("dateToggle");
+    const toggle = document.getElementById("dateToggle")! as HTMLInputElement;;
 
 toggle.addEventListener("change", () => {
   currentDate = toggle.checked ? "10/13" : "10/12";
