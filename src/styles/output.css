@@ -2917,7 +2917,7 @@ td:not(:last-child)::after {
   /* 背景色（お好みで） */
   color: rgb(0, 0, 0);
   /* 文字色 */
-  padding: 0.4em 2em;
+  padding: 0.4em 1.3em;
   /* 内側の余白 */
   border-radius: 9999px;
   /* 丸み：大きくすると pill型に */
@@ -2934,7 +2934,7 @@ td:not(:last-child)::after {
   /* 背景色（お好みで） */
   color: rgb(0, 0, 0);
   /* 文字色 */
-  padding: 0.4em 2em;
+  padding: 0.4em 1.3em;
   /* 内側の余白 */
   border-radius: 9999px;
   /* 丸み：大きくすると pill型に */

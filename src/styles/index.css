@@ -1206,7 +1206,7 @@ td:not(:last-child)::after {
   display: inline-block;       /* 背景をテキストの長さに合わせる */
   background-color: rgb(253 224 71);   /* 背景色（お好みで） */
   color: rgb(0, 0, 0);                /* 文字色 */
-  padding: 0.4em 2em;        /* 内側の余白 */
+  padding: 0.4em 1.3em;        /* 内側の余白 */
   border-radius: 9999px;       /* 丸み：大きくすると pill型に */
   font-size: 1.1rem;           /* 文字サイズ */
   font-weight: bold;           /* 太字 */
@@ -1216,7 +1216,7 @@ td:not(:last-child)::after {
   display: inline-block;       /* 背景をテキストの長さに合わせる */
   background-color: rgb(253 224 71);   /* 背景色（お好みで） */
   color: rgb(0, 0, 0);                /* 文字色 */
-  padding: 0.4em 2em;        /* 内側の余白 */
+  padding: 0.4em 1.3em;        /* 内側の余白 */
   border-radius: 9999px;       /* 丸み：大きくすると pill型に */
   font-size: 1.1rem;           /* 文字サイズ */
   font-weight: bold;           /* 太字 */
