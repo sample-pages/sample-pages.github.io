@@ -1216,7 +1216,7 @@ td:not(:last-child)::after {
   color: #000000;            /* サブテキスト色 */
   font-weight: 600;
   margin-top: 10px;      /* 上の文字との間隔 */
-  margin-bottom: 10px;
+  margin-bottom: 0px;
   @apply max-md:text-[1.2rem];
 }
 
@@ -1225,6 +1225,6 @@ td:not(:last-child)::after {
   color: #000000;            /* サブテキスト色 */
   font-weight: 600;
   margin-top: 10px;      /* 上の文字との間隔 */
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   @apply max-md:text-[1.2rem];
 }
