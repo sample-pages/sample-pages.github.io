@@ -69,7 +69,7 @@ const tagColors: Record<string, string> = {
 
     {uniqueTags.map((tag) => (
       <a
-        class={`text-[14px] max-lg:text-sm pr-[12px] pl-[12px] py-1 rounded-full text-white mr-3 mb-2 tag-hover ${
+        class={`text-[14px] max-lg:text-sm pr-[12px] pl-[12px] py-1 rounded-full text-white mr-3 ml-1 mb-2 tag-hover ${
           tagColors[tag] || "bg-gray-500"
         }`}
         href={`/tags/${tag}`}
@@ -78,7 +78,7 @@ const tagColors: Record<string, string> = {
       </a>
     ))}
 
-    <div style="height: 30px;"></div>
+    <div style="height: 25px;"></div>
     <ul style="padding-left: 0.25rem">
       {page.data.map((post: any) => (
         <li>
