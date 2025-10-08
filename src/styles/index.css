@@ -197,9 +197,37 @@ body {
   @apply max-lg:text-[60px];
 }
 
-.hover-color:hover {
-    color: #b2b5b3;
+.hover-color {
+  position: relative;
+  text-decoration: none; /* デフォルトの下線を消す */
+  transition: all 0.2s ease-in-out;
 }
+
+.hover-color::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px; /* 下線の太さ */
+  background-color: currentColor; /* 文字色と同じ色 */
+  transition: width 0.2s ease-in-out;
+}
+
+.hover-color:hover::after {
+  width: 100%;
+}
+
+.tag-hover {
+  display: inline-block; /* inlineだとscaleが効かないので */
+  transition: transform 0.2s ease-in-out; /* スムーズに拡大 */
+}
+
+.tag-hover:hover {
+  transform: scale(1.1); /* ホバーで5%拡大 */
+}
+
+
 
 .width-body {
     width: 75%;
