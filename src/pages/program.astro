@@ -266,7 +266,7 @@ const venueWidths = [150, 150, 150, 150];
           const topPos = offset - parentRect.top + container.scrollTop;
           bar.style.top = `${topPos}px`;
           label.style.top = `${topPos}px`;
-          label.textContent = `現在 ${String(now.getHours()).padStart(2,"0")}:${String(now.getMinutes()).padStart(2,"0")}`;
+          label.textContent = `現在時刻 ${String(now.getHours()).padStart(2,"0")}:${String(now.getMinutes()).padStart(2,"0")}`;
           visible = true;
           break;
         }
