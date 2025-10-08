@@ -198,25 +198,15 @@ body {
 }
 
 .hover-color {
-  position: relative;
-  text-decoration: none; /* デフォルトの下線を消す */
-  transition: all 0.2s ease-in-out;
+  display: inline-block;           /* 文字幅に沿わせる */
+  border-bottom: 2px solid transparent; /* 初期は下線なし */
+  transition: border-color 0.2s ease-in-out;
 }
 
-.hover-color::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0%;
-  height: 2px; /* 下線の太さ */
-  background-color: currentColor; /* 文字色と同じ色 */
-  transition: width 0.2s ease-in-out;
+.hover-color:hover {
+  border-bottom-color: currentColor;  /* ホバーで文字色の下線 */
 }
 
-.hover-color:hover::after {
-  width: 100%;
-}
 
 .tag-hover {
   display: inline-block; /* inlineだとscaleが効かないので */
