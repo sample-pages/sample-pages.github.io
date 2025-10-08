@@ -1084,7 +1084,7 @@ td:not(:last-child)::after {
 }
 
 .table_color {
-  background-color: #a72828;
+  background-color: #000000;
 }
 
 .toggle-button-4 {
@@ -1110,7 +1110,7 @@ td:not(:last-child)::after {
   width: 130px;       /* 幅を広げる */
   height: 42px;
   border-radius: 21px;
-  background-color: #2837a7;
+  background-color: #000000;
   transition: left 0.4s, background-color 0.4s;
   display: flex;
   align-items: center;
@@ -1119,7 +1119,7 @@ td:not(:last-child)::after {
 
 .toggle-button-4:has(:checked)::before {
   left: 126px;        /* 横幅 - スライダー幅 - 左余白 */
-  background-color: #a72828;
+  background-color: #000000;
 }
 
 /* 日付表示 */
