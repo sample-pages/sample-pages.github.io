@@ -52,7 +52,9 @@ const uniqueTags = [
 
 // タグ名ごとの色を定義
 const tagColors: Record<string, string> = {
-  お知らせ: "bg-red-600",
+  お知らせ: "bg-orange-600",
+  受付: "bg-green-600",
+  重要: "bg-red-600",
   // 追加のタグはここに書く
 };
 ---
@@ -78,7 +80,7 @@ const tagColors: Record<string, string> = {
       </>
     ))}
 
-    <div style="height: 20px;"></div>
+    <div style="height: 30px;"></div>
     <ul style="padding-left: 0.25rem">
       {page.data.map((post: any) => (
         <li>
@@ -90,7 +92,7 @@ const tagColors: Record<string, string> = {
                 <a class="text-sm text-red-500">{post.frontmatter.update}</a>
               </div>
             ) : (
-              <div class="mb-[3px] no-update-content mr-2">
+              <div class="mb-[2px] no-update-content mr-2">
                 <a class="text-base max-lg:text-[14px]">{post.frontmatter.date}</a>
               </div>
             )}

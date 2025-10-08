@@ -14,7 +14,9 @@ const latestPosts = sortedPosts.slice(0, 3);
 
 // タグ名ごとの色を定義
 const tagColors: Record<string, string> = {
-  お知らせ: "bg-red-600",
+  お知らせ: "bg-orange-600",
+  受付: "bg-green-600",
+  重要: "bg-red-600",
   // 追加のタグはここに書く
 };
 ---
@@ -140,12 +142,12 @@ const tagColors: Record<string, string> = {
       
             {/* 説明文 */}
             <a class="text-base block mt-1">{post.frontmatter.description}</a>
-            <div style="height: 24px;" />
+            <div style="height: 20px;" />
           </li>
         ))}
       </ul>
       
-    <br />
+    <div style="height: 5px;" />
     <div class="flex items-center justify-center mb-1">
       <a
         href="/posts/1"
