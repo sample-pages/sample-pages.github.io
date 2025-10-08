@@ -1174,8 +1174,8 @@ td:not(:last-child)::after {
   flex-direction: column; /* 上下に並べる */
   align-items: center;    /* 中央揃え */
   text-align: center;     /* テキストも中央揃え */
-  margin-bottom: 10px;         /* 上下の余白調整 */
-  margin-top: 12px;         /* 上下の余白調整 */
+  margin-bottom: 40px;         /* 上下の余白調整 */
+  margin-top: 42px;         /* 上下の余白調整 */
 }
 
 .headline-main {
