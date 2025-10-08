@@ -1211,3 +1211,20 @@ td:not(:last-child)::after {
   @apply max-md:text-[1.2rem];
 }
 
+.headline-newssub {
+  font-size: 1.7rem;      /* 小さめの文字 */
+  color: #000000;            /* サブテキスト色 */
+  font-weight: 600;
+  margin-top: 10px;      /* 上の文字との間隔 */
+  margin-bottom: 10px;
+  @apply max-md:text-[1.2rem];
+}
+
+.headline-attentionsub {
+  font-size: 1.7rem;      /* 小さめの文字 */
+  color: #000000;            /* サブテキスト色 */
+  font-weight: 600;
+  margin-top: 10px;      /* 上の文字との間隔 */
+  margin-bottom: 20px;
+  @apply max-md:text-[1.2rem];
+}
