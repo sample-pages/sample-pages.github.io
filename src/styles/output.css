@@ -1062,14 +1062,14 @@ html[data-theme="light"] .text-color {
   background-color: rgb(252 165 165 / var(--tw-bg-opacity, 1));
 }
 
-.bg-red-400{
-  --tw-bg-opacity: 1;
-  background-color: rgb(248 113 113 / var(--tw-bg-opacity, 1));
-}
-
 .bg-red-500{
   --tw-bg-opacity: 1;
   background-color: rgb(239 68 68 / var(--tw-bg-opacity, 1));
+}
+
+.bg-red-600{
+  --tw-bg-opacity: 1;
+  background-color: rgb(220 38 38 / var(--tw-bg-opacity, 1));
 }
 
 .bg-red-700{
@@ -2564,7 +2564,7 @@ img {
   justify-content: center;
   transition: background-color 0.3s, border-color 0.3s, transform 0.3s;
   /* transform を追加 */
-  border: 1.5px solid #000000;
+  border: 1.5px solid #c6c6c6;
   /* ← 黒い縁を追加 */
 }
 

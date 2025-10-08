@@ -1008,7 +1008,7 @@ img {
   align-items: center;
   justify-content: center;
   transition: background-color 0.3s, border-color 0.3s, transform 0.3s; /* transform を追加 */
-  border: 1.5px solid #000000; /* ← 黒い縁を追加 */
+  border: 1.5px solid #c6c6c6; /* ← 黒い縁を追加 */
 }
 
 @media (hover: hover) and (pointer: fine) {
