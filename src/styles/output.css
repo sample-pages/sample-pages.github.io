@@ -2862,7 +2862,7 @@ td:not(:last-child)::after {
   font-weight: 600;
   margin-top: 10px;
   /* 上の文字との間隔 */
-  margin-bottom: 0px;
+  margin-bottom: -5px;
 }
 
 @media not all and (min-width: 768px){
