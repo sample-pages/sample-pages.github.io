@@ -2802,6 +2802,20 @@ td:not(:last-child)::after {
     padding-top: 2rem;
   }
 
+  @media not all and (min-width: 1024px){
+    .max-lg\:max-lg\:pr-8{
+      padding-right: 2rem;
+    }
+  }
+
+  .max-lg\:pt-4{
+    padding-top: 1rem;
+  }
+
+  .max-lg\:pt-2{
+    padding-top: 0.5rem;
+  }
+
   .max-lg\:text-\[12px\]{
     font-size: 12px;
   }
@@ -2849,6 +2863,18 @@ td:not(:last-child)::after {
 
   .max-md\:h-4{
     height: 1rem;
+  }
+
+  .max-md\:h-6{
+    height: 1.5rem;
+  }
+
+  .max-md\:h-8{
+    height: 2rem;
+  }
+
+  .max-md\:h-7{
+    height: 1.75rem;
   }
 
   .max-md\:w-\[109\.5\%\]{
@@ -2933,6 +2959,14 @@ td:not(:last-child)::after {
 
   .lg\:pt-10{
     padding-top: 2.5rem;
+  }
+
+  .lg\:pt-8{
+    padding-top: 2rem;
+  }
+
+  .lg\:pt-6{
+    padding-top: 1.5rem;
   }
 
   .lg\:text-2xl{
