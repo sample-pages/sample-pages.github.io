@@ -647,12 +647,8 @@ html[data-theme="light"] .text-color {
   left: 0px;
 }
 
-.left-1\/2{
-  left: 50%;
-}
-
-.right-0{
-  right: 0px;
+.left-\[44\%\]{
+  left: 44%;
 }
 
 .right-5{
@@ -711,6 +707,11 @@ html[data-theme="light"] .text-color {
 .my-4{
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+
+.my-2{
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .mb-0{
@@ -779,6 +780,22 @@ html[data-theme="light"] .text-color {
 
 .mt-\[3px\]{
   margin-top: 3px;
+}
+
+.mr-1{
+  margin-right: 0.25rem;
+}
+
+.ml-1{
+  margin-left: 0.25rem;
+}
+
+.ml-2{
+  margin-left: 0.5rem;
+}
+
+.mr-2{
+  margin-right: 0.5rem;
 }
 
 .block{
@@ -1110,6 +1127,19 @@ html[data-theme="light"] .text-color {
 .py-\[2px\]{
   padding-top: 2px;
   padding-bottom: 2px;
+}
+
+.px-5{
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.pb-4{
+  padding-bottom: 1rem;
+}
+
+.pb-6{
+  padding-bottom: 1.5rem;
 }
 
 .text-left{
@@ -2618,7 +2648,7 @@ td:not(:last-child)::after {
 }
 
 .table_color {
-  background-color: #000000;
+  background-color: #a72828;
 }
 
 .toggle-button-4 {
@@ -2627,13 +2657,13 @@ td:not(:last-child)::after {
   /* 全体も少し広げる */
   height: 52px;
   border-radius: 25px;
-  background-color: #f9fafb;
+  background-color: #ffffff;
   cursor: pointer;
   transition: background-color 0.4s;
 }
 
 .toggle-button-4:has(:checked) {
-  background-color: #f9fafb;
+  background-color: #ffffff;
 }
 
 /* スライダー部分 */
@@ -2647,7 +2677,7 @@ td:not(:last-child)::after {
   /* 幅を広げる */
   height: 42px;
   border-radius: 21px;
-  background-color: #75bbff;
+  background-color: #2837a7;
   transition: left 0.4s, background-color 0.4s;
   display: flex;
   align-items: center;
@@ -2657,7 +2687,7 @@ td:not(:last-child)::after {
 .toggle-button-4:has(:checked)::before {
   left: 126px;
   /* 横幅 - スライダー幅 - 左余白 */
-  background-color: #ff8d8d;
+  background-color: #a72828;
 }
 
 /* 日付表示 */
@@ -2787,6 +2817,22 @@ td:not(:last-child)::after {
     padding: 2rem;
   }
 
+  .max-lg\:p-2{
+    padding: 0.5rem;
+  }
+
+  .max-lg\:pt-8{
+    padding-top: 2rem;
+  }
+
+  .max-lg\:pr-8{
+    padding-right: 2rem;
+  }
+
+  .max-lg\:pl-8{
+    padding-left: 2rem;
+  }
+
   .max-lg\:text-\[12px\]{
     font-size: 12px;
   }
@@ -2820,14 +2866,58 @@ td:not(:last-child)::after {
 }
 
 @media not all and (min-width: 768px){
+  .max-md\:mr-2{
+    margin-right: 0.5rem;
+  }
+
+  .max-md\:ml-2{
+    margin-left: 0.5rem;
+  }
+
   .max-md\:h-\[64px\]{
     height: 64px;
+  }
+
+  .max-md\:w-\[108\]{
+    width: 108;
+  }
+
+  .max-md\:w-\[108\%\]{
+    width: 108%;
+  }
+
+  .max-md\:w-\[109\%\]{
+    width: 109%;
+  }
+
+  .max-md\:w-\[110\%\]{
+    width: 110%;
+  }
+
+  .max-md\:w-\[19\.5\%\]{
+    width: 19.5%;
+  }
+
+  .max-md\:w-\[109\.5\%\]{
+    width: 109.5%;
   }
 }
 
 @media (min-width: 768px){
+  .md\:mr-10{
+    margin-right: 2.5rem;
+  }
+
+  .md\:ml-10{
+    margin-left: 2.5rem;
+  }
+
   .md\:h-\[90px\]{
     height: 90px;
+  }
+
+  .md\:w-\[100\%\]{
+    width: 100%;
   }
 }
 
@@ -2870,6 +2960,18 @@ td:not(:last-child)::after {
 
   .lg\:p-8{
     padding: 2rem;
+  }
+
+  .lg\:pt-10{
+    padding-top: 2.5rem;
+  }
+
+  .lg\:pr-10{
+    padding-right: 2.5rem;
+  }
+
+  .lg\:pl-10{
+    padding-left: 2.5rem;
   }
 
   .lg\:text-2xl{

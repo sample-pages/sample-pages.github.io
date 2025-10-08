@@ -8,21 +8,24 @@ const venueWidths = [150, 150, 150, 150];
 
 <Layout title="日程・プログラム｜第8回うぃーすた全国交流会">
   <div class="text-sm lg:text-base margin-contents text-color zen-kaku-gothic-new" style="margin-bottom: 80px;">
-    <div class="max-lg:p-8 lg:p-10 mt-[128px] lg:mt-[115px] text-color margin-contents header_bcolor rounded-[40px] shadow-md relative" style="max-width: 900px; width: 100%;">
-      <span class="midashi">日程・プログラム</span>
-      <div style="height: 20px;"></div>
+    <div style="height: 10px;"></div>
+    <div class="mt-[128px] lg:mt-[115px] text-color header_bcolor rounded-[40px] shadow-md relative" style="max-width: 900px; width: 100%;">
+      <div class="max-lg:pt-8 max-lg:pr-8 max-lg:pl-8 lg:pt-10 lg:pr-10 lg:pl-10">
+        <span class="midashi">日程・プログラム</span>
+        <div style="height: 20px;"></div>
 
-      <span class="midashi" id="timetable">タイムテーブル</span>
-      <div style="height: 20px;"></div>
+        <span class="midashi" id="timetable">タイムテーブル</span>
+        <div style="height: 20px;"></div>
 
-      <div class="flex justify-center my-4">
-        <label class="border toggle-button-4 flex items-center">
-          <input type="checkbox" id="dateToggle">
-        </label>
+        <div class="flex justify-center pb-6">
+          <label class="border toggle-button-4 flex items-center">
+            <input type="checkbox" id="dateToggle">
+          </label>
+        </div>
       </div>
       
 
-      <div id="tableContainer" class="overflow-auto max-h-[80vh] border rounded-md shadow-md bg-gray-50 relative">
+      <div id="tableContainer" class="overflow-auto max-h-[80vh] border rounded-md shadow-md bg-gray-50 relative max-md:mr-2 max-md:ml-2 md:mr-10 md:ml-10">
         <div class="min-w-[600px] relative z-0">
 
           <table id="timetable" class="border-collapse w-full text-sm relative table-fixed">
@@ -40,7 +43,7 @@ const venueWidths = [150, 150, 150, 150];
             <tbody>
               {times.map(time => (
                 <tr data-time={time} class="h-[60px] border-gray-200">
-                  <td class="absolute sticky text-black text-center left-0 z-[10] px-2 py-2 font-medium">{time}</td>
+                  <td class="absolute sticky text-black bg-white text-center left-0 z-[10] px-2 py-2 font-medium">{time}</td>
                   {venues.map((_, i) => (
                     <td class="border-t relative px-4 py-2" style={`width: ${venueWidths[i]}px;`}></td>
                   ))}
@@ -53,8 +56,10 @@ const venueWidths = [150, 150, 150, 150];
           <div id="eventsLayer" class="absolute top-0 left-0 w-full h-full"></div>
 
           <!-- 現在時刻バー -->
-          <div id="currentTimeBar" class="absolute left-0 right-0 h-[2px] bg-red-500 z-[0]" style="top:0;"></div>
-          <div id="currentTimeLabel" class="absolute left-1/2 -translate-y-1/2 bg-red-500 text-xs text-white px-2 py-[2px] rounded-full shadow z-[20]" style="top:0;">現在 --</div>
+          <div id="currentTimeBar"
+     class="absolute h-[2px] bg-red-500 z-[0] max-md:w-[109.5%] md:w-[100%]"
+     style="left: 0; top: 0;"></div>
+          <div id="currentTimeLabel" class="absolute left-[44%] -translate-y-1/2 bg-red-500 text-xs text-white px-2 py-[2px] rounded-full shadow z-[20]" style="top:0;">現在 --</div>
         </div>
       </div>
     </div>
@@ -207,6 +212,8 @@ const venueWidths = [150, 150, 150, 150];
       }
       if (!visible) { bar.style.top = "-9999px"; label.style.top = "-9999px"; }
     }
+
+    
 
     // 初期描画
     renderEvents();

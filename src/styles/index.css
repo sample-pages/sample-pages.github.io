@@ -1084,7 +1084,7 @@ td:not(:last-child)::after {
 }
 
 .table_color {
-  background-color: #000000;
+  background-color: #a72828;
 }
 
 .toggle-button-4 {
@@ -1092,13 +1092,13 @@ td:not(:last-child)::after {
   width: 262px;       /* 全体も少し広げる */
   height: 52px;
   border-radius: 25px;
-  background-color: #f9fafb;
+  background-color: #ffffff;
   cursor: pointer;
   transition: background-color 0.4s;
 }
 
 .toggle-button-4:has(:checked) {
-  background-color: #f9fafb;
+  background-color: #ffffff;
 }
 
 /* スライダー部分 */
@@ -1110,7 +1110,7 @@ td:not(:last-child)::after {
   width: 130px;       /* 幅を広げる */
   height: 42px;
   border-radius: 21px;
-  background-color: #75bbff;
+  background-color: #2837a7;
   transition: left 0.4s, background-color 0.4s;
   display: flex;
   align-items: center;
@@ -1119,7 +1119,7 @@ td:not(:last-child)::after {
 
 .toggle-button-4:has(:checked)::before {
   left: 126px;        /* 横幅 - スライダー幅 - 左余白 */
-  background-color: #ff8d8d;
+  background-color: #a72828;
 }
 
 /* 日付表示 */
