@@ -864,6 +864,10 @@ html[data-theme="light"] .text-color {
   width: 50%;
 }
 
+.w-2\/3{
+  width: 66.666667%;
+}
+
 .min-w-\[600px\]{
   min-width: 600px;
 }
@@ -2843,6 +2847,10 @@ td:not(:last-child)::after {
     height: 64px;
   }
 
+  .max-md\:h-4{
+    height: 1rem;
+  }
+
   .max-md\:w-\[109\.5\%\]{
     width: 109.5%;
   }
@@ -2859,6 +2867,14 @@ td:not(:last-child)::after {
 
   .md\:h-\[90px\]{
     height: 90px;
+  }
+
+  .md\:h-8{
+    height: 2rem;
+  }
+
+  .md\:h-10{
+    height: 2.5rem;
   }
 
   .md\:w-\[100\%\]{
