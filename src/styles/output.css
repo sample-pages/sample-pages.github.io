@@ -812,6 +812,14 @@ html[data-theme="light"] .text-color {
   margin-bottom: 4px;
 }
 
+.mt-\[10px\]{
+  margin-top: 10px;
+}
+
+.mt-\[140px\]{
+  margin-top: 140px;
+}
+
 .block{
   display: block;
 }
