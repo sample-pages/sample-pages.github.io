@@ -159,8 +159,8 @@ body {
 
 .midashi2 {
   font-family: "Zen Kaku Gothic New", sans-serif;
-  font-weight: 600;
-  font-size: 1.4rem;
+  font-weight: 500;
+  font-size: 1.3rem;
   @apply max-lg:text-[19px];
 }
 
