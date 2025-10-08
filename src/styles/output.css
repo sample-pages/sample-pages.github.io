@@ -675,6 +675,10 @@ html[data-theme="light"] .text-color {
   top: 0.5rem;
 }
 
+.right-4{
+  right: 1rem;
+}
+
 .z-0{
   z-index: 0;
 }
