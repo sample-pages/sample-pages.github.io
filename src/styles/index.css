@@ -1118,8 +1118,8 @@ td:not(:last-child)::after {
 
 .toggle-button-4 {
   position: relative;
-  width: 260px;
-  height: 50px;
+  width: 258px;
+  height: 48px;
   border-radius: 25px;
   background-color: #ffffff;
   cursor: pointer;

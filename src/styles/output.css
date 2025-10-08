@@ -655,8 +655,8 @@ html[data-theme="light"] .text-color {
   left: 44%;
 }
 
-.right-5{
-  right: 1.25rem;
+.right-4{
+  right: 1rem;
 }
 
 .top-0{
@@ -673,10 +673,6 @@ html[data-theme="light"] .text-color {
 
 .top-2{
   top: 0.5rem;
-}
-
-.right-4{
-  right: 1rem;
 }
 
 .z-0{
@@ -1100,6 +1096,11 @@ html[data-theme="light"] .text-color {
   border-color: rgb(209 213 219 / var(--tw-border-opacity, 1));
 }
 
+.border-gray-700{
+  --tw-border-opacity: 1;
+  border-color: rgb(55 65 81 / var(--tw-border-opacity, 1));
+}
+
 .border-white{
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
@@ -1186,11 +1187,6 @@ html[data-theme="light"] .text-color {
   padding-right: 0.5rem;
 }
 
-.px-3{
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-}
-
 .px-4{
   padding-left: 1rem;
   padding-right: 1rem;
@@ -1264,8 +1260,8 @@ html[data-theme="light"] .text-color {
   line-height: 2.25rem;
 }
 
-.text-\[14px\]{
-  font-size: 14px;
+.text-\[13px\]{
+  font-size: 13px;
 }
 
 .text-\[15px\]{
@@ -1313,14 +1309,6 @@ html[data-theme="light"] .text-color {
   line-height: 1rem;
 }
 
-.text-\[12px\]{
-  font-size: 12px;
-}
-
-.text-\[13px\]{
-  font-size: 13px;
-}
-
 .font-bold{
   font-weight: 700;
 }
@@ -1352,19 +1340,9 @@ html[data-theme="light"] .text-color {
   color: rgb(30 64 175 / var(--tw-text-opacity, 1));
 }
 
-.text-gray-400{
-  --tw-text-opacity: 1;
-  color: rgb(156 163 175 / var(--tw-text-opacity, 1));
-}
-
 .text-gray-500{
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity, 1));
-}
-
-.text-gray-600{
-  --tw-text-opacity: 1;
-  color: rgb(75 85 99 / var(--tw-text-opacity, 1));
 }
 
 .text-gray-800{
@@ -2837,8 +2815,8 @@ td:not(:last-child)::after {
 
 .toggle-button-4 {
   position: relative;
-  width: 260px;
-  height: 50px;
+  width: 258px;
+  height: 48px;
   border-radius: 25px;
   background-color: #ffffff;
   cursor: pointer;
