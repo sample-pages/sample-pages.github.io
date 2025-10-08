@@ -2775,6 +2775,12 @@ td:not(:last-child)::after {
   line-height: 1.2;
 }
 
+@media not all and (min-width: 768px){
+  .headline-main{
+    font-size: 2.5rem;
+  }
+}
+
 .headline-sub {
   font-size: 1.7rem;
   /* 小さめの文字 */
@@ -2784,6 +2790,12 @@ td:not(:last-child)::after {
   margin-top: 10px;
   /* 上の文字との間隔 */
   margin-bottom: 25px;
+}
+
+@media not all and (min-width: 768px){
+  .headline-sub{
+    font-size: 1.2rem;
+  }
 }
 
 .headline-semisub {
@@ -2796,6 +2808,12 @@ td:not(:last-child)::after {
   /* 上の文字との間隔 */
 }
 
+@media not all and (min-width: 768px){
+  .headline-semisub{
+    font-size: 1.2rem;
+  }
+}
+
 .headline-semisemisub {
   font-size: 1.7rem;
   /* 小さめの文字 */
@@ -2805,6 +2823,12 @@ td:not(:last-child)::after {
   margin-top: 10px;
   /* 上の文字との間隔 */
   margin-bottom: 20px;
+}
+
+@media not all and (min-width: 768px){
+  .headline-semisemisub{
+    font-size: 1.2rem;
+  }
 }
 
 .hover\:scale-110:hover{

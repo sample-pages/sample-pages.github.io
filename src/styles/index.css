@@ -1182,6 +1182,7 @@ td:not(:last-child)::after {
   font-size: 3.5rem;        /* 大きめの文字 */
   font-weight: bold;
   line-height: 1.2;
+  @apply max-md:text-[2.5rem];
 }
 
 .headline-sub {
@@ -1190,6 +1191,7 @@ td:not(:last-child)::after {
   font-weight: 600;
   margin-top: 10px;      /* 上の文字との間隔 */
   margin-bottom: 25px;
+  @apply max-md:text-[1.2rem];
 }
 
 .headline-semisub {
@@ -1197,6 +1199,7 @@ td:not(:last-child)::after {
   color: #000000;            /* サブテキスト色 */
   font-weight: 600;
   margin-top: 0px;      /* 上の文字との間隔 */
+  @apply max-md:text-[1.2rem];
 }
 
 .headline-semisemisub {
@@ -1205,5 +1208,6 @@ td:not(:last-child)::after {
   font-weight: 600;
   margin-top: 10px;      /* 上の文字との間隔 */
   margin-bottom: 20px;
+  @apply max-md:text-[1.2rem];
 }
 
