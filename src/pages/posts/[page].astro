@@ -69,7 +69,7 @@ const tagColors: Record<string, string> = {
 
     {uniqueTags.map((tag) => (
       <a
-        class={`text-[15px] max-lg:text-sm pr-[12px] pl-[12px] py-1 rounded-full text-white mr-3 mb-2 tag-hover ${
+        class={`text-[14px] max-lg:text-sm pr-[12px] pl-[12px] py-1 rounded-full text-white mr-3 mb-2 tag-hover ${
           tagColors[tag] || "bg-gray-500"
         }`}
         href={`/tags/${tag}`}
@@ -92,8 +92,8 @@ const tagColors: Record<string, string> = {
                   <a class="text-sm md:text-base text-red-500">{post.frontmatter.update}</a>
                 </div>
               ) : (
-                <div class="no-update-content mr-2">
-                  <a class="text-base md:text-lg">{post.frontmatter.date}</a>
+                <div class="mb-1 no-update-content mr-2">
+                  <a class="text-base md:text-base">{post.frontmatter.date}</a>
                 </div>
               )}
 
@@ -115,7 +115,7 @@ const tagColors: Record<string, string> = {
 
             {/* 2行目: タイトル */}
             <a
-              class="md:w-auto text-base md:text-lg font-medium hover-color"
+              class="md:w-auto text-[15px] md:text-base font-medium hover-color"
               href={post.url}
             >
               {post.frontmatter.title}

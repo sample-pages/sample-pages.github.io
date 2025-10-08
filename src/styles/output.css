@@ -1309,6 +1309,14 @@ html[data-theme="light"] .text-color {
   line-height: 1rem;
 }
 
+.text-\[10px\]{
+  font-size: 10px;
+}
+
+.text-\[14px\]{
+  font-size: 14px;
+}
+
 .font-bold{
   font-weight: 700;
 }
@@ -3200,6 +3208,10 @@ td:not(:last-child)::after {
 
   .lg\:mt-\[140px\]{
     margin-top: 140px;
+  }
+
+  .lg\:mb-\[2px\]{
+    margin-bottom: 2px;
   }
 
   .lg\:h-32{
