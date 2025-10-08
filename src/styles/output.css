@@ -3109,6 +3109,10 @@ td:not(:last-child)::after {
     margin-top: 1rem;
   }
 
+  .max-lg\:mb-0{
+    margin-bottom: 0px;
+  }
+
   .max-lg\:h-24{
     height: 6rem;
   }
@@ -3188,12 +3192,30 @@ td:not(:last-child)::after {
     margin-right: 2.5rem;
   }
 
+  .md\:mb-0{
+    margin-bottom: 0px;
+  }
+
   .md\:h-\[90px\]{
     height: 90px;
   }
 
   .md\:w-\[100\%\]{
     width: 100%;
+  }
+
+  .md\:w-auto{
+    width: auto;
+  }
+
+  .md\:text-base{
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .md\:text-lg{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 }
 

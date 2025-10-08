@@ -82,42 +82,47 @@ const tagColors: Record<string, string> = {
     <ul style="padding-left: 0.25rem">
       {page.data.map((post: any) => (
         <li>
-          <div class="flex items-center gap-2 flex-wrap">
-            {/* 日付 */}
-            {post.frontmatter.update ? (
-              <div class="update-content flex items-center gap-1">
-                <a class="text-sm">{post.frontmatter.date}</a>
-                <a class="text-sm text-red-500">{post.frontmatter.update}</a>
-              </div>
-            ) : (
-              <div class="mb-[2px] no-update-content mr-2">
-                <a class="text-base max-lg:text-[14px]">{post.frontmatter.date}</a>
-              </div>
-            )}
+          <div class="flex flex-wrap items-center gap-2">
+            {/* 1行目: 日付 + タグ */}
+            <div class="w-full md:w-auto flex flex-wrap items-center gap-1 mb-1 md:mb-0">
+              {/* 日付 */}
+              {post.frontmatter.update ? (
+                <div class="update-content flex items-center gap-1">
+                  <a class="text-sm md:text-base">{post.frontmatter.date}</a>
+                  <a class="text-sm md:text-base text-red-500">{post.frontmatter.update}</a>
+                </div>
+              ) : (
+                <div class="no-update-content mr-2">
+                  <a class="text-base md:text-lg">{post.frontmatter.date}</a>
+                </div>
+              )}
 
-            {/* タグ */}
-            {post.frontmatter.tags && (
-              <div class="flex gap-1 flex-wrap mr-2">
-                {post.frontmatter.tags.map((tag: string) => (
-                  <span
-                    class={`text-xs px-2 py-[2px] rounded-full text-white ${
-                      tagColors[tag] || "bg-gray-500"
-                    }`}
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            )}
+              {/* タグ */}
+              {post.frontmatter.tags && (
+                <div class="flex gap-1 flex-wrap mr-2">
+                  {post.frontmatter.tags.map((tag: string) => (
+                    <span
+                      class={`text-xs px-2 py-[2px] rounded-full text-white tag-hover ${
+                        tagColors[tag] || "bg-gray-500"
+                      }`}
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              )}
+            </div>
 
-            {/* タイトル */}
+            {/* 2行目: タイトル */}
             <a
-              class="lg:mb-[3px] text-lg max-lg:text-[15px] font-medium hover-color"
+              class="w-full md:w-auto text-lg md:text-lg font-medium hover-color"
               href={post.url}
             >
               {post.frontmatter.title}
             </a>
           </div>
+
+
 
           {/* 説明文 */}
           <a class="text-base block mt-1">{post.frontmatter.description}</a>
