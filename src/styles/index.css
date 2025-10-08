@@ -221,7 +221,7 @@ body {
     @apply sm:p-8
 }
 
-.margin-markdown {
+.margin-default {
   max-width: 56rem;
   margin-left: auto;
   margin-right: auto;
@@ -1167,5 +1167,43 @@ td:not(:last-child)::after {
   width: 0;
   height: 0;
   border: none;
+}
+
+.headline-page {
+  display: flex;
+  flex-direction: column; /* 上下に並べる */
+  align-items: center;    /* 中央揃え */
+  text-align: center;     /* テキストも中央揃え */
+  margin-bottom: 10px;         /* 上下の余白調整 */
+  margin-top: 12px;         /* 上下の余白調整 */
+}
+
+.headline-main {
+  font-size: 3.5rem;        /* 大きめの文字 */
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.headline-sub {
+  font-size: 1.7rem;      /* 小さめの文字 */
+  color: #000000;            /* サブテキスト色 */
+  font-weight: 600;
+  margin-top: 10px;      /* 上の文字との間隔 */
+  margin-bottom: 25px;
+}
+
+.headline-semisub {
+  font-size: 1.7rem;      /* 小さめの文字 */
+  color: #000000;            /* サブテキスト色 */
+  font-weight: 600;
+  margin-top: 0px;      /* 上の文字との間隔 */
+}
+
+.headline-semisemisub {
+  font-size: 1.7rem;      /* 小さめの文字 */
+  color: #000000;            /* サブテキスト色 */
+  font-weight: 600;
+  margin-top: 10px;      /* 上の文字との間隔 */
+  margin-bottom: 20px;
 }
 
