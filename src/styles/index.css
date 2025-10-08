@@ -51,7 +51,7 @@ body {
 }
 
 .zen-kaku-gothic-new {
-  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-family: "Zen Kaku Gothic New", "Makinas-4-Flat", sans-serif;
   font-weight: 500;
   font-style: normal;
 }
@@ -1095,79 +1095,39 @@ td:not(:last-child)::after {
 }
 
 .table_color {
-  background-color: #000000;
+  background-color: #c24949;
 }
 
 .toggle-button-4 {
   position: relative;
-  width: 262px;       /* 全体も少し広げる */
-  height: 52px;
+  width: 260px;
+  height: 50px;
   border-radius: 25px;
   background-color: #ffffff;
   cursor: pointer;
   transition: background-color 0.4s;
 }
 
-.toggle-button-4:has(:checked) {
-  background-color: #ffffff;
+/* スライダー横移動 */
+.toggle-button-4 input:checked ~ .slider {
+  left: 126px;
 }
 
-/* スライダー部分 */
-.toggle-button-4::before {
-  content: '';
-  position: absolute;
-  top: 4px;
-  left: 4px;
-  width: 130px;       /* 幅を広げる */
-  height: 42px;
-  border-radius: 21px;
-  background-color: #000000;
-  transition: left 0.4s, background-color 0.4s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* 左日付が右にスライドして消える */
+.toggle-button-4 input:checked ~ .date-left {
+  left: 126px; /* スライダーに追従 */
+  opacity: 0;
 }
 
-.toggle-button-4:has(:checked)::before {
-  left: 126px;        /* 横幅 - スライダー幅 - 左余白 */
-  background-color: #000000;
+/* 右日付が左からスライドイン */
+.toggle-button-4 input:checked ~ .date-right {
+  left: 126px;  /* 左端までスライド */
+  opacity: 1;
 }
 
-/* 日付表示 */
-.toggle-button-4::after {
-  content: '7月18日(土)';
-  position: absolute;
-  top: 50%;
-  left: 4px;
-  width: 130px;       /* スライダー幅と同じ */
-  height: 42px;
-  transform: translateY(-50%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 600;
-  color: #fff;
-  transition: left 0.4s, content 0.4s;
-}
 
-.toggle-button-4:has(:checked)::after {
-  content: '7月19日(日)';
-  left: 126px;        /* スライダー右端中央に合わせる */
-  width: 130px;
-}
 
-/* チェックボックス非表示 */
-.toggle-button-4 input {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  display: none;
-  margin: 0;
-  padding: 0;
-  width: 0;
-  height: 0;
-  border: none;
-}
+
 
 .headline-page {
   display: flex;
@@ -1229,11 +1189,35 @@ td:not(:last-child)::after {
   @apply max-md:text-[1.2rem];
 }
 
-.headline-registersub {
+.headline-appsub {
   font-size: 1.7rem;      /* 小さめの文字 */
   color: #000000;            /* サブテキスト色 */
   font-weight: 600;
   margin-top: 10px;      /* 上の文字との間隔 */
   margin-bottom: 20px;
   @apply max-md:text-[1.2rem];
+}
+
+.heading-container {
+  text-align: center; /* 見出しを中央揃え */
+}
+
+.rounded-heading-blue {
+  display: inline-block;       /* 背景をテキストの長さに合わせる */
+  background-color: rgb(253 224 71);   /* 背景色（お好みで） */
+  color: rgb(0, 0, 0);                /* 文字色 */
+  padding: 0.4em 2em;        /* 内側の余白 */
+  border-radius: 9999px;       /* 丸み：大きくすると pill型に */
+  font-size: 1.1rem;           /* 文字サイズ */
+  font-weight: bold;           /* 太字 */
+}
+
+.rounded-heading-red {
+  display: inline-block;       /* 背景をテキストの長さに合わせる */
+  background-color: rgb(253 224 71);   /* 背景色（お好みで） */
+  color: rgb(0, 0, 0);                /* 文字色 */
+  padding: 0.4em 2em;        /* 内側の余白 */
+  border-radius: 9999px;       /* 丸み：大きくすると pill型に */
+  font-size: 1.1rem;           /* 文字サイズ */
+  font-weight: bold;           /* 太字 */
 }

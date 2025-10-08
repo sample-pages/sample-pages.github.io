@@ -12,11 +12,16 @@ const venueWidths = [150, 150, 150, 150];
           <span class="headline-main">PROGRAM</span>
           <span class="headline-semisemisub">日程・プログラム</span>
         </h2>
+
         <div style="height: 20px;"></div>
-        <span class="midashi">日程・プログラム</span>
+        <div class="">
+          <h2 class="rounded-heading-blue border">
+            7月18日(<span class="text-blue-500">土</span>)
+          </h2>
+        </div>
         <div style="height: 20px;"></div>
-        <div style="margin-left: 0.25rem; margin-right: 0.25rem letter-spacing: .025em; margin-bottom: 3px; line-height: 2.05;">
-          <p><b>7月18日(土)</b><br>
+        <div class="mx-auto" style="max-width: 56rem; letter-spacing: .025em; margin-bottom: 3px; line-height: 2.05;">
+          <p>
             ○14:00～14:05　開会式<br>
             ○14:05～16:20　グループトーク<br>
             少人数のグループでトークをします。吃音に関すること、日常のことなど、テーマはさまざま。<br>
@@ -25,8 +30,16 @@ const venueWidths = [150, 150, 150, 150];
             ○21:00～　フリータイム（入浴、歓談など）<br>
             夕食のあとは自由時間です。<br>
             ※門限は23:00となります。</p>
-            <br>
-            <p><b>7月19日(日)</b><br>
+            <br></p>
+        </div>
+        <div class="">
+          <h2 class="rounded-heading-red border">
+            7月19日(<span class="text-red-500">日</span>)
+          </h2>
+        </div>
+        <div style="height: 20px;"></div>
+        <div class="mx-auto" style="max-width: 56rem; letter-spacing: .025em; margin-bottom: 3px; line-height: 2.05;">
+            <p>
               ○7:00〜8:30　朝食（ホテルのビュッフェ）<br>
               ○9:00～10:00　マイメッセージ<br>
               吃音にまつわる体験、吃音への思い、みんなに伝えたいことなど、みんなの前で自由に発表していただきます。（発表は希望者のみ）<br>
@@ -36,7 +49,7 @@ const venueWidths = [150, 150, 150, 150];
               自由参加・当日支払いとなります。<br>
             </p>
         </div>
-        <div style="height: 40px;"></div>
+        <div style="height: 60px;"></div>
         <span class="midashi" id="timetable">タイムテーブル</span>
         <div style="height: 20px;"></div>
         <div style="margin-left: 0.25rem; margin-right: 0.25rem">
@@ -44,11 +57,31 @@ const venueWidths = [150, 150, 150, 150];
           イベントをタップすることで詳細を確認できます。</p>
         </div>
         <div style="height: 30px;"></div>
-        <div class="flex justify-center">
-          <label class="border toggle-button-4 flex items-center">
-            <input type="checkbox" id="dateToggle">
+        <div class="flex justify-center mt-10">
+          <label class="border toggle-button-4 relative flex items-center w-[262px] h-[52px] rounded-[25px] bg-white cursor-pointer">
+            <input type="checkbox" id="dateToggle" class="absolute opacity-0 w-0 h-0">
+        
+            <!-- スライダー -->
+            <span class="slider absolute top-1 left-1 w-32 h-10 bg-yellow-300 rounded-full transition-all duration-700 ease-[cubic-bezier(0.4,0,0.2,1)] z-0"></span>
+        
+            <!-- 左日付（初期左端） -->
+            <span class="date date-left absolute top-1/2 left-1 transform -translate-y-1/2 w-32 h-10 flex items-center justify-center font-semibold z-10 pointer-events-none transition-all duration-700 ease-in-out">
+              7月18日(<span class="sat text-blue-500">土</span>)
+            </span>
+        
+            <!-- 右日付（初期左端、スライドで右端へ） -->
+            <span class="date date-right absolute top-1/2 left-1 transform -translate-y-1/2 w-32 h-10 flex items-center justify-center font-semibold z-10 pointer-events-none transition-all duration-700 ease-in-out opacity-0">
+              7月19日(<span class="sun text-red-500">日</span>)
+            </span>
           </label>
         </div>
+        
+        
+        
+        
+        
+        
+        
       </div>
       <div style="height: 8px;"></div>
       <div class="flex justify-center">
@@ -134,12 +167,12 @@ const venueWidths = [150, 150, 150, 150];
       eventsLayer.innerHTML = "";
       eventsList = eventsData[currentDate].map(ev => {
         const div = document.createElement("div");
-        div.className = "absolute bg-white border border-gray-300 text-black px-2 py-2 z-[0] flex flex-col cursor-pointer";
+        div.className = "rounded absolute bg-yellow-300 border border-gray-300 text-black px-2 py-2 z-[0] flex flex-col cursor-pointer";
         const title = document.createElement("div");
         title.className = "font-medium text-sm";
         title.textContent = ev.name;
         const time = document.createElement("div");
-        time.className = "text-xs text-gray-500 mt-1";
+        time.className = "text-xs text-black mt-1";
         time.textContent = `${ev.start}〜${ev.end}`;
         div.appendChild(title);
         div.appendChild(time);

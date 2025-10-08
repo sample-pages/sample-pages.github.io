@@ -12,10 +12,15 @@ const sortedPosts = nonDraftPosts.sort((a, b) => {
 
 const latestPosts = sortedPosts.slice(0, 3);
 
+// タグ名ごとの色を定義
+const tagColors: Record<string, string> = {
+  お知らせ: "bg-red-600",
+  // 追加のタグはここに書く
+};
 ---
 
 <Layout title="第8回うぃーすた全国交流会">
-  <a id="contactButton" href="/register/"
+  <a id="contactButton" href="/application/"
   class="fixed lg:right-14 lg:bottom-14 max-lg:right-5 max-lg:bottom-5 lg:w-32 lg:h-32 max-lg:w-24 max-lg:h-24 rounded-full bg-red-700 text-white shadow-xl flex flex-col items-center justify-center z-50
    zen-kaku-gothic-new
   hover:bg-red-800 hover:scale-110 transition-transform transition-all duration-200
@@ -93,31 +98,53 @@ const latestPosts = sortedPosts.slice(0, 3);
         style="letter-spacing: .025em; line-height: 1.5; max-width: 900px; width: 100%;"
     >
       <!-- <span class="midashi mb-4">お知らせ</span> -->
-    <ul style="margin-left: 0.25rem; margin-right: 0.25rem;">
-        {
-          latestPosts.map((post) => (
-            <li>
+      <ul style="margin-left: 0.25rem; margin-right: 0.25rem;">
+        {latestPosts.map((post) => (
+          <li>
+            <div class="flex items-center gap-2 flex-wrap">
+              {/* 日付 */}
               {post.frontmatter.update ? (
-                <div class="update-content">
+                <div class="update-content flex items-center gap-1">
                   <a class="text-lg">{post.frontmatter.date}</a>
-                  &nbsp;
-                  <a class="text-lg">{post.frontmatter.update}</a>
+                  <a class="text-lg text-red-500">{post.frontmatter.update}</a>
                 </div>
               ) : (
-                <div class="no-update-content">
+                <div class="no-update-content mb-[3px] mr-2">
                   <a class="text-base max-lg:text-[14px]">{post.frontmatter.date}</a>
                 </div>
               )}
-              <a class="text-base max-xl:text-sm font-medium hover-color" href={post.url}>
+      
+              {/* ★タグ表示 */}
+              {post.frontmatter.tags && (
+                <div class="flex gap-1 flex-wrap mr-2">
+                  {post.frontmatter.tags.map((tag: string) => (
+                    <span
+                      class={`text-xs px-2 py-[2px] rounded-full text-white ${
+                        tagColors[tag] || "bg-gray-500"
+                      }`}
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              )}
+      
+              {/* タイトル */}
+              <a
+                class="lg:mb-[3px] text-base max-xl:text-sm font-medium hover-color"
+                href={post.url}
+              >
                 {post.frontmatter.title}
               </a>
-              <br />
-              <a class="text-base">{post.frontmatter.description}</a>
-              <div style="height: 24px;" />
-            </li>
-          ))
-        }
-    </ul>
+            </div>
+      
+            {/* 説明文 */}
+            <a class="text-base block mt-1">{post.frontmatter.description}</a>
+            <div style="height: 24px;" />
+          </li>
+        ))}
+      </ul>
+      
     <br />
     <div class="flex items-center justify-center mb-1">
       <a
@@ -200,7 +227,7 @@ const latestPosts = sortedPosts.slice(0, 3);
         <div style="height: 24px;" />
       <div class="flex items-center justify-center mb-1">
         <a
-          href="/programs/"
+          href="/program/"
           class="text-base max-xl:text-sm flex items-center justify-center zen-kaku-gothic-new font-medium
                  border border-black rounded-full px-4 py-1.5
                  text-gray-800 hover:bg-red-700 hover:text-white transition-colors duration-200"
@@ -227,7 +254,7 @@ const latestPosts = sortedPosts.slice(0, 3);
           <div style="height: 24px;" />
         <div class="flex items-center justify-center mb-1">
           <a
-            href="/attentions/"
+            href="/attention/"
             class="text-base max-xl:text-sm flex items-center justify-center zen-kaku-gothic-new font-medium
                    border border-black rounded-full px-4 py-1.5
                    text-gray-800 hover:bg-red-700 hover:text-white transition-colors duration-200"
