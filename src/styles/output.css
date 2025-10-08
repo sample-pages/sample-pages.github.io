@@ -1309,6 +1309,14 @@ html[data-theme="light"] .text-color {
   line-height: 1rem;
 }
 
+.text-\[12px\]{
+  font-size: 12px;
+}
+
+.text-\[13px\]{
+  font-size: 13px;
+}
+
 .font-bold{
   font-weight: 700;
 }
