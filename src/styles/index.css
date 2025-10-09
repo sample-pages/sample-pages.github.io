@@ -1014,8 +1014,8 @@ img {
   position: absolute;
   top: 20px;
   right: 20px;
-  width: 42px;
-  height: 42px;
+  width: 50px;
+  height: 50px;
   background-color: #ffffff;
   border: none;
   border-radius: 50%;
@@ -1227,4 +1227,8 @@ td:not(:last-child)::after {
   border-radius: 9999px;       /* 丸み：大きくすると pill型に */
   font-size: 1.1rem;           /* 文字サイズ */
   font-weight: bold;           /* 太字 */
+}
+
+.contents-w {
+  @apply md:px-12 max-md:px-6;
 }

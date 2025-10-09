@@ -58,7 +58,7 @@ const tagColors: Record<string, string> = {
 
 <Layout title="お知らせ｜第8回うぃーすた全国交流会">
   <div class="mt-[135px] lg:mt-[150px] margin-default text-color zen-kaku-gothic-new text-sm lg:text-base" style="line-height: 2.05;">
-    <div class="bg-white rounded-[40px] rounded-b-none pt-8 px-12 shadow-sm">
+    <div class="bg-white rounded-[40px] rounded-b-none pt-8 md:px-12 max-md:px-6 shadow-sm">
     <h2 class="headline-page">
       <span class="headline-main">NEWS</span>
       <span class="headline-newssub">お知らせ</span>
@@ -67,7 +67,7 @@ const tagColors: Record<string, string> = {
 
     {uniqueTags.map((tag) => (
       <a
-        class={`text-[14px] max-lg:text-sm pr-[14px] pl-[14px] rounded-full text-black mr-2 ml-1 mb-2 tag-hover border border-gray-400 ${
+        class={`text-[14px] max-lg:text-sm pr-[10px] pl-[10px] rounded-full text-black mr-2 ml-1 mb-2 tag-hover border border-gray-400 ${
           tagColors[tag] || "bg-white"
         }`}
         href={`/tags/${tag}`}
