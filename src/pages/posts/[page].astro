@@ -43,9 +43,6 @@ export async function getStaticPaths({ paginate }: { paginate: any }) {
 
 const { page } = Astro.props as { page: Pagination };
 
-const allPosts = await Astro.glob("./*.md");
-
-
 // ★ ここで uniqueTags を定義
 
 // タグ名ごとの色を定義
