@@ -83,8 +83,8 @@ const tagColors: Record<string, string> = {
                 <a class="text-sm">{post.frontmatter.update}</a>
               </div>
             ) : (
-              <div class="mb-[2px] no-update-content mr-2">
-                <a class="text-base max-lg:text-xs">{post.frontmatter.date}</a>
+              <div class="no-update-content mr-2">
+                <a class="text-base md:text-base">{post.frontmatter.date}</a>
               </div>
             )}
     
@@ -104,7 +104,7 @@ const tagColors: Record<string, string> = {
             )}
     
             {/* タイトル */}
-            <a class="lg:mb-[2px] text-lg max-lg:text-sm font-medium hover-color" href={post.url}>
+            <a class="text-[15px] md:text-base font-medium hover-color" href={post.url}>
               {post.frontmatter.title}
             </a>
           </div>
