@@ -13,7 +13,7 @@ const tagColors: Record<string, string> = {
 <Layout title={`${frontmatter.title}｜第8回うぃーすた全国交流会`}>
   <div class="mt-[140px] lg:mt-[150px] margin-default text-color zen-kaku-gothic-new text-sm lg:text-base" style="line-height: 2.05;">
     <div class="bg-white rounded-[40px] rounded-b-none pt-8 md:px-12 max-md:px-6 shadow-sm">
-
+      <div style="height: 10px;"></div>
     <div class="flex">
       <a
         href="#"
@@ -61,7 +61,7 @@ const tagColors: Record<string, string> = {
                 {frontmatter.tags.map((tag: any) => (
                   <a
                     href={`/tags/${tag}`}
-                    class={`text-xs px-2 py-[2px] rounded-full text-black border ${
+                    class={`text-xs px-2 py-[2px] rounded-full text-black border-[1.5px] border-red-200 ${
                       tagColors[tag] || "bg-white"
                     } tag-hover`}
                   >
