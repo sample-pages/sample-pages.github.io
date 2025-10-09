@@ -1143,6 +1143,7 @@ td:not(:last-child)::after {
   text-align: center;     /* テキストも中央揃え */
   margin-bottom: 40px;         /* 上下の余白調整 */
   margin-top: 42px;         /* 上下の余白調整 */
+  @apply max-md:mb-[30px] max-md:mt-[32px];
 }
 
 .headline-main {
