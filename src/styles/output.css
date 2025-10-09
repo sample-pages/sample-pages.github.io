@@ -820,6 +820,14 @@ html[data-theme="light"] .text-color {
   margin-top: 138px;
 }
 
+.mt-\[1px\]{
+  margin-top: 1px;
+}
+
+.mt-\[140px\]{
+  margin-top: 140px;
+}
+
 .block{
   display: block;
 }
