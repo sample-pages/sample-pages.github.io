@@ -97,7 +97,7 @@ const tagColors: Record<string, string> = {
   <div class="flex gap-1 flex-wrap mr-2">
     {post.frontmatter.tags.map((tag: string) => (
       <span
-        class="text-xs px-2 py-[2px] rounded-full text-black border-[1px] border-red-200"
+        class="text-xs px-2 py-[2px] rounded-full text-black border-[1px] border-red-300"
         style={{ backgroundColor: tagColors[tag] || "#ffffff" }}
       >
         {tag}
