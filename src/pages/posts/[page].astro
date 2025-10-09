@@ -45,10 +45,8 @@ const { page } = Astro.props as { page: Pagination };
 
 const allPosts = await Astro.glob("./*.md");
 
+
 // ★ ここで uniqueTags を定義
-const uniqueTags = [
-  ...new Set(allPosts.map((post) => post.frontmatter.tags).flat())
-];
 
 // タグ名ごとの色を定義
 const tagColors: Record<string, string> = {
@@ -63,8 +61,8 @@ const tagColors: Record<string, string> = {
       <span class="headline-main">NEWS</span>
       <span class="headline-newssub">お知らせ</span>
     </h2>
+    <!-- 
     <div style="height: 20px;"></div>
-
     {uniqueTags.map((tag) => (
       <a
         class={`text-[14px] max-lg:text-sm pr-[10px] pl-[10px] rounded-full text-black mr-2 ml-1 mb-2 tag-hover border border-gray-400 ${
@@ -75,8 +73,10 @@ const tagColors: Record<string, string> = {
         {tag}
       </a>
     ))}
+-->
 
     <div style="height: 25px;"></div>
+
     <ul style="padding-left: 0.25rem">
       {page.data.map((post: any) => (
         <li>
