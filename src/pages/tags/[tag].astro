@@ -50,15 +50,14 @@ const filteredPosts: any = posts.filter((post: any) =>
 
 // タグ名ごとの色を定義
 const tagColors: Record<string, string> = {
-  お知らせ: "bg-orange-600",
-  受付: "bg-green-600",
-  重要: "bg-red-600",
+
   // 必要なタグをここに追加
 };
 ---
 
-<Layout title=`タグ: ${tag}｜第8回うぃーすた全国交流会`>
-  <div class="mt-[140px] lg:mt-[140px] margin-default text-color zen-kaku-gothic-new">
+<Layout title=`タグ：${tag}｜第8回うぃーすた全国交流会`>
+  <div class="mt-[135px] lg:mt-[150px] margin-default text-color zen-kaku-gothic-new text-sm lg:text-base" style="line-height: 2.05;">
+    <div class="bg-white rounded-[40px] rounded-b-none pt-8 px-12 shadow-sm min-h-[calc(100vh-150px-100px)]">
     <div style="height: 10px;"></div>
     <div class="flex">
       <a
@@ -94,8 +93,8 @@ const tagColors: Record<string, string> = {
               <div class="flex gap-1 flex-wrap mr-2">
                 {post.frontmatter.tags.map((tag: string) => (
                   <span
-                    class={`text-xs px-2 py-[2px] rounded-full text-white ${
-                      tagColors[tag] || "bg-gray-500"
+                    class={`text-xs px-2 py-[2px] rounded-full text-black border border-gray-400 ${
+                      tagColors[tag] || "bg-white"
                     }`}
                   >
                     {tag}
@@ -116,7 +115,7 @@ const tagColors: Record<string, string> = {
         </li>
       ))}
     </ul>
-    
-  </div>
+    <div style="height: 150px;"></div>
+
   </div>
 </Layout>

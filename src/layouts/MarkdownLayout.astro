@@ -5,15 +5,14 @@ const { frontmatter } = Astro.props;
 
 // タグ名ごとの色を定義
 const tagColors: Record<string, string> = {
-  お知らせ: "bg-orange-600",
-  受付: "bg-green-600",
-  重要: "bg-red-600",
+
   // 他のタグもここに追加
 };
 ---
 
 <Layout title={`${frontmatter.title}｜第8回うぃーすた全国交流会`}>
-  <div class="text-color mt-[140px] lg:mt-[140px] margin-default">
+  <div class="mt-[135px] lg:mt-[150px] margin-default text-color zen-kaku-gothic-new text-sm lg:text-base" style="line-height: 2.05;">
+    <div class="bg-white rounded-[40px] rounded-b-none pt-8 px-12 shadow-sm">
     <div style="height: 10px;"></div>
     <div class="flex">
       <a
@@ -43,8 +42,8 @@ const tagColors: Record<string, string> = {
                 {frontmatter.tags.map((tag: any) => (
                   <a
                     href={`/tags/${tag}`}
-                    class={`text-xs px-2 py-[2px] rounded-full text-white mr-1 mb-1 ${
-                      tagColors[tag] || "bg-gray-500"
+                    class={`text-xs px-2 py-[2px] rounded-full text-black mr-1 mb-1 ${
+                      tagColors[tag] || "bg-white"
                     } hover-color`}
                   >
                     {tag}
@@ -62,8 +61,8 @@ const tagColors: Record<string, string> = {
                 {frontmatter.tags.map((tag: any) => (
                   <a
                     href={`/tags/${tag}`}
-                    class={`text-[13px] px-2 py-[px] rounded-full text-white mt-2 mr-1 mb-1 ${
-                      tagColors[tag] || "bg-gray-500"
+                    class={`text-[13px] px-[11px] rounded-full text-black mt-2 mr-1 mb-1 border border-gray-400 ${
+                      tagColors[tag] || "bg-white"
                     } tag-hover`}
                   >
                     {tag}
@@ -81,7 +80,7 @@ const tagColors: Record<string, string> = {
       >
         <slot />
       </div>
+      <div style="height: 150px;"></div>
     </div>
   </div>
-  <div style="height: 70px;"></div>
 </Layout>

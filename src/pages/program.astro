@@ -7,7 +7,8 @@ const venueWidths = [150, 150, 150, 150];
 ---
 
 <Layout title="日程・プログラム｜第8回うぃーすた全国交流会">
-  <div class="mt-[135px] lg:mt-[140px] text-sm lg:text-base margin-default text-color zen-kaku-gothic-new">
+  <div class="mt-[135px] lg:mt-[150px] margin-default text-color zen-kaku-gothic-new text-sm lg:text-base" style="line-height: 2.05;">
+    <div class="bg-white rounded-[40px] rounded-b-none pt-8 px-12 shadow-sm">
         <h2 class="headline-page">
           <span class="headline-main">PROGRAM</span>
           <span class="headline-semisemisub">日程・プログラム</span>
@@ -42,7 +43,7 @@ const venueWidths = [150, 150, 150, 150];
             <p>
               ○7:00〜8:30　朝食（ホテルのビュッフェ）<br>
               ○9:00～10:00　マイメッセージ<br>
-              吃音にまつわる体験、吃音への思い、みんなに伝えたいことなど、みんなの前で自由に発表していただきます。（発表は希望者のみ）<br>
+              吃音にまつわる体験、吃音への思い、みんなに伝えたいことなど、みんなの前で自由に発表していただきます。<br>（発表は希望者のみ）<br>
               ○10:10～11:10　クイズ大会<br>
               ○11:20～11:40　閉会式<br>
               ○13:00～　昼食（近隣の飲食店を利用予定）<br>
@@ -59,7 +60,7 @@ const venueWidths = [150, 150, 150, 150];
           イベントをタップすることで詳細を確認できます。</p>
         </div>
         <div class="flex justify-center mt-10">
-          <label class="toggle-button-4 relative flex items-center w-[262px] h-[52px] rounded-[25px] bg-white cursor-pointer">
+          <label class="toggle-button-4 relative flex items-center w-[262px] h-[52px] rounded-[25px] border cursor-pointer">
             <input type="checkbox" id="dateToggle" class="absolute opacity-0 w-0 h-0">
         
             <!-- スライダー -->
@@ -76,17 +77,10 @@ const venueWidths = [150, 150, 150, 150];
             </span>
           </label>
         </div>
-        
-        
-        
-        
-        
-        
-        
-      </div>
-      <div style="height: 8px;"></div>
+
+      <div style="height: 24px;"></div>
       <div class="flex justify-center">
-      <div id="tableContainer" class="mx-auto overflow-auto max-h-[500px] max-w-[54rem] border rounded-md shadow-md bg-gray-50 relative max-md:mr-4 max-md:ml-4 md:mr-10 md:ml-10">
+      <div id="tableContainer" class="mx-auto overflow-auto max-h-[500px] max-w-[60rem] border rounded-md shadow-md bg-gray-50 relative max-md:mr-4 max-md:ml-4 md:mr-4 md:ml-4">
         <div class="min-w-[600px] relative z-0">
 
           <table id="timetable" class="border-collapse w-full text-sm relative table-fixed">
@@ -124,18 +118,19 @@ const venueWidths = [150, 150, 150, 150];
         </div>
       </div>
       </div>
-      <div style="height: 100px"></div>
-    </div>
+      <div style="height: 150px"></div>
+    
 
-    <!-- モーダル -->
-    <div id="eventModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-[20000] zen-kaku-gothic-new">
-      <div class="bg-white p-6 rounded-xl shadow-lg max-w-sm w-2/3 relative">
-        <button id="modalClose" class="absolute top-2 right-4 text-gray-500 hover:text-black text-[24px]">&times;</button>
-        <h3 id="modalTitle" class="font-bold text-lg mb-2"></h3>
-        <p id="modalTime" class="text-sm text-black mt-2"></p>
-        <div style="height: 10px"></div>
-        <p id="modalDescription" class="text-sm text-black whitespace-pre-wrap"></p>
-        
+      <!-- モーダル -->
+      <div id="eventModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-[20000] zen-kaku-gothic-new">
+        <div class="bg-white p-6 rounded-xl shadow-lg max-w-sm w-2/3 relative">
+          <button id="modalClose" class="absolute top-2 right-4 text-gray-500 hover:text-black text-[24px]">&times;</button>
+          <h3 id="modalTitle" class="font-bold text-lg mb-2"></h3>
+          <p id="modalTime" class="text-sm text-black mt-2"></p>
+          <div style="height: 10px"></div>
+          <p id="modalDescription" class="text-sm text-black whitespace-pre-wrap"></p>
+          
+        </div>
       </div>
     </div>
   </div>

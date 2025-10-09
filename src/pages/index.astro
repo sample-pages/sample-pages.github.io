@@ -14,9 +14,7 @@ const latestPosts = sortedPosts.slice(0, 3);
 
 // タグ名ごとの色を定義
 const tagColors: Record<string, string> = {
-  お知らせ: "bg-orange-600",
-  受付: "bg-green-600",
-  重要: "bg-red-600",
+
   // 追加のタグはここに書く
 };
 ---
@@ -121,8 +119,8 @@ const tagColors: Record<string, string> = {
                 <div class="flex gap-1 flex-wrap mr-2">
                   {post.frontmatter.tags.map((tag: string) => (
                     <span
-                      class={`text-xs px-2 py-[2px] rounded-full text-white ${
-                        tagColors[tag] || "bg-gray-500"
+                      class={`text-xs px-2 py-[2px] rounded-full text-black border border-gray-400 ${
+                        tagColors[tag] || "bg-white"
                       }`}
                     >
                       {tag}
