@@ -1066,10 +1066,6 @@ html[data-theme="light"] .text-color {
   border-width: 1px;
 }
 
-.border-\[1\.5px\]{
-  border-width: 1.5px;
-}
-
 .border-\[1px\]{
   border-width: 1px;
 }
@@ -1115,19 +1111,14 @@ html[data-theme="light"] .text-color {
   border-color: rgb(254 202 202 / var(--tw-border-opacity, 1));
 }
 
-.border-white{
-  --tw-border-opacity: 1;
-  border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
-}
-
 .border-red-300{
   --tw-border-opacity: 1;
   border-color: rgb(252 165 165 / var(--tw-border-opacity, 1));
 }
 
-.border-red-400{
+.border-white{
   --tw-border-opacity: 1;
-  border-color: rgb(248 113 113 / var(--tw-border-opacity, 1));
+  border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
 }
 
 .bg-black{
@@ -2705,7 +2696,7 @@ img {
   /* transform を追加 */
   border: 1.5px solid #c6c6c6;
   /* ← 黒い縁を追加 */
-  z-index: 1000;
+  z-index: 10;
   /* ← これ重要！上に重ねる */
 }
 

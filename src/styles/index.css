@@ -1025,7 +1025,7 @@ img {
   justify-content: center;
   transition: background-color 0.3s, border-color 0.3s, transform 0.3s; /* transform を追加 */
   border: 1.5px solid #c6c6c6; /* ← 黒い縁を追加 */
-  z-index: 1000; /* ← これ重要！上に重ねる */
+  z-index: 10; /* ← これ重要！上に重ねる */
   @apply lg:w-[50px] lg:h-[50px];
 }
 
