@@ -1121,9 +1121,9 @@ html[data-theme="light"] .text-color {
   border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
 }
 
-.bg-\[\#d86e6e\]{
+.bg-\[\#dc6262\]{
   --tw-bg-opacity: 1;
-  background-color: rgb(216 110 110 / var(--tw-bg-opacity, 1));
+  background-color: rgb(220 98 98 / var(--tw-bg-opacity, 1));
 }
 
 .bg-black{
@@ -1166,9 +1166,9 @@ html[data-theme="light"] .text-color {
   background-color: rgb(253 224 71 / var(--tw-bg-opacity, 1));
 }
 
-.bg-\[\#dc6262\]{
+.bg-\[\#ee8080\]{
   --tw-bg-opacity: 1;
-  background-color: rgb(220 98 98 / var(--tw-bg-opacity, 1));
+  background-color: rgb(238 128 128 / var(--tw-bg-opacity, 1));
 }
 
 .bg-opacity-50{
@@ -1329,9 +1329,9 @@ html[data-theme="light"] .text-color {
   color: rgb(0 0 0 / var(--tw-text-opacity, 1));
 }
 
-.text-blue-500{
+.text-blue-200{
   --tw-text-opacity: 1;
-  color: rgb(59 130 246 / var(--tw-text-opacity, 1));
+  color: rgb(191 219 254 / var(--tw-text-opacity, 1));
 }
 
 .text-blue-800{
@@ -1354,6 +1354,11 @@ html[data-theme="light"] .text-color {
   color: rgb(17 24 39 / var(--tw-text-opacity, 1));
 }
 
+.text-red-200{
+  --tw-text-opacity: 1;
+  color: rgb(254 202 202 / var(--tw-text-opacity, 1));
+}
+
 .text-red-500{
   --tw-text-opacity: 1;
   color: rgb(239 68 68 / var(--tw-text-opacity, 1));
@@ -1364,24 +1369,19 @@ html[data-theme="light"] .text-color {
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
-.text-blue-100{
-  --tw-text-opacity: 1;
-  color: rgb(219 234 254 / var(--tw-text-opacity, 1));
-}
-
-.text-blue-200{
-  --tw-text-opacity: 1;
-  color: rgb(191 219 254 / var(--tw-text-opacity, 1));
-}
-
 .text-blue-300{
   --tw-text-opacity: 1;
   color: rgb(147 197 253 / var(--tw-text-opacity, 1));
 }
 
-.text-red-200{
+.text-blue-400{
   --tw-text-opacity: 1;
-  color: rgb(254 202 202 / var(--tw-text-opacity, 1));
+  color: rgb(96 165 250 / var(--tw-text-opacity, 1));
+}
+
+.text-red-300{
+  --tw-text-opacity: 1;
+  color: rgb(252 165 165 / var(--tw-text-opacity, 1));
 }
 
 .opacity-0{
@@ -2824,7 +2824,7 @@ td:not(:last-child)::after {
 }
 
 .table_color {
-  background-color: #dc6262;
+  background-color: #ee8080;
 }
 
 .toggle-button-4 {
@@ -3002,9 +3002,9 @@ td:not(:last-child)::after {
 .rounded-heading-blue {
   display: inline-block;
   /* 背景をテキストの長さに合わせる */
-  background-color: #fff1f1;
+  background-color: #ee8080;
   /* 背景色（お好みで） */
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   /* 文字色 */
   padding: 0.1em 1.3em;
   /* 内側の余白 */
@@ -3019,9 +3019,9 @@ td:not(:last-child)::after {
 .rounded-heading-red {
   display: inline-block;
   /* 背景をテキストの長さに合わせる */
-  background-color: #fff1f1;
+  background-color: #ee8080;
   /* 背景色（お好みで） */
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   /* 文字色 */
   padding: 0.1em 1.3em;
   /* 内側の余白 */
