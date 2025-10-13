@@ -1094,6 +1094,10 @@ html[data-theme="light"] .text-color {
   border-width: 1px;
 }
 
+.border-2{
+  border-width: 2px;
+}
+
 .border-b{
   border-bottom-width: 1px;
 }
@@ -1108,6 +1112,14 @@ html[data-theme="light"] .text-color {
 
 .border-t{
   border-top-width: 1px;
+}
+
+.border-b-2{
+  border-bottom-width: 2px;
+}
+
+.border-t-2{
+  border-top-width: 2px;
 }
 
 .border-black{
