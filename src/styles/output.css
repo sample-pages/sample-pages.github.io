@@ -1402,6 +1402,12 @@ html[data-theme="light"] .text-color {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.shadow-2xl{
+  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .filter{
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
@@ -3138,6 +3144,14 @@ td:not(:last-child)::after {
     height: 64px;
   }
 
+  .max-md\:h-1{
+    height: 0.25rem;
+  }
+
+  .max-md\:h-0{
+    height: 0px;
+  }
+
   .max-md\:w-\[109\.5\%\]{
     width: 109.5%;
   }
@@ -3160,6 +3174,14 @@ td:not(:last-child)::after {
 
   .md\:h-\[90px\]{
     height: 90px;
+  }
+
+  .md\:h-4{
+    height: 1rem;
+  }
+
+  .md\:h-3{
+    height: 0.75rem;
   }
 
   .md\:w-\[100\%\]{
