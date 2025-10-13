@@ -808,6 +808,30 @@ html[data-theme="light"] .text-color {
   margin-top: 3px;
 }
 
+.mt-\[100px\]{
+  margin-top: 100px;
+}
+
+.mt-\[90px\]{
+  margin-top: 90px;
+}
+
+.mt-\[84px\]{
+  margin-top: 84px;
+}
+
+.mt-\[80px\]{
+  margin-top: 80px;
+}
+
+.mt-\[px\]{
+  margin-top: px;
+}
+
+.mt-\[78px\]{
+  margin-top: 78px;
+}
+
 .block{
   display: block;
 }
