@@ -1102,7 +1102,7 @@ td:not(:last-child)::after {
 }
 
 .table_color {
-  background-color: #ee8080;
+  background-color: #e47272;
 }
 
 .toggle-button-4 {
@@ -1212,7 +1212,7 @@ td:not(:last-child)::after {
 
 .rounded-heading-blue {
   display: inline-block;       /* 背景をテキストの長さに合わせる */
-  background-color: #ee8080;   /* 背景色（お好みで） */
+  background-color: #e47272;   /* 背景色（お好みで） */
   color: rgb(255, 255, 255);                /* 文字色 */
   padding: 0.1em 1.3em;        /* 内側の余白 */
   border-radius: 9999px;       /* 丸み：大きくすると pill型に */
@@ -1222,7 +1222,7 @@ td:not(:last-child)::after {
 
 .rounded-heading-red {
   display: inline-block;       /* 背景をテキストの長さに合わせる */
-  background-color: #ee8080;   /* 背景色（お好みで） */
+  background-color: #e47272;   /* 背景色（お好みで） */
   color: rgb(255, 255, 255);                /* 文字色 */
   padding: 0.1em 1.3em;        /* 内側の余白 */
   border-radius: 9999px;       /* 丸み：大きくすると pill型に */
