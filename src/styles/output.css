@@ -3057,7 +3057,7 @@ td:not(:last-child)::after {
 
 @media not all and (min-width: 768px){
   .load-fsize{
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 }
 
