@@ -1255,6 +1255,7 @@ td:not(:last-child)::after {
   }
 }
 
-
-
-
+.load-fsize {
+ font-size: 1.5rem;
+ @apply max-md:text-[1rem];
+}

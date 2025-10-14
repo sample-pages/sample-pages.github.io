@@ -3051,6 +3051,16 @@ td:not(:last-child)::after {
   }
 }
 
+.load-fsize {
+  font-size: 1.5rem;
+}
+
+@media not all and (min-width: 768px){
+  .load-fsize{
+    font-size: 1rem;
+  }
+}
+
 .hover\:scale-110:hover{
   --tw-scale-x: 1.1;
   --tw-scale-y: 1.1;
@@ -3303,7 +3313,3 @@ td:not(:last-child)::after {
     line-height: 1.75rem;
   }
 }
-
-
-
-

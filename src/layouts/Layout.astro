@@ -58,6 +58,66 @@ if (!('ontouchstart' in window)) {
   smoothScroll();
 }
 
+window.addEventListener('load', () => {
+  // すでに表示済みならスキップ（同じセッション内）
+  if (sessionStorage.getItem("welcomeShown")) return;
+
+  const overlay = document.createElement('div');
+  overlay.style.cssText = `
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    display: flex;
+    justify-content: center; align-items: center;
+    background: rgba(256, 256, 256, 1);
+    z-index: 9999;
+  `;
+
+  const container = document.createElement('div');
+  container.style.cssText = `width: 90%; text-align: center;`;
+
+  const line1 = document.createElement('div');
+  line1.textContent = "吃音のある同年代の仲間たちと";
+  line1.classList.add("zen-kaku-gothic-new", "load-fsize");
+  line1.style.cssText = `color:black;opacity:0;transition:opacity 1s;text-align:center;`;
+
+  const line2 = document.createElement('div');
+  line2.textContent = "悩みや夢を語り合う、";
+  line2.classList.add("zen-kaku-gothic-new", "load-fsize");
+  line2.style.cssText = `color:black;opacity:0;transition:opacity 1s;margin-top:0.5rem;text-align:center;`;
+
+  const line3 = document.createElement('div');
+  line3.textContent = "かけがえのない時間を過ごしてみませんか？";
+  line3.classList.add("zen-kaku-gothic-new", "load-fsize");
+  line3.style.cssText = `color:black;opacity:0;transition:opacity 1s;margin-top:0.5rem;text-align:center;`;
+
+  container.appendChild(line1);
+  container.appendChild(line2);
+  container.appendChild(line3);
+  overlay.appendChild(container);
+  document.body.appendChild(overlay);
+
+  // フェードイン順
+  setTimeout(() => line1.style.opacity = "1", 800);
+  setTimeout(() => line2.style.opacity = "1", 2500);
+  setTimeout(() => line3.style.opacity = "1", 5000);
+
+  // 全体フェードアウト
+  setTimeout(() => {
+    overlay.style.transition = 'opacity 1s';
+    overlay.style.opacity = "0";
+    setTimeout(() => overlay.remove(), 1000);
+  }, 7000);
+
+  // 表示済みフラグをセッションに保存
+  sessionStorage.setItem("welcomeShown", "true");
+});
+
+
+
+
+
+
 
 
     </script>
