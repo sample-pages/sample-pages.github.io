@@ -33,9 +33,6 @@ const { title } = Astro.props;
     <script>
       // --- 初期設定 ---
 let targetScroll = window.scrollY;
-let isTouchScrolling = false;
-let startTouchY = 0;
-let startScrollY = 0;
 
 // --- マウスホイール対応 ---
 window.addEventListener("wheel", e => {
@@ -44,25 +41,6 @@ window.addEventListener("wheel", e => {
   // ページ範囲内に制限
   targetScroll = Math.max(0, Math.min(document.body.scrollHeight - window.innerHeight, targetScroll));
 }, { passive: false });
-
-// --- タッチスクロール対応 ---
-window.addEventListener("touchstart", e => {
-  isTouchScrolling = true;
-  startTouchY = e.touches[0]?.clientY ?? 0;
-  startScrollY = targetScroll;
-}, { passive: true });
-
-window.addEventListener("touchmove", e => {
-  if (!isTouchScrolling) return;
-  const deltaY = startTouchY - (e.touches[0]?.clientY ?? startTouchY);
-
-  targetScroll = startScrollY + deltaY * 0.7; // スクロール量を半分にして重く
-  targetScroll = Math.max(0, Math.min(document.body.scrollHeight - window.innerHeight, targetScroll));
-}, { passive: true });
-
-window.addEventListener("touchend", _ => {
-  isTouchScrolling = false;
-});
 
 // --- スムーズスクロール ---
 function smoothScroll() {
