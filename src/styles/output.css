@@ -3030,18 +3030,12 @@ td:not(:last-child)::after {
   }
 }
 
-/* 通常状態（最初から表示しておく） */
-
 #mainHeader {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* アニメーションを行うページでだけ、JSがこのクラスを一時的に付ける */
-
-#mainHeader.animate {
-  opacity: 0;
-  transform: translateY(-40px);
+#mainHeader.slide-in {
   animation: slideDown 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
@@ -3309,5 +3303,7 @@ td:not(:last-child)::after {
     line-height: 1.75rem;
   }
 }
+
+
 
 
