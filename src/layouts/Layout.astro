@@ -31,29 +31,34 @@ const { title } = Astro.props;
     <title>{title}</title>
     <meta name="description" content="『第8回うぃーすた全国交流会』を2026年7月18日(土)〜19日(日)に大阪にて開催します！">
     <script>
-      // --- 初期設定 ---
+// --- 初期設定 ---
 let targetScroll = window.scrollY;
 
-// --- マウスホイール対応 ---
-window.addEventListener("wheel", e => {
-  e.preventDefault(); // デフォルトスクロール停止
-  targetScroll += e.deltaY * 0.7; // スクロール量を半分にして重く
-  // ページ範囲内に制限
-  targetScroll = Math.max(0, Math.min(document.body.scrollHeight - window.innerHeight, targetScroll));
-}, { passive: false });
+// --- PC マウスホイールのみ ---
+if (!('ontouchstart' in window)) {
+  window.addEventListener("wheel", (e: WheelEvent) => {
+    e.preventDefault(); // デフォルトスクロール停止
 
-// --- スムーズスクロール ---
-function smoothScroll() {
-  const currentScroll = window.scrollY;
-  const diff = targetScroll - currentScroll;
-  // 小さい差なら移動させない
-  if (Math.abs(diff) > 0.5) {
-    window.scrollTo(0, currentScroll + diff * 0.1); // 0.1を小さくするとより重くなる
+    targetScroll += e.deltaY * 0.7; // スクロール量調整
+    targetScroll = Math.max(0, Math.min(document.body.scrollHeight - window.innerHeight, targetScroll));
+  }, { passive: false });
+
+  // --- スムーズスクロール ---
+  function smoothScroll() {
+    const currentScroll = window.scrollY;
+    const diff = targetScroll - currentScroll;
+
+    if (Math.abs(diff) > 0.5) {
+      window.scrollTo(0, currentScroll + diff * 0.1);
+    }
+
+    requestAnimationFrame(smoothScroll);
   }
-  requestAnimationFrame(smoothScroll);
+
+  smoothScroll();
 }
 
-smoothScroll();
+
 
     </script>
   </head>
