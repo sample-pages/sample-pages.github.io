@@ -182,23 +182,27 @@ document.addEventListener("DOMContentLoaded", () => {
   const header = document.getElementById("mainHeader");
   if (!header) return;
 
-  const navEntries = performance.getEntriesByType("navigation");
-  const nav = navEntries[0] as PerformanceNavigationTiming | undefined;
-
-  if (nav?.type === "reload") {
-    // リロード時だけ初期状態を隠してアニメーション
+  // sessionStorage にフラグがない場合のみアニメーション
+  if (!sessionStorage.getItem("headerAnimated")) {
+    // 初期状態を隠す
     header.style.opacity = "0";
     header.style.transform = "translateY(-50px)";
 
+    // アニメーション開始（遅延は必要に応じて変更）
     setTimeout(() => {
       header.classList.add("slide-in");
-    }, 50);
+    }, 8400);
+
+    // フラグを保存して二度目以降はアニメーションしない
+    sessionStorage.setItem("headerAnimated", "true");
   } else {
-    // ページ遷移や初回アクセス時は静止
+    // 二度目以降は静止状態
     header.style.opacity = "1";
     header.style.transform = "translateY(0)";
   }
 });
+
+
 
 
 
