@@ -1024,7 +1024,7 @@ img {
   align-items: center;
   justify-content: center;
   transition: background-color 0.3s, border-color 0.3s, transform 0.3s; /* transform を追加 */
-  border: 1.5px solid #c6c6c6; /* ← 黒い縁を追加 */
+  /*border: 1.5px solid #c6c6c6; /* ← 黒い縁を追加 */
   z-index: 10; /* ← これ重要！上に重ねる */
   @apply lg:w-[50px] lg:h-[50px];
 }
@@ -1233,3 +1233,29 @@ td:not(:last-child)::after {
 .contents-w {
   @apply md:px-12 max-md:px-6;
 }
+
+/* 通常状態（最初から表示しておく） */
+#mainHeader {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* アニメーションを行うページでだけ、JSがこのクラスを一時的に付ける */
+#mainHeader.animate {
+  opacity: 0;
+  transform: translateY(-40px);
+  animation: slideDown 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
