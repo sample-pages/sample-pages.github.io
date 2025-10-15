@@ -28,58 +28,49 @@ const { title } = Astro.props;
     <meta name="description" content="『第8回うぃーすた全国交流会』を2026年7月18日(土)〜19日(日)に大阪にて開催します！">
 
     <script>
-      // --- 初期スクロール位置 ---
-      let targetScroll = window.scrollY;
-      
       // --- デバイス判定 ---
       const isTouchDevice = 'ontouchstart' in window;
+      
+      // --- 初期スクロール位置 ---
+      let targetScroll = window.scrollY;
       
       // --- スムーズスクロール関数 ---
       function smoothScroll() {
         const currentScroll = window.scrollY;
         const diff = targetScroll - currentScroll;
-      
         if (Math.abs(diff) > 0.5) {
-          window.scrollTo(0, currentScroll + diff * 0.1); // 滑らかに移動
+          // タッチは少し早めに追従
+          window.scrollTo(0, currentScroll + diff * (isTouchDevice ? 0.3 : 0.1));
         }
-      
         requestAnimationFrame(smoothScroll);
       }
+      smoothScroll();
       
-      smoothScroll(); // 常にアニメーション開始
-      
+      // --- PC: マウスホイール操作 ---
       if (!isTouchDevice) {
-        // --- PC: マウスホイール ---
-        window.addEventListener(
-          "wheel",
-          (e: WheelEvent) => {
-            e.preventDefault();
-            targetScroll += e.deltaY * 0.8;
-            targetScroll = Math.max(
-              0,
-              Math.min(document.body.scrollHeight - window.innerHeight, targetScroll)
-            );
-          },
-          { passive: false }
-        );
-      } else {
-        // --- スマホ: タッチスクロール ---
+        window.addEventListener("wheel", (e: WheelEvent) => {
+          e.preventDefault();
+          targetScroll += e.deltaY * 0.8;
+          targetScroll = Math.max(0, Math.min(document.body.scrollHeight - window.innerHeight, targetScroll));
+        }, { passive: false });
+      }
+      
+      // --- スマホ: タッチ操作 ---
+      else {
         let startY = 0;
       
         window.addEventListener("touchstart", (e: TouchEvent) => {
-          startY = e.touches?.[0]?.clientY ?? 0;
-        }, { passive: true });
+          startY = e.touches[0]?.clientY ?? 0;
+        }, { passive: false });
       
         window.addEventListener("touchmove", (e: TouchEvent) => {
-          const currentY = e.touches?.[0]?.clientY ?? 0;
-          const delta = startY - currentY; // 上にスワイプ → 正の値
-          targetScroll += delta * 1; // スクロール感度調整
-          targetScroll = Math.max(
-            0,
-            Math.min(document.body.scrollHeight - window.innerHeight, targetScroll)
-          );
-          startY = currentY; // 次回用に更新
-        }, { passive: true });
+          e.preventDefault();
+          const currentY = e.touches[0]?.clientY ?? 0;
+          const delta = startY - currentY; // 上にスワイプで正
+          targetScroll += delta;
+          targetScroll = Math.max(0, Math.min(document.body.scrollHeight - window.innerHeight, targetScroll));
+          startY = currentY;
+        }, { passive: false });
       }
       
       // --- 初回アクセスオーバーレイ ---
@@ -153,7 +144,7 @@ const { title } = Astro.props;
         backToTopButton.addEventListener('click', () => {
           targetScroll = 0;
           const start = window.scrollY;
-          const duration = 1500; // ミリ秒
+          const duration = 1500;
           const startTime = performance.now();
       
           function smoothScrollStep(now) {
@@ -168,6 +159,7 @@ const { title } = Astro.props;
         });
       });
       </script>
+      
       
       
   </head>
