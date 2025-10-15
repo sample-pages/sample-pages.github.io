@@ -2,59 +2,42 @@
 
 ---
 
-<footer class="footer text-color footer_bcolor zen-kaku-gothic-new">
-  <div style="height: 20px;"></div>
-  <button id="backToTop" class="back-to-top">
+<footer class="border-t-[4px] border-red-100 footer text-color footer_bcolor zen-kaku-gothic-new relative">
+  <div class="flex items-center justify-between h-[100px] ml-14 max-md:ml-8 mr-36"> <!-- フッター全体 -->
+
+    <!-- 左側：SNSアイコン群 -->
+    <div class="flex items-center space-x-6">
+      <div class="flex items-center space-x-3">
+        <a href="https://www.facebook.com/we.are.stutterer" class="header_bcolor rounded-full w-12 h-12 flex justify-center items-center transform transition-transform duration-200 hover:scale-110">
+          <img src="/images/Facebook_Logo_Primary.png" class="w-9" alt="Facebook">
+        </a>
+        <a href="https://x.com/westu__2026" class="header_bcolor rounded-full w-12 h-12 flex justify-center items-center transform transition-transform duration-200 hover:scale-110">
+          <i class="ri-twitter-x-line text-black text-[32px]"></i>
+        </a>
+        <a href="https://www.youtube.com/@westu_kansai" class="header_bcolor rounded-full w-12 h-12 flex justify-center items-center transform transition-transform duration-200 hover:scale-110">
+          <img src="/images/yt_icon_red_digital.png" class="w-9" alt="YouTube">
+        </a>
+      </div>
+    </div>
+
+    <!-- 右側：コピーライト + ボタン -->
+    <div class="flex items-center space-x-10">
+      <p class="font-body text-sm text-right resp-pc-f">
+        Copyright &#169; 2025 うぃーすた全国交流会実行委員会 All rights reserved.
+      </p>
+
+      
+    </div>
+    
+    
+  
+    
+  </div>
+  <button id="backToTop" class="border-t-[4px] border-l-[4px] border-red-100 ml-0 back-to-top flex justify-center items-center bg-[#ffd8d8]">
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
       <polyline points="6 15 12 9 18 15"></polyline>
     </svg>
   </button>
-  <div class="flex-col resp-pc-f">
-    <div class="flex justify-center items-center p-4" style="padding-top: 0px">
-      <!-- SNSテキスト -->
-      <p class="text-[22px] mr-5 font-bold">OFFICIAL SNS</p>
-    
-      <!-- SNSアイコン -->
-      <div class="flex justify-center items-center space-x-3">
-        <a href="https://www.facebook.com/we.are.stutterer" target="_blank" rel="noopener noreferrer"
-           class="header_bcolor rounded-full w-12 h-12 flex justify-center items-center">
-          <img src="/images/Facebook_Logo_Primary.png" class="w-9" alt="Facebook">
-        </a>
-      
-        <a href="https://x.com/westu__2026" target="_blank" rel="noopener noreferrer"
-           class="header_bcolor rounded-full w-12 h-12 flex justify-center items-center">
-          <i class="ri-twitter-x-line text-black text-[32px]"></i>
-        </a>
-      
-        <a href="https://www.youtube.com/@westu_kansai" target="_blank" rel="noopener noreferrer"
-           class="header_bcolor rounded-full w-12 h-12 flex justify-center items-center">
-          <img src="/images/yt_icon_red_digital.png" class="w-13" alt="YouTube">
-        </a>
-      </div>
-      
-    
-      <!-- 縦棒 -->
-      <span class="inline-block border-l border-black h-10 mr-8 ml-6"></span>
-    
-      <!-- 画像リンク -->
-      <a href="https://we-are-stutt.jimdofree.com" target="_blank" rel="noopener noreferrer">
-        <img src="/images/1453810670.jpeg" style="height: 50px; width: auto;" alt="公式サイト">
-      </a>
-      <a href="https://chukosei-tsudoi.my.canva.site" target="_blank" rel="noopener noreferrer">
-        <div class="Makinas-4-Flat card-box flex flex-col items-center leading-none" style="margin-top: 0.25rem; margin-left: 1.5rem;">
-          <span class="text-start" style="font-size: 16px; margin-left: 0.1rem;">全国言友会</span>
-          <span class="text-lg  text-start">吃音のある中高生交流会</span>
-        </div>
-      </a>
-    </div>
-    
-
-      <!-- コピーライト -->
-    <p class="font-body text-sm text-center mt-4">
-      Copyright &#169; 2025 うぃーすた全国交流会実行委員会 All rights reserved.
-    </p>
-    <div style="height: 24px;"></div>
-  </div>
         <!-- <a href="https://github.com/luetsrr"
           ><i
             class="ri-github-line hover-color"
@@ -157,26 +140,4 @@
   </div>
   
 </footer>
-
-<script>
-  const backToTopButton = document.getElementById('backToTop');
-
-  // クリック（またはタップ）でスムーズスクロール
-  backToTopButton?.addEventListener('click', (e) => {
-    e.preventDefault();
-
-    // スクロールアニメーション
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-
-    // モバイル用：タップ時に一瞬拡大 → 元に戻す
-    backToTopButton.style.transform = 'scale(1.2)';
-    backToTopButton.style.transition = 'transform 0.3s ease';
-    setTimeout(() => {
-      backToTopButton.style.transform = 'scale(1)';
-    }, 200); // 0.2秒後に戻す
-  });
-</script>
 

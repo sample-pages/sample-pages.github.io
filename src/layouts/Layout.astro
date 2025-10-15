@@ -39,7 +39,7 @@ if (!('ontouchstart' in window)) {
   window.addEventListener("wheel", (e: WheelEvent) => {
     e.preventDefault(); // デフォルトスクロール停止
 
-    targetScroll += e.deltaY * 0.7; // スクロール量調整
+    targetScroll += e.deltaY * 0.8; // スクロール量調整
     targetScroll = Math.max(0, Math.min(document.body.scrollHeight - window.innerHeight, targetScroll));
   }, { passive: false });
 
@@ -69,12 +69,13 @@ window.addEventListener('load', () => {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url('/images/p0126_l.png') no-repeat center center;
   background: 
-    linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)), /* 半透明で色を薄く */
-  background-size: cover; /* 画面いっぱいに拡大 */
+    linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), /* ← 上に重ねる */
+    url('/images/p0126_l.png') no-repeat center center; /* ← 背景画像 */
+  background-size: cover;
   z-index: 9999;
 `;
+
 
 
   const container = document.createElement('div');
@@ -111,16 +112,44 @@ window.addEventListener('load', () => {
   // フェードイン順
   setTimeout(() => line1.style.opacity = "1", 800);
   setTimeout(() => line2.style.opacity = "1", 2500);
-  setTimeout(() => line3.style.opacity = "1", 5000);
+  setTimeout(() => line3.style.opacity = "1", 4000);
 
   // 全体フェードアウト
   setTimeout(() => {
     overlay.style.transition = 'opacity 1s';
     overlay.style.opacity = "0";
     setTimeout(() => overlay.remove(), 1000);
-  }, 8400);
+  }, 7000);
 
   sessionStorage.setItem("welcomeShown", "true");
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const backToTopButton = document.getElementById('backToTop');
+  if (!backToTopButton) return;
+
+  backToTopButton.addEventListener('click', () => {
+    targetScroll = 0;
+    const start = window.scrollY;
+    const duration = 1500; // ← ゆっくりにしたいならここを大きく（ミリ秒）
+    const startTime = performance.now();
+
+    function smoothScrollStep(now) {
+      const elapsed = now - startTime;
+      const progress = Math.min(elapsed / duration, 1); // 0〜1に正規化
+
+      // イージング（ゆっくり減速する感じ）
+      const ease = 1 - Math.pow(1 - progress, 3);
+
+      window.scrollTo(0, start * (1 - ease));
+
+      if (progress < 1) {
+        requestAnimationFrame(smoothScrollStep);
+      }
+    }
+
+    requestAnimationFrame(smoothScrollStep);
+  });
 });
 
     </script>

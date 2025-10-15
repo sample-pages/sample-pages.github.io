@@ -572,7 +572,7 @@ video {
     html[data-theme="light"] {
   /*background-color: #fff1f1;*/
   background: 
-    linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)), /* 半透明で色を薄く */
+    linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), /* 半透明で色を薄く */
     url('/images/p0126_l.png') center center;
   background-size: contain;
   /* 画面に収まるように調整 */
@@ -660,8 +660,8 @@ html[data-theme="light"] .text-color {
   left: 44%;
 }
 
-.right-4{
-  right: 1rem;
+.right-5{
+  right: 1.25rem;
 }
 
 .top-0{
@@ -674,10 +674,6 @@ html[data-theme="light"] .text-color {
 
 .top-1\/2{
   top: 50%;
-}
-
-.top-2{
-  top: 0.5rem;
 }
 
 .z-0{
@@ -745,8 +741,16 @@ html[data-theme="light"] .text-color {
   margin-bottom: 3px;
 }
 
-.ml-1{
-  margin-left: 0.25rem;
+.ml-0{
+  margin-left: 0px;
+}
+
+.ml-10{
+  margin-left: 2.5rem;
+}
+
+.ml-14{
+  margin-left: 3.5rem;
 }
 
 .ml-2{
@@ -769,20 +773,16 @@ html[data-theme="light"] .text-color {
   margin-right: 0.5rem;
 }
 
+.mr-36{
+  margin-right: 9rem;
+}
+
 .mr-4{
   margin-right: 1rem;
 }
 
-.mr-5{
-  margin-right: 1.25rem;
-}
-
 .mr-7{
   margin-right: 1.75rem;
-}
-
-.mr-8{
-  margin-right: 2rem;
 }
 
 .mt-1{
@@ -795,10 +795,6 @@ html[data-theme="light"] .text-color {
 
 .mt-2{
   margin-top: 0.5rem;
-}
-
-.mt-4{
-  margin-top: 1rem;
 }
 
 .mt-\[115px\]{
@@ -815,6 +811,22 @@ html[data-theme="light"] .text-color {
 
 .mt-\[72px\]{
   margin-top: 72px;
+}
+
+.mt-\[70px\]{
+  margin-top: 70px;
+}
+
+.mt-\[60px\]{
+  margin-top: 60px;
+}
+
+.mt-\[54px\]{
+  margin-top: 54px;
+}
+
+.mt-\[64px\]{
+  margin-top: 64px;
 }
 
 .block{
@@ -853,8 +865,16 @@ html[data-theme="light"] .text-color {
   height: 3rem;
 }
 
+.h-72{
+  height: 18rem;
+}
+
 .h-8{
   height: 2rem;
+}
+
+.h-\[100px\]{
+  height: 100px;
 }
 
 .h-\[2px\]{
@@ -871,6 +891,26 @@ html[data-theme="light"] .text-color {
 
 .h-full{
   height: 100%;
+}
+
+.h-\[\]{
+  height: ;
+}
+
+.h-\[50px\]{
+  height: 50px;
+}
+
+.h-\[30px\]{
+  height: 30px;
+}
+
+.h-\[20px\]{
+  height: 20px;
+}
+
+.h-\[10px\]{
+  height: 10px;
 }
 
 .max-h-\[500px\]{
@@ -998,6 +1038,10 @@ html[data-theme="light"] .text-color {
   justify-content: center;
 }
 
+.justify-between{
+  justify-content: space-between;
+}
+
 .gap-1{
   gap: 0.25rem;
 }
@@ -1010,10 +1054,22 @@ html[data-theme="light"] .text-color {
   gap: 0.75rem;
 }
 
+.space-x-10 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-x-reverse: 0;
+  margin-right: calc(2.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(2.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
 .space-x-3 > :not([hidden]) ~ :not([hidden]){
   --tw-space-x-reverse: 0;
   margin-right: calc(0.75rem * var(--tw-space-x-reverse));
   margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.space-x-6 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .space-y-2 > :not([hidden]) ~ :not([hidden]){
@@ -1083,8 +1139,16 @@ html[data-theme="light"] .text-color {
   border-bottom-width: 1px;
 }
 
+.border-b-\[4px\]{
+  border-bottom-width: 4px;
+}
+
 .border-l{
   border-left-width: 1px;
+}
+
+.border-l-\[4px\]{
+  border-left-width: 4px;
 }
 
 .border-r{
@@ -1093,6 +1157,10 @@ html[data-theme="light"] .text-color {
 
 .border-t{
   border-top-width: 1px;
+}
+
+.border-t-\[4px\]{
+  border-top-width: 4px;
 }
 
 .border-black{
@@ -1110,9 +1178,9 @@ html[data-theme="light"] .text-color {
   border-color: rgb(209 213 219 / var(--tw-border-opacity, 1));
 }
 
-.border-gray-400{
+.border-red-100{
   --tw-border-opacity: 1;
-  border-color: rgb(156 163 175 / var(--tw-border-opacity, 1));
+  border-color: rgb(254 226 226 / var(--tw-border-opacity, 1));
 }
 
 .border-red-200{
@@ -1130,9 +1198,19 @@ html[data-theme="light"] .text-color {
   border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
 }
 
-.bg-\[\#ee8080\]{
+.bg-\[\#cb5757\]{
   --tw-bg-opacity: 1;
-  background-color: rgb(238 128 128 / var(--tw-bg-opacity, 1));
+  background-color: rgb(203 87 87 / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[\#ffd8d8\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 216 216 / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[\#fffdfd\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 253 253 / var(--tw-bg-opacity, 1));
 }
 
 .bg-black{
@@ -1168,6 +1246,10 @@ html[data-theme="light"] .text-color {
 .bg-white{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+}
+
+.bg-white\/30{
+  background-color: rgb(255 255 255 / 0.3);
 }
 
 .bg-yellow-300{
@@ -1226,12 +1308,8 @@ html[data-theme="light"] .text-color {
   padding-bottom: 2px;
 }
 
-.pl-\[10px\]{
-  padding-left: 10px;
-}
-
-.pr-\[10px\]{
-  padding-right: 10px;
+.pl-8{
+  padding-left: 2rem;
 }
 
 .pt-2{
@@ -1250,6 +1328,10 @@ html[data-theme="light"] .text-color {
   text-align: center;
 }
 
+.text-right{
+  text-align: right;
+}
+
 .text-start{
   text-align: start;
 }
@@ -1261,10 +1343,6 @@ html[data-theme="light"] .text-color {
 .text-3xl{
   font-size: 1.875rem;
   line-height: 2.25rem;
-}
-
-.text-\[14px\]{
-  font-size: 14px;
 }
 
 .text-\[15px\]{
@@ -1285,6 +1363,10 @@ html[data-theme="light"] .text-color {
 
 .text-\[32px\]{
   font-size: 32px;
+}
+
+.text-\[50px\]{
+  font-size: 50px;
 }
 
 .text-base{
@@ -1328,6 +1410,10 @@ html[data-theme="light"] .text-color {
   line-height: 1;
 }
 
+.tracking-widest{
+  letter-spacing: 0.1em;
+}
+
 .text-black{
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity, 1));
@@ -1336,6 +1422,11 @@ html[data-theme="light"] .text-color {
 .text-blue-300{
   --tw-text-opacity: 1;
   color: rgb(147 197 253 / var(--tw-text-opacity, 1));
+}
+
+.text-blue-500{
+  --tw-text-opacity: 1;
+  color: rgb(59 130 246 / var(--tw-text-opacity, 1));
 }
 
 .text-blue-800{
@@ -1480,6 +1571,13 @@ body {
   overflow-x: hidden;
 }
 
+.outline-text {
+  color: #000000;
+  /* 中は透明 */
+  -webkit-text-stroke: 1px #000000;
+  /* 線の太さと色 */
+}
+
 .Makinas-4-Flat {
   font-family: "Makinas-4-Flat", sans-serif;
   font-weight: 500;
@@ -1545,7 +1643,7 @@ body {
 }
 
 .header_bcolor {
-  background-color: #fff3f3;
+  background-color: #fffdfd;
   /*background: linear-gradient(
     to bottom,
     rgba(255, 255, 255, 1) 0%,
@@ -1558,7 +1656,7 @@ body {
 }
 
 .footer_bcolor {
-  background-color: #ffd7d7;
+  background-color: #ffe0e0;
 }
 
 .header_tcolor {
@@ -1566,7 +1664,7 @@ body {
 }
 
 .about_color {
-  background-color: #ffdbdb;
+  background-color: #ffe9e9;
 }
 
 .about_color2 {
@@ -1691,23 +1789,17 @@ body {
 }
 
 .margin-contents {
-  max-width: 70rem;
+  max-width: 64rem;
   margin-left: auto;
   margin-right: auto;
   padding-top: 1rem;
   padding-bottom: 1rem;
   padding-left: 1.5rem;
-  padding-right: 1.5rem
-}
-
-@media (min-width: 640px){
-  .margin-contents{
-    padding: 2rem;
-  }
+  padding-right: 1.5rem;
 }
 
 .margin-default {
-  max-width: 64rem;
+  max-width: 54rem;
   margin-left: auto;
   margin-right: auto;
   padding-top: 1rem;
@@ -1953,6 +2045,11 @@ body {
 
 .resp-pc-g{
   display: flex;
+}
+
+.footer .resp-pc-g {
+  align-items: center;
+  /* 子要素の高さを揃える */
 }
 
 @media (min-width: 1280px){
@@ -2694,47 +2791,40 @@ img {
 }
 
 .footer {
+  height: 100px;
+  /* フッター全体の高さ */
   position: relative;
-  padding: 10px;
+  align-items: center;
+}
+
+.footer .flex {
+  align-items: center;
+  /* 子要素の高さを揃える */
 }
 
 .back-to-top {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 50px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
   background-color: #ffffff;
-  border: none;
-  border-radius: 50%;
+  border-radius: 0;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 0.3s, border-color 0.3s, transform 0.3s;
-  /* transform を追加 */
-  /*border: 1.5px solid #c6c6c6; /* ← 黒い縁を追加 */
+  /* ← ポイント：フッター内で右下固定 */
+  position: absolute;
+  right: 0px;
+  bottom: 0;
   z-index: 10;
-  /* ← これ重要！上に重ねる */
+  transition: background-color 0.3s ease;
 }
 
-@media (min-width: 1024px){
-  .back-to-top{
-    height: 50px;
-    width: 50px;
-  }
+.back-to-top:hover {
+  background-color: #a84242;
 }
 
-@media (hover: hover) and (pointer: fine) {
-  .back-to-top:hover {
-    background-color: #ffffff;
-    transform: scale(1.2);
-    /* 1.2倍に拡大 */
-  }
-}
-
-.back-to-top:active {
-  transform: scale(1.2);
+.back-to-top:hover svg {
+  stroke: #fff;
 }
 
 .back-to-top svg {
@@ -2812,7 +2902,7 @@ td:not(:last-child)::after {
 }
 
 .table_color {
-  background-color: #e47272;
+  background-color: #cb5757;
 }
 
 .toggle-button-4 {
@@ -2990,7 +3080,7 @@ td:not(:last-child)::after {
 .rounded-heading-blue {
   display: inline-block;
   /* 背景をテキストの長さに合わせる */
-  background-color: #e47272;
+  background-color: #ff1313;
   /* 背景色（お好みで） */
   color: rgb(255, 255, 255);
   /* 文字色 */
@@ -3007,7 +3097,7 @@ td:not(:last-child)::after {
 .rounded-heading-red {
   display: inline-block;
   /* 背景をテキストの長さに合わせる */
-  background-color: #e47272;
+  background-color: #000000;
   /* 背景色（お好みで） */
   color: rgb(255, 255, 255);
   /* 文字色 */
@@ -3157,11 +3247,6 @@ td:not(:last-child)::after {
     font-size: 14px;
   }
 
-  .max-lg\:text-sm{
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
-
   .max-lg\:text-xl{
     font-size: 1.25rem;
     line-height: 1.75rem;
@@ -3173,6 +3258,26 @@ td:not(:last-child)::after {
 }
 
 @media not all and (min-width: 768px){
+  .max-md\:ml-2{
+    margin-left: 0.5rem;
+  }
+
+  .max-md\:ml-1{
+    margin-left: 0.25rem;
+  }
+
+  .max-md\:ml-10{
+    margin-left: 2.5rem;
+  }
+
+  .max-md\:ml-8{
+    margin-left: 2rem;
+  }
+
+  .max-md\:ml-6{
+    margin-left: 1.5rem;
+  }
+
   .max-md\:h-0{
     height: 0px;
   }
@@ -3194,6 +3299,10 @@ td:not(:last-child)::after {
     font-size: 1rem;
     line-height: 1.5rem;
   }
+
+  .max-md\:text-\[50px\]{
+    font-size: 50px;
+  }
 }
 
 @media (min-width: 768px){
@@ -3207,6 +3316,14 @@ td:not(:last-child)::after {
 
   .md\:h-\[90px\]{
     height: 90px;
+  }
+
+  .md\:h-\[50px\]{
+    height: 50px;
+  }
+
+  .md\:h-\[40px\]{
+    height: 40px;
   }
 
   .md\:w-\[100\%\]{
@@ -3256,6 +3373,10 @@ td:not(:last-child)::after {
 
   .lg\:mt-\[150px\]{
     margin-top: 150px;
+  }
+
+  .lg\:mt-\[78px\]{
+    margin-top: 78px;
   }
 
   .lg\:h-32{

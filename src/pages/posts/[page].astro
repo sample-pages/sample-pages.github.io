@@ -52,29 +52,16 @@ const tagColors: Record<string, string> = {
 ---
 
 <Layout title="お知らせ｜第8回うぃーすた全国交流会">
-  <div class="mt-[140px] lg:mt-[150px] margin-default text-color zen-kaku-gothic-new text-sm lg:text-base" style="line-height: 2.05;">
-    <div class="bg-white rounded-[40px] rounded-b-none pt-8 md:px-12 max-md:px-6 shadow-sm">
-    <h2 class="headline-page">
-      <span class="headline-main">NEWS</span>
-      <span class="headline-newssub">お知らせ</span>
-    </h2>
-    <!-- 
-    <div style="height: 20px;"></div>
-    {uniqueTags.map((tag) => (
-      <a
-        class={`text-[14px] max-lg:text-sm pr-[10px] pl-[10px] rounded-full text-black mr-2 ml-1 mb-2 tag-hover border border-gray-400 ${
-          tagColors[tag] || "bg-white"
-        }`}
-        href={`/tags/${tag}`}
-      >
-        {tag}
-      </a>
-    ))}
--->
+  <div class="mt-[70px] lg:mt-[78px] bg-[#fffdfd] border-b-[4px] border-red-100 w-full h-72 flex flex-col justify-center pl-8 zen-kaku-gothic-new">
+    <span class="ml-10 max-md:ml-1 text-[50px] font-bold outline-text tracking-widest">NEWS</span>
+    <span class="ml-10 max-md:ml-1 text-[20px]">お知らせ</span>
+  </div>
+  <div class="bg-white/30 text-color zen-kaku-gothic-new text-sm lg:text-base" style="line-height: 2.05;">
+    <div class="margin-contents pt-8 md:px-12 max-md:px-6">
 
-    <div style="height: 25px;"></div>
+    <div class="h-[10px] md:h-[50px]"></div>
 
-    <ul style="padding-left: 0.25rem">
+    <ul class="margin-default" style="padding-left: 0.25rem">
       {page.data.map((post: any) => (
         <li>
           <div class="flex flex-wrap items-center gap-1">

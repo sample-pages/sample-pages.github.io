@@ -2,7 +2,7 @@
 
 ---
 
-<header class="zen-kaku-gothic-new header_bcolor position z-[1000]" id="mainHeader">
+<header class="border-b-[4px] border-red-100 zen-kaku-gothic-new header_bcolor position z-[1000]" id="mainHeader">
   <div class="mx-auto flex flex-wrap p-2 flex-row items-center">
     <a class="flex flex-row items-center text-gray-900 mb-0">
       <!--
@@ -191,7 +191,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // アニメーション開始（遅延は必要に応じて変更）
     setTimeout(() => {
       header.classList.add("slide-in");
-    }, 8400);
+    }, 7000);
 
     // フラグを保存して二度目以降はアニメーションしない
     sessionStorage.setItem("headerAnimated", "true");

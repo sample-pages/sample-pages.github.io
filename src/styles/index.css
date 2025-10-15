@@ -25,7 +25,7 @@
     html[data-theme="light"] {
       /*background-color: #fff1f1;*/
       background: 
-    linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)), /* 半透明で色を薄く */
+    linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), /* 半透明で色を薄く */
     url('/images/p0126_l.png') center center;
   background-size: contain;   /* 画面に収まるように調整 */
     }
@@ -46,6 +46,11 @@ html, body {
 
 body {
   overflow-x: hidden;
+}
+
+.outline-text {
+  color: #000000;                 /* 中は透明 */
+  -webkit-text-stroke: 1px #000000;     /* 線の太さと色 */
 }
 
 .Makinas-4-Flat {
@@ -117,7 +122,7 @@ body {
 }
 
 .header_bcolor {
-  background-color: #fff3f3;
+  background-color: #fffdfd;
   /*background: linear-gradient(
     to bottom,
     rgba(255, 255, 255, 1) 0%,
@@ -131,7 +136,7 @@ body {
 
 
 .footer_bcolor {
-  background-color: #ffd7d7;
+  background-color: #ffe0e0;
 }
 
 .header_tcolor {
@@ -139,7 +144,7 @@ body {
 }
 
 .about_color {
-  background-color: #ffdbdb;
+  background-color: #ffe9e9;
 }
 
 .about_color2 {
@@ -233,18 +238,17 @@ body {
 }
 
 .margin-contents {
-    max-width: 70rem;
+    max-width: 64rem;
     margin-left: auto;
     margin-right: auto;
     padding-top: 1rem;
     padding-bottom: 1rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
-    @apply sm:p-8
 }
 
 .margin-default {
-  max-width: 64rem;
+  max-width: 54rem;
   margin-left: auto;
   margin-right: auto;
   padding-top: 1rem;
@@ -1010,44 +1014,47 @@ img {
 }
 
 .footer {
+  height: 100px; /* フッター全体の高さ */
   position: relative;
-  padding: 10px;
+  align-items: center;
+}
+
+.footer .flex {
+  align-items: center; /* 子要素の高さを揃える */
 }
 
 .back-to-top {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 50px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
   background-color: #ffffff;
-  border: none;
-  border-radius: 50%;
+  border-radius: 0;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 0.3s, border-color 0.3s, transform 0.3s; /* transform を追加 */
-  /*border: 1.5px solid #c6c6c6; /* ← 黒い縁を追加 */
-  z-index: 10; /* ← これ重要！上に重ねる */
-  @apply lg:w-[50px] lg:h-[50px];
+
+  /* ← ポイント：フッター内で右下固定 */
+  position: absolute;
+  right: 0px;
+  bottom: 0;
+
+  z-index: 10;
+  transition: background-color 0.3s ease;
 }
 
-@media (hover: hover) and (pointer: fine) {
 .back-to-top:hover {
-  background-color: #ffffff;
-  transform: scale(1.2); /* 1.2倍に拡大 */
-}
+  background-color: #a84242;
 }
 
-.back-to-top:active {
-  transform: scale(1.2);
+.back-to-top:hover svg {
+  stroke: #fff;
 }
 
 .back-to-top svg {
   width: 24px;
   height: 24px;
 }
+
 
 
 .fade-in {
@@ -1106,7 +1113,7 @@ td:not(:last-child)::after {
 }
 
 .table_color {
-  background-color: #e47272;
+  background-color: #cb5757;
 }
 
 .toggle-button-4 {
@@ -1216,7 +1223,7 @@ td:not(:last-child)::after {
 
 .rounded-heading-blue {
   display: inline-block;       /* 背景をテキストの長さに合わせる */
-  background-color: #e47272;   /* 背景色（お好みで） */
+  background-color: #ff1313;   /* 背景色（お好みで） */
   color: rgb(255, 255, 255);                /* 文字色 */
   padding: 0.1em 1.3em;        /* 内側の余白 */
   border-radius: 9999px;       /* 丸み：大きくすると pill型に */
@@ -1226,7 +1233,7 @@ td:not(:last-child)::after {
 
 .rounded-heading-red {
   display: inline-block;       /* 背景をテキストの長さに合わせる */
-  background-color: #e47272;   /* 背景色（お好みで） */
+  background-color: #000000;   /* 背景色（お好みで） */
   color: rgb(255, 255, 255);                /* 文字色 */
   padding: 0.1em 1.3em;        /* 内側の余白 */
   border-radius: 9999px;       /* 丸み：大きくすると pill型に */
