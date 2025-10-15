@@ -829,6 +829,10 @@ html[data-theme="light"] .text-color {
   margin-top: 64px;
 }
 
+.mt-\[80px\]{
+  margin-top: 80px;
+}
+
 .block{
   display: block;
 }
@@ -891,6 +895,10 @@ html[data-theme="light"] .text-color {
 
 .h-full{
   height: 100%;
+}
+
+.h-\[\]{
+  height: ;
 }
 
 .h-\[50px\]{

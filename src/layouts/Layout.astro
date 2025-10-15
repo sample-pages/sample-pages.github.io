@@ -34,29 +34,38 @@ const { title } = Astro.props;
 // --- 初期設定 ---
 let targetScroll = window.scrollY;
 
-// --- PC マウスホイールのみ ---
-if (!('ontouchstart' in window)) {
-  window.addEventListener("wheel", (e: WheelEvent) => {
-    e.preventDefault(); // デフォルトスクロール停止
+// --- スムーズスクロール関数（PCのみ） ---
+function smoothScroll() {
+  const currentScroll = window.scrollY;
+  const diff = targetScroll - currentScroll;
 
-    targetScroll += e.deltaY * 0.8; // スクロール量調整
-    targetScroll = Math.max(0, Math.min(document.body.scrollHeight - window.innerHeight, targetScroll));
-  }, { passive: false });
-
-  // --- スムーズスクロール ---
-  function smoothScroll() {
-    const currentScroll = window.scrollY;
-    const diff = targetScroll - currentScroll;
-
-    if (Math.abs(diff) > 0.5) {
-      window.scrollTo(0, currentScroll + diff * 0.1);
-    }
-
-    requestAnimationFrame(smoothScroll);
+  if (Math.abs(diff) > 0.5) {
+    window.scrollTo(0, currentScroll + diff * 0.1); // スムーズに移動
   }
 
-  smoothScroll();
+  requestAnimationFrame(smoothScroll);
 }
+
+// --- PC マウスホイールのみ ---
+if (!("ontouchstart" in window)) {
+  window.addEventListener(
+    "wheel",
+    (e: WheelEvent) => {
+      e.preventDefault(); // デフォルトスクロール停止
+      targetScroll += e.deltaY * 0.8; // スクロール量調整
+      targetScroll = Math.max(
+        0,
+        Math.min(document.body.scrollHeight - window.innerHeight, targetScroll)
+      );
+    },
+    { passive: false }
+  );
+
+  smoothScroll(); // スムーズスクロール開始
+}
+
+
+
 
 window.addEventListener('load', () => {
   if (sessionStorage.getItem("welcomeShown")) return;
