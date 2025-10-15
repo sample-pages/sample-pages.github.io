@@ -989,6 +989,10 @@ html[data-theme="light"] .text-color {
   max-width: 24rem;
 }
 
+.flex-grow{
+  flex-grow: 1;
+}
+
 .grow{
   flex-grow: 1;
 }
