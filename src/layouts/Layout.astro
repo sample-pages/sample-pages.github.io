@@ -31,137 +31,137 @@ const { title } = Astro.props;
     <title>{title}</title>
     <meta name="description" content="『第8回うぃーすた全国交流会』を2026年7月18日(土)〜19日(日)に大阪にて開催します！">
     <script>
-// --- 初期設定 ---
-let targetScroll = window.scrollY;
-
-// --- スムーズスクロール関数（PCのみ） ---
-function smoothScroll() {
-  const currentScroll = window.scrollY;
-  const diff = targetScroll - currentScroll;
-
-  if (Math.abs(diff) > 0.5) {
-    window.scrollTo(0, currentScroll + diff * 0.1); // スムーズに移動
-  }
-
-  requestAnimationFrame(smoothScroll);
-}
-
-// --- PC マウスホイールのみ ---
-if (!("ontouchstart" in window)) {
-  window.addEventListener(
-    "wheel",
-    (e: WheelEvent) => {
-      e.preventDefault(); // デフォルトスクロール停止
-      targetScroll += e.deltaY * 0.8; // スクロール量調整
-      targetScroll = Math.max(
-        0,
-        Math.min(document.body.scrollHeight - window.innerHeight, targetScroll)
-      );
-    },
-    { passive: false }
-  );
-
-  smoothScroll(); // スムーズスクロール開始
-}
-
-
-
-
-window.addEventListener('load', () => {
-  if (sessionStorage.getItem("welcomeShown")) return;
-
-  const overlay = document.createElement('div');
-  overlay.style.cssText = `
-  position: fixed;
-  top: 0; left: 0;
-  width: 100vw; height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: 
-    linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), /* ← 上に重ねる */
-    url('/images/p0126_l.png') no-repeat center center; /* ← 背景画像 */
-  background-size: cover;
-  z-index: 9999;
-`;
-
-
-
-  const container = document.createElement('div');
-  container.style.cssText = `
-    display: flex;
-    flex-direction: row-reverse; /* 右から左に横並び */
-    gap: 2rem;                   /* ブロック間の余白 */
-  `;
-
-  const createLine = (text: string) => {
-    const div = document.createElement('div');
-    div.textContent = text;
-    div.classList.add("zen-kaku-gothic-new", "load-fsize");
-    div.style.cssText = `
-      color: black;
-      opacity: 0;
-      transition: opacity 1s;
-      writing-mode: vertical-rl; /* 縦書き */
-      text-align: left;           /* 文字は左上寄せ */
-    `;
-    return div;
-  };
-
-  const line1 = createLine("吃音のある同年代の仲間たちと");
-  const line2 = createLine("悩みや夢を語り合う、");
-  const line3 = createLine("かけがえのない時間を過ごしてみませんか？");
-
-  container.appendChild(line1);
-  container.appendChild(line2);
-  container.appendChild(line3);
-  overlay.appendChild(container);
-  document.body.appendChild(overlay);
-
-  // フェードイン順
-  setTimeout(() => line1.style.opacity = "1", 800);
-  setTimeout(() => line2.style.opacity = "1", 2500);
-  setTimeout(() => line3.style.opacity = "1", 4000);
-
-  // 全体フェードアウト
-  setTimeout(() => {
-    overlay.style.transition = 'opacity 1s';
-    overlay.style.opacity = "0";
-    setTimeout(() => overlay.remove(), 1000);
-  }, 7000);
-
-  sessionStorage.setItem("welcomeShown", "true");
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  const backToTopButton = document.getElementById('backToTop');
-  if (!backToTopButton) return;
-
-  backToTopButton.addEventListener('click', () => {
-    targetScroll = 0;
-    const start = window.scrollY;
-    const duration = 1500; // ← ゆっくりにしたいならここを大きく（ミリ秒）
-    const startTime = performance.now();
-
-    function smoothScrollStep(now) {
-      const elapsed = now - startTime;
-      const progress = Math.min(elapsed / duration, 1); // 0〜1に正規化
-
-      // イージング（ゆっくり減速する感じ）
-      const ease = 1 - Math.pow(1 - progress, 3);
-
-      window.scrollTo(0, start * (1 - ease));
-
-      if (progress < 1) {
-        requestAnimationFrame(smoothScrollStep);
+      // --- 初期スクロール位置 ---
+      let targetScroll = window.scrollY;
+      
+      // --- スムーズスクロール関数（PC専用） ---
+      function smoothScroll() {
+        const currentScroll = window.scrollY;
+        const diff = targetScroll - currentScroll;
+      
+        if (Math.abs(diff) > 0.5) {
+          window.scrollTo(0, currentScroll + diff * 0.1); // スムーズに移動
+        }
+      
+        requestAnimationFrame(smoothScroll);
       }
-    }
-
-    requestAnimationFrame(smoothScrollStep);
-  });
-});
-
-    </script>
+      
+      // --- デバイス判定 ---
+      const isTouchDevice = 'ontouchstart' in window;
+      
+      if (!isTouchDevice) {
+        // PC：カスタムスムーズスクロール
+        window.addEventListener(
+          "wheel",
+          (e: WheelEvent) => {
+            e.preventDefault(); // デフォルトスクロール停止
+            targetScroll += e.deltaY * 0.8;
+            targetScroll = Math.max(
+              0,
+              Math.min(document.body.scrollHeight - window.innerHeight, targetScroll)
+            );
+          },
+          { passive: false }
+        );
+      
+        smoothScroll(); // スムーズスクロール開始
+      } else {
+        // スマホ：自然スクロールに任せる
+        document.body.style.overscrollBehavior = 'auto';
+        // カスタムスクロールは適用しない
+      }
+      
+      // --- 初回アクセスオーバーレイ ---
+      window.addEventListener('load', () => {
+        if (sessionStorage.getItem("welcomeShown")) return;
+      
+        const overlay = document.createElement('div');
+        overlay.style.cssText = `
+          position: fixed;
+          top: 0; left: 0;
+          width: 100vw; height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: 
+            linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+            url('/images/p0126_l.png') no-repeat center center;
+          background-size: cover;
+          z-index: 9999;
+        `;
+      
+        const container = document.createElement('div');
+        container.style.cssText = `
+          display: flex;
+          flex-direction: row-reverse;
+          gap: 2rem;
+        `;
+      
+        const createLine = (text: string) => {
+          const div = document.createElement('div');
+          div.textContent = text;
+          div.classList.add("zen-kaku-gothic-new", "load-fsize");
+          div.style.cssText = `
+            color: black;
+            opacity: 0;
+            transition: opacity 1s;
+            writing-mode: vertical-rl;
+            text-align: left;
+          `;
+          return div;
+        };
+      
+        const line1 = createLine("吃音のある同年代の仲間たちと");
+        const line2 = createLine("悩みや夢を語り合う、");
+        const line3 = createLine("かけがえのない時間を過ごしてみませんか？");
+      
+        container.appendChild(line1);
+        container.appendChild(line2);
+        container.appendChild(line3);
+        overlay.appendChild(container);
+        document.body.appendChild(overlay);
+      
+        setTimeout(() => line1.style.opacity = "1", 800);
+        setTimeout(() => line2.style.opacity = "1", 2500);
+        setTimeout(() => line3.style.opacity = "1", 4000);
+      
+        setTimeout(() => {
+          overlay.style.transition = 'opacity 1s';
+          overlay.style.opacity = "0";
+          setTimeout(() => overlay.remove(), 1000);
+        }, 7000);
+      
+        sessionStorage.setItem("welcomeShown", "true");
+      });
+      
+      // --- 「トップへ戻る」ボタン ---
+      document.addEventListener("DOMContentLoaded", () => {
+        const backToTopButton = document.getElementById('backToTop');
+        if (!backToTopButton) return;
+      
+        backToTopButton.addEventListener('click', () => {
+          targetScroll = 0;
+          const start = window.scrollY;
+          const duration = 1500; // ミリ秒
+          const startTime = performance.now();
+      
+          function smoothScrollStep(now) {
+            const elapsed = now - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+      
+            // イージング（減速）
+            const ease = 1 - Math.pow(1 - progress, 3);
+      
+            window.scrollTo(0, start * (1 - ease));
+      
+            if (progress < 1) requestAnimationFrame(smoothScrollStep);
+          }
+      
+          requestAnimationFrame(smoothScrollStep);
+        });
+      });
+      </script>
+      
   </head>
   <!--style="overscroll-behavior-y: none;" -->
   <body class="margin-body flex flex-col min-h-screen overflow-x-hidden" id="page-top">
