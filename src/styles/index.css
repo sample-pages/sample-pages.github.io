@@ -1346,7 +1346,7 @@ td:not(:last-child)::after {
 /* ▼ レスポンシブ対応：スマホで画像サイズ調整 */
 @media (max-width: 768px) {
   .highres-img {
-    width: 840px;
+    width: 800px;
   }
 }
 
