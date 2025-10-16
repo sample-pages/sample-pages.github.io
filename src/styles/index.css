@@ -1330,6 +1330,6 @@ td:not(:last-child)::after {
 /* 768px以上の画面（md:）でスケール変更 */
 @media (max-width: 768px) {
   .rotate-forever {
-    --scale: 3.2;
+    --scale: 3.5;
   }
 }
