@@ -1273,3 +1273,33 @@ td:not(:last-child)::after {
  font-size: 1.5rem;
  @apply max-md:text-[1.2rem];
 }
+
+.shiny-slide {
+  display: inline-block;
+  background: linear-gradient(90deg, #000 40%, #fff 50%, #000 60%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1;
+
+  /* shineOnce は1秒遅れて開始、slideUp はすぐ開始 */
+  animation: 
+    shineOnce 3s forwards 0s,  /* 1秒遅延して光が始まる */
+    slideUp 0.4s ease-out forwards 0s;  /* スライドはすぐ開始 */
+}
+
+@keyframes shineOnce {
+  0% { background-position: 100% 0; }
+  100% { background-position: 0% 0; }
+}
+
+@keyframes slideUp {
+  0% { transform: translateY(50px); }
+  100% { transform: translateY(0); }
+}
+
+
+
+
+
+

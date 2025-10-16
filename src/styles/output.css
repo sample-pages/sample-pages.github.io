@@ -688,6 +688,10 @@ html[data-theme="light"] .text-color {
   z-index: 50;
 }
 
+.z-\[-1\]{
+  z-index: -1;
+}
+
 .z-\[0\]{
   z-index: 0;
 }
@@ -793,6 +797,10 @@ html[data-theme="light"] .text-color {
   margin-top: 0.5rem;
 }
 
+.mt-3{
+  margin-top: 0.75rem;
+}
+
 .mt-\[115px\]{
   margin-top: 115px;
 }
@@ -807,6 +815,10 @@ html[data-theme="light"] .text-color {
 
 .mt-\[80px\]{
   margin-top: 80px;
+}
+
+.mt-8{
+  margin-top: 2rem;
 }
 
 .block{
@@ -1076,6 +1088,14 @@ html[data-theme="light"] .text-color {
   border-radius: 0.75rem;
 }
 
+.rounded-2xl{
+  border-radius: 1rem;
+}
+
+.rounded-3xl{
+  border-radius: 1.5rem;
+}
+
 .border{
   border-width: 1px;
 }
@@ -1249,12 +1269,20 @@ html[data-theme="light"] .text-color {
   padding-bottom: 2px;
 }
 
+.pb-3{
+  padding-bottom: 0.75rem;
+}
+
 .pl-8{
   padding-left: 2rem;
 }
 
 .pt-2{
   padding-top: 0.5rem;
+}
+
+.pt-3{
+  padding-top: 0.75rem;
 }
 
 .pt-8{
@@ -3087,6 +3115,40 @@ td:not(:last-child)::after {
   }
 }
 
+.shiny-slide {
+  display: inline-block;
+  background: linear-gradient(90deg, #000 40%, #fff 50%, #000 60%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1;
+  /* shineOnce は1秒遅れて開始、slideUp はすぐ開始 */
+  animation: 
+    shineOnce 3s forwards 0s,  /* 1秒遅延して光が始まる */
+    slideUp 0.4s ease-out forwards 0s;
+  /* スライドはすぐ開始 */
+}
+
+@keyframes shineOnce {
+  0% {
+    background-position: 100% 0;
+  }
+
+  100% {
+    background-position: 0% 0;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(50px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .hover\:scale-110:hover{
   --tw-scale-x: 1.1;
   --tw-scale-y: 1.1;
@@ -3213,10 +3275,6 @@ td:not(:last-child)::after {
   .max-md\:text-base{
     font-size: 1rem;
     line-height: 1.5rem;
-  }
-
-  .max-md\:tracking-wider{
-    letter-spacing: 0.05em;
   }
 }
 
@@ -3350,3 +3408,9 @@ td:not(:last-child)::after {
     line-height: 1.75rem;
   }
 }
+
+
+
+
+
+
