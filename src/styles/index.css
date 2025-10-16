@@ -1318,10 +1318,18 @@ td:not(:last-child)::after {
 
 
 @keyframes rotateForever {
-  from { transform: rotate(0deg) scale(2.5); }
-  to   { transform: rotate(360deg) scale(2.5); }
+  from { transform: rotate(0deg) scale(var(--scale)); }
+  to   { transform: rotate(360deg) scale(var(--scale)); }
 }
 
 .rotate-forever {
-  animation: rotateForever 100s linear infinite; /* 20秒で1回転、無限ループ */
+  animation: rotateForever 100s linear infinite;
+  --scale: 2.8; /* デフォルトの拡大率（スマホ） */
+}
+
+/* 768px以上の画面（md:）でスケール変更 */
+@media (max-width: 768px) {
+  .rotate-forever {
+    --scale: 3.2;
+  }
 }

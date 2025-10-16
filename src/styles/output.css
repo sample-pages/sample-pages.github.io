@@ -3168,17 +3168,26 @@ td:not(:last-child)::after {
 
 @keyframes rotateForever {
   from {
-    transform: rotate(0deg) scale(2.5);
+    transform: rotate(0deg) scale(var(--scale));
   }
 
   to   {
-    transform: rotate(360deg) scale(2.5);
+    transform: rotate(360deg) scale(var(--scale));
   }
 }
 
 .rotate-forever {
   animation: rotateForever 100s linear infinite;
-  /* 20秒で1回転、無限ループ */
+  --scale: 2.8;
+  /* デフォルトの拡大率（スマホ） */
+}
+
+/* 768px以上の画面（md:）でスケール変更 */
+
+@media (max-width: 768px) {
+  .rotate-forever {
+    --scale: 3.2;
+  }
 }
 
 .hover\:scale-110:hover{
@@ -3254,6 +3263,12 @@ td:not(:last-child)::after {
 
   .max-lg\:w-24{
     width: 6rem;
+  }
+
+  .max-lg\:scale-150{
+    --tw-scale-x: 1.5;
+    --tw-scale-y: 1.5;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
   .max-lg\:gap-10{

@@ -7,14 +7,14 @@ import Layout from "../layouts/Layout.astro";
   <div class="overflow-hidden relative border-b-[4px] border-red-100 max-lg:h-[300px] lg:h-[500px] mt-[80px] w-full">
     <!-- 背景画像 -->
     <div 
-      class="absolute inset-0 bg-cover bg-center"
+      class="absolute inset-0 bg-cover bg-center max-lg:scale-150"
       style="background-image: url('/images/chukosei.png');"
     ></div>
   
     <!-- 中央に固定するラッパー -->
     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
       <img 
-        src="/images/chukosei_wa.png" 
+        src="/images/chukosei_wa.png"
         alt="重ねる画像" 
         class="rotate-forever"
       />
