@@ -3210,7 +3210,7 @@ td:not(:last-child)::after {
 
 @media (max-width: 768px) {
   .highres-img {
-    width: 900px;
+    width: 840px;
   }
 }
 
