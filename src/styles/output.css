@@ -2385,7 +2385,7 @@ img {
   border: 1px solid #ddd;
   border-radius: 1rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  z-index: 999;
+  z-index: 9999;
   padding: 0;
   overflow: hidden;
 }
