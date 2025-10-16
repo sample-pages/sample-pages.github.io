@@ -809,6 +809,14 @@ html[data-theme="light"] .text-color {
   margin-top: 80px;
 }
 
+.ml-20{
+  margin-left: 5rem;
+}
+
+.ml-60{
+  margin-left: 15rem;
+}
+
 .block{
   display: block;
 }
@@ -1432,6 +1440,14 @@ html[data-theme="light"] .text-color {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
+.transition{
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .transition-all{
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1446,14 +1462,6 @@ html[data-theme="light"] .text-color {
 
 .transition-transform{
   transition-property: transform;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
-.transition{
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -1589,7 +1597,7 @@ body {
 }
 
 .about_color {
-  background-color: #ffe9e9;
+  background-color: #ffe0e0;
 }
 
 .about_color2 {
@@ -3208,6 +3216,10 @@ td:not(:last-child)::after {
     font-size: 1rem;
     line-height: 1.5rem;
   }
+
+  .max-md\:tracking-wider{
+    letter-spacing: 0.05em;
+  }
 }
 
 @media (min-width: 768px){
@@ -3248,6 +3260,14 @@ td:not(:last-child)::after {
   .md\:text-lg{
     font-size: 1.125rem;
     line-height: 1.75rem;
+  }
+
+  .md\:tracking-widest{
+    letter-spacing: 0.1em;
+  }
+
+  .md\:tracking-wider{
+    letter-spacing: 0.05em;
   }
 }
 
