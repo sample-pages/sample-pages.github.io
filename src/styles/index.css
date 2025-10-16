@@ -37,14 +37,14 @@
   }
 
 html, body {
-
+  overflow-x: hidden;
   /*
     overscroll-behavior-y: none;
     */
 }
 
 body {
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 .outline-text {
@@ -761,15 +761,15 @@ img {
 }
 
   #stutter {
-    scroll-margin-top: 150px; /* 上から80px下にスクロールさせる */
+    scroll-margin-top: 130px; /* 上から80px下にスクロールさせる */
   }
 
   #westu {
-    scroll-margin-top: 150px; /* 上から80px下にスクロールさせる */
+    scroll-margin-top: 130px; /* 上から80px下にスクロールさせる */
   }
 
   #westu_koryu {
-    scroll-margin-top: 150px; /* 上から80px下にスクロールさせる */
+    scroll-margin-top: 130px; /* 上から80px下にスクロールさせる */
   }
   
   #burger {
@@ -778,7 +778,11 @@ img {
   }
 
   #timetable {
-    scroll-margin-top: 140px; /* 上から80px下にスクロールさせる */
+    scroll-margin-top: 130px; /* 上から80px下にスクロールさせる */
+  }
+
+  #faq {
+    scroll-margin-top: 130px; /* 上から80px下にスクロールさせる */
   }
   
 

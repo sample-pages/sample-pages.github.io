@@ -809,14 +809,6 @@ html[data-theme="light"] .text-color {
   margin-top: 80px;
 }
 
-.ml-20{
-  margin-left: 5rem;
-}
-
-.ml-60{
-  margin-left: 15rem;
-}
-
 .block{
   display: block;
 }
@@ -1495,13 +1487,14 @@ html[data-theme="light"] .text-color {
 }
 
 html, body {
+  overflow-x: hidden;
   /*
     overscroll-behavior-y: none;
     */
 }
 
 body {
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 .outline-text {
@@ -2431,17 +2424,17 @@ img {
 }
 
 #stutter {
-  scroll-margin-top: 150px;
+  scroll-margin-top: 130px;
   /* 上から80px下にスクロールさせる */
 }
 
 #westu {
-  scroll-margin-top: 150px;
+  scroll-margin-top: 130px;
   /* 上から80px下にスクロールさせる */
 }
 
 #westu_koryu {
-  scroll-margin-top: 150px;
+  scroll-margin-top: 130px;
   /* 上から80px下にスクロールさせる */
 }
 
@@ -2452,7 +2445,12 @@ img {
 }
 
 #timetable {
-  scroll-margin-top: 140px;
+  scroll-margin-top: 130px;
+  /* 上から80px下にスクロールさせる */
+}
+
+#faq {
+  scroll-margin-top: 130px;
   /* 上から80px下にスクロールさせる */
 }
 
@@ -3264,10 +3262,6 @@ td:not(:last-child)::after {
 
   .md\:tracking-widest{
     letter-spacing: 0.1em;
-  }
-
-  .md\:tracking-wider{
-    letter-spacing: 0.05em;
   }
 }
 
