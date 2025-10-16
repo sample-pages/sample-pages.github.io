@@ -1284,7 +1284,7 @@ td:not(:last-child)::after {
 
   /* shineOnce は1秒遅れて開始、slideUp はすぐ開始 */
   animation: 
-    shineOnce 3s forwards 0s,  /* 1秒遅延して光が始まる */
+    shineOnce 2.5s forwards 0s,  /* 1秒遅延して光が始まる */
     slideUp 0.4s ease-out forwards 0s;  /* スライドはすぐ開始 */
 }
 
