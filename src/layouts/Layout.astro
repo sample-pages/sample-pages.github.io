@@ -91,12 +91,10 @@ const { title } = Astro.props;
       
       // --- トップへ戻るボタン ---
       document.addEventListener("DOMContentLoaded", () => {
-        let targetScroll = window.scrollY;
         const backToTopButton = document.getElementById('backToTop');
         if (!backToTopButton) return;
       
         backToTopButton.addEventListener('click', () => {
-          targetScroll = 0;
           const start = window.scrollY;
           const duration = 1500;
           const startTime = performance.now();
