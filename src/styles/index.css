@@ -714,9 +714,10 @@ img {
     display: none; /* 初期は非表示 */
     position: absolute;
     top: 110%; /* 親要素の下に配置 */
-    left: 0;
+    left: 50%; /* ← 親要素の中心に合わせる */
+  transform: translateX(-50%); /* ← 中央に移動 */
+  width: 150px; /* 好きな幅を指定 */
     background-color: #bc3b41;
-    width: 100%;
     border: 1px solid #ddd;
     border-radius: 1rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
@@ -761,15 +762,15 @@ img {
 }
 
   #stutter {
-    scroll-margin-top: 130px; /* 上から80px下にスクロールさせる */
+    scroll-margin-top: 110px; /* 上から80px下にスクロールさせる */
   }
 
   #westu {
-    scroll-margin-top: 130px; /* 上から80px下にスクロールさせる */
+    scroll-margin-top: 110px; /* 上から80px下にスクロールさせる */
   }
 
   #westu_koryu {
-    scroll-margin-top: 130px; /* 上から80px下にスクロールさせる */
+    scroll-margin-top: 110px; /* 上から80px下にスクロールさせる */
   }
   
   #burger {
@@ -777,12 +778,16 @@ img {
     position: relative;
   }
 
+  #program {
+    scroll-margin-top: 110px; /* 上から80px下にスクロールさせる */
+  }
+
   #timetable {
-    scroll-margin-top: 130px; /* 上から80px下にスクロールさせる */
+    scroll-margin-top: 110px; /* 上から80px下にスクロールさせる */
   }
 
   #faq {
-    scroll-margin-top: 130px; /* 上から80px下にスクロールさせる */
+    scroll-margin-top: 110px; /* 上から80px下にスクロールさせる */
   }
   
 
