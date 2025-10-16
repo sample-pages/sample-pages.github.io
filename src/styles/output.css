@@ -3108,9 +3108,25 @@ td:not(:last-child)::after {
   line-height: 1;
   /* shineOnce は1秒遅れて開始、slideUp はすぐ開始 */
   animation: 
-    shineOnce 2.5s forwards 0s,  /* 1秒遅延して光が始まる */
+    shineOnce 3s forwards 0s,  /* 1秒遅延して光が始まる */
     slideUp 0.4s ease-out forwards 0s;
   /* スライドはすぐ開始 */
+}
+
+@media (max-width: 640px) {
+  .shiny-slide {
+    display: inline-block;
+    background: linear-gradient(90deg, #000 40%, #fff 50%, #000 60%);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1;
+    /* shineOnce は1秒遅れて開始、slideUp はすぐ開始 */
+    animation: 
+      shineOnce 1s forwards 0s,  /* 1秒遅延して光が始まる */
+      slideUp 0.4s ease-out forwards 0s;
+    /* スライドはすぐ開始 */
+  }
 }
 
 @keyframes shineOnce {
@@ -3119,7 +3135,7 @@ td:not(:last-child)::after {
   }
 
   100% {
-    background-position: 0% 0;
+    background-position: -10% 0;
   }
 }
 
