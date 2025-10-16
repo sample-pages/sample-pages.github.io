@@ -1317,5 +1317,11 @@ td:not(:last-child)::after {
 
 
 
+@keyframes rotateForever {
+  from { transform: rotate(0deg) scale(2.5); }
+  to   { transform: rotate(360deg) scale(2.5); }
+}
 
-
+.rotate-forever {
+  animation: rotateForever 100s linear infinite; /* 20秒で1回転、無限ループ */
+}
