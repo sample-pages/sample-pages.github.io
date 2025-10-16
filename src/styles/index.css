@@ -1021,6 +1021,48 @@ img {
   transition: opacity 0.5s ease, transform 0.3s ease;
 }
 
+/* 元の矢印 */
+.arrow-original {
+  left: 0;
+  top: 0;
+  right: 0;      /* 初期位置 */
+  transition: transform 0.3s ease;
+}
+
+/* 左からスライドしてくる矢印 */
+.arrow-slide {
+  left: 0;
+  top: 0;
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+
+/* ホバー時 */
+#contactButton:hover .arrow-slide {
+  left: 4px;
+  opacity: 1;
+}
+
+#contactButton:hover .arrow-original {
+  transform: translateX(2em); /* 右に押し出す */
+  opacity: 0;
+}
+
+/* ホバー時のアニメーション */
+a:hover .arrow-slide {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+a:hover .arrow-original {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+
+
 .footer {
   height: 100px; /* フッター全体の高さ */
   position: relative;
@@ -1068,7 +1110,7 @@ img {
 .fade-in {
   opacity: 0;
   transform: translateY(20px); /* 下から少し浮かび上がるように */
-  animation: fadeInUp 1s ease-out forwards;
+  animation: fadeInUp 0.5s ease-out forwards;
 }
 
 @keyframes fadeInUp {

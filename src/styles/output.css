@@ -857,6 +857,10 @@ html[data-theme="light"] .text-color {
   height: 3rem;
 }
 
+.h-5{
+  height: 1.25rem;
+}
+
 .h-72{
   height: 18rem;
 }
@@ -931,6 +935,14 @@ html[data-theme="light"] .text-color {
 
 .w-32{
   width: 8rem;
+}
+
+.w-5{
+  width: 1.25rem;
+}
+
+.w-8{
+  width: 2rem;
 }
 
 .w-9{
@@ -1312,6 +1324,11 @@ html[data-theme="light"] .text-color {
 
 .align-middle{
   vertical-align: middle;
+}
+
+.text-2xl{
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .text-\[15px\]{
@@ -2763,6 +2780,51 @@ img {
   transition: opacity 0.5s ease, transform 0.3s ease;
 }
 
+/* 元の矢印 */
+
+.arrow-original {
+  left: 0;
+  top: 0;
+  right: 0;
+  /* 初期位置 */
+  transition: transform 0.3s ease;
+}
+
+/* 左からスライドしてくる矢印 */
+
+.arrow-slide {
+  left: 0;
+  top: 0;
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* ホバー時 */
+
+#contactButton:hover .arrow-slide {
+  left: 4px;
+  opacity: 1;
+}
+
+#contactButton:hover .arrow-original {
+  transform: translateX(2em);
+  /* 右に押し出す */
+  opacity: 0;
+}
+
+/* ホバー時のアニメーション */
+
+a:hover .arrow-slide {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+a:hover .arrow-original {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
 .footer {
   height: 100px;
   /* フッター全体の高さ */
@@ -2809,7 +2871,7 @@ img {
   opacity: 0;
   transform: translateY(20px);
   /* 下から少し浮かび上がるように */
-  animation: fadeInUp 1s ease-out forwards;
+  animation: fadeInUp 0.5s ease-out forwards;
 }
 
 @keyframes fadeInUp {
@@ -3328,11 +3390,6 @@ td:not(:last-child)::after {
     font-size: 16px;
   }
 
-  .max-lg\:text-xl{
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-  }
-
   .max-lg\:font-semibold{
     font-weight: 600;
   }
@@ -3363,14 +3420,6 @@ td:not(:last-child)::after {
   .max-md\:text-base{
     font-size: 1rem;
     line-height: 1.5rem;
-  }
-
-  .max-md\:tracking-widest{
-    letter-spacing: 0.1em;
-  }
-
-  .max-md\:tracking-wide{
-    letter-spacing: 0.025em;
   }
 }
 
@@ -3458,11 +3507,6 @@ td:not(:last-child)::after {
 
   .lg\:p-8{
     padding: 2rem;
-  }
-
-  .lg\:text-2xl{
-    font-size: 1.5rem;
-    line-height: 2rem;
   }
 
   .lg\:text-\[17px\]{
