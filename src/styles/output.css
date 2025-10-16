@@ -3166,27 +3166,51 @@ td:not(:last-child)::after {
   }
 }
 
+/* ▼ 画像を常に高解像度で描画する設定 */
+
+.highres-img {
+  width: 1800px;
+  /* 高解像度画像の実サイズを指定 */
+  height: auto;
+  max-width: none;
+  /* ← これを追加 */
+  image-rendering: -webkit-optimize-contrast;
+  /* WebKit用（シャープ化） */
+  image-rendering: crisp-edges;
+  /* 拡大時に補間を抑える */
+  transform-origin: center center;
+  /* 回転中心 */
+}
+
+/* ▼ 回転アニメーション（スケール固定） */
+
 @keyframes rotateForever {
   from {
-    transform: rotate(0deg) scale(var(--scale));
+    transform: rotate(0deg);
   }
 
   to   {
-    transform: rotate(360deg) scale(var(--scale));
+    transform: rotate(360deg);
   }
 }
 
 .rotate-forever {
   animation: rotateForever 100s linear infinite;
-  --scale: 2.8;
-  /* デフォルトの拡大率（スマホ） */
 }
 
-/* 768px以上の画面（md:）でスケール変更 */
+/* ▼ レスポンシブ対応：スマホで画像サイズ調整 */
+
+@media (max-width: 1024px) {
+  .highres-img {
+    width: 1200px;
+  }
+}
+
+/* ▼ レスポンシブ対応：スマホで画像サイズ調整 */
 
 @media (max-width: 768px) {
-  .rotate-forever {
-    --scale: 3.5;
+  .highres-img {
+    width: 900px;
   }
 }
 
@@ -3459,3 +3483,4 @@ td:not(:last-child)::after {
     line-height: 1.75rem;
   }
 }
+
