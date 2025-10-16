@@ -3245,6 +3245,14 @@ td:not(:last-child)::after {
     line-height: 1.75rem;
   }
 
+  .max-lg\:text-\[18px\]{
+    font-size: 18px;
+  }
+
+  .max-lg\:text-\[16px\]{
+    font-size: 16px;
+  }
+
   .max-lg\:font-semibold{
     font-weight: 600;
   }
@@ -3315,6 +3323,11 @@ td:not(:last-child)::after {
 
   .md\:text-lg{
     font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .md\:text-xl{
+    font-size: 1.25rem;
     line-height: 1.75rem;
   }
 

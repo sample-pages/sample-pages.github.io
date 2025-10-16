@@ -48,6 +48,8 @@ const { title } = Astro.props;
         const container = document.createElement('div');
         container.style.cssText = `
           display: flex;
+          position: relative; /* ここを追加 */
+  top: -10px; /* 上に50px移動 */
           flex-direction: row-reverse;
           gap: 2rem;
         `;
@@ -57,7 +59,6 @@ const { title } = Astro.props;
           div.textContent = text;
           div.classList.add("zen-kaku-gothic-new", "load-fsize");
           div.style.cssText = `
-            top: 40%;
           color: black;
             opacity: 0;
             transition: opacity 1s;
