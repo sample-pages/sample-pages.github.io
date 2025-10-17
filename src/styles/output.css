@@ -905,6 +905,14 @@ html[data-theme="light"] .text-color {
   height: 100%;
 }
 
+.h-6{
+  height: 1.5rem;
+}
+
+.h-7{
+  height: 1.75rem;
+}
+
 .max-h-\[500px\]{
   max-height: 500px;
 }
@@ -3407,6 +3415,10 @@ td:not(:last-child)::after {
     height: 64px;
   }
 
+  .max-md\:h-5{
+    height: 1.25rem;
+  }
+
   .max-md\:w-\[109\.5\%\]{
     width: 109.5%;
   }
@@ -3442,6 +3454,10 @@ td:not(:last-child)::after {
 
   .md\:h-\[90px\]{
     height: 90px;
+  }
+
+  .md\:h-7{
+    height: 1.75rem;
   }
 
   .md\:w-\[100\%\]{
