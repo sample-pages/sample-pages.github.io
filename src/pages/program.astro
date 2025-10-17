@@ -29,7 +29,12 @@ const venueWidths = [150, 150, 150, 150];
     <div style="height: 40px;"></div>
     <p class="midashi">開催場所</p>
     <div style="height: 10px;"></div>
-    <div class="ml-1" style="max-width: 56rem; letter-spacing: .025em; margin-bottom: 3px; line-height: 2.05;">
+    <div class="ml-1 resp-pc-f" style="max-width: 56rem; letter-spacing: .025em; margin-bottom: 3px; line-height: 2.05;">
+      <p>
+        <a class="hover-color" href="https://osaka-yha.or.jp/osakakokusai/">大阪国際ユースホステル・羽衣青少年センター
+          （詳細<i class="ri-arrow-right-up-long-line"></i>）</a></p>
+    </div>
+    <div class="ml-1 resp-pc-g" style="max-width: 56rem; letter-spacing: .025em; margin-bottom: 3px; line-height: 2.05;">
       <p>
         <a class="hover-color" href="https://osaka-yha.or.jp/osakakokusai/">大阪国際ユースホステル・羽衣青少年センター<br>
           （リンク<i class="ri-arrow-right-up-long-line"></i>）</a></p>
@@ -145,17 +150,7 @@ const venueWidths = [150, 150, 150, 150];
       <div style="height: 120px"></div>
     
 
-      <!-- モーダル -->
-      <div id="eventModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-[20000] zen-kaku-gothic-new">
-        <div class="bg-white p-6 rounded-3xl shadow-lg max-w-sm w-2/3 relative">
-          <button id="modalClose" class="absolute top-1 right-5 text-gray-500 hover:text-black text-[24px]">&times;</button>
-          <h3 id="modalTitle" class="font-bold text-lg mb-2"></h3>
-          <p id="modalTime" class="text-sm text-black mt-2"></p>
-          <div style="height: 10px"></div>
-          <p id="modalDescription" class="text-sm text-black whitespace-pre-wrap"></p>
-          
-        </div>
-      </div>
+      
     </div>
   </div>
 
@@ -328,3 +323,15 @@ toggle.addEventListener("change", () => {
 });
   </script>
 </Layout>
+
+<!-- モーダル -->
+<div id="eventModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-[20000] zen-kaku-gothic-new">
+  <div class="bg-white p-6 rounded-3xl shadow-lg max-w-sm w-2/3 relative">
+    <button id="modalClose" class="absolute top-3 right-6 text-gray-500 hover:text-black text-[24px]">&times;</button>
+    <h3 id="modalTitle" class="font-bold text-lg mb-2"></h3>
+    <p id="modalTime" class="text-sm text-black mt-2"></p>
+    <div style="height: 10px"></div>
+    <p id="modalDescription" class="text-sm text-black whitespace-pre-wrap"></p>
+    
+  </div>
+</div>
