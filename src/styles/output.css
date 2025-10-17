@@ -664,8 +664,8 @@ html[data-theme="light"] .text-color {
   left: 44%;
 }
 
-.right-5{
-  right: 1.25rem;
+.right-6{
+  right: 1.5rem;
 }
 
 .top-0{
@@ -680,20 +680,8 @@ html[data-theme="light"] .text-color {
   top: 50%;
 }
 
-.right-3{
-  right: 0.75rem;
-}
-
-.top-2{
-  top: 0.5rem;
-}
-
 .top-3{
   top: 0.75rem;
-}
-
-.right-6{
-  right: 1.5rem;
 }
 
 .z-0{
@@ -747,11 +735,6 @@ html[data-theme="light"] .text-color {
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
-}
-
-.my-auto{
-  margin-top: auto;
-  margin-bottom: auto;
 }
 
 .mb-0{
@@ -976,10 +959,6 @@ html[data-theme="light"] .text-color {
 
 .w-full{
   width: 100%;
-}
-
-.w-\[80\%\]{
-  width: 80%;
 }
 
 .min-w-\[600px\]{
@@ -1351,11 +1330,6 @@ html[data-theme="light"] .text-color {
   vertical-align: middle;
 }
 
-.text-2xl{
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
 .text-\[15px\]{
   font-size: 15px;
 }
@@ -1399,10 +1373,6 @@ html[data-theme="light"] .text-color {
 .text-xs{
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.text-\[28px\]{
-  font-size: 28px;
 }
 
 .font-bold{
@@ -2507,17 +2477,17 @@ img {
 }
 
 #stutter {
-  scroll-margin-top: 110px;
+  scroll-margin-top: 115px;
   /* 上から80px下にスクロールさせる */
 }
 
 #westu {
-  scroll-margin-top: 110px;
+  scroll-margin-top: 115px;
   /* 上から80px下にスクロールさせる */
 }
 
 #westu_koryu {
-  scroll-margin-top: 110px;
+  scroll-margin-top: 115px;
   /* 上から80px下にスクロールさせる */
 }
 
@@ -2528,17 +2498,17 @@ img {
 }
 
 #program {
-  scroll-margin-top: 110px;
+  scroll-margin-top: 115px;
   /* 上から80px下にスクロールさせる */
 }
 
 #timetable {
-  scroll-margin-top: 110px;
+  scroll-margin-top: 115px;
   /* 上から80px下にスクロールさせる */
 }
 
 #faq {
-  scroll-margin-top: 110px;
+  scroll-margin-top: 115px;
   /* 上から80px下にスクロールさせる */
 }
 
@@ -3449,12 +3419,6 @@ td:not(:last-child)::after {
   .max-md\:text-base{
     font-size: 1rem;
     line-height: 1.5rem;
-  }
-}
-
-@media (min-width: 640px){
-  .sm\:w-2\/3{
-    width: 66.666667%;
   }
 }
 
