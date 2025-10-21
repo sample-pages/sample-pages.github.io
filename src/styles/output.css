@@ -3332,7 +3332,7 @@ article h2 {
 
 @media (max-width: 640px) {
   .horizontal_scroll .scroller > * {
-    flex-basis: 120%;
+    flex-basis: 160%;
     flex-shrink: 0;
     aspect-ratio: 16 / 9;
     display: flex;
