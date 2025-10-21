@@ -3477,6 +3477,10 @@ article h2 {
     height: 30px;
   }
 
+  .max-md\:h-\[54px\]{
+    height: 54px;
+  }
+
   .max-md\:w-\[109\.5\%\]{
     width: 109.5%;
   }
