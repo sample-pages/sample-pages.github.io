@@ -26,10 +26,14 @@ const { title } = Astro.props;
     <title>{title}</title>
     <meta name="description" content="『第8回うぃーすた全国交流会』を2026年7月18日(土)〜19日(日)に大阪にて開催します！">
     <script>
-      // --- 初回アクセスオーバーレイ ---
-      window.addEventListener('load', () => {
+      window.addEventListener('DOMContentLoaded', () => {
         if (sessionStorage.getItem("welcomeShown")) return;
       
+        // 画像をプリロード
+        const img = new Image();
+        img.src = '/images/p0126_l.png';
+      
+        // --- オーバーレイ作成 ---
         const overlay = document.createElement('div');
         overlay.style.cssText = `
           position: fixed;
@@ -38,28 +42,33 @@ const { title } = Astro.props;
           display: flex;
           justify-content: center;
           align-items: center;
-          background: 
-            linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
-            url('/images/p0126_l.png') no-repeat center center;
+          background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('/images/p0126_l.png') no-repeat center center;
           background-size: cover;
           z-index: 9999;
+          opacity: 0;
+          transition: opacity 0.5s;
         `;
+        document.body.appendChild(overlay);
       
+        // 少し遅らせてフェードイン
+        setTimeout(() => overlay.style.opacity = '1', 50);
+      
+        // --- 文字コンテナ作成 ---
         const container = document.createElement('div');
         container.style.cssText = `
           display: flex;
-          position: relative; /* ここを追加 */
-  top: -10px; /* 上に50px移動 */
+          position: relative;
+          top: -10px;
           flex-direction: row-reverse;
           gap: 2rem;
         `;
       
-        const createLine = (text: string) => {
+        const createLine = (text) => {
           const div = document.createElement('div');
           div.textContent = text;
           div.classList.add("zen-kaku-gothic-new", "load-fsize");
           div.style.cssText = `
-          color: black;
+            color: black;
             opacity: 0;
             transition: opacity 1s;
             writing-mode: vertical-rl;
@@ -76,43 +85,22 @@ const { title } = Astro.props;
         container.appendChild(line2);
         container.appendChild(line3);
         overlay.appendChild(container);
-        document.body.appendChild(overlay);
       
+        // --- 文字フェードイン ---
         setTimeout(() => line1.style.opacity = "1", 800);
         setTimeout(() => line2.style.opacity = "1", 2500);
         setTimeout(() => line3.style.opacity = "1", 4000);
       
+        // --- オーバーレイフェードアウト ---
         setTimeout(() => {
-          overlay.style.transition = 'opacity 1s';
           overlay.style.opacity = "0";
           setTimeout(() => overlay.remove(), 1000);
         }, 7000);
       
         sessionStorage.setItem("welcomeShown", "true");
       });
-      
-      // --- トップへ戻るボタン ---
-      document.addEventListener("DOMContentLoaded", () => {
-        const backToTopButton = document.getElementById('backToTop');
-        if (!backToTopButton) return;
-      
-        backToTopButton.addEventListener('click', () => {
-          const start = window.scrollY;
-          const duration = 1500;
-          const startTime = performance.now();
-      
-          function smoothScrollStep(now) {
-            const elapsed = now - startTime;
-            const progress = Math.min(elapsed / duration, 1);
-            const ease = 1 - Math.pow(1 - progress, 3);
-            window.scrollTo(0, start * (1 - ease));
-            if (progress < 1) requestAnimationFrame(smoothScrollStep);
-          }
-      
-          requestAnimationFrame(smoothScrollStep);
-        });
-      });
       </script>
+      
       
   </head>
 
