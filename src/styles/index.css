@@ -1397,3 +1397,46 @@ td:not(:last-child)::after {
   }
 }
 
+
+article:not(.sticky) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  background-color: whitesmoke;
+}
+article h2 {
+  text-align: center;
+}
+.horizontal_scroll {
+  --sticky-container-height: 100vh;
+  height: var(--sticky-container-height);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.horizontal_scroll .sticky {
+  position: sticky;
+  top: 122px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.horizontal_scroll .scroller {
+  display: flex;
+  overflow: auto;
+}
+.horizontal_scroll .scroller.nobar {
+  overflow: hidden;
+}
+.horizontal_scroll .scroller > * {
+  flex-basis: 60%;
+  flex-shrink: 0;
+  aspect-ratio: 16 / 9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: whitesmoke;
+}
+.horizontal_scroll .scroller > *:not(:first-child) {
+  margin-left: 1%;
+}

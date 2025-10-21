@@ -813,10 +813,6 @@ html[data-theme="light"] .text-color {
   margin-top: 2rem;
 }
 
-.mt-\[115px\]{
-  margin-top: 115px;
-}
-
 .mt-\[3px\]{
   margin-top: 3px;
 }
@@ -903,14 +899,6 @@ html[data-theme="light"] .text-color {
 
 .h-full{
   height: 100%;
-}
-
-.h-6{
-  height: 1.5rem;
-}
-
-.h-7{
-  height: 1.75rem;
 }
 
 .max-h-\[500px\]{
@@ -3296,6 +3284,56 @@ td:not(:last-child)::after {
   }
 }
 
+article:not(.sticky) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  background-color: whitesmoke;
+}
+
+article h2 {
+  text-align: center;
+}
+
+.horizontal_scroll {
+  --sticky-container-height: 100vh;
+  height: var(--sticky-container-height);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.horizontal_scroll .sticky {
+  position: sticky;
+  top: 122px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.horizontal_scroll .scroller {
+  display: flex;
+  overflow: auto;
+}
+
+.horizontal_scroll .scroller.nobar {
+  overflow: hidden;
+}
+
+.horizontal_scroll .scroller > * {
+  flex-basis: 60%;
+  flex-shrink: 0;
+  aspect-ratio: 16 / 9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: whitesmoke;
+}
+
+.horizontal_scroll .scroller > *:not(:first-child) {
+  margin-left: 1%;
+}
+
 .hover\:scale-110:hover{
   --tw-scale-x: 1.1;
   --tw-scale-y: 1.1;
@@ -3411,12 +3449,12 @@ td:not(:last-child)::after {
     margin-left: 2rem;
   }
 
-  .max-md\:h-\[64px\]{
-    height: 64px;
-  }
-
   .max-md\:h-5{
     height: 1.25rem;
+  }
+
+  .max-md\:h-\[64px\]{
+    height: 64px;
   }
 
   .max-md\:w-\[109\.5\%\]{
@@ -3444,6 +3482,10 @@ td:not(:last-child)::after {
     margin-bottom: 0px;
   }
 
+  .md\:h-7{
+    height: 1.75rem;
+  }
+
   .md\:h-\[40px\]{
     height: 40px;
   }
@@ -3452,12 +3494,8 @@ td:not(:last-child)::after {
     height: 50px;
   }
 
-  .md\:h-\[90px\]{
-    height: 90px;
-  }
-
-  .md\:h-7{
-    height: 1.75rem;
+  .md\:h-\[80px\]{
+    height: 80px;
   }
 
   .md\:w-\[100\%\]{
@@ -3490,15 +3528,6 @@ td:not(:last-child)::after {
 
   .md\:tracking-widest{
     letter-spacing: 0.1em;
-  }
-}
-
-@media not all and (min-width: 768px){
-  @media (min-width: 768px){
-    .max-md\:md\:text-xl{
-      font-size: 1.25rem;
-      line-height: 1.75rem;
-    }
   }
 }
 
@@ -3582,4 +3611,3 @@ td:not(:last-child)::after {
     line-height: 1.75rem;
   }
 }
-

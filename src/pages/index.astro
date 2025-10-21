@@ -62,9 +62,9 @@ const tagColors: Record<string, string> = {
       <div style="height: 30px;"></div>
       <p class="max-xl:text-base xl:text-lg resp-sm-g" style="text-align: center;">吃音のある同年代の仲間たちと悩みや夢を語り合う、かけがえのない時間を過ごしてみませんか？</p>
       <p class="max-xl:text-base xl:text-lg resp-sm-f" style="text-align: center;">吃音のある同年代の仲間たちと<br>悩みや夢を語り合う、<br>かけがえのない時間を過ごしてみませんか？</p>
-      <div class="max-md:h-[64px] md:h-[90px]"></div>
+      <div class="max-md:h-[64px] md:h-[80px]"></div>
     </div>
-    
+  
     <!--
     <div class="cards-container text-color text-font max-lg:gap-10">
     <a class="card-link">
@@ -97,6 +97,34 @@ const tagColors: Record<string, string> = {
     </a>
   </div>
   -->
+  </div>
+    <div class="horizontal_scroll">
+      <article class="sticky">
+        <div class="reveal">
+          <h1 class="zen-kaku-gothic-new headline2 mx-auto text-left" style="max-width: 900px;">
+            <span class="headline-bg">TOPICS</span>
+            <span class="max-lg:ml-6 lg:ml-8 inline-block align-middle pt-2">トピックス</span>
+          </h1>
+        </div>
+        <div style="height: 36px;" />
+        <div class="scroller">
+          <section>
+            <h3>section 1</h3>
+          </section>
+          <section>
+            <h3>section 2</h3>
+          </section>
+          <section>
+            <h3>section 3</h3>
+          </section>
+          <section>
+            <h3>section 4</h3>
+          </section>
+        </div>
+      </article>
+    </div>
+    <div class="margin-contents text-color zen-kaku-gothic-new" style="padding-bottom: 0rem;">
+  <div style="height: 70px;" />
   <div class="reveal">
     <h1 class="headline2 mx-auto text-left" style="max-width: 900px;">
       <span class="headline-bg">NEWS</span>
@@ -181,6 +209,7 @@ const tagColors: Record<string, string> = {
     
     </div>
   </div>
+  <!--
   <div style="height: 70px;" />
   <div class="reveal">
     <h1 class="headline mx-auto text-left" style="max-width: 900px;">
@@ -204,9 +233,7 @@ const tagColors: Record<string, string> = {
         <span class="flex items-center">
           うぃーすたについて&nbsp;
           <span class="overflow-hidden relative w-5 h-5 flex items-center justify-center">
-            <!-- 元の矢印 -->
             <i class="ri-arrow-right-line arrow-original absolute text-lg leading-none" style="top: 2px;"></i>
-            <!-- 左からスライドしてくる矢印 -->
             <i class="ri-arrow-right-line arrow-slide absolute text-lg leading-none" style="top: 2px;"></i>
           </span>
         </span>
@@ -214,6 +241,8 @@ const tagColors: Record<string, string> = {
     </div>
   </div>
   </div>
+-->
+  <!--
     <div style="height: 70px;" />
     <div class="reveal">
       <h1 class="headline2 mx-auto text-left" style="max-width: 900px;">
@@ -237,9 +266,7 @@ const tagColors: Record<string, string> = {
           <span class="flex items-center">
             特設ページ&nbsp;
             <span class="overflow-hidden relative w-5 h-5 flex items-center justify-center">
-              <!-- 元の矢印 -->
               <i class="ri-arrow-right-line arrow-original absolute text-lg leading-none" style="top: 2px;"></i>
-              <!-- 左からスライドしてくる矢印 -->
               <i class="ri-arrow-right-line arrow-slide absolute text-lg leading-none" style="top: 2px;"></i>
             </span>
           </span>
@@ -247,6 +274,7 @@ const tagColors: Record<string, string> = {
       </div>
     </div>
     </div>
+  -->
       <div style="height: 70px;" />
       <div class="reveal">
         <h1 class="headline mx-auto text-left" style="max-width: 900px;">
@@ -366,7 +394,15 @@ const tagColors: Record<string, string> = {
     </div>
     </div>
     <div style="height: 30px;" />
+    <div class="resp-pc-f flex items-center justify-center mb-1">
+      <iframe width="640" height="350" src="https://www.youtube.com/embed/rjl5ssJeaEA?si=BRp80BIwf-duPUUQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div class="resp-pc-g flex items-center justify-center mb-1">
+      <iframe width="350" height="200" src="https://www.youtube.com/embed/rjl5ssJeaEA?si=BRp80BIwf-duPUUQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div style="height: 30px;" />
     <div class="flex items-center justify-center mb-1">
+      
       <a
         href="/history/"
         class="text-base max-xl:text-sm flex items-center justify-center zen-kaku-gothic-new font-medium
@@ -557,3 +593,67 @@ buttons.forEach(btn => {
 
 
 </script>
+
+<script>
+  "use strict";
+  
+  document.addEventListener("DOMContentLoaded", () => {
+    const stickyContainers = document.querySelectorAll<HTMLElement>(".horizontal_scroll");
+
+  
+    stickyContainers.forEach((stickyContainer) => {
+      const stickyItem = stickyContainer.querySelector(".sticky") as HTMLElement;
+      const scroller = stickyContainer.querySelector(".scroller") as HTMLElement;
+      if (!stickyItem || !scroller) return; // ← ここを追加
+      scroller?.classList.add("nobar");
+  
+      // sticky の高さを横スクロール量に合わせて設定
+      const updateStickyHeight = () => {
+        const stickyHeight =
+          scroller.scrollWidth - scroller.clientWidth + stickyItem.clientHeight;
+        stickyContainer.style.setProperty("--sticky-container-height", `${stickyHeight}px`);
+      };
+      updateStickyHeight();
+      new ResizeObserver(updateStickyHeight).observe(scroller);
+      new ResizeObserver(updateStickyHeight).observe(stickyItem);
+  
+      // スクロール同期
+      const syncScroll = () => {
+        const rect = stickyContainer.getBoundingClientRect();
+        const scrollY = window.scrollY;
+        const start = rect.top + scrollY;
+        const end = start + rect.height - window.innerHeight;
+        const scrollRange = end - start;
+  
+        if (scrollY >= start && scrollY <= end) {
+          // 通常のスクロール中
+          const progress = (scrollY - start) / scrollRange;
+          const maxScroll = scroller.scrollWidth - scroller.clientWidth;
+          scroller.scrollLeft = progress * maxScroll;
+        } else if (scrollY < start) {
+          scroller.scrollLeft = 0;
+        } else if (scrollY > end) {
+          // 最後にピタッと止める（小数誤差補正）
+          scroller.scrollLeft = scroller.scrollWidth - scroller.clientWidth - 0.5;
+        }
+      };
+  
+      // IntersectionObserverで必要なときだけリスナーを登録
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              window.addEventListener("scroll", syncScroll, { passive: true });
+              syncScroll();
+            } else {
+              window.removeEventListener("scroll", syncScroll);
+            }
+          });
+        },
+        { threshold: 0 }
+      );
+      observer.observe(stickyContainer);
+    });
+  });
+  </script>
+  
