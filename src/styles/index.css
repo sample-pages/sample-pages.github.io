@@ -1437,6 +1437,17 @@ article h2 {
   align-items: center;
   background-color: whitesmoke;
 }
+@media (max-width: 640px) {
+  .horizontal_scroll .scroller > * {
+    flex-basis: 120%;
+    flex-shrink: 0;
+    aspect-ratio: 16 / 9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+  }
+}
 .horizontal_scroll .scroller > *:not(:first-child) {
   margin-left: 1%;
 }
