@@ -1429,7 +1429,7 @@ article h2 {
   overflow: hidden;
 }
 .horizontal_scroll .scroller > * {
-  flex-basis: 60%;
+  flex-basis: 56%;
   flex-shrink: 0;
   aspect-ratio: 16 / 9;
   display: flex;
