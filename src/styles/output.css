@@ -3332,7 +3332,7 @@ article h2 {
 
 @media (max-width: 640px) {
   .horizontal_scroll .scroller > * {
-    flex-basis: 160%;
+    flex-basis: 170%;
     flex-shrink: 0;
     aspect-ratio: 16 / 9;
     display: flex;
@@ -3465,12 +3465,12 @@ article h2 {
     height: 1.25rem;
   }
 
-  .max-md\:h-\[64px\]{
-    height: 64px;
-  }
-
   .max-md\:h-\[60px\]{
     height: 60px;
+  }
+
+  .max-md\:h-\[64px\]{
+    height: 64px;
   }
 
   .max-md\:w-\[109\.5\%\]{
@@ -3510,12 +3510,12 @@ article h2 {
     height: 50px;
   }
 
-  .md\:h-\[80px\]{
-    height: 80px;
-  }
-
   .md\:h-\[70px\]{
     height: 70px;
+  }
+
+  .md\:h-\[80px\]{
+    height: 80px;
   }
 
   .md\:w-\[100\%\]{
