@@ -684,6 +684,14 @@ html[data-theme="light"] .text-color {
   top: 0.75rem;
 }
 
+.bottom-0{
+  bottom: 0px;
+}
+
+.bottom-\[-2px\]{
+  bottom: -2px;
+}
+
 .z-0{
   z-index: 0;
 }
@@ -901,6 +909,14 @@ html[data-theme="light"] .text-color {
   height: 100%;
 }
 
+.h-\[6px\]{
+  height: 6px;
+}
+
+.h-\[1px\]{
+  height: 1px;
+}
+
 .max-h-\[500px\]{
   max-height: 500px;
 }
@@ -955,6 +971,14 @@ html[data-theme="light"] .text-color {
 
 .w-full{
   width: 100%;
+}
+
+.w-24{
+  width: 6rem;
+}
+
+.w-auto{
+  width: auto;
 }
 
 .min-w-\[600px\]{
@@ -1231,6 +1255,11 @@ html[data-theme="light"] .text-color {
   background-color: rgb(253 224 71 / var(--tw-bg-opacity, 1));
 }
 
+.bg-red-100{
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 226 226 / var(--tw-bg-opacity, 1));
+}
+
 .bg-opacity-50{
   --tw-bg-opacity: 0.5;
 }
@@ -1304,6 +1333,10 @@ html[data-theme="light"] .text-color {
 
 .pt-8{
   padding-top: 2rem;
+}
+
+.pb-1{
+  padding-bottom: 0.25rem;
 }
 
 .text-left{
@@ -3346,6 +3379,33 @@ article h2 {
   margin-left: 1%;
 }
 
+.qa-label {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  /* 幅を固定 */
+  height: 36px;
+  /* 高さを固定（＝幅と同じ） */
+  border-radius: 50%;
+  /* 真円にする */
+  font-weight: bold;
+  font-size: 14px;
+  margin-right: 8px;
+}
+
+.qa-label.q {
+  background-color: #ffffff;
+  color: #333;
+  border: 1px solid #000000;
+}
+
+.qa-label.a {
+  background-color: #ffe3e3;
+  color: #000000;
+  border: 1px solid #000000;
+}
+
 .hover\:scale-110:hover{
   --tw-scale-x: 1.1;
   --tw-scale-y: 1.1;
@@ -3465,20 +3525,20 @@ article h2 {
     height: 1.25rem;
   }
 
-  .max-md\:h-\[60px\]{
-    height: 60px;
-  }
-
-  .max-md\:h-\[64px\]{
-    height: 64px;
-  }
-
   .max-md\:h-\[30px\]{
     height: 30px;
   }
 
   .max-md\:h-\[54px\]{
     height: 54px;
+  }
+
+  .max-md\:h-\[60px\]{
+    height: 60px;
+  }
+
+  .max-md\:h-\[64px\]{
+    height: 64px;
   }
 
   .max-md\:w-\[109\.5\%\]{
@@ -3510,6 +3570,10 @@ article h2 {
     height: 1.75rem;
   }
 
+  .md\:h-\[36px\]{
+    height: 36px;
+  }
+
   .md\:h-\[40px\]{
     height: 40px;
   }
@@ -3524,10 +3588,6 @@ article h2 {
 
   .md\:h-\[80px\]{
     height: 80px;
-  }
-
-  .md\:h-\[36px\]{
-    height: 36px;
   }
 
   .md\:w-\[100\%\]{

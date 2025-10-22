@@ -1451,3 +1451,27 @@ article h2 {
 .horizontal_scroll .scroller > *:not(:first-child) {
   margin-left: 1%;
 }
+
+.qa-label {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;   /* 幅を固定 */
+  height: 36px;  /* 高さを固定（＝幅と同じ） */
+  border-radius: 50%; /* 真円にする */
+  font-weight: bold;
+  font-size: 14px;
+  margin-right: 8px;
+}
+
+.qa-label.q {
+  background-color: #ffffff;
+  color: #333;
+  border: 1px solid #000000;
+}
+
+.qa-label.a {
+  background-color: #ffe3e3;
+  color: #000000;
+  border: 1px solid #000000;
+}

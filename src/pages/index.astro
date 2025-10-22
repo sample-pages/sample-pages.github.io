@@ -286,7 +286,8 @@ const tagColors: Record<string, string> = {
             class="text-base max-xl:text-sm max-lg:p-6 lg:p-8 text-color margin-contents header_bcolor rounded-[40px] shadow-md"
             style="letter-spacing: .025em; line-height: 2.05; max-width: 900px; width: 100%;"
         >
-        &nbsp;開催日程や会場、プログラムについてご紹介します。
+        &nbsp;開催日程や会場、プログラムについてご紹介します。<br>
+        &nbsp;グループトーク、講演、BBQ、マイメッセージ...など盛りだくさん！
         <div style="height: 24px;" />
         <div class="flex items-center justify-center mb-1">
           <a
@@ -519,7 +520,7 @@ revealElements.forEach(el => io.observe(el));
 const contactButton = document.getElementById('contactButton');
 
 const minThreshold = 100; // このpxを超えたら表示開始
-const maxThreshold = 2800; // このpxを超えたら非表示
+const maxThreshold = 5000; // このpxを超えたら非表示
 
 // 初期状態は非表示
 contactButton?.classList.add('opacity-0', 'pointer-events-none');
