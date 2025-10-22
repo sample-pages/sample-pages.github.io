@@ -789,6 +789,14 @@ img {
   #faq {
     scroll-margin-top: 115px; /* 上から80px下にスクロールさせる */
   }
+
+  #plan {
+    scroll-margin-top: 115px; /* 上から80px下にスクロールさせる */
+  }
+
+  #attention {
+    scroll-margin-top: 115px; /* 上から80px下にスクロールさせる */
+  }
   
 
   .topbar {

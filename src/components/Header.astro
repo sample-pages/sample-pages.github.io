@@ -286,13 +286,17 @@ document.addEventListener("DOMContentLoaded", () => {
             <p>／</p>
           </div>
         </a>
-        <a class="card-header" href="/application/">
-          <div class="pic-image">
-              <div class="card-box">
-                  <p class="card-title" style="padding: 0.15rem;">お申し込み</p>
-              </div>
+        <div class="card-header pic-image dropdown">
+          <a class="" href="/application/">
+            <div class="card-box">
+              <p class="card-title" style="padding: 0.15rem;">お申し込み</p>
+            </div>
+          </a>
+          <div class="dropdown-content">
+            <a href="/application/#plan">参加プラン</a>
+            <a href="/application/#attention">お申し込みに関するご注意</a>
           </div>
-        </a> 
+        </div>
         <a>
           <div class="card-box no-select">
             <p>／</p>
@@ -368,13 +372,17 @@ document.addEventListener("DOMContentLoaded", () => {
         <a href="/attention/#faq">よくある質問</a>
       </div>
     </div>
-    <a class="card-header back-blur" style="z-index: -10;" href="/application/">
-      <div class="pic-image">
-          <div class="card-box">
-              <p class="card-title" style="padding: 0.5rem;">お申し込み</p>
-          </div>
+    <div class="card-header pic-image dropdown" style="z-index: 0;">
+      <a class="back-blur" href="/application/">
+        <div class="card-box">
+          <p class="card-title" style="padding: 0.5rem;">お申し込み</p>
+        </div>
+      </a>
+      <div class="dropdown-content">
+        <a href="/application/#plan">参加プラン</a>
+        <a href="/application/#attention">参加に関するご注意</a>
       </div>
-    </a> 
+    </div>
     <a class="card-header back-blur" href="/contact/">
       <div class="pic-image">
           <div class="card-box">

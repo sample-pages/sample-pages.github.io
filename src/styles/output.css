@@ -648,6 +648,10 @@ html[data-theme="light"] .text-color {
   inset: 0px;
 }
 
+.bottom-\[-2px\]{
+  bottom: -2px;
+}
+
 .left-0{
   left: 0px;
 }
@@ -682,14 +686,6 @@ html[data-theme="light"] .text-color {
 
 .top-3{
   top: 0.75rem;
-}
-
-.bottom-0{
-  bottom: 0px;
-}
-
-.bottom-\[-2px\]{
-  bottom: -2px;
 }
 
 .z-0{
@@ -909,14 +905,6 @@ html[data-theme="light"] .text-color {
   height: 100%;
 }
 
-.h-\[6px\]{
-  height: 6px;
-}
-
-.h-\[1px\]{
-  height: 1px;
-}
-
 .max-h-\[500px\]{
   max-height: 500px;
 }
@@ -971,14 +959,6 @@ html[data-theme="light"] .text-color {
 
 .w-full{
   width: 100%;
-}
-
-.w-24{
-  width: 6rem;
-}
-
-.w-auto{
-  width: auto;
 }
 
 .min-w-\[600px\]{
@@ -1255,11 +1235,6 @@ html[data-theme="light"] .text-color {
   background-color: rgb(253 224 71 / var(--tw-bg-opacity, 1));
 }
 
-.bg-red-100{
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 226 226 / var(--tw-bg-opacity, 1));
-}
-
 .bg-opacity-50{
   --tw-bg-opacity: 0.5;
 }
@@ -1315,6 +1290,10 @@ html[data-theme="light"] .text-color {
   padding-bottom: 2px;
 }
 
+.pb-1{
+  padding-bottom: 0.25rem;
+}
+
 .pb-3{
   padding-bottom: 0.75rem;
 }
@@ -1333,10 +1312,6 @@ html[data-theme="light"] .text-color {
 
 .pt-8{
   padding-top: 2rem;
-}
-
-.pb-1{
-  padding-bottom: 0.25rem;
 }
 
 .text-left{
@@ -2537,6 +2512,16 @@ img {
 }
 
 #faq {
+  scroll-margin-top: 115px;
+  /* 上から80px下にスクロールさせる */
+}
+
+#plan {
+  scroll-margin-top: 115px;
+  /* 上から80px下にスクロールさせる */
+}
+
+#attention {
   scroll-margin-top: 115px;
   /* 上から80px下にスクロールさせる */
 }
