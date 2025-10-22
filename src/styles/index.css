@@ -487,7 +487,6 @@ html {
 }
 
 img {
-    width: 90%;
     margin: 0 auto;
 }
 
@@ -1457,7 +1456,7 @@ article h2 {
   }
 }
 .horizontal_scroll .scroller > *:not(:first-child) {
-  margin-left: 1%;
+  margin-left: 2%;
 }
 
 .qa-label {
