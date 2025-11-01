@@ -5,6 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=M+PLUS+Rounded+1c&family=Mochiy+Pop+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kaisei+Opti&family=Kiwi+Maru&family=M+PLUS+Rounded+1c&family=Mochiy+Pop+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Zen+Kaku+Gothic+New:wght@500;700&family=Zen+Maru+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=RocknRoll+One&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -45,6 +46,12 @@ html, body {
 
 body {
   overflow-x: clip;
+}
+
+.rocknroll-one-regular {
+  font-family: "RocknRoll One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .outline-text {
@@ -598,9 +605,8 @@ img {
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  border: 1px solid rgba(255, 255, 255, .3);
+  border: 1px solid rgba(0, 0, 0);
   background: rgba(255, 255, 255, 0.3);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
   background-clip: border-box;
   border-radius: 1rem;
   backdrop-filter: blur(13px);
@@ -1481,4 +1487,39 @@ article h2 {
   background-color: #ffe3e3;
   color: #000000;
   border: 1px solid #000000;
+}
+
+.chukosei_text {
+  color:#2ca1e9;
+}
+
+.heading-31 {
+  position: relative;
+  padding: .3em 0 .2em 1em;
+  border-bottom: 3px solid #2ca1e9;
+  color: #000000;
+  font-size: 22px;
+  display: inline-block;
+}
+
+.heading-31::before {
+  position: absolute;
+  top: 0;
+  left: .3em;
+  transform: rotate(55deg);
+  height: 5px;
+  width: 14px;
+  background: #2ca1e9;
+  content: '';
+}
+
+.heading-31::after {
+  position: absolute;
+  transform: rotate(15deg);
+  top: .6em;
+  left: 0;
+  height: 5px;
+  width: 10px;
+  background: #2ca1e9;
+  content: '';
 }
