@@ -22,20 +22,28 @@
 
 @layer base {
 
-    :root,
-    html[data-theme="light"] {
-      /*background-color: #fff1f1;*/
-      background: 
-    linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), /* 半透明で色を薄く */
-    url('/images/p0126_l.png') center center;
-  background-size: contain;   /* 画面に収まるように調整 */
-    }
-
-    html[data-theme="light"] .text-color {
-        color: #000000;
-    }
-
+  /* デフォルト背景 */
+  :root,
+  html[data-theme="light"]:not(.chukosei) {
+    background: 
+      linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+      url('/images/p0126_l.png') center center;
+    background-size: contain;
   }
+
+  /* 特定ページ背景 */
+  html.chukosei[data-theme="light"] {
+    background: 
+      linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+      url('/images/chu_blue.jpg') center center !important;
+    background-size: contain !important;
+  }
+
+  html[data-theme="light"] .text-color {
+    color: #000000;
+  }
+}
+
 
 html, body {
   overflow-x: hidden;
@@ -452,6 +460,11 @@ body {
 .resp-pc-g {
     @apply flex;
     @apply xl:hidden;
+}
+
+.resp-pc-h {
+  @apply flex flex-col;  /* ← ここを変更 */
+  @apply xl:hidden;
 }
 
 .resp-xl-f {
@@ -1495,11 +1508,12 @@ article h2 {
 
 .heading-31 {
   position: relative;
-  padding: .3em 0 .2em 1em;
+  padding: .3em 0 .4em 1em;
   border-bottom: 3px solid #2ca1e9;
   color: #000000;
-  font-size: 22px;
+  font-size: 24px;
   display: inline-block;
+  @apply max-lg:text-[20px];
 }
 
 .heading-31::before {
@@ -1522,4 +1536,59 @@ article h2 {
   width: 10px;
   background: #2ca1e9;
   content: '';
+}
+
+/* 右下吹き出し */
+.speach-balloons-square-rd {
+  position: relative;
+  max-width: 640px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 24px;
+  padding-right: 24px;
+  line-height: 40px;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  border-radius: 1.25rem;
+}
+.speach-balloons-square-rd::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  right: 20px;
+  bottom: -20px;
+  border-right: 22px solid rgb(255, 255, 255);
+  border-top: 22px solid transparent;
+  border-bottom: 22px solid transparent;
+  transform: rotate( 120deg);
+}
+
+/* 左下吹き出し */
+.speach-balloons-square-ld {
+  position: relative;
+  max-width: 640px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 24px;
+  padding-right: 24px;
+  line-height: 40px;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  border-radius: 1.25rem;
+}
+
+.speach-balloons-square-ld::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  left: 20px;
+  bottom: -20px;
+  border-right: 22px solid rgb(255, 255, 255);
+  border-top: 22px solid transparent;
+  border-bottom: 22px solid transparent;
+  transform: rotate( 55deg);
 }
