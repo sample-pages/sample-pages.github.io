@@ -3677,23 +3677,9 @@ article h2 {
   /* 中央寄せ */
   background-repeat: no-repeat;
   /* 繰り返さない */
-  background-size: 235%;
-  padding: 180px 20px;
+  background-size: 1000%;
+  padding: 120px 20px;
   /* 内側余白（上下左右） */
-}
-
-@media (max-width: 640px) {
-  .bg-section {
-    background-image: url('/images/blob-spray-stroke-sm-6.svg');
-    /* ←画像パス */
-    background-position: top center;
-    /* 中央寄せ */
-    background-repeat: no-repeat;
-    /* 繰り返さない */
-    background-size: 695%;
-    padding: 150px 20px;
-    /* 内側余白（上下左右） */
-  }
 }
 
 .hover\:scale-110:hover{
