@@ -1243,10 +1243,6 @@ html[data-theme="light"] .text-color {
   border-top-width: 4px;
 }
 
-.border-b-\[0px\]{
-  border-bottom-width: 0px;
-}
-
 .border-black{
   --tw-border-opacity: 1;
   border-color: rgb(0 0 0 / var(--tw-border-opacity, 1));
@@ -1639,10 +1635,6 @@ html[data-theme="light"] .text-color {
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.outline{
-  outline-style: solid;
 }
 
 .filter{
@@ -3678,6 +3670,32 @@ article h2 {
   transform: rotate( 55deg);
 }
 
+.bg-section {
+  background-image: url('/images/blob-spray-stroke-sm-6.svg');
+  /* ←画像パス */
+  background-position: top center;
+  /* 中央寄せ */
+  background-repeat: no-repeat;
+  /* 繰り返さない */
+  background-size: 235%;
+  padding: 180px 20px;
+  /* 内側余白（上下左右） */
+}
+
+@media (max-width: 640px) {
+  .bg-section {
+    background-image: url('/images/blob-spray-stroke-sm-6.svg');
+    /* ←画像パス */
+    background-position: top center;
+    /* 中央寄せ */
+    background-repeat: no-repeat;
+    /* 繰り返さない */
+    background-size: 695%;
+    padding: 150px 20px;
+    /* 内側余白（上下左右） */
+  }
+}
+
 .hover\:scale-110:hover{
   --tw-scale-x: 1.1;
   --tw-scale-y: 1.1;
@@ -3713,28 +3731,20 @@ article h2 {
     margin-top: 0.125rem;
   }
 
-  .max-xl\:h-\[30px\]{
-    height: 30px;
-  }
-
-  .max-xl\:h-\[64px\]{
-    height: 64px;
-  }
-
-  .max-xl\:h-\[20px\]{
-    height: 20px;
-  }
-
   .max-xl\:h-\[10px\]{
     height: 10px;
+  }
+
+  .max-xl\:h-\[30px\]{
+    height: 30px;
   }
 
   .max-xl\:h-\[50px\]{
     height: 50px;
   }
 
-  .max-xl\:h-\[54px\]{
-    height: 54px;
+  .max-xl\:h-\[64px\]{
+    height: 64px;
   }
 
   .max-xl\:text-base{
@@ -4006,12 +4016,16 @@ article h2 {
     height: 100px;
   }
 
+  .xl\:h-\[30px\]{
+    height: 30px;
+  }
+
   .xl\:h-\[50px\]{
     height: 50px;
   }
 
-  .xl\:h-\[30px\]{
-    height: 30px;
+  .xl\:h-\[80px\]{
+    height: 80px;
   }
 
   .xl\:text-base{
