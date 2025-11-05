@@ -3746,8 +3746,8 @@ article h2 {
   /* ← アイコンの高さ位置調整（真ん中よりやや上） */
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 84px;
   height: 84px;
+  width: auto;
   transition: opacity 0.3s ease;
 }
 
