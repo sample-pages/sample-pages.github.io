@@ -1621,7 +1621,7 @@ article h2 {
   color: rgb(0, 0, 0);
   text-decoration: none;
   font-weight: bold;
-  border: 3px solid rgb(0, 0, 0);
+  border: 3px solid rgb(255, 208, 208);
   border-radius: 50%;
   aspect-ratio: 1 / 1;
   transition: background 0.3s, color 0.3s;
@@ -1658,7 +1658,7 @@ article h2 {
   top: 33%; /* ← アイコンの高さ位置調整（真ん中よりやや上） */
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 84px;
+  height: 40%;
   width: auto;
   transition: opacity 0.3s ease;
 }
@@ -1682,7 +1682,7 @@ article h2 {
   top: 60%; /* ← 画像の少し下に配置 */
   left: 50%;
   transform: translateX(-50%);
-  width: 170px;
+  width: 80%;
   height: 2px;
   background-color: currentColor;
   border-radius: 2px;
@@ -1709,6 +1709,12 @@ article h2 {
   line-height: 1.4;
 }
 
+@media (max-width: 700px) {
+  .tile p {
+    font-size: 13px;
+  }
+}
+
 /* === スマホ対応 === */
 @media (max-width: 600px) {
   .tile-container {
@@ -1718,22 +1724,21 @@ article h2 {
   }
 
   .tile-content img {
-    width: 52px;
-    height: 52px;
-    top: 34%;
+    width: 40%;
+    height: 40%;
+    top: 33%;
   }
 
   .line {
-    width: 90px;
-    top: 54%;
+    top: 60%;
   }
 
   .text-area {
     width: 100px;
-    top: 59%;
+    top: 58%;
   }
 
   .tile p {
-    font-size: 14px;
+    font-size: 11px;
   }
 }

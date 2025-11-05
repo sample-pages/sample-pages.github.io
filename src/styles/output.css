@@ -3704,7 +3704,7 @@ article h2 {
   color: rgb(0, 0, 0);
   text-decoration: none;
   font-weight: bold;
-  border: 3px solid rgb(0, 0, 0);
+  border: 3px solid rgb(255, 208, 208);
   border-radius: 50%;
   aspect-ratio: 1 / 1;
   transition: background 0.3s, color 0.3s;
@@ -3746,7 +3746,7 @@ article h2 {
   /* ← アイコンの高さ位置調整（真ん中よりやや上） */
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 84px;
+  height: 40%;
   width: auto;
   transition: opacity 0.3s ease;
 }
@@ -3775,7 +3775,7 @@ article h2 {
   /* ← 画像の少し下に配置 */
   left: 50%;
   transform: translateX(-50%);
-  width: 170px;
+  width: 80%;
   height: 2px;
   background-color: currentColor;
   border-radius: 2px;
@@ -3808,6 +3808,12 @@ article h2 {
   line-height: 1.4;
 }
 
+@media (max-width: 700px) {
+  .tile p {
+    font-size: 13px;
+  }
+}
+
 /* === スマホ対応 === */
 
 @media (max-width: 600px) {
@@ -3818,23 +3824,22 @@ article h2 {
   }
 
   .tile-content img {
-    width: 52px;
-    height: 52px;
-    top: 34%;
+    width: 40%;
+    height: 40%;
+    top: 33%;
   }
 
   .line {
-    width: 90px;
-    top: 54%;
+    top: 60%;
   }
 
   .text-area {
     width: 100px;
-    top: 59%;
+    top: 58%;
   }
 
   .tile p {
-    font-size: 14px;
+    font-size: 11px;
   }
 }
 
@@ -3982,8 +3987,8 @@ article h2 {
     height: 30px;
   }
 
-  .max-md\:h-\[50px\]{
-    height: 50px;
+  .max-md\:h-\[35px\]{
+    height: 35px;
   }
 
   .max-md\:h-\[54px\]{
@@ -3996,6 +4001,10 @@ article h2 {
 
   .max-md\:h-\[64px\]{
     height: 64px;
+  }
+
+  .max-md\:h-\[74px\]{
+    height: 74px;
   }
 
   .max-md\:w-20{
@@ -4043,12 +4052,12 @@ article h2 {
     height: 40px;
   }
 
-  .md\:h-\[50px\]{
-    height: 50px;
+  .md\:h-\[45px\]{
+    height: 45px;
   }
 
-  .md\:h-\[60px\]{
-    height: 60px;
+  .md\:h-\[50px\]{
+    height: 50px;
   }
 
   .md\:h-\[70px\]{
@@ -4057,6 +4066,10 @@ article h2 {
 
   .md\:h-\[80px\]{
     height: 80px;
+  }
+
+  .md\:h-\[90px\]{
+    height: 90px;
   }
 
   .md\:w-\[100\%\]{
