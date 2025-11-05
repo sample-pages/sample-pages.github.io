@@ -3831,6 +3831,7 @@ article h2 {
 
   .line {
     top: 60%;
+    height: 1px;
   }
 
   .text-area {
