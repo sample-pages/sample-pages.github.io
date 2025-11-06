@@ -1591,12 +1591,14 @@ article h2 {
 }
 
 .bg-section {
-  background-image: url('/images/blob-spray-stroke-sm-6.svg'); /* ←画像パス */
-  background-position: top center; /* 中央寄せ */
-  background-repeat: no-repeat; /* 繰り返さない */
-  background-size: 1000%;
-  padding: 120px 20px; /* 内側余白（上下左右） */
+  background-image: url('/images/chukosei_bg.svg');
+  background-position: top center;
+  background-repeat: no-repeat;
+  padding: 0;
+  height: 100%; /* ← 親要素の高さに合わせる */
+  background-size: cover;
 }
+
 
 /* === 全体のグリッド設定 === */
 .tile-container {
