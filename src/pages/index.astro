@@ -530,16 +530,19 @@ revealElements.forEach(el => io.observe(el));
 
 const contactButton = document.getElementById('contactButton');
 
-const minThreshold = 100; // このpxを超えたら表示開始
-const maxThreshold = 3200; // このpxを超えたら非表示
+// ページ全体に対する割合で制御（0〜1）
+const minRatio = 0.05; // ページの5%を超えたら表示
+const maxRatio = 0.95;  // ページの80%を超えたら非表示
 
 // 初期状態は非表示
 contactButton?.classList.add('opacity-0', 'pointer-events-none');
 
 window.addEventListener('scroll', () => {
-  const scrollY = window.scrollY;
+  const scrollTop = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const scrollRatio = scrollTop / docHeight; // スクロール率（0〜1）
 
-  if (scrollY > minThreshold && scrollY < maxThreshold) {
+  if (scrollRatio > minRatio && scrollRatio < maxRatio) {
     // 表示
     contactButton?.classList.remove('opacity-0', 'pointer-events-none');
     contactButton?.classList.add('opacity-100');
@@ -549,6 +552,7 @@ window.addEventListener('scroll', () => {
     contactButton?.classList.remove('opacity-100');
   }
 });
+
 
 </script>
 
