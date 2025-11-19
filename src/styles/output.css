@@ -925,10 +925,6 @@ html[data-theme="light"] .text-color {
   height: 10px;
 }
 
-.h-\[140px\]{
-  height: 140px;
-}
-
 .h-\[20px\]{
   height: 20px;
 }
@@ -1288,6 +1284,11 @@ html[data-theme="light"] .text-color {
   background-color: rgb(203 87 87 / var(--tw-bg-opacity, 1));
 }
 
+.bg-\[\#cbe1f2\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(203 225 242 / var(--tw-bg-opacity, 1));
+}
+
 .bg-\[\#ffd8d8\]{
   --tw-bg-opacity: 1;
   background-color: rgb(255 216 216 / var(--tw-bg-opacity, 1));
@@ -1340,16 +1341,6 @@ html[data-theme="light"] .text-color {
 .bg-yellow-300{
   --tw-bg-opacity: 1;
   background-color: rgb(253 224 71 / var(--tw-bg-opacity, 1));
-}
-
-.bg-\[\#d2e4f2\]{
-  --tw-bg-opacity: 1;
-  background-color: rgb(210 228 242 / var(--tw-bg-opacity, 1));
-}
-
-.bg-\[\#cbe1f2\]{
-  --tw-bg-opacity: 1;
-  background-color: rgb(203 225 242 / var(--tw-bg-opacity, 1));
 }
 
 .bg-opacity-50{
@@ -1901,6 +1892,50 @@ body {
 
 @media not all and (min-width: 1024px){
   .headline-bg{
+    font-size: 60px;
+  }
+}
+
+.headline-bgc {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 5rem;
+  font-weight: 900;
+  font-style: italic;
+  color: rgba(0, 132, 255, 0.213);
+  z-index: -1;
+  /* 背景に */
+  white-space: nowrap;
+  pointer-events: none;
+  /* クリックなど無効化 */
+}
+
+@media not all and (min-width: 1024px){
+  .headline-bgc{
+    font-size: 60px;
+  }
+}
+
+.headline-bgc2 {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 5rem;
+  font-weight: 900;
+  font-style: italic;
+  color: rgba(82, 225, 0, 0.349);
+  z-index: -1;
+  /* 背景に */
+  white-space: nowrap;
+  pointer-events: none;
+  /* クリックなど無効化 */
+}
+
+@media not all and (min-width: 1024px){
+  .headline-bgc2{
     font-size: 60px;
   }
 }
@@ -3896,18 +3931,6 @@ article h2 {
     height: 50px;
   }
 
-  .max-xl\:h-\[64px\]{
-    height: 64px;
-  }
-
-  .max-xl\:h-\[100px\]{
-    height: 100px;
-  }
-
-  .max-xl\:h-\[60px\]{
-    height: 60px;
-  }
-
   .max-xl\:text-base{
     font-size: 1rem;
     line-height: 1.5rem;
@@ -3945,16 +3968,12 @@ article h2 {
     height: 6rem;
   }
 
-  .max-lg\:h-\[300px\]{
-    height: 300px;
-  }
-
-  .max-lg\:h-\[\]{
-    height: ;
-  }
-
   .max-lg\:h-\[150px\]{
     height: 150px;
+  }
+
+  .max-lg\:h-\[300px\]{
+    height: 300px;
   }
 
   .max-lg\:w-24{
@@ -4005,6 +4024,10 @@ article h2 {
     height: 1.25rem;
   }
 
+  .max-md\:h-\[100px\]{
+    height: 100px;
+  }
+
   .max-md\:h-\[24px\]{
     height: 24px;
   }
@@ -4027,10 +4050,6 @@ article h2 {
 
   .max-md\:h-\[67px\]{
     height: 67px;
-  }
-
-  .max-md\:h-\[100px\]{
-    height: 100px;
   }
 
   .max-md\:w-20{
@@ -4070,6 +4089,18 @@ article h2 {
     height: 1.75rem;
   }
 
+  .md\:h-\[100px\]{
+    height: 100px;
+  }
+
+  .md\:h-\[120px\]{
+    height: 120px;
+  }
+
+  .md\:h-\[200px\]{
+    height: 200px;
+  }
+
   .md\:h-\[36px\]{
     height: 36px;
   }
@@ -4102,24 +4133,12 @@ article h2 {
     height: 90px;
   }
 
-  .md\:h-\[140px\]{
-    height: 140px;
+  .md\:h-\[180px\]{
+    height: 180px;
   }
 
-  .md\:h-\[100px\]{
-    height: 100px;
-  }
-
-  .md\:h-\[120px\]{
-    height: 120px;
-  }
-
-  .md\:h-\[160px\]{
-    height: 160px;
-  }
-
-  .md\:h-\[200px\]{
-    height: 200px;
+  .md\:h-\[20px\]{
+    height: 20px;
   }
 
   .md\:w-\[100\%\]{
@@ -4229,20 +4248,16 @@ article h2 {
     height: 100px;
   }
 
+  .xl\:h-\[120px\]{
+    height: 120px;
+  }
+
   .xl\:h-\[30px\]{
     height: 30px;
   }
 
   .xl\:h-\[50px\]{
     height: 50px;
-  }
-
-  .xl\:h-\[140px\]{
-    height: 140px;
-  }
-
-  .xl\:h-\[120px\]{
-    height: 120px;
   }
 
   .xl\:text-base{

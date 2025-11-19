@@ -220,6 +220,36 @@ body {
   @apply max-lg:text-[60px];
 }
 
+.headline-bgc {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 5rem;
+  font-weight: 900;
+  font-style: italic;
+  color: rgba(0, 132, 255, 0.213);
+  z-index: -1; /* 背景に */
+  white-space: nowrap;
+  pointer-events: none; /* クリックなど無効化 */
+  @apply max-lg:text-[60px];
+}
+
+.headline-bgc2 {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 5rem;
+  font-weight: 900;
+  font-style: italic;
+  color: rgba(82, 225, 0, 0.349);
+  z-index: -1; /* 背景に */
+  white-space: nowrap;
+  pointer-events: none; /* クリックなど無効化 */
+  @apply max-lg:text-[60px];
+}
+
 .hover-color {
   display: inline-block;           /* 文字幅に沿わせる */
   border-bottom: 2px solid transparent; /* 初期は下線なし */
