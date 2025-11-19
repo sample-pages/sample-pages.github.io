@@ -37,8 +37,20 @@ const tagColors: Record<string, string> = {
   </div>
 </a>
 
+<a id="contactButtonLeft" href="/application/"
+  class="overflow-hidden fixed lg:left-14 lg:bottom-14 max-lg:left-5 max-lg:bottom-5 lg:w-32 lg:h-32 max-lg:w-24 max-lg:h-24 rounded-full bg-red-700 text-white shadow-2xl flex flex-col items-center justify-center z-50
+   zen-kaku-gothic-new
+  hover:bg-red-800 hover:scale-110 transition-transform transition-all duration-200
+  opacity-0 pointer-events-none"
+>
+  <span class="lg:mt-6 max-lg:mt-4 max-lg:text-[12px] max-lg:font-semibold">お申し込みは</span>
+  <span class="max-lg:text-[12px] max-lg:font-semibold">こちら</span>
 
-
+  <div class="overflow-hidden relative max-md:h-5 md:h-7 w-8 flex items-center justify-center">
+    <i class="ri-arrow-right-long-line max-md:text-lg md:text-xl arrow-original"></i>
+    <i class="ri-arrow-right-long-line max-md:text-lg md:text-xl arrow-slide absolute"></i>
+  </div>
+</a>
 
 
   <div class="border-b-[4px] border-red-100 max-lg:h-[300px] lg:h-[500px] mt-[80px]" style="background-image: url('/images/loading.jpeg'); background-size: cover; background-position: center; width: 100%;"></div>
@@ -526,30 +538,39 @@ const io = new IntersectionObserver((entries, observer) => {
 
 revealElements.forEach(el => io.observe(el));
 
-const contactButton = document.getElementById('contactButton');
-
 // ページ全体に対する割合で制御（0〜1）
 const minRatio = 0.05; // ページの5%を超えたら表示
 const maxRatio = 0.95;  // ページの80%を超えたら非表示
 
+const buttons = [
+  document.getElementById('contactButton'),
+  document.getElementById('contactButtonLeft')
+];
+
 // 初期状態は非表示
-contactButton?.classList.add('opacity-0', 'pointer-events-none');
+buttons.forEach(btn => {
+  if (!btn) return;
+  btn.classList.add('opacity-0', 'pointer-events-none');
+});
 
 window.addEventListener('scroll', () => {
   const scrollTop = window.scrollY;
   const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-  const scrollRatio = scrollTop / docHeight; // スクロール率（0〜1）
+  const scrollRatio = scrollTop / docHeight;
 
-  if (scrollRatio > minRatio && scrollRatio < maxRatio) {
-    // 表示
-    contactButton?.classList.remove('opacity-0', 'pointer-events-none');
-    contactButton?.classList.add('opacity-100');
-  } else {
-    // 非表示
-    contactButton?.classList.add('opacity-0', 'pointer-events-none');
-    contactButton?.classList.remove('opacity-100');
-  }
+  buttons.forEach(btn => {
+    if (!btn) return;
+    if (scrollRatio > minRatio && scrollRatio < maxRatio) {
+      btn.classList.remove('opacity-0', 'pointer-events-none');
+      btn.classList.add('opacity-100');
+    } else {
+      btn.classList.add('opacity-0', 'pointer-events-none');
+      btn.classList.remove('opacity-100');
+    }
+  });
 });
+
+
 
 
 </script>

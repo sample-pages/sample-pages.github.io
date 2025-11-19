@@ -1668,12 +1668,22 @@ html[data-theme="light"] .text-color {
   transition-duration: 150ms;
 }
 
+.transition-opacity{
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .duration-200{
   transition-duration: 200ms;
 }
 
 .duration-700{
   transition-duration: 700ms;
+}
+
+.duration-500{
+  transition-duration: 500ms;
 }
 
 .ease-\[cubic-bezier\(0\.4\2c 0\2c 0\.2\2c 1\)\]{
@@ -1904,7 +1914,7 @@ body {
   font-size: 5rem;
   font-weight: 900;
   font-style: italic;
-  color: rgba(0, 132, 255, 0.213);
+  color: rgba(255, 0, 242, 0.229);
   z-index: -1;
   /* 背景に */
   white-space: nowrap;
@@ -3884,6 +3894,17 @@ article h2 {
   }
 }
 
+.event-block {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.event-block:hover {
+  transform: scale(1.03);
+  z-index: 20;
+  /* 周囲より前面へ */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
 .hover\:scale-110:hover{
   --tw-scale-x: 1.1;
   --tw-scale-y: 1.1;
@@ -3954,6 +3975,10 @@ article h2 {
 
   .max-lg\:right-5{
     right: 1.25rem;
+  }
+
+  .max-lg\:left-5{
+    left: 1.25rem;
   }
 
   .max-lg\:ml-6{
@@ -4097,8 +4122,8 @@ article h2 {
     height: 120px;
   }
 
-  .md\:h-\[200px\]{
-    height: 200px;
+  .md\:h-\[180px\]{
+    height: 180px;
   }
 
   .md\:h-\[36px\]{
@@ -4131,14 +4156,6 @@ article h2 {
 
   .md\:h-\[90px\]{
     height: 90px;
-  }
-
-  .md\:h-\[180px\]{
-    height: 180px;
-  }
-
-  .md\:h-\[20px\]{
-    height: 20px;
   }
 
   .md\:w-\[100\%\]{
@@ -4181,6 +4198,10 @@ article h2 {
 
   .lg\:right-14{
     right: 3.5rem;
+  }
+
+  .lg\:left-14{
+    left: 3.5rem;
   }
 
   .lg\:mb-\[3px\]{
