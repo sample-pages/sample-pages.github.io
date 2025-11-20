@@ -228,7 +228,7 @@ body {
   font-size: 5rem;
   font-weight: 900;
   font-style: italic;
-  color: rgba(255, 0, 242, 0.229);
+  color: rgba(255, 0, 242, 0.172);
   z-index: -1; /* 背景に */
   white-space: nowrap;
   pointer-events: none; /* クリックなど無効化 */
@@ -243,7 +243,7 @@ body {
   font-size: 5rem;
   font-weight: 900;
   font-style: italic;
-  color: rgba(82, 225, 0, 0.349);
+  color: rgba(82, 225, 0, 0.351);
   z-index: -1; /* 背景に */
   white-space: nowrap;
   pointer-events: none; /* クリックなど無効化 */
