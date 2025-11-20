@@ -489,6 +489,15 @@ body {
     @apply xl:hidden;
 }
 
+.resp-pc-x {
+  @apply hidden md:flex;
+}
+
+.resp-pc-i {
+  @apply flex;
+  @apply md:hidden;
+}
+
 .resp-pc-h {
   @apply flex flex-col;  /* ← ここを変更 */
   @apply xl:hidden;
@@ -1781,4 +1790,70 @@ article h2 {
   transform: scale(1.03);
   z-index: 20; /* 周囲より前面へ */
   box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+
+/* PCでは2列、スマホでは1列 */
+.profile-list{
+  display: grid;
+  gap: 2.4rem;
+  grid-template-columns: 1fr; /* スマホ：1列 */
+  max-width: 800px;
+  margin: 0 auto;
+}
+@media (min-width: 768px){
+  .profile-list{
+    grid-template-columns: 1fr 1fr; /* PC：2列 */
+  }
+}
+
+/* カード本体（縦レイアウト） */
+.profile-item{
+  background: #fff;
+  border-radius: 40px;
+  padding: 1.6rem 1.2rem;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  transition: box-shadow .15s ease, transform .15s ease;
+}
+.profile-item:hover{
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  transform: translateY(-3px);
+}
+
+/* 写真：丸型 */
+.profile-photo{
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 1rem;
+}
+.profile-photo img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .35s ease;
+}
+.profile-item:hover .profile-photo img{
+  transform: scale(1.07);
+}
+
+/* 名前 */
+.profile-name{
+  margin: 0.3rem 0 0.3rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #000000;
+}
+
+/* 一言 */
+.profile-comment{
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 0.95rem;
+  text-align: left;
+  color: #000000;
+  line-height: 1.70;
 }
