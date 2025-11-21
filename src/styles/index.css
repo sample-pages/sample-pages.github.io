@@ -1796,7 +1796,7 @@ article h2 {
 /* PCでは2列、スマホでは1列 */
 .profile-list{
   display: grid;
-  gap: 2.8rem;
+  gap: 2.6rem;
   grid-template-columns: 1fr; /* スマホ：1列 */
   max-width: 800px;
   margin: 0 auto;
