@@ -1435,8 +1435,8 @@ html[data-theme="light"] .text-color {
   padding-bottom: 0.75rem;
 }
 
-.pl-2{
-  padding-left: 0.5rem;
+.pl-1{
+  padding-left: 0.25rem;
 }
 
 .pl-6{
@@ -1447,8 +1447,8 @@ html[data-theme="light"] .text-color {
   padding-left: 2rem;
 }
 
-.pr-2{
-  padding-right: 0.5rem;
+.pr-1{
+  padding-right: 0.25rem;
 }
 
 .pr-6{
@@ -1465,14 +1465,6 @@ html[data-theme="light"] .text-color {
 
 .pt-8{
   padding-top: 2rem;
-}
-
-.pl-1{
-  padding-left: 0.25rem;
-}
-
-.pr-1{
-  padding-right: 0.25rem;
 }
 
 .text-left{
@@ -3116,7 +3108,7 @@ a:hover .arrow-original {
 }
 
 .footer {
-  height: 110px;
+  height: 111px;
   /* フッター全体の高さ */
   position: relative;
   align-items: center;
@@ -3128,8 +3120,8 @@ a:hover .arrow-original {
 }
 
 .back-to-top {
-  width: 110px;
-  height: 110px;
+  width: 111px;
+  height: 111px;
   background-color: #ffffff;
   border-radius: 0;
   cursor: pointer;
