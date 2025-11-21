@@ -1126,7 +1126,7 @@ a:hover .arrow-original {
 
 
 .footer {
-  height: 100px; /* フッター全体の高さ */
+  height: 90px; /* フッター全体の高さ */
   position: relative;
   align-items: center;
 }
