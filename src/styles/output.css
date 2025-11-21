@@ -3938,7 +3938,7 @@ article h2 {
 
 .profile-list{
   display: grid;
-  gap: 2.4rem;
+  gap: 2.8rem;
   grid-template-columns: 1fr;
   /* スマホ：1列 */
   max-width: 800px;
