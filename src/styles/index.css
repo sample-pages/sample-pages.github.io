@@ -1126,7 +1126,7 @@ a:hover .arrow-original {
 
 
 .footer {
-  height: 90px; /* フッター全体の高さ */
+  height: 110px; /* フッター全体の高さ */
   position: relative;
   align-items: center;
 }
@@ -1136,8 +1136,8 @@ a:hover .arrow-original {
 }
 
 .back-to-top {
-  width: 100px;
-  height: 100px;
+  width: 110px;
+  height: 110px;
   background-color: #ffffff;
   border-radius: 0;
   cursor: pointer;
