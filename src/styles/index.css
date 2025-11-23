@@ -2046,6 +2046,7 @@ article h2 {
 
 @media (max-width: 768px) {
   .border-box {
+    border: 5px solid #ffc6c6; /* 縁取りの色と太さ */
     padding-left: 30px;           /* 内側の余白 */
   padding-right: 30px;           /* 内側の余白 */
   padding-top: 18px;           /* 内側の余白 */

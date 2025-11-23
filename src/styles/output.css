@@ -1227,10 +1227,6 @@ html[data-theme="light"] .text-color {
   border-bottom-width: 4px;
 }
 
-.border-l-\[4px\]{
-  border-left-width: 4px;
-}
-
 .border-r{
   border-right-width: 1px;
 }
@@ -4277,6 +4273,8 @@ article h2 {
 
 @media (max-width: 768px) {
   .border-box {
+    border: 5px solid #ffc6c6;
+    /* 縁取りの色と太さ */
     padding-left: 30px;
     /* 内側の余白 */
     padding-right: 30px;
@@ -4611,6 +4609,10 @@ article h2 {
     height: 20px;
   }
 
+  .md\:h-\[35px\]{
+    height: 35px;
+  }
+
   .md\:h-\[36px\]{
     height: 36px;
   }
@@ -4619,16 +4621,16 @@ article h2 {
     height: 40px;
   }
 
-  .md\:h-\[45px\]{
-    height: 45px;
-  }
-
   .md\:h-\[46px\]{
     height: 46px;
   }
 
   .md\:h-\[50px\]{
     height: 50px;
+  }
+
+  .md\:h-\[55px\]{
+    height: 55px;
   }
 
   .md\:h-\[60px\]{
@@ -4649,22 +4651,6 @@ article h2 {
 
   .md\:h-\[90px\]{
     height: 90px;
-  }
-
-  .md\:h-\[35px\]{
-    height: 35px;
-  }
-
-  .md\:h-\[55px\]{
-    height: 55px;
-  }
-
-  .md\:h-\[65px\]{
-    height: 65px;
-  }
-
-  .md\:h-\[85px\]{
-    height: 85px;
   }
 
   .md\:w-\[100\%\]{
