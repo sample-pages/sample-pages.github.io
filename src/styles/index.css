@@ -1912,7 +1912,6 @@ article h2 {
   border-radius: 50%;
   overflow: hidden;
   border: 4px solid rgba(255,255,255,0.9);
-  box-shadow: var(--shadow);
 
   display: flex;            /* Flexで中央揃え */
   justify-content: center;  /* 横方向中央 */
@@ -1932,7 +1931,6 @@ article h2 {
   border-radius: 50%;
   overflow: hidden;
   border: 4px solid rgba(255,255,255,0.9);
-  box-shadow: var(--shadow);
 
   display: flex;            /* Flexで中央揃え */
   justify-content: center;  /* 横方向中央 */
@@ -2043,7 +2041,7 @@ article h2 {
   max-width: 900px;            /* 幅 */
   margin: 10px auto;       /* 上下マージン50px、左右中央揃え */
   border-radius: 30px;     /* 角を丸くする場合 */
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* 影をつける場合 */
+
 }
 
 @media (max-width: 768px) {

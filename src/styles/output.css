@@ -4104,7 +4104,6 @@ article h2 {
   border-radius: 50%;
   overflow: hidden;
   border: 4px solid rgba(255,255,255,0.9);
-  box-shadow: var(--shadow);
   display: flex;
   /* Flexで中央揃え */
   justify-content: center;
@@ -4129,7 +4128,6 @@ article h2 {
   border-radius: 50%;
   overflow: hidden;
   border: 4px solid rgba(255,255,255,0.9);
-  box-shadow: var(--shadow);
   display: flex;
   /* Flexで中央揃え */
   justify-content: center;
@@ -4275,8 +4273,6 @@ article h2 {
   /* 上下マージン50px、左右中央揃え */
   border-radius: 30px;
   /* 角を丸くする場合 */
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  /* 影をつける場合 */
 }
 
 @media (max-width: 768px) {
@@ -4538,12 +4534,12 @@ article h2 {
     height: 30px;
   }
 
-  .max-md\:h-\[47px\]{
-    height: 47px;
+  .max-md\:h-\[42px\]{
+    height: 42px;
   }
 
-  .max-md\:h-\[50px\]{
-    height: 50px;
+  .max-md\:h-\[45px\]{
+    height: 45px;
   }
 
   .max-md\:h-\[60px\]{
@@ -4556,14 +4552,6 @@ article h2 {
 
   .max-md\:h-\[67px\]{
     height: 67px;
-  }
-
-  .max-md\:h-\[45px\]{
-    height: 45px;
-  }
-
-  .max-md\:h-\[42px\]{
-    height: 42px;
   }
 
   .max-md\:w-20{
@@ -4663,6 +4651,22 @@ article h2 {
     height: 90px;
   }
 
+  .md\:h-\[35px\]{
+    height: 35px;
+  }
+
+  .md\:h-\[55px\]{
+    height: 55px;
+  }
+
+  .md\:h-\[65px\]{
+    height: 65px;
+  }
+
+  .md\:h-\[85px\]{
+    height: 85px;
+  }
+
   .md\:w-\[100\%\]{
     width: 100%;
   }
@@ -4745,6 +4749,10 @@ article h2 {
     padding: 2rem;
   }
 
+  .lg\:text-\[15px\]{
+    font-size: 15px;
+  }
+
   .lg\:text-\[17px\]{
     font-size: 17px;
   }
@@ -4762,10 +4770,6 @@ article h2 {
   .lg\:text-xl{
     font-size: 1.25rem;
     line-height: 1.75rem;
-  }
-
-  .lg\:text-\[15px\]{
-    font-size: 15px;
   }
 }
 
