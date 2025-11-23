@@ -2059,8 +2059,10 @@ article h2 {
   width: 100%;
   overflow-x: auto; /* 横スクロールを可能に */
   -webkit-overflow-scrolling: touch;
-  padding: 10px;
+  text-align: center; /* スクロール可能領域ごと中央に */
   box-sizing: border-box;
+  padding-top: 10px;
+  padding-bottom: 16px;
 }
 
 /* グラフ本体（横に伸びる領域）*/
