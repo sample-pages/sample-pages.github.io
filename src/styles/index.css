@@ -2068,7 +2068,6 @@ article h2 {
 /* グラフ本体（横に伸びる領域）*/
 .chart-inner {
   display: inline-flex;
-  gap: 10px;
   min-width: max-content; /* ← これが重要：折り返しさせずスクロール発生 */
 }
 

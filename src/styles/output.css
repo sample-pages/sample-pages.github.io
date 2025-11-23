@@ -4304,7 +4304,6 @@ article h2 {
 
 .chart-inner {
   display: inline-flex;
-  gap: 10px;
   min-width: -moz-max-content;
   min-width: max-content;
   /* ← これが重要：折り返しさせずスクロール発生 */
