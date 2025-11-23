@@ -4755,6 +4755,10 @@ article h2 {
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
+
+  .lg\:text-\[15px\]{
+    font-size: 15px;
+  }
 }
 
 @media (min-width: 1280px){
