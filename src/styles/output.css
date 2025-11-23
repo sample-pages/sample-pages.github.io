@@ -1492,6 +1492,10 @@ html[data-theme="light"] .text-color {
   vertical-align: middle;
 }
 
+.text-\[1\.2rem\]{
+  font-size: 1.2rem;
+}
+
 .text-\[15px\]{
   font-size: 15px;
 }
@@ -1543,10 +1547,6 @@ html[data-theme="light"] .text-color {
 .text-xs{
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.text-\[1\.2rem\]{
-  font-size: 1.2rem;
 }
 
 .\!font-bold{
@@ -1633,10 +1633,6 @@ html[data-theme="light"] .text-color {
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
-}
-
-.text-\[1\]{
-  color: 1;
 }
 
 .opacity-0{
@@ -4285,13 +4281,13 @@ article h2 {
 
 @media (max-width: 768px) {
   .border-box {
-    padding-left: 36px;
+    padding-left: 30px;
     /* 内側の余白 */
-    padding-right: 36px;
+    padding-right: 30px;
     /* 内側の余白 */
-    padding-top: 24px;
+    padding-top: 18px;
     /* 内側の余白 */
-    padding-bottom: 36px;
+    padding-bottom: 30px;
     /* 内側の余白 */
   }
 }
@@ -4466,12 +4462,6 @@ article h2 {
     margin-top: 1rem;
   }
 
-  @media not all and (min-width: 1024px){
-    .max-lg\:max-lg\:ml-6{
-      margin-left: 1.5rem;
-    }
-  }
-
   .max-lg\:h-24{
     height: 6rem;
   }
@@ -4512,15 +4502,6 @@ article h2 {
 
   .max-lg\:text-\[16px\]{
     font-size: 16px;
-  }
-
-  .max-lg\:text-base{
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-
-  .max-lg\:text-\[1\.2rem\]{
-    font-size: 1.2rem;
   }
 
   .max-lg\:font-semibold{

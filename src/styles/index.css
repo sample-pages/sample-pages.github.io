@@ -2048,10 +2048,10 @@ article h2 {
 
 @media (max-width: 768px) {
   .border-box {
-    padding-left: 36px;           /* 内側の余白 */
-  padding-right: 36px;           /* 内側の余白 */
-  padding-top: 24px;           /* 内側の余白 */
-  padding-bottom: 36px;           /* 内側の余白 */
+    padding-left: 30px;           /* 内側の余白 */
+  padding-right: 30px;           /* 内側の余白 */
+  padding-top: 18px;           /* 内側の余白 */
+  padding-bottom: 30px;           /* 内側の余白 */
   }
 }
 
