@@ -1889,7 +1889,7 @@ body {
 
 @media not all and (min-width: 1024px){
   .index-midashi{
-    font-size: 18px;
+    font-size: 32px;
   }
 }
 
@@ -4275,6 +4275,19 @@ article h2 {
   /* 影をつける場合 */
 }
 
+@media (max-width: 768px) {
+  .border-box {
+    padding-left: 36px;
+    /* 内側の余白 */
+    padding-right: 36px;
+    /* 内側の余白 */
+    padding-top: 24px;
+    /* 内側の余白 */
+    padding-bottom: 36px;
+    /* 内側の余白 */
+  }
+}
+
 .chart-wrapper {
   display: flex;
   flex-direction: column;
@@ -4300,6 +4313,7 @@ article h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 40px;
 }
 
 .bar {
@@ -4527,6 +4541,10 @@ article h2 {
 
   .max-md\:h-\[67px\]{
     height: 67px;
+  }
+
+  .max-md\:h-\[40px\]{
+    height: 40px;
   }
 
   .max-md\:w-20{

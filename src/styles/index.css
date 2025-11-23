@@ -192,7 +192,7 @@ body {
   font-family: "Zen Kaku Gothic New", sans-serif;
   font-weight: 700;
   font-size: 2.8rem;
-  @apply max-lg:text-[18px];
+  @apply max-lg:text-[32px];
 }
 
 
@@ -2046,6 +2046,15 @@ article h2 {
   box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* 影をつける場合 */
 }
 
+@media (max-width: 768px) {
+  .border-box {
+    padding-left: 36px;           /* 内側の余白 */
+  padding-right: 36px;           /* 内側の余白 */
+  padding-top: 24px;           /* 内側の余白 */
+  padding-bottom: 36px;           /* 内側の余白 */
+  }
+}
+
 .chart-wrapper {
   display: flex;
   flex-direction: column;
@@ -2069,6 +2078,7 @@ article h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 40px;
 }
 
 .bar {
