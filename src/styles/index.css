@@ -47,6 +47,7 @@
 
 html, body {
   overflow-x: hidden;
+  scroll-behavior: smooth;
   /*
     overscroll-behavior-y: none;
     */
@@ -185,6 +186,13 @@ body {
   font-weight: 500;
   font-size: 1.3rem;
   @apply max-lg:text-[19px];
+}
+
+.index-midashi {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 700;
+  font-size: 2.8rem;
+  @apply max-lg:text-[18px];
 }
 
 
@@ -850,6 +858,19 @@ img {
 
   #attention {
     scroll-margin-top: 115px; /* 上から80px下にスクロールさせる */
+  }
+
+  #first {
+    scroll-margin-top: 135px; /* 上から80px下にスクロールさせる */
+  }
+  #second{
+    scroll-margin-top: 135px; /* 上から80px下にスクロールさせる */
+  }
+  #third {
+    scroll-margin-top: 135px; /* 上から80px下にスクロールさせる */
+  }
+  #fourth {
+    scroll-margin-top: 135px; /* 上から80px下にスクロールさせる */
   }
   
 
@@ -1856,4 +1877,227 @@ article h2 {
   text-align: left;
   color: #000000;
   line-height: 1.70;
+}
+
+/* ========= CSS Variables ========= */
+:root {
+  --img-size: 280px;
+  --gap: 100px;
+  --bubble-bg: #fff;
+  --bubble-color: #111;
+  --bubble-radius: 16px;
+  --shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+/* 画像を2×2に並べるコンテナ */
+.face-board {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--gap);
+  width: min(720px, calc(2 * var(--img-size) + var(--gap) + 40px));
+  margin: 0 auto;
+}
+
+.item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  width: var(--img-size);
+  height: var(--img-size);
+  background: #fdeded;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid rgba(255,255,255,0.9);
+  box-shadow: var(--shadow);
+
+  display: flex;            /* Flexで中央揃え */
+  justify-content: center;  /* 横方向中央 */
+  align-items: center;      /* 縦方向中央 */
+}
+
+.icon img {
+  height: 80%;             /* 高さを親に合わせる */
+  width: auto;              /* 幅は自動で元の比率を維持 */
+  display: block;           /* margin:auto を効かせる場合必須 */
+}
+
+.icon2 {
+  width: var(--img-size);
+  height: var(--img-size);
+  background: #fdeded;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid rgba(255,255,255,0.9);
+  box-shadow: var(--shadow);
+
+  display: flex;            /* Flexで中央揃え */
+  justify-content: center;  /* 横方向中央 */
+  align-items: center;      /* 縦方向中央 */
+}
+
+.icon2 img {
+  height: 60%;             /* 高さを親に合わせる */
+  width: auto;              /* 幅は自動で元の比率を維持 */
+  display: block;           /* margin:auto を効かせる場合必須 */
+}
+
+/* 番号スタイル（背景なし） */
+.speech-num {
+  position: absolute;
+  top: -102px;      /* 吹き出しの上に少しかぶせる */
+  left: 20px;      /* 左寄せ */
+
+  color: #000000;    /* テキストカラー */
+  font-weight: bold;
+  font-size: 48px;
+
+  z-index: 15;
+  background: none; /* 背景なし */
+  padding: 0;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+/* ---- 吹き出し ---- */
+.speech {
+  position:absolute;
+  max-width: 640px;
+  padding: 20px 24px;
+  background: var(--bubble-bg);
+  color: var(--bubble-color);
+  border-radius: var(--bubble-radius);
+
+  font-size: 1.2rem;
+  opacity:1; /*  ←常に表示 */
+  transform: translateY(140px); /* ←画像に少しかぶせる */
+  transition: .2s ease;
+  pointer-events:auto;
+  z-index:10;
+}
+
+.speech::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;   /* 吹き出しの下に少し出す */
+  left: 0px;      /* 左寄せに調整 */
+  
+  width: 0px;
+  height: 0px;
+  border-left: 80px solid transparent;   /* 三角の左側 */
+  border-right: 10px solid transparent;  /* 三角の右側 */
+  border-top: 100px solid var(--bubble-bg); /* 上向き三角形（尖った口） */
+
+  z-index: -1;
+}
+
+/* 吹き出し配置 */
+.top-left .speech {
+  top: -70%;
+  left: 0%;
+}
+.top-left .speech::after {
+  bottom: -30px;
+  left: 20px;
+}
+
+@media (max-width: 768px) {
+  :root { --img-size: 240px; }
+
+  .face-board {
+    grid-template-columns: 1fr; /* 1カラムにして縦並び */
+    gap: 120px;                  /* スマホ用に少し余白を縮める */
+    justify-items: center;
+    width: 100%;
+  }
+
+  .speech {
+    max-width: 100%;  /* スマホでは幅を画面に合わせる */
+    transform: translateY(100px); /* ←画像に少しかぶせる */
+  }
+
+  .speech::after {
+    bottom: -10px;   /* 吹き出しの口位置微調整 */
+    border-left: 80px solid transparent;   /* 三角の左側 */
+  border-right: 10px solid transparent;  /* 三角の右側 */
+  border-top: 100px solid var(--bubble-bg); /* 上向き三角形（尖った口） */
+  }
+
+  .speech-num {
+    top: -104px;      /* スマホでは番号の位置を調整 */
+    left: 22px;
+    font-size: 40px;
+  }
+}
+
+.border-box {
+  background-color: white; /* 背景白 */
+  border: 7px solid #ffc6c6; /* 縁取りの色と太さ */
+  padding-left: 70px;           /* 内側の余白 */
+  padding-right: 70px;           /* 内側の余白 */
+  padding-top: 40px;           /* 内側の余白 */
+  padding-bottom: 60px;           /* 内側の余白 */
+  max-width: 900px;            /* 幅 */
+  margin: 10px auto;       /* 上下マージン50px、左右中央揃え */
+  border-radius: 30px;     /* 角を丸くする場合 */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* 影をつける場合 */
+}
+
+.chart-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 30px;   /* 左の余白 */
+  padding-right: 30px;  /* 右の余白 */
+}
+
+.bar-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  height: 300px;
+  border-left: 2px solid #333;
+  border-bottom: 2px solid #333;
+  padding-left: 10px;
+  padding-bottom: 0px;
+}
+
+.bar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bar {
+  width: 40px;
+  background-color: #4faf4c;
+  border-radius: 5px 5px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  color: white;
+  font-size: 14px;
+}
+
+.label {
+  margin-top: 5px; /* 棒とラベルの間の隙間 */
+  font-weight: bold;
+}
+
+.box {
+  opacity: 0;
+}
+
+.show {
+  animation: fadeShake 0.7s steps(6) forwards;
+}
+
+@keyframes fadeShake {
+  0%   { opacity: 0; transform: rotate(0deg); }
+  33%  { opacity: 0.3; transform: rotate(-10deg); }
+  66%  { opacity: 0.6; transform: rotate(7deg); }
+  100% { opacity: 1; transform: rotate(0deg); }
 }
