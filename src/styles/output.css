@@ -1545,6 +1545,10 @@ html[data-theme="light"] .text-color {
   line-height: 1rem;
 }
 
+.text-\[1\.2rem\]{
+  font-size: 1.2rem;
+}
+
 .\!font-bold{
   font-weight: 700 !important;
 }
@@ -1629,6 +1633,10 @@ html[data-theme="light"] .text-color {
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.text-\[1\]{
+  color: 1;
 }
 
 .opacity-0{
@@ -1889,7 +1897,7 @@ body {
 
 @media not all and (min-width: 1024px){
   .index-midashi{
-    font-size: 32px;
+    font-size: 36px;
   }
 }
 
@@ -4458,6 +4466,12 @@ article h2 {
     margin-top: 1rem;
   }
 
+  @media not all and (min-width: 1024px){
+    .max-lg\:max-lg\:ml-6{
+      margin-left: 1.5rem;
+    }
+  }
+
   .max-lg\:h-24{
     height: 6rem;
   }
@@ -4498,6 +4512,15 @@ article h2 {
 
   .max-lg\:text-\[16px\]{
     font-size: 16px;
+  }
+
+  .max-lg\:text-base{
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .max-lg\:text-\[1\.2rem\]{
+    font-size: 1.2rem;
   }
 
   .max-lg\:font-semibold{

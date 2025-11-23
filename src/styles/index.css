@@ -192,7 +192,7 @@ body {
   font-family: "Zen Kaku Gothic New", sans-serif;
   font-weight: 700;
   font-size: 2.8rem;
-  @apply max-lg:text-[32px];
+  @apply max-lg:text-[36px];
 }
 
 
