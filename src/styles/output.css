@@ -973,6 +973,10 @@ html[data-theme="light"] .text-color {
   height: 15px;
 }
 
+.h-\[25px\]{
+  height: 25px;
+}
+
 .max-h-\[500px\]{
   max-height: 500px;
 }
