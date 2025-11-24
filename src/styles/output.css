@@ -4542,12 +4542,44 @@ article h2 {
 }
 
 @media not all and (min-width: 768px){
+  .max-md\:bottom-6{
+    bottom: 1.5rem;
+  }
+
+  .max-md\:bottom-4{
+    bottom: 1rem;
+  }
+
+  .max-md\:left-6{
+    left: 1.5rem;
+  }
+
+  .max-md\:bottom-3{
+    bottom: 0.75rem;
+  }
+
+  .max-md\:left-5{
+    left: 1.25rem;
+  }
+
+  .max-md\:bottom-2{
+    bottom: 0.5rem;
+  }
+
   .max-md\:ml-1{
     margin-left: 0.25rem;
   }
 
   .max-md\:ml-8{
     margin-left: 2rem;
+  }
+
+  .max-md\:mb-4{
+    margin-bottom: 1rem;
+  }
+
+  .max-md\:ml-6{
+    margin-left: 1.5rem;
   }
 
   .max-md\:h-5{
@@ -4611,6 +4643,10 @@ article h2 {
     padding-right: 1.5rem;
   }
 
+  .max-md\:pb-4{
+    padding-bottom: 1rem;
+  }
+
   .max-md\:text-\[1\.2rem\]{
     font-size: 1.2rem;
   }
@@ -4636,6 +4672,14 @@ article h2 {
 }
 
 @media (min-width: 768px){
+  .md\:bottom-6{
+    bottom: 1.5rem;
+  }
+
+  .md\:left-8{
+    left: 2rem;
+  }
+
   .md\:mb-0{
     margin-bottom: 0px;
   }
