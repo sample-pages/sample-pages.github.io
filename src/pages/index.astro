@@ -422,14 +422,14 @@ const tagColors: Record<string, string> = {
                   <a class="text-lg text-red-500">{post.frontmatter.update}</a>
                 </div>
               ) : (
-                <div class="no-update-content mb-[3px] mr-2">
+                <div class="no-update-content mb-[3px] mr-1">
                   <a class="text-base max-lg:text-[14px]">{post.frontmatter.date}</a>
                 </div>
               )}
       
               {/* ★タグ表示 */}
               {post.frontmatter.tags && (
-                <div class="flex gap-1 flex-wrap mr-2">
+                <div class="flex gap-1 flex-wrap mr-1">
                   {post.frontmatter.tags.map((tag: string) => (
                     <span
                       class={`text-xs px-2 py-[2px] rounded-full text-black border-[1px] border-red-300 ${
@@ -448,7 +448,7 @@ const tagColors: Record<string, string> = {
   href={post.url}
 >
   {post.frontmatter.new && (
-    <span class="text-red-500 font-bold text-base max-xl:text-sm">NEW!&nbsp;</span>
+    <span class="text-red-500 font-bold text-base max-xl:text-sm">NEW!</span>
   )}
   {post.frontmatter.title}
 </a>
