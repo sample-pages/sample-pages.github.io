@@ -953,6 +953,22 @@ html[data-theme="light"] .text-color {
   height: 100%;
 }
 
+.h-\[105px\]{
+  height: 105px;
+}
+
+.h-\[95px\]{
+  height: 95px;
+}
+
+.h-\[1px\]{
+  height: 1px;
+}
+
+.h-\[110px\]{
+  height: 110px;
+}
+
 .max-h-\[500px\]{
   max-height: 500px;
 }
