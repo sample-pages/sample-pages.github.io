@@ -442,11 +442,14 @@ const tagColors: Record<string, string> = {
       
               {/* タイトル */}
               <a
-                class="lg:mb-[3px] text-base max-xl:text-sm font-medium hover-color"
-                href={post.url}
-              >
-                {post.frontmatter.title}
-              </a>
+  class="lg:mb-[3px] text-base max-xl:text-sm font-medium hover-color flex items-center gap-2"
+  href={post.url}
+>
+  {post.frontmatter.new && (
+    <span class="text-red-500 font-bold text-base max-xl:text-sm">NEW!&nbsp;</span>
+  )}
+  {post.frontmatter.title}
+</a>
             </div>
       
             {/* 説明文 */}
