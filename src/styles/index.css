@@ -1594,9 +1594,9 @@ article h2 {
 
 .heading-32 {
   color: #000000;
-  font-size: 24px;
+  font-size: 30px;
   display: inline-block;
-  @apply max-lg:text-[20px];
+  @apply max-xl:text-[24px];
 }
 
 /* 右下吹き出し */
@@ -1877,7 +1877,7 @@ article h2 {
   margin-top: 10px;
   margin-left: 10px;
   margin-right: 10px;
-  font-size: 0.95rem;
+  font-size: 1.0rem;
   text-align: left;
   color: #000000;
   line-height: 1.70;

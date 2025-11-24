@@ -1029,6 +1029,10 @@ html[data-theme="light"] .text-color {
   max-width: 48rem;
 }
 
+.max-w-4xl{
+  max-width: 56rem;
+}
+
 .max-w-\[64rem\]{
   max-width: 64rem;
 }
@@ -1535,6 +1539,11 @@ html[data-theme="light"] .text-color {
 .text-xs{
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.text-2xl{
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .\!font-bold{
@@ -3737,13 +3746,13 @@ article h2 {
 
 .heading-32 {
   color: #000000;
-  font-size: 24px;
+  font-size: 30px;
   display: inline-block;
 }
 
-@media not all and (min-width: 1024px){
+@media not all and (min-width: 1280px){
   .heading-32{
-    font-size: 20px;
+    font-size: 24px;
   }
 }
 
@@ -4059,7 +4068,7 @@ article h2 {
   margin-top: 10px;
   margin-left: 10px;
   margin-right: 10px;
-  font-size: 0.95rem;
+  font-size: 1.0rem;
   text-align: left;
   color: #000000;
   line-height: 1.70;
@@ -4794,6 +4803,10 @@ article h2 {
 
   .xl\:h-\[50px\]{
     height: 50px;
+  }
+
+  .xl\:h-\[60px\]{
+    height: 60px;
   }
 
   .xl\:text-base{
