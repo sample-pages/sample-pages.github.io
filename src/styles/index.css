@@ -278,6 +278,15 @@ body {
   transform: scale(1.1); /* ホバーで5%拡大 */
 }
 
+.tag-hover-mild {
+  display: inline-block; /* inlineだとscaleが効かないので */
+  transition: transform 0.2s ease-in-out; /* スムーズに拡大 */
+}
+
+.tag-hover-mild:hover {
+  transform: scale(1.03); /* ホバーで5%拡大 */
+}
+
 
 
 .width-body {

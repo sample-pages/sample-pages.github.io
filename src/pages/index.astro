@@ -149,9 +149,23 @@ const tagColors: Record<string, string> = {
       <span class="max-lg:ml-6 lg:ml-8 inline-block align-middle pt-2">トピックス</span>
     </h1>
   <div class="max-md:h-[30px] md:h-[36px]" />
-  <div class="pl-1 pr-1 margin-default text-color zen-kaku-gothic-new" style="padding-bottom: 0rem;">
-    <img src="/images/westu.jpg" alt="Topic1" />
-  </div>
+  <div class="text-center">
+  <a class="tag-hover-mild" href="/posts/28536014">
+    <div class="relative pl-1 pr-1 margin-default text-color zen-kaku-gothic-new" style="padding-bottom: 0rem;">
+      <!-- 画像 -->
+      <img src="/images/westu.jpg" alt="Topic1" class="w-full h-auto object-cover" />
+      <!-- 下に向かって黒くなるグラデーション -->
+      <div class="ml-1 mr-1 absolute inset-0" style="background: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0.5) 100%);"></div>
+    
+      <!-- 文字 -->
+      <div class="absolute bottom-6 left-8 text-white z-10">
+        <h2 class="max-md:text-xl md:text-2xl font-bold">ホームページを公開しました</h2>
+        <p class="mt-1 text-lg"></p>
+      </div>
+    </div>
+  </a>
+</div>
+  
   </div>
   <div class="max-md:h-[45px] md:h-[66px]" />
   <section class="bg-[#fae1e1]">

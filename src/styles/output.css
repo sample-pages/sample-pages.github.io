@@ -659,6 +659,10 @@ html[data-theme="light"] .text-color {
   inset: 0px;
 }
 
+.bottom-6{
+  bottom: 1.5rem;
+}
+
 .left-0{
   left: 0px;
 }
@@ -669,6 +673,10 @@ html[data-theme="light"] .text-color {
 
 .left-1\/2{
   left: 50%;
+}
+
+.left-8{
+  left: 2rem;
 }
 
 .left-\[44\%\]{
@@ -1636,6 +1644,11 @@ html[data-theme="light"] .text-color {
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
+.text-gray-700{
+  --tw-text-opacity: 1;
+  color: rgb(55 65 81 / var(--tw-text-opacity, 1));
+}
+
 .opacity-0{
   opacity: 0;
 }
@@ -2015,6 +2028,18 @@ body {
 
 .tag-hover:hover {
   transform: scale(1.1);
+  /* ホバーで5%拡大 */
+}
+
+.tag-hover-mild {
+  display: inline-block;
+  /* inlineだとscaleが効かないので */
+  transition: transform 0.2s ease-in-out;
+  /* スムーズに拡大 */
+}
+
+.tag-hover-mild:hover {
+  transform: scale(1.03);
   /* ホバーで5%拡大 */
 }
 
@@ -4603,6 +4628,11 @@ article h2 {
     font-size: 1.125rem;
     line-height: 1.75rem;
   }
+
+  .max-md\:text-xl{
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
 }
 
 @media (min-width: 768px){
@@ -4689,6 +4719,11 @@ article h2 {
   .md\:px-12{
     padding-left: 3rem;
     padding-right: 3rem;
+  }
+
+  .md\:text-2xl{
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 
   .md\:text-\[1\.4rem\]{
