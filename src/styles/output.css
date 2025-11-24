@@ -4661,6 +4661,10 @@ article h2 {
     height: 30px;
   }
 
+  .md\:h-\[25px\]{
+    height: 25px;
+  }
+
   .md\:w-\[100\%\]{
     width: 100%;
   }
