@@ -550,9 +550,6 @@ html {
     scroll-behavior: lgooth;
 }
 
-img {
-    margin: 0 auto;
-}
 
 .img-des {
     display: inline-block;
@@ -1593,6 +1590,13 @@ article h2 {
   width: 10px;
   background: #2ca1e9;
   content: '';
+}
+
+.heading-32 {
+  color: #000000;
+  font-size: 24px;
+  display: inline-block;
+  @apply max-lg:text-[20px];
 }
 
 /* 右下吹き出し */

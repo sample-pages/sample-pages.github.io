@@ -21,7 +21,7 @@ import Layout from "../layouts/Layout2.astro";
     </div>
   </div>
   <div class="max-xl:h-[50px] xl:h-[100px]"></div>
-  <div class="flex items-center justify-center gap-8 max-w-6xl mx-auto">
+  <div class="flex items-center justify-center gap-8 max-w-8xl mx-auto">
 
     <!-- 左の画像 -->
     <img 
@@ -32,15 +32,15 @@ import Layout from "../layouts/Layout2.astro";
   
     <!-- 真ん中のテキストボックス -->
     <div class="pl-6 pr-6">
-      <div class="resp-pc-f text-[35px] font-medium zen-kaku-gothic-new chukosei_text mb-6">
+      <div class="resp-pc-f text-[40px] font-medium zen-kaku-gothic-new chukosei_text mb-6">
         思春期の困りごと、一緒に乗り越えよう！
       </div>
-      <div class="resp-pc-h text-[24px] mx-auto text-center font-medium zen-kaku-gothic-new chukosei_text mb-6">
+      <div class="resp-pc-h text-[30px] mx-auto text-center font-medium zen-kaku-gothic-new chukosei_text mb-6">
         思春期の困りごと、<br>
         一緒に乗り越えよう！
       </div>
       <div class="reveal">
-      <div class="text-center max-xl:text-base xl:text-lg zen-kaku-gothic-new leading-relaxed">
+      <div class="text-center max-xl:text-base xl:text-xl zen-kaku-gothic-new leading-relaxed">
         <br>
         吃音のある人は約100人に1人。<br><br>
         全国には吃音のある中高生がたくさんいます。<br><br>
@@ -63,7 +63,7 @@ import Layout from "../layouts/Layout2.astro";
   <section class="bg-[#cbe1f2]">
     <div class="reveal">
     <div class="zen-kaku-gothic-new max-w-sm mx-auto text-center text-color" style="padding-bottom: 0rem;">
-      <h2 class="heading-31">&nbsp;中高生交流会とは？&emsp;</h2>
+      <h2 id="typingText" class="heading-32" data-text="中高生交流会とは？"></h2>
     </div>
   </div>
   
@@ -628,3 +628,29 @@ const io = new IntersectionObserver((entries, observer) => {
 
 revealElements.forEach(el => io.observe(el));
 </script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+  const typingElement = document.getElementById("typingText");
+  if (!typingElement) return;
+
+  const el = typingElement as HTMLElement; // 型を確定
+  const text: string = el.getAttribute("data-text") ?? "";
+  el.textContent = "";
+
+  let index = 0;
+
+  function typeChar() {
+    if (index < text.length) {
+      // textContent が null の可能性を回避してから連結
+      el.textContent = (el.textContent ?? "") + text[index];
+      index++;
+      setTimeout(typeChar, 150);
+    }
+  }
+
+  typeChar();
+});
+  </script>
+  
+  
