@@ -107,13 +107,13 @@ const { title } = Astro.props;
       
         backToTopButton.addEventListener('click', () => {
           const start = window.scrollY;
-          const duration = 1500;
+          const duration = 3200;
           const startTime = performance.now();
       
           function smoothScrollStep(now) {
             const elapsed = now - startTime;
             const progress = Math.min(elapsed / duration, 1);
-            const ease = 1 - Math.pow(1 - progress, 3);
+            const ease = 1 - Math.pow(1 - progress, 8);
             window.scrollTo(0, start * (1 - ease));
             if (progress < 1) requestAnimationFrame(smoothScrollStep);
           }
