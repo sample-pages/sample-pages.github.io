@@ -1976,7 +1976,7 @@ article h2 {
 /* ---- 吹き出し ---- */
 .speech {
   position:absolute;
-  max-width: 640px;
+  max-width: 700px;
   padding: 20px 24px;
   background: var(--bubble-bg);
   color: var(--bubble-color);
@@ -2016,7 +2016,7 @@ article h2 {
 }
 
 @media (max-width: 768px) {
-  :root { --img-size: 240px; }
+  :root { --img-size: 260px; }
 
   .face-board {
     grid-template-columns: 1fr; /* 1カラムにして縦並び */
@@ -2027,7 +2027,7 @@ article h2 {
 
   .speech {
     max-width: 100%;  /* スマホでは幅を画面に合わせる */
-    transform: translateY(100px); /* ←画像に少しかぶせる */
+    transform: translateY(120px); /* ←画像に少しかぶせる */
   }
 
   .speech::after {
@@ -2038,7 +2038,7 @@ article h2 {
   }
 
   .speech-num {
-    top: -104px;      /* スマホでは番号の位置を調整 */
+    top: -97px;      /* スマホでは番号の位置を調整 */
     left: 22px;
     font-size: 40px;
   }
