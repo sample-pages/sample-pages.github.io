@@ -4343,11 +4343,29 @@ article h2 {
   padding-bottom: 0px;
 }
 
+.bar-chart-mf {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  height: 300px;
+  border-left: 2px solid #333;
+  border-bottom: 2px solid #333;
+  padding-left: 20px;
+  padding-bottom: 0px;
+}
+
 .bar-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 40px;
+}
+
+.bar-container-mf {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20px;
 }
 
 .bar {
@@ -4365,6 +4383,94 @@ article h2 {
   margin-top: 5px;
   /* 棒とラベルの間の隙間 */
   font-weight: bold;
+}
+
+/* 積み上げ棒用 */
+
+.stack-bar {
+  width: 40px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+/* 積み上げ要素（共通） */
+
+.bar-mf {
+  width: 20px;
+  background-color: #4faf4c;
+  align-items: flex-end;
+  color: white;
+  font-size: 14px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ラベルをバー中央に配置 */
+
+.bar-label {
+  position: absolute;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* 積み上げ要素（共通） */
+
+.bar-m {
+  width: 20px;
+  background-color: #4faf4c;
+  border-radius: 5px 5px 0 0;
+  align-items: flex-end;
+  color: white;
+  font-size: 14px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 積み上げ要素（共通） */
+
+.bar-f {
+  width: 20px;
+  background-color: #4faf4c;
+  border-radius: 5px 5px 0 0;
+  align-items: flex-end;
+  color: white;
+  font-size: 14px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 男性バー（上側） */
+
+.bar-m.male {
+  background: #4c93af;
+}
+
+/* 女性バー（下側） */
+
+.bar-f.female {
+  background: #ff7eb8;
+}
+
+/* 男性バー（上側） */
+
+.bar-mf.male {
+  background: #4c93af;
+}
+
+/* 女性バー（下側） */
+
+.bar-mf.female {
+  background: #ff7eb8;
+  border-radius: 5px 5px 0 0;
 }
 
 .box {
