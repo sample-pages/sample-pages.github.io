@@ -4890,6 +4890,10 @@ article h2 {
     height: 90px;
   }
 
+  .md\:h-\[55px\]{
+    height: 55px;
+  }
+
   .md\:w-\[100\%\]{
     width: 100%;
   }
