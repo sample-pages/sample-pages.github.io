@@ -2089,7 +2089,6 @@ article h2 {
   align-items: flex-end;
   gap: 10px;
   height: 300px;
-  border-left: 2px solid #333;
   border-bottom: 2px solid #333;
   padding-left: 10px;
   padding-bottom: 0px;
@@ -2100,7 +2099,6 @@ article h2 {
   align-items: flex-end;
   gap: 10px;
   height: 300px;
-  border-left: 2px solid #333;
   border-bottom: 2px solid #333;
   padding-left: 20px;
   padding-bottom: 0px;
@@ -2223,6 +2221,63 @@ article h2 {
   border-radius: 5px 5px 0 0;
 }
 
+/* 凡例 */
+.chart-legend {
+  display: flex;
+  gap: 16px;
+  margin-top: 0px;
+  align-items: center;
+  font-size: 14px;
+  justify-content: center; /* ← 中央揃え */
+  width: 100%;            /* ← スクロール幅に合わせる */
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* 凡例の色丸 */
+.legend-color {
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+/* 棒グラフと同じ色 */
+.legend-color.male {
+  background: #4c93af;
+}
+
+.legend-color.female {
+  background: #ff7eb8;
+}
+
+.y-axis {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: sticky; /* ← ここで固定 */
+  left: 0;          /* 左端に固定 */
+  z-index: 10;      /* 棒グラフより前面に出す */
+  background: white; /* 背景を白にすると棒が重なっても見やすい */
+  padding-right: 10px; /* 棒と少し間隔 */
+  border-right: 2px solid #333; /* 軸線をここで固定 */
+}
+
+.x-axis {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: sticky; /* ← ここで固定 */
+  left: 0;          /* 左端に固定 */
+  z-index: 10;      /* 棒グラフより前面に出す */
+  background: white; /* 背景を白にすると棒が重なっても見やすい */
+  padding-right: 10px; /* 棒と少し間隔 */
+  border-right: 2px solid #ffffff; /* 軸線をここで固定 */
+}
 
 .box {
   opacity: 0;
