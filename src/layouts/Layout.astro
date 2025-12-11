@@ -27,78 +27,166 @@ const { title } = Astro.props;
     <meta name="description" content="『第8回うぃーすた全国交流会』を2026年7月18日(土)〜19日(日)に大阪にて開催します！">
     <script>
       window.addEventListener('DOMContentLoaded', () => {
-        if (sessionStorage.getItem("welcomeShown")) return;
-      
-        // 画像をプリロード
-        const img = new Image();
-        img.src = '/images/p0126_l.png';
-      
-        // --- オーバーレイ作成 ---
-        const overlay = document.createElement('div');
-        overlay.style.cssText = `
-          position: fixed;
-          top: 0; left: 0;
-          width: 100vw; height: 100vh;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('/images/p0126_l.png') no-repeat center center;
-          background-size: cover;
-          z-index: 9999;
-          opacity: 0;
-          transition: opacity 0.5s;
-        `;
-        document.body.appendChild(overlay);
-      
-        // 少し遅らせてフェードイン
-        setTimeout(() => overlay.style.opacity = '1', 50);
-      
-        // --- 文字コンテナ作成 ---
-        const container = document.createElement('div');
-        container.style.cssText = `
-          display: flex;
-          position: relative;
-          top: -10px;
-          flex-direction: row-reverse;
-          gap: 2rem;
-        `;
-      
-        const createLine = (text) => {
-          const div = document.createElement('div');
-          div.textContent = text;
-          div.classList.add("zen-kaku-gothic-new", "load-fsize");
-          div.style.cssText = `
-            color: black;
-            opacity: 0;
-            transition: opacity 1s;
-            writing-mode: vertical-rl;
-            text-align: left;
-          `;
-          return div;
-        };
-      
-        const line1 = createLine("吃音のある同年代の仲間たちと");
-        const line2 = createLine("悩みや夢を語り合う、");
-        const line3 = createLine("かけがえのない時間を過ごしてみませんか？");
-      
-        container.appendChild(line1);
-        container.appendChild(line2);
-        container.appendChild(line3);
-        overlay.appendChild(container);
-      
-        // --- 文字フェードイン ---
-        setTimeout(() => line1.style.opacity = "1", 800);
-        setTimeout(() => line2.style.opacity = "1", 2500);
-        setTimeout(() => line3.style.opacity = "1", 4000);
-      
-        // --- オーバーレイフェードアウト ---
-        setTimeout(() => {
-          overlay.style.opacity = "0";
-          setTimeout(() => overlay.remove(), 1000);
-        }, 7000);
-      
-        sessionStorage.setItem("welcomeShown", "true");
-      });
+    // 表示済みチェック
+    if (sessionStorage.getItem("welcomeShown")) return;
+    sessionStorage.setItem("welcomeShown", "true");
+  
+    // 画像をプリロード
+    const img = new Image();
+    img.src = '/images/p0126_l.png';
+
+    // ==========================================
+    //  ★レスポンシブ用CSSスタイル定義
+    //  JSの中でCSSを作ることで、PCとスマホの切り替えを行います
+    // ==========================================
+    const style = document.createElement('style');
+    style.innerHTML = `
+      /* --- 共通設定 (PC・スマホ) --- */
+      .intro-overlay {
+        position: fixed;
+        top: 0; left: 0;
+        width: 100vw; height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-size: cover !important;
+        z-index: 9999;
+        opacity: 0;
+        transition: opacity 0.5s;
+      }
+
+      .intro-container {
+        display: flex;
+        position: relative;
+        top: -10px;
+        flex-direction: row-reverse; /* 縦書きなので右から左へ並べる */
+        /* PCのときの間隔 */
+        gap: 3rem; 
+      }
+
+      .intro-text {
+        color: black;
+        opacity: 0;
+        transition: opacity 1s;
+        writing-mode: vertical-rl;
+        text-align: left;
+        /* PCのときの文字サイズ */
+        font-size: 1.5rem; 
+        line-height: 1.8;
+      }
+
+      .intro-skip-btn {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent; /* 背景透明 */
+        border: 1px solid #000;
+        border-radius: 50%; /* 丸 */
+        color: #000;
+        cursor: pointer;
+        z-index: 10000;
+        transition: background-color 0.3s, transform 0.2s;
+        font-family: "Zen Kaku Gothic New", "Makinas-4-Flat", sans-serif;
+        font-weight: bold;
+        text-decoration: none; /* リンクの下線を消す */
+        
+        /* PCのときのボタンサイズと位置 */
+        width: 100px;
+        height: 100px;
+        bottom: 60px;
+        right: 60px;
+        font-size: 16px;
+      }
+
+      .intro-skip-btn:hover {
+        background-color: rgba(255,255,255,0.3);
+      }
+
+      /* --- ★スマホ・タブレット用 (画面幅768px以下) --- */
+      @media (max-width: 768px) {
+        .intro-container {
+          gap: 1.5rem; /* 間隔を狭く */
+        }
+        .intro-text {
+          font-size: 1.1rem; /* 文字を少し小さく */
+          line-height: 1.5;
+        }
+        .intro-skip-btn {
+          /* ボタンを小さくして端に寄せる */
+          width: 70px;
+          height: 70px;
+          bottom: 30px;
+          right: 30px;
+          font-size: 12px;
+        }
+      }
+    `;
+    document.head.appendChild(style);
+
+  
+    // --- 共通の「閉じる」処理 ---
+    const removeOverlay = () => {
+      overlay.style.opacity = "0";
+      setTimeout(() => {
+        if (overlay.parentNode) overlay.remove();
+        // スタイルタグも消しておく（ゴミを残さない）
+        if (style.parentNode) style.remove();
+      }, 1000);
+    };
+
+    // --- オーバーレイ作成 ---
+    const overlay = document.createElement('div');
+    overlay.classList.add('intro-overlay');
+    // 背景画像の設定
+    overlay.style.background = `linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('/images/p0126_l.png') no-repeat center center`;
+    document.body.appendChild(overlay);
+  
+    setTimeout(() => overlay.style.opacity = '1', 50);
+  
+    // --- 文字コンテナ作成 ---
+    const container = document.createElement('div');
+    container.classList.add('intro-container'); // クラスを追加
+  
+    const createLine = (text) => {
+      const div = document.createElement('div');
+      div.textContent = text;
+      div.classList.add("zen-kaku-gothic-new", "intro-text"); // クラスを追加
+      return div;
+    };
+  
+    const line1 = createLine("吃音のある同年代の仲間たちと");
+    const line2 = createLine("悩みや夢を語り合う、");
+    const line3 = createLine("かけがえのない時間を過ごしてみませんか？");
+  
+    container.appendChild(line1);
+    container.appendChild(line2);
+    container.appendChild(line3);
+    overlay.appendChild(container);
+
+    // --- Skipボタン作成 ---
+    const targetUrl = '/'; 
+    const skipBtn = document.createElement('button');
+    skipBtn.textContent = 'Skip >>';
+    skipBtn.classList.add('intro-skip-btn'); // クラスを追加
+
+    // クリック時の処理
+    skipBtn.addEventListener('click', () => {
+        window.location.href = targetUrl;
+    });
+
+    overlay.appendChild(skipBtn);
+  
+    // --- アニメーション ---
+    setTimeout(() => line1.style.opacity = "1", 800);
+    setTimeout(() => line2.style.opacity = "1", 2500);
+    setTimeout(() => line3.style.opacity = "1", 4000);
+  
+    // --- 自動フェードアウト ---
+    setTimeout(() => {
+        removeOverlay();
+    }, 7000);
+  });
 
       // --- トップへ戻るボタン ---
       document.addEventListener("DOMContentLoaded", () => {

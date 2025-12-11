@@ -2293,3 +2293,14 @@ article h2 {
   66%  { opacity: 0.6; transform: rotate(7deg); }
   100% { opacity: 1; transform: rotate(0deg); }
 }
+
+.zoom-target {
+  opacity: 0;
+  transform: scale(0.7);
+  transition: transform 0.3s ease-out, opacity 0.6s ease-out;
+}
+
+.zoom-active {
+  opacity: 1;
+  transform: scale(1);
+}

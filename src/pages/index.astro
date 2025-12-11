@@ -171,7 +171,7 @@ const tagColors: Record<string, string> = {
   <section class="bg-[#fae1e1]">
     <div class="margin-contents text-color zen-kaku-gothic-new" style="padding-bottom: 0rem;">
       <div class="max-md:h-[30px] md:h-[36px]" />
-      <div class="box">
+      <div class="zoom-target">
         <div class="text-center text-[18px] text-black tracking-wider mb-2">
           ▼ ABOUT
         </div>
@@ -1445,3 +1445,22 @@ buttons.forEach(btn => {
   window.addEventListener('scroll', checkBoxes);
   window.addEventListener('load', checkBoxes);
 </script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const targets = document.querySelectorAll(".zoom-target");
+  
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("zoom-active");
+        }
+      });
+    }, {
+      threshold: 0.3 // 20% 見えたら発火
+    });
+  
+    targets.forEach(t => observer.observe(t));
+  });
+  </script>
+  
