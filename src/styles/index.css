@@ -1616,7 +1616,7 @@ article h2 {
 
 .heading-32 {
   color: #000000;
-  font-size: 40px;
+  font-size: 44px;
   display: inline-block;
   @apply max-xl:text-[30px];
 }
@@ -1856,7 +1856,7 @@ article h2 {
 
 /* カード本体（縦レイアウト） */
 .profile-item{
-  background: #fff;
+  background: #ffffff9f;
   border-radius: 40px;
   padding: 1.6rem 1.2rem;
   text-align: center;
@@ -1892,6 +1892,58 @@ article h2 {
   font-size: 1.2rem;
   font-weight: 600;
   color: #000000;
+}
+
+.profile-item {
+  position: relative; /* 必須 */
+  
+  /* カード自体の角丸設定（もし設定していなければここで指定） */
+  border-radius: 12px; 
+}
+
+.profile-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none; /* クリックを邪魔しない */
+
+  /* --- 設定エリア --- */
+  --border-color: #00aeff; /* 線の色 */
+  --border-width: 3px;  /* 線の太さ */
+  --corner-len: 40px;   /* 角の長さ */
+  --card-radius: 12px;  /* ★重要：親のprofile-itemと同じ数値を指定 */
+
+  /* 角丸のボーダーを全体に描く */
+  border: var(--border-width) solid var(--border-color);
+  border-radius: var(--card-radius);
+
+  /* マスク機能を使って「四隅以外」を見えなくする */
+  -webkit-mask-image: 
+    linear-gradient(#fff 0 0), /* 左上用 */
+    linear-gradient(#fff 0 0), /* 右上用 */
+    linear-gradient(#fff 0 0), /* 右下用 */
+    linear-gradient(#fff 0 0); /* 左下用 */
+  
+  mask-image: 
+    linear-gradient(#fff 0 0),
+    linear-gradient(#fff 0 0),
+    linear-gradient(#fff 0 0),
+    linear-gradient(#fff 0 0);
+
+  /* マスクのサイズ（角の長さ） */
+  -webkit-mask-size: var(--corner-len) var(--corner-len);
+  mask-size: var(--corner-len) var(--corner-len);
+
+  /* マスクの配置（四隅に置く） */
+  -webkit-mask-position: top left, top right, bottom right, bottom left;
+  mask-position: top left, top right, bottom right, bottom left;
+
+  /* 繰り返しを防ぐ */
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
 }
 
 /* 一言 */
