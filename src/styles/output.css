@@ -1037,6 +1037,10 @@ html[data-theme="light"] .text-color {
   width: 100%;
 }
 
+.w-\[90\%\]{
+  width: 90%;
+}
+
 .min-w-\[600px\]{
   min-width: 600px;
 }
