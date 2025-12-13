@@ -50,11 +50,10 @@ gtag('config', 'G-YF4SGN2B86');
     img.src = '/images/p0126_l.png';
 
     // ==========================================
-    //  ★レスポンシブ用CSSスタイル定義
+    //  CSSスタイル定義
     // ==========================================
     const style = document.createElement('style');
     style.innerHTML = `
-      /* --- 共通設定 (PC・スマホ) --- */
       .intro-overlay {
         position: fixed;
         top: 0; left: 0;
@@ -101,7 +100,6 @@ gtag('config', 'G-YF4SGN2B86');
         font-family: "Zen Kaku Gothic New", "Makinas-4-Flat", sans-serif;
         font-weight: bold;
         text-decoration: none;
-        
         width: 100px;
         height: 100px;
         bottom: 60px;
@@ -132,27 +130,22 @@ gtag('config', 'G-YF4SGN2B86');
     `;
     document.head.appendChild(style);
 
-  
     // ==================================================
-    // ★重要：オーバーレイを閉じる処理
-    // ここでヘッダーを強制的に表示させます
+    //  オーバーレイを閉じる関数（ヘッダー強制表示付き）
     // ==================================================
     const removeOverlay = () => {
       overlay.style.opacity = "0";
 
-      // --- ヘッダー強制表示処理 ---
-      // あなたのHTMLのヘッダーID（mainHeader）を取得
+      // --- ★ヘッダーを強制的に表示させる処理 ---
       const header = document.getElementById("mainHeader");
-      
       if (header) {
-        // ヘッダー用JSで設定された透明・位置ズレを強制的にリセットして表示する
+        // スタイルを上書きして即座に見えるようにする
         header.style.opacity = "1";
         header.style.transform = "translateY(0)";
-        
-        // ヘッダー用JSのアニメーションクラスも念のため付けておく
         header.classList.add("slide-in");
       }
 
+      // 要素の削除
       setTimeout(() => {
         if (overlay.parentNode) overlay.remove();
         if (style.parentNode) style.remove();
@@ -187,24 +180,28 @@ gtag('config', 'G-YF4SGN2B86');
     container.appendChild(line3);
     overlay.appendChild(container);
 
-    // --- Skipボタン作成 ---
+    // ==========================================
+    //  ★Skipボタン作成（修正版）
+    // ==========================================
     const skipBtn = document.createElement('button');
     skipBtn.textContent = 'Skip >>';
+    skipBtn.type = 'button'; // ボタンタイプを明示
     skipBtn.classList.add('intro-skip-btn');
 
-    // ★クリックで現在ページを表示（removeOverlay実行）
-    skipBtn.addEventListener('click', () => {
-        removeOverlay();
+    // ★クリック時の処理：移動せずに閉じるだけ
+    skipBtn.addEventListener('click', (e) => {
+        e.preventDefault(); // 予期せぬ動作を防止
+        removeOverlay();    // 画面を閉じてヘッダーを表示
     });
 
     overlay.appendChild(skipBtn);
   
-    // --- アニメーション ---
+    // --- テキストのアニメーション ---
     setTimeout(() => line1.style.opacity = "1", 800);
     setTimeout(() => line2.style.opacity = "1", 2500);
     setTimeout(() => line3.style.opacity = "1", 4000);
   
-    // --- 自動フェードアウト ---
+    // --- 自動終了タイマー ---
     setTimeout(() => {
         if (overlay.parentNode) {
             removeOverlay();
