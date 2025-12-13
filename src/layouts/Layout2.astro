@@ -23,6 +23,20 @@ const { title } = Astro.props;
     <link rel="icon" type="image/png" href="/images/logo.png">
     <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
 
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YF4SGN2B86"></script>
+<script>
+  // windowをany型にキャストしてTypeScriptのチェックを回避
+(window as any).dataLayer = (window as any).dataLayer || [];
+
+function gtag(...args: any[]) {
+  (window as any).dataLayer.push(args);
+}
+
+gtag('js', new Date());
+gtag('config', 'G-YF4SGN2B86');
+</script>
+
     <title>{title}</title>
     <meta name="description" content="『第8回うぃーすた全国交流会』を2026年7月18日(土)〜19日(日)に大阪にて開催します！">
     <script>

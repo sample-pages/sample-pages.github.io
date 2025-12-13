@@ -2380,3 +2380,12 @@ article h2 {
   /* 必要に応じて transform を指定してGPUレイヤーに乗せることで安定する場合もあります */
   transform: translateZ(0); 
 }
+
+/* スクロールバーを非表示にするカスタムスタイル（任意） */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

@@ -62,47 +62,186 @@ import Layout from "../layouts/Layout.astro";
     <div style="height: 50px;"></div>
     <p class="midashi relative inline-block pb-1" id="program">
       ○ プログラム&emsp;
-      
     </p>
-    <div style="height: 18px;"></div>
+    <div class="w-full max-w-6xl mx-auto px-0 py-8">
 
-        <div class="ml-1">
-          <h2 class="lg:text-xl max-lg:text-[16px]">
-            1日目：7月18日(<span class="text-blue-500">土</span>)
-          </h2>
-        </div>
-        <div style="height: 10px;"></div>
-        <div class="ml-1" style="max-width: 56rem; letter-spacing: .025em; margin-bottom: 3px; line-height: 2.05;">
-          <p class="text-sm blog-width lg:text-[17px]"
-          style="letter-spacing: .025em; line-height: 2.05;">
-            ○14:00～14:05　開会式<br>
-            ○14:05～16:20　グループトーク<br>
-            少人数のグループでトークをします。吃音に関すること、日常のことなど、テーマはさまざま。<br>
-            ○16:30～17:30　講演（ゲスト：）<br>
-            ○19:00～21:00　夕食（近隣の飲食店を利用）<br>
-            ○21:00～　フリータイム（入浴、歓談など）<br>
-            夕食のあとは自由時間です。<br>
-            ※門限は23:00となります。</p>
+      <div class="mb-2 ml-2">
+        <h2 class="font-bold text-gray-800 lg:text-2xl text-lg">
+          1日目：7月18日(<span class="text-blue-500">土</span>)
+        </h2>
+      </div>
+    
+      <div class="relative group">
+    
+        <button id="prevBtn" class="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-white/90 text-gray-600 hover:text-red-600 p-3 rounded-full shadow-lg border border-gray-100 transition-all focus:outline-none flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+          </svg>
+        </button>
+    
+        <div id="sliderContainer" class="flex overflow-x-auto snap-x snap-mandatory gap-6 py-6 px-2 scroll-smooth scrollbar-hide">
+          
+          <div class="slider-card snap-center shrink-0 w-[92%] md:w-[450px] bg-white p-6 md:p-8 rounded-2xl shadow-md border border-gray-100 flex flex-col transition-transform hover:-translate-y-1">
+            <span class="inline-block px-3 py-1 mb-3 text-base font-bold text-white bg-gradient-to-br from-red-500 to-pink-600 rounded-full w-fit shadow-sm">
+              14:00 ～ 14:05
+            </span>
+            <div class="h-[5px] md:h-[10px]"></div>
+            <h3 class="text-2xl md:text-4xl font-bold text-gray-800 mb-4 italic">開会式</h3>
+            <div class="h-[5px] md:h-[10px]"></div>
+            <p class="text-base leading-relaxed">
+              実行委員長の挨拶や、うぃーすたのご紹介などを行います。
             </p>
-        </div>
-        <div style="height: 20px;"></div>
-        <div class="ml-1">
-          <h2 class="lg:text-xl max-lg:text-[16px]">
-            2日目：7月19日(<span class="text-red-500">日</span>)
-          </h2>
-        </div>
-        <div style="height: 10px;"></div>
-        <div class="ml-1" style="max-width: 56rem; letter-spacing: .025em; margin-bottom: 3px; line-height: 2.05;">
-          <p class="text-sm blog-width lg:text-[17px]"
-          style="letter-spacing: .025em; line-height: 2.05;">
-              ○7:00〜8:30　朝食（ホテルのビュッフェ）<br>
-              ○9:00～10:00　マイメッセージ<br>
-              吃音にまつわる体験、吃音への思い、みんなに伝えたいことなど、みんなの前で自由に発表していただきます。<br>（発表は希望者のみ）<br>
-              ○10:10～11:10　クイズ大会<br>
-              ○11:20～11:40　閉会式<br>
-              ○13:00～　昼食（近隣の飲食店を利用予定）<br>
-              自由参加・当日支払いとなります。<br>
+          </div>
+    
+          <div class="slider-card snap-center shrink-0 w-[92%] md:w-[450px] bg-white p-6 md:p-8 rounded-2xl shadow-md border border-gray-100 flex flex-col transition-transform hover:-translate-y-1">
+            <span class="inline-block px-3 py-1 mb-3 text-base font-bold text-white bg-gradient-to-br from-red-500 to-pink-600 rounded-full w-fit shadow-sm">
+              14:05 ～ 16:20
+            </span>
+            <div class="h-[5px] md:h-[10px]"></div>
+            <h3 class="text-2xl md:text-4xl font-bold text-gray-800 mb-4 italic">グループトーク</h3>
+            <div class="h-[5px] md:h-[10px]"></div>
+            <p class="text-base leading-relaxed">
+              少人数のグループでトークをします。吃音に関すること、日常のことなど、テーマはさまざま。
             </p>
+          </div>
+    
+          <div class="slider-card snap-center shrink-0 w-[92%] md:w-[450px] bg-white p-6 md:p-8 rounded-2xl shadow-md border border-gray-100 flex flex-col transition-transform hover:-translate-y-1">
+            <span class="inline-block px-3 py-1 mb-3 text-base font-bold text-white bg-gradient-to-br from-red-500 to-pink-600 rounded-full w-fit shadow-sm">
+              16:30 ～ 17:30
+            </span>
+            <div class="h-[5px] md:h-[10px]"></div>
+            <h3 class="text-2xl md:text-4xl font-bold text-gray-800 mb-4 italic">ビンゴ大会</h3>
+            <div class="h-[5px] md:h-[10px]"></div>
+            <p class="text-base leading-relaxed">
+              
+            </p>
+          </div>
+    
+          <div class="slider-card snap-center shrink-0 w-[92%] md:w-[450px] bg-white p-6 md:p-8 rounded-2xl shadow-md border border-gray-100 flex flex-col transition-transform hover:-translate-y-1">
+            <span class="inline-block px-3 py-1 mb-3 text-base font-bold text-white bg-gradient-to-br from-red-500 to-pink-600 rounded-full w-fit shadow-sm">
+              19:00 ～ 21:00
+            </span>
+            <div class="h-[5px] md:h-[10px]"></div>
+            <h3 class="text-2xl md:text-4xl font-bold text-gray-800 mb-4 italic">夕食</h3>
+            <div class="h-[5px] md:h-[10px]"></div>
+            <p class="text-base leading-relaxed">
+              近隣の飲食店を利用します。みんなで食事を楽しみましょう。
+            </p>
+          </div>
+    
+          <div class="slider-card snap-center shrink-0 w-[92%] md:w-[450px] bg-white p-6 md:p-8 rounded-2xl shadow-md border border-gray-100 flex flex-col transition-transform hover:-translate-y-1">
+            <span class="inline-block px-3 py-1 mb-3 text-base font-bold text-white bg-gradient-to-br from-red-500 to-pink-600 rounded-full w-fit shadow-sm">
+              21:00 ～
+            </span>
+            <div class="h-[5px] md:h-[10px]"></div>
+            <h3 class="text-2xl md:text-4xl font-bold text-gray-800 mb-4 italic">フリータイム</h3>
+            <div class="h-[5px] md:h-[10px]"></div>
+            <p class="text-base leading-relaxed">
+              夕食のあとは自由時間です。入浴やロビーでの歓談など、思い思いにお過ごしください。
+            </p>
+          </div>
+    
+        </div>
+    
+        <button id="nextBtn" class="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-white/90 text-gray-600 hover:text-red-600 p-3 rounded-full shadow-lg border border-gray-100 transition-all focus:outline-none flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+          </svg>
+        </button>
+    
+      </div>
+    </div>
+    
+    <div class="w-full max-w-6xl mx-auto px-0 py-4">
+    
+      <div class="mb-2 ml-2">
+        <h2 class="font-bold text-gray-800 lg:text-2xl text-lg">
+          2日目：7月19日(<span class="text-red-500">日</span>)
+        </h2>
+      </div>
+    
+      <div class="relative group">
+
+        <button id="prevBtn2" class="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-white/90 text-gray-600 hover:text-red-600 p-3 rounded-full shadow-lg border border-gray-100 transition-all focus:outline-none flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+          </svg>
+        </button>
+      
+        <div id="sliderContainer2" class="flex overflow-x-auto snap-x snap-mandatory gap-6 py-6 px-2 scroll-smooth scrollbar-hide">
+          
+          <div class="slider-card snap-center shrink-0 w-[92%] md:w-[450px] bg-white p-6 md:p-8 rounded-2xl shadow-md border border-gray-100 flex flex-col transition-transform hover:-translate-y-1">
+            <span class="inline-block px-3 py-1 mb-3 text-base font-bold text-white bg-gradient-to-br from-orange-400 to-red-500 rounded-full w-fit shadow-sm">
+              7:00 ～ 8:30
+            </span>
+            <div class="h-[5px] md:h-[10px]"></div>
+            <h3 class="text-2xl md:text-4xl font-bold text-gray-800 mb-4 italic">朝食</h3>
+            <div class="h-[5px] md:h-[10px]"></div>
+            <p class="text-base leading-relaxed">
+              ホテルのビュッフェ形式です。しっかり食べて2日目を楽しみましょう。
+            </p>
+          </div>
+      
+          <div class="slider-card snap-center shrink-0 w-[92%] md:w-[450px] bg-white p-6 md:p-8 rounded-2xl shadow-md border border-gray-100 flex flex-col transition-transform hover:-translate-y-1">
+            <span class="inline-block px-3 py-1 mb-3 text-base font-bold text-white bg-gradient-to-br from-orange-400 to-red-500 rounded-full w-fit shadow-sm">
+              9:00 ～ 10:00
+            </span>
+            <div class="h-[5px] md:h-[10px]"></div>
+            <h3 class="text-2xl md:text-4xl font-bold text-gray-800 mb-4 italic">マイメッセージ</h3>
+            <div class="h-[5px] md:h-[10px]"></div>
+            <p class="text-base leading-relaxed">
+              吃音にまつわる体験、吃音への思い、みんなに伝えたいことなど、みんなの前で自由に発表していただきます。<br>
+              ※発表は希望者のみ
+            </p>
+          </div>
+      
+          <div class="slider-card snap-center shrink-0 w-[92%] md:w-[450px] bg-white p-6 md:p-8 rounded-2xl shadow-md border border-gray-100 flex flex-col transition-transform hover:-translate-y-1">
+            <span class="inline-block px-3 py-1 mb-3 text-base font-bold text-white bg-gradient-to-br from-orange-400 to-red-500 rounded-full w-fit shadow-sm">
+              10:10 ～ 11:10
+            </span>
+            <div class="h-[5px] md:h-[10px]"></div>
+            <h3 class="text-2xl md:text-4xl font-bold text-gray-800 mb-4 italic">クイズ大会</h3>
+            <div class="h-[5px] md:h-[10px]"></div>
+            <p class="text-base leading-relaxed">
+              チームに分かれてクイズ大会を行います。上位チームには豪華景品も？
+            </p>
+          </div>
+      
+          <div class="slider-card snap-center shrink-0 w-[92%] md:w-[450px] bg-white p-6 md:p-8 rounded-2xl shadow-md border border-gray-100 flex flex-col transition-transform hover:-translate-y-1">
+            <span class="inline-block px-3 py-1 mb-3 text-base font-bold text-white bg-gradient-to-br from-orange-400 to-red-500 rounded-full w-fit shadow-sm">
+              11:20 ～ 11:40
+            </span>
+            <div class="h-[5px] md:h-[10px]"></div>
+            <h3 class="text-2xl md:text-4xl font-bold text-gray-800 mb-4 italic">閉会式</h3>
+            <div class="h-[5px] md:h-[10px]"></div>
+            <p class="text-base leading-relaxed">
+              最後の締めくくりです。最後までみんなと同じときを過ごしましょう。
+            </p>
+          </div>
+      
+          <div class="slider-card snap-center shrink-0 w-[92%] md:w-[450px] bg-white p-6 md:p-8 rounded-2xl shadow-md border border-gray-100 flex flex-col transition-transform hover:-translate-y-1">
+            <span class="inline-block px-3 py-1 mb-3 text-base font-bold text-white bg-gradient-to-br from-orange-400 to-red-500 rounded-full w-fit shadow-sm">
+              13:00 ～
+            </span>
+            <div class="h-[5px] md:h-[10px]"></div>
+            <h3 class="text-2xl md:text-4xl font-bold text-gray-800 mb-4 italic">昼食</h3>
+            <div class="h-[5px] md:h-[10px]"></div>
+            <p class="text-base leading-relaxed">
+              近隣の飲食店を利用予定です。<br>
+              ※任意参加
+            </p>
+          </div>
+      
+        </div>
+        
+        <button id="nextBtn2" class="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-white/90 text-gray-600 hover:text-red-600 p-3 rounded-full shadow-lg border border-gray-100 transition-all focus:outline-none flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+          </svg>
+        </button>
+      
+      </div>
+    </div>
         </div>
       <div style="height: 120px"></div>
     
@@ -112,183 +251,44 @@ import Layout from "../layouts/Layout.astro";
   </div>
 
   <script>
-    const container = document.getElementById("tableContainer")!;
-    const tbody = document.querySelector("#timetable tbody")!;
-    const eventsLayer = document.getElementById("eventsLayer")!;
-
-    // 🔸 日付ごとのイベント一覧
-    const eventsData = {
-      "10/12": [
-        { start: "12:30", end: "13:30", venue: "研修室AB", name: "受付", description: "" },
-        { start: "13:30", end: "13:45", venue: "研修室AB", name: "開会式", description: "" },
-        { start: "13:50", end: "16:00", venue: "研修室AB", name: "グループトーク", description: "" },
-        { start: "16:00", end: "17:00", venue: "羽衣青少年センター", name: "チェックイン", description: "" },
-        { start: "17:00", end: "20:00", venue: "バーベキューガーデン羽衣", name: "BBQ", description: "" },
-        { start: "20:00", end: "22:00", venue: "研修室AB", name: "フリータイム", description: "" },
-      ],
-      "10/13": [
-        { start: "08:00", end: "09:00", venue: "羽衣青少年センター", name: "朝食", description: "" },
-        { start: "09:30", end: "11:00", venue: "研修室C", name: "ワークショップ", description: "" },
-        { start: "11:00", end: "12:00", venue: "研修室AB", name: "閉会式", description: "" },
-      ]
-    };
-
-    let currentDate = "10/12";
-    let eventsList: any[] = [];
-
-    // イベントブロックを生成
-    function renderEvents() {
-      eventsLayer.innerHTML = "";
-      eventsList = eventsData[currentDate].map(ev => {
-        const div = document.createElement("div");
-        div.className = "rounded absolute bg-yellow-300 border border-gray-300 text-black px-2 py-2 z-[0] flex flex-col cursor-pointer";
-        const title = document.createElement("div");
-        title.className = "font-medium text-sm";
-        title.textContent = ev.name;
-        const time = document.createElement("div");
-        time.className = "text-xs text-black mt-1";
-        time.textContent = `${ev.start}〜${ev.end}`;
-        div.appendChild(title);
-        div.appendChild(time);
-        eventsLayer.appendChild(div);
-        ev.div = div;
-        return ev;
+    document.addEventListener('DOMContentLoaded', function() {
+      const slider = document.getElementById('sliderContainer');
+      const prevBtn = document.getElementById('prevBtn');
+      const nextBtn = document.getElementById('nextBtn');
+      
+      // スクロールする量を計算（カードの幅 + ギャップ）
+      // 概算で450px(幅) + 24px(gap-6) = 474px 程度移動させます
+      const scrollAmount = 480; 
+  
+      nextBtn?.addEventListener('click', () => {
+        slider?.scrollBy({ left: scrollAmount, behavior: 'smooth' });
       });
-      positionEvents();
-      setupModal();
-    }
-
-    function positionEvents() {
-      const containerRect = container.getBoundingClientRect();
-      const rows = [...tbody.querySelectorAll("tr")];
-
-      eventsList.forEach(ev => {
-        const venueIndex = ["研修室AB","研修室C","羽衣青少年センター","バーベキューガーデン羽衣"].indexOf(ev.venue);
-        if (venueIndex === -1) return;
-
-        const td = tbody.querySelectorAll("tr:first-child td")[venueIndex + 1]!;
-        const tdRect = td.getBoundingClientRect();
-
-        const [sh, sm] = ev.start.split(":").map(Number);
-        const [eh, em] = ev.end.split(":").map(Number);
-        const startMinutes = sh*60 + sm;
-        const endMinutes = eh*60 + em;
-
-        let baseRow = rows[0]!;
-        for (let row of rows) {
-          const rowMinutes = row.dataset.time!.split(":").map(Number).reduce((h,m)=>h*60+m);
-          if (rowMinutes <= startMinutes) baseRow = row;
-          else break;
-        }
-        const nextRow = baseRow.nextElementSibling || baseRow;
-        const baseRect = baseRow.getBoundingClientRect();
-        const nextRect = nextRow.getBoundingClientRect();
-        const rowStartMinutes = baseRow.dataset.time!.split(":").map(Number).reduce((h,m)=>h*60+m);
-        const ratio = (startMinutes - rowStartMinutes)/60;
-        const topPx = baseRect.top - containerRect.top + ratio*(nextRect.top - baseRect.top) + container.scrollTop;
-        const heightPx = (endMinutes - startMinutes)/60 * baseRect.height;
-        const widthPx = tdRect.width;
-        ev.div.style.top = `${topPx}px`;
-        ev.div.style.left = `${tdRect.left - containerRect.left + container.scrollLeft - 1.5}px`;
-        ev.div.style.width = `${widthPx}px`;
-        ev.div.style.height = `${heightPx}px`;
+  
+      prevBtn?.addEventListener('click', () => {
+        slider?.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
       });
-    }
-
-    // モーダル
-    function setupModal() {
-      const modal = document.getElementById("eventModal")!;
-      const modalTitle = document.getElementById("modalTitle")!;
-      const modalDescription = document.getElementById("modalDescription")!;
-      const modalTime = document.getElementById("modalTime")!;
-      const modalClose = document.getElementById("modalClose")!;
-
-      eventsList.forEach(ev => {
-        ev.div.addEventListener("click", () => {
-          modalTitle.textContent = ev.name;
-          modalDescription.textContent = ev.description || "詳細情報なし";
-          modalTime.textContent = `時間：${ev.start}〜${ev.end}`;
-          modal.classList.remove("hidden");
-          modal.classList.add("flex");
+    });
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // 2日目用のIDを取得
+      const slider2 = document.getElementById('sliderContainer2');
+      const prevBtn2 = document.getElementById('prevBtn2');
+      const nextBtn2 = document.getElementById('nextBtn2');
+      
+      // スクロール量
+      const scrollAmount = 480; 
+  
+      // 2日目用のイベントリスナー
+      if (slider2 && nextBtn2 && prevBtn2) {
+        nextBtn2.addEventListener('click', () => {
+          slider2.scrollBy({ left: scrollAmount, behavior: 'smooth' });
         });
-      });
-
-      modalClose.addEventListener("click", () => modal.classList.add("hidden"));
-      modal.addEventListener("click", e => {
-        if (e.target === modal) modal.classList.add("hidden");
-      });
-    }
-
-    // 現在時刻バー更新
-    const bar = document.getElementById("currentTimeBar")!;
-    const label = document.getElementById("currentTimeLabel")!;
-    function updateTimeBar() {
-      const now = new Date();
-      const currentMinutes = now.getHours()*60 + now.getMinutes();
-      const rows = [...tbody.querySelectorAll("tr")] as HTMLTableRowElement[];
-      let visible = false;
-      for (let i=0; i<rows.length-1; i++) {
-        const [sh,sm] = rows[i]!.dataset.time!.split(":").map(Number);
-        const [eh,em] = rows[i+1]!.dataset.time!.split(":").map(Number);
-        const startM = sh!*60 + sm!;
-        const endM = eh!*60 + em!;
-        if (currentMinutes >= startM && currentMinutes < endM) {
-          const startRect = rows[i]!.getBoundingClientRect();
-          const endRect = rows[i+1]!.getBoundingClientRect();
-          const parentRect = container.getBoundingClientRect();
-          const ratio = (currentMinutes - startM)/(endM - startM);
-          const offset = startRect.top + ratio*(endRect.top - startRect.top);
-          const topPos = offset - parentRect.top + container.scrollTop;
-          bar.style.top = `${topPos}px`;
-          label.style.top = `${topPos}px`;
-          label.textContent = `現在時刻 ${String(now.getHours()).padStart(2,"0")}:${String(now.getMinutes()).padStart(2,"0")}`;
-          visible = true;
-          break;
-        }
+  
+        prevBtn2.addEventListener('click', () => {
+          slider2.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        });
       }
-      if (!visible) { bar.style.top = "-9999px"; label.style.top = "-9999px"; }
-    }
-
-    
-
-    // 初期描画
-    renderEvents();
-    updateTimeBar();
-    setInterval(updateTimeBar, 30000);
-    container.addEventListener("scroll", positionEvents);
-    window.addEventListener("resize", positionEvents);
-
-    // 🔸 日付切り替えボタン処理
-    document.querySelectorAll(".date-btn").forEach(btn => {
-  const button = btn as HTMLButtonElement;
-  button.addEventListener("click", () => {
-    document.querySelectorAll(".date-btn").forEach(b =>
-      (b as HTMLButtonElement).classList.remove("bg-blue-300", "text-blue-800")
-    );
-    button.classList.add("bg-blue-300", "text-blue-800");
-    currentDate = button.dataset.date!;
-    renderEvents();
-  });
-});
-
-
-    const toggle = document.getElementById("dateToggle")! as HTMLInputElement;;
-
-toggle.addEventListener("change", () => {
-  currentDate = toggle.checked ? "10/13" : "10/12";
-  renderEvents();
-});
+    });
   </script>
 </Layout>
-
-<!-- モーダル -->
-<div id="eventModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-[20000] zen-kaku-gothic-new">
-  <div class="bg-white p-6 rounded-3xl shadow-lg max-w-sm w-2/3 relative">
-    <button id="modalClose" class="absolute top-3 right-6 text-gray-500 hover:text-black text-[24px]">&times;</button>
-    <h3 id="modalTitle" class="font-bold text-lg mb-2"></h3>
-    <p id="modalTime" class="text-sm text-black mt-2"></p>
-    <div style="height: 10px"></div>
-    <p id="modalDescription" class="text-sm text-black whitespace-pre-wrap"></p>
-    
-  </div>
-</div>
