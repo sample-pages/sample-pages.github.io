@@ -176,51 +176,52 @@ const tagColors: Record<string, string> = {
   <div class="max-md:h-[30px] md:h-[36px]" />
   <div class="zen-kaku-gothic-new relative w-full group py-2">
   
-    <button id="prevBtn" class="absolute left-2 md:left-[250px] top-1/2 -translate-y-1/2 z-20 bg-white text-black p-2 md:p-3 rounded-full backdrop-blur-sm border-2 border-black transition-transform duration-300 hover:scale-110 disabled:opacity-0 disabled:cursor-not-allowed shadow-lg">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-5 h-5 md:w-8 md:h-8">
+    <button id="prevBtn" class="absolute left-1 md:left-[250px] top-1/2 -translate-y-1/2 z-20 bg-white text-black p-1.5 md:p-3 rounded-full backdrop-blur-sm border border-black md:border-2 transition-transform duration-300 hover:scale-110 disabled:opacity-0 disabled:cursor-not-allowed shadow-lg">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4 md:w-8 md:h-8">
         <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
       </svg>
     </button>
   
-    <div id="slider" class="flex gap-4 md:gap-6 overflow-x-auto scroll-smooth no-scrollbar items-center px-4 md:px-72" style="scroll-snap-type: x mandatory;">
+    <div id="slider" class="flex gap-3 md:gap-6 overflow-x-auto scroll-smooth no-scrollbar items-center px-4 md:px-72" style="scroll-snap-type: x mandatory;">
       
-      <div class="flex-shrink-0 snap-center relative rounded-3xl overflow-hidden shadow-lg transition-transform hover:scale-[1.01]">
+      <div class="slider-card flex-shrink-0 snap-center relative rounded-2xl md:rounded-3xl overflow-hidden shadow-lg transition-transform hover:scale-[1.01]">
         <a class="block h-full" href="/posts/28536014">
-          <img src="/images/westu.jpg" alt="Topic1" class="h-[250px] md:h-[400px] w-auto max-w-none" />
+          <img src="/images/westu.jpg" alt="Topic1" class="h-[180px] md:h-[400px] w-auto max-w-none" />
           <div class="absolute inset-0 pointer-events-none" style="background: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0.6) 100%);"></div>
-          <div class="absolute bottom-4 left-4 md:left-6 text-white z-10 pr-4 pointer-events-none">
-            <h2 class="text-lg md:text-2xl font-bold whitespace-nowrap">ホームページを公開しました</h2>
+          <div class="absolute bottom-3 left-3 md:bottom-4 md:left-6 text-white z-10 pr-2 pointer-events-none">
+            <h2 class="text-base md:text-2xl font-bold whitespace-nowrap">ホームページを公開しました</h2>
           </div>
         </a>
       </div>
   
-      <div class="flex-shrink-0 snap-center relative rounded-3xl overflow-hidden shadow-lg transition-transform hover:scale-[1.01]">
-          <a class="block h-full" href="#">
-            <img src="https://placehold.co/600x400/333/FFF?text=test" alt="Topic2" class="h-[250px] md:h-[400px] w-auto max-w-none" />
-            <div class="absolute inset-0 pointer-events-none" style="background: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0.6) 100%);"></div>
-            <div class="absolute bottom-4 left-4 md:left-6 text-white z-10 pr-4 pointer-events-none">
-              <h2 class="text-lg md:text-2xl font-bold whitespace-nowrap">イベント情報</h2>
-            </div>
-          </a>
-        </div>
-    
-        <div class="flex-shrink-0 snap-center relative rounded-3xl overflow-hidden shadow-lg transition-transform hover:scale-[1.01]">
-          <a class="block h-full" href="#">
-            <img src="https://placehold.co/600x400/555/FFF?text=test" alt="Topic3" class="h-[250px] md:h-[400px] w-auto max-w-none" />
-            <div class="absolute inset-0 pointer-events-none" style="background: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0.6) 100%);"></div>
-            <div class="absolute bottom-4 left-4 md:left-6 text-white z-10 pr-4 pointer-events-none">
-              <h2 class="text-lg md:text-2xl font-bold whitespace-nowrap">メンバー募集中</h2>
-            </div>
-          </a>
-        </div>
+      <div class="slider-card flex-shrink-0 snap-center relative rounded-2xl md:rounded-3xl overflow-hidden shadow-lg transition-transform hover:scale-[1.01]">
+        <a class="block h-full" href="#">
+          <img src="https://placehold.co/600x400/333/FFF?text=test" alt="Topic2" class="h-[180px] md:h-[400px] w-auto max-w-none" />
+          <div class="absolute inset-0 pointer-events-none" style="background: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0.6) 100%);"></div>
+          <div class="absolute bottom-3 left-3 md:bottom-4 md:left-6 text-white z-10 pr-2 pointer-events-none">
+            <h2 class="text-base md:text-2xl font-bold whitespace-nowrap">イベント情報</h2>
+          </div>
+        </a>
+      </div>
+  
+      <div class="slider-card flex-shrink-0 snap-center relative rounded-2xl md:rounded-3xl overflow-hidden shadow-lg transition-transform hover:scale-[1.01]">
+        <a class="block h-full" href="#">
+          <img src="https://placehold.co/600x400/555/FFF?text=test" alt="Topic3" class="h-[180px] md:h-[400px] w-auto max-w-none" />
+          <div class="absolute inset-0 pointer-events-none" style="background: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0.6) 100%);"></div>
+          <div class="absolute bottom-3 left-3 md:bottom-4 md:left-6 text-white z-10 pr-2 pointer-events-none">
+            <h2 class="text-base md:text-2xl font-bold whitespace-nowrap">メンバー募集中</h2>
+          </div>
+        </a>
+      </div>
+
     </div>
   
-    <button id="nextBtn" class="absolute right-2 md:right-[250px] top-1/2 -translate-y-1/2 z-20 bg-white text-black p-2 md:p-3 rounded-full backdrop-blur-sm border-2 border-black transition-transform duration-300 hover:scale-110 shadow-lg">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-5 h-5 md:w-8 md:h-8">
+    <button id="nextBtn" class="absolute right-1 md:right-[250px] top-1/2 -translate-y-1/2 z-20 bg-white text-black p-1.5 md:p-3 rounded-full backdrop-blur-sm border border-black md:border-2 transition-transform duration-300 hover:scale-110 shadow-lg">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4 md:w-8 md:h-8">
         <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
       </svg>
     </button>
-  </div>
+</div>
   
   </div>
   <div class="max-md:h-[45px] md:h-[66px]" />
@@ -1521,36 +1522,44 @@ buttons.forEach(btn => {
   </script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-  // 型アサーション (as HTMLElement) を使うか、あるいは単に取得する
   const slider = document.getElementById('slider');
   const prevBtn = document.getElementById('prevBtn');
   const nextBtn = document.getElementById('nextBtn');
 
-  // 【重要】ここで null チェックを行う
-  // もし要素が見つからなければ、以後の処理を行わずに終了します。
-  // これにより、TypeScriptは「これ以降、sliderたちは null ではない」と認識します。
   if (!slider || !prevBtn || !nextBtn) {
     return;
   }
 
-  // --- 以降は slider, prevBtn, nextBtn が確実に存在するものとして扱われます ---
-
+  // 正確なスクロール量を計算する関数
   const getScrollAmount = () => {
-    return slider.clientWidth / 2;
+    // 最初のカード要素を取得
+    const firstCard = slider.children[0] as HTMLElement;
+    if (!firstCard) return 300; // カードがない場合のデフォルト値
+
+    // スタイル情報を取得して gap（隙間）のサイズを計算
+    const style = window.getComputedStyle(slider);
+    // gapの値を数値で取得 (例: "24px" -> 24)
+    const gap = parseFloat(style.columnGap) || 0;
+    
+    // カードの幅 + 隙間分 を移動量とする
+    return firstCard.offsetWidth + gap;
   };
 
   nextBtn.addEventListener('click', () => {
+    const amount = getScrollAmount();
     const maxScrollLeft = slider.scrollWidth - slider.clientWidth;
-    
+
     if (slider.scrollLeft >= maxScrollLeft - 10) {
+      // 最後まで行っていたら最初に戻る
       slider.scrollTo({ left: 0, behavior: 'smooth' });
     } else {
-      slider.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+      slider.scrollBy({ left: amount, behavior: 'smooth' });
     }
   });
 
   prevBtn.addEventListener('click', () => {
-    slider.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
+    const amount = getScrollAmount();
+    slider.scrollBy({ left: -amount, behavior: 'smooth' });
   });
 });
 </script>
