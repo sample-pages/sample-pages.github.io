@@ -211,25 +211,17 @@ gtag('config', 'G-YF4SGN2B86');
 
       // --- トップへ戻るボタン ---
       document.addEventListener("DOMContentLoaded", () => {
-        const backToTopButton = document.getElementById('backToTop');
-        if (!backToTopButton) return;
-      
-        backToTopButton.addEventListener('click', () => {
-          const start = window.scrollY;
-          const duration = 1500;
-          const startTime = performance.now();
-      
-          function smoothScrollStep(now) {
-            const elapsed = now - startTime;
-            const progress = Math.min(elapsed / duration, 1);
-            const ease = 1 - Math.pow(1 - progress, 3);
-            window.scrollTo(0, start * (1 - ease));
-            if (progress < 1) requestAnimationFrame(smoothScrollStep);
-          }
-      
-          requestAnimationFrame(smoothScrollStep);
-        });
-      });
+  const backToTopButton = document.getElementById('backToTop');
+  if (!backToTopButton) return;
+
+  backToTopButton.addEventListener('click', () => {
+    // これだけでブラウザが最適に滑らかにスクロールしてくれます
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+});
       </script>
       
       
