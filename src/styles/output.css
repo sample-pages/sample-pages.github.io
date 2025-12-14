@@ -5172,6 +5172,18 @@ article h2 {
 }
 
 @media not all and (min-width: 768px){
+  .max-md\:left-\[\]{
+    left: ;
+  }
+
+  .max-md\:left-\[260\]{
+    left: 260;
+  }
+
+  .max-md\:left-\[260px\]{
+    left: 260px;
+  }
+
   .max-md\:ml-1{
     margin-left: 0.25rem;
   }
@@ -5243,6 +5255,21 @@ article h2 {
   .max-md\:px-6{
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+  }
+
+  .max-md\:px-\[\]{
+    padding-left: ;
+    padding-right: ;
+  }
+
+  .max-md\:px-\[300px\]{
+    padding-left: 300px;
+    padding-right: 300px;
+  }
+
+  .max-md\:px-\[290px\]{
+    padding-left: 290px;
+    padding-right: 290px;
   }
 
   .max-md\:text-\[1\.2rem\]{
@@ -5456,6 +5483,21 @@ article h2 {
   .md\:px-72{
     padding-left: 18rem;
     padding-right: 18rem;
+  }
+
+  .md\:px-\[250px\]{
+    padding-left: 250px;
+    padding-right: 250px;
+  }
+
+  .md\:px-\[260px\]{
+    padding-left: 260px;
+    padding-right: 260px;
+  }
+
+  .md\:px-\[280px\]{
+    padding-left: 280px;
+    padding-right: 280px;
   }
 
   .md\:text-2xl{
