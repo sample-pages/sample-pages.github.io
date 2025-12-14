@@ -1448,6 +1448,31 @@ html[data-theme="light"] .text-color {
   background-color: rgb(253 224 71 / var(--tw-bg-opacity, 1));
 }
 
+.bg-\[\#ffda99\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 218 153 / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[\#edaa77\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(237 170 119 / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[\#edb78e\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(237 183 142 / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[\#ffe2cc\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 226 204 / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[\#ffd4b3\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 212 179 / var(--tw-bg-opacity, 1));
+}
+
 .bg-opacity-50{
   --tw-bg-opacity: 0.5;
 }
