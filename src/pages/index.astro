@@ -1520,24 +1520,34 @@ buttons.forEach(btn => {
   </script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+  // 型アサーション (as HTMLElement) を使うか、あるいは単に取得する
   const slider = document.getElementById('slider');
   const prevBtn = document.getElementById('prevBtn');
   const nextBtn = document.getElementById('nextBtn');
-  
-  // スクロール量の計算（画面幅の半分程度移動）
+
+  // 【重要】ここで null チェックを行う
+  // もし要素が見つからなければ、以後の処理を行わずに終了します。
+  // これにより、TypeScriptは「これ以降、sliderたちは null ではない」と認識します。
+  if (!slider || !prevBtn || !nextBtn) {
+    return;
+  }
+
+  // --- 以降は slider, prevBtn, nextBtn が確実に存在するものとして扱われます ---
+
   const getScrollAmount = () => {
     return slider.clientWidth / 2;
   };
 
-  // 右ボタンクリック
   nextBtn.addEventListener('click', () => {
     const maxScrollLeft = slider.scrollWidth - slider.clientWidth;
-    // 端まで行っていたら最初に戻る挙動を入れる場合は以下を残す
-    // 端で止まりたい場合は if文の中身を削除して slider.scrollBy(...) だけにしてください
+    
+    if (slider.scrollLeft >= maxScrollLeft - 10) {
+      slider.scrollTo({ left: 0, behavior: 'smooth' });
+    } else {
       slider.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+    }
   });
 
-  // 左ボタンクリック
   prevBtn.addEventListener('click', () => {
     slider.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
   });
