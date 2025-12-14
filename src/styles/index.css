@@ -188,10 +188,31 @@ body {
 }
 
 .midashi {
-    font-family: "Zen Kaku Gothic New", sans-serif;
-    font-weight: 500;
-    font-size: 1.4rem;
-    @apply max-lg:text-[18px];
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 500;
+  font-size: 1.4rem;
+  @apply max-lg:text-[18px];
+
+  /* --- 以下を追加 --- */
+  position: relative; /* 棒の位置の基準にする */
+  padding-left: 1rem; /* 棒と文字の間の余白 (お好みで調整) */
+}
+
+/* 縦棒の設定 */
+.midashi::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 6px; /* 棒の太さ */
+  height: 60%; /* 文字の高さに合わせる */
+  
+  /* 赤系のグラデーション (上から下へ) */
+  background: linear-gradient(to bottom, #ffaaa2, #d369ae);
+  
+  /* 角を少し丸くする場合（お好みで） */
+  border-radius: 4px; 
 }
 
 .midashi2 {
@@ -2388,4 +2409,14 @@ article h2 {
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+/* Chrome, Safari, Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+/* IE, Edge, Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }

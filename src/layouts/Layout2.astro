@@ -50,12 +50,10 @@ gtag('config', 'G-YF4SGN2B86');
     img.src = '/images/p0126_l.png';
 
     // ==========================================
-    //  ★レスポンシブ用CSSスタイル定義
-    //  JSの中でCSSを作ることで、PCとスマホの切り替えを行います
+    //  CSSスタイル定義
     // ==========================================
     const style = document.createElement('style');
     style.innerHTML = `
-      /* --- 共通設定 (PC・スマホ) --- */
       .intro-overlay {
         position: fixed;
         top: 0; left: 0;
@@ -73,8 +71,7 @@ gtag('config', 'G-YF4SGN2B86');
         display: flex;
         position: relative;
         top: -20px;
-        flex-direction: row-reverse; /* 縦書きなので右から左へ並べる */
-        /* PCのときの間隔 */
+        flex-direction: row-reverse;
         gap: 3rem; 
       }
 
@@ -84,7 +81,6 @@ gtag('config', 'G-YF4SGN2B86');
         transition: opacity 1s;
         writing-mode: vertical-rl;
         text-align: left;
-        /* PCのときの文字サイズ */
         font-size: 1.5rem; 
         line-height: 1.8;
       }
@@ -94,18 +90,16 @@ gtag('config', 'G-YF4SGN2B86');
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: transparent; /* 背景透明 */
+        background-color: transparent;
         border: 1.5px solid #000;
-        border-radius: 50%; /* 丸 */
+        border-radius: 50%;
         color: #000;
         cursor: pointer;
         z-index: 10000;
         transition: background-color 0.3s, transform 0.2s;
         font-family: "Zen Kaku Gothic New", "Makinas-4-Flat", sans-serif;
         font-weight: bold;
-        text-decoration: none; /* リンクの下線を消す */
-        
-        /* PCのときのボタンサイズと位置 */
+        text-decoration: none;
         width: 100px;
         height: 100px;
         bottom: 60px;
@@ -117,17 +111,15 @@ gtag('config', 'G-YF4SGN2B86');
         background-color: rgba(255,255,255,0.3);
       }
 
-      /* --- ★スマホ・タブレット用 (画面幅768px以下) --- */
       @media (max-width: 768px) {
         .intro-container {
-          gap: 1.5rem; /* 間隔を狭く */
+          gap: 1.5rem;
         }
         .intro-text {
-          font-size: 1.1rem; /* 文字を少し小さく */
+          font-size: 1.1rem;
           line-height: 1.5;
         }
         .intro-skip-btn {
-          /* ボタンを小さくして端に寄せる */
           width: 80px;
           height: 80px;
           bottom: 80px;
@@ -138,13 +130,24 @@ gtag('config', 'G-YF4SGN2B86');
     `;
     document.head.appendChild(style);
 
-  
-    // --- 共通の「閉じる」処理 ---
+    // ==================================================
+    //  オーバーレイを閉じる関数（ヘッダー強制表示付き）
+    // ==================================================
     const removeOverlay = () => {
       overlay.style.opacity = "0";
+
+      // --- ★ヘッダーを強制的に表示させる処理 ---
+      const header = document.getElementById("mainHeader");
+      if (header) {
+        // スタイルを上書きして即座に見えるようにする
+        header.style.opacity = "1";
+        header.style.transform = "translateY(0)";
+        header.classList.add("slide-in");
+      }
+
+      // 要素の削除
       setTimeout(() => {
         if (overlay.parentNode) overlay.remove();
-        // スタイルタグも消しておく（ゴミを残さない）
         if (style.parentNode) style.remove();
       }, 1000);
     };
@@ -152,7 +155,6 @@ gtag('config', 'G-YF4SGN2B86');
     // --- オーバーレイ作成 ---
     const overlay = document.createElement('div');
     overlay.classList.add('intro-overlay');
-    // 背景画像の設定
     overlay.style.background = `linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('/images/p0126_l.png') no-repeat center center`;
     document.body.appendChild(overlay);
   
@@ -160,12 +162,12 @@ gtag('config', 'G-YF4SGN2B86');
   
     // --- 文字コンテナ作成 ---
     const container = document.createElement('div');
-    container.classList.add('intro-container'); // クラスを追加
+    container.classList.add('intro-container');
   
     const createLine = (text) => {
       const div = document.createElement('div');
       div.textContent = text;
-      div.classList.add("zen-kaku-gothic-new", "intro-text"); // クラスを追加
+      div.classList.add("zen-kaku-gothic-new", "intro-text");
       return div;
     };
   
@@ -178,29 +180,34 @@ gtag('config', 'G-YF4SGN2B86');
     container.appendChild(line3);
     overlay.appendChild(container);
 
-    // --- Skipボタン作成 ---
-    const targetUrl = '/'; 
+    // ==========================================
+    //  ★Skipボタン作成（修正版）
+    // ==========================================
     const skipBtn = document.createElement('button');
     skipBtn.textContent = 'Skip >>';
-    skipBtn.classList.add('intro-skip-btn'); // クラスを追加
+    skipBtn.type = 'button'; // ボタンタイプを明示
+    skipBtn.classList.add('intro-skip-btn');
 
-    // クリック時の処理
-    skipBtn.addEventListener('click', () => {
-        window.location.href = targetUrl;
+    // ★クリック時の処理：移動せずに閉じるだけ
+    skipBtn.addEventListener('click', (e) => {
+        e.preventDefault(); // 予期せぬ動作を防止
+        removeOverlay();    // 画面を閉じてヘッダーを表示
     });
 
     overlay.appendChild(skipBtn);
   
-    // --- アニメーション ---
+    // --- テキストのアニメーション ---
     setTimeout(() => line1.style.opacity = "1", 800);
     setTimeout(() => line2.style.opacity = "1", 2500);
     setTimeout(() => line3.style.opacity = "1", 4000);
   
-    // --- 自動フェードアウト ---
+    // --- 自動終了タイマー ---
     setTimeout(() => {
-        removeOverlay();
+        if (overlay.parentNode) {
+            removeOverlay();
+        }
     }, 7000);
-  });
+});
 
       // --- トップへ戻るボタン ---
       document.addEventListener("DOMContentLoaded", () => {

@@ -169,26 +169,57 @@ const tagColors: Record<string, string> = {
     </div>
   -->
     <h1 class="headline2 mx-auto text-left" style="max-width: 900px;">
-      <span class="headline-bg">TOPICS</span>
-      <span class="max-lg:ml-6 lg:ml-8 inline-block align-middle pt-2">トピックス</span>
+      <span class="headline-bg">PICKUP</span>
+      <span class="max-lg:ml-6 lg:ml-8 inline-block align-middle pt-2">ピックアップ</span>
     </h1>
+  </div>
   <div class="max-md:h-[30px] md:h-[36px]" />
-  <div class="text-center">
-  <a class="tag-hover-mild" href="/posts/28536014">
-    <div class="relative pl-1 pr-1 margin-default text-color zen-kaku-gothic-new" style="padding-bottom: 0rem;">
-      <!-- 画像 -->
-      <img src="/images/westu.jpg" alt="Topic1" class="w-full h-auto object-cover" />
-      <!-- 下に向かって黒くなるグラデーション -->
-      <div class="ml-1 mr-1 absolute inset-0" style="background: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0.5) 100%);"></div>
-    
-      <!-- 文字 -->
-      <div class="absolute max-md:bottom-2 max-md:left-5 md:bottom-6 md:left-8 text-white z-10">
-        <h2 class="max-md:text-xl md:text-2xl font-bold">ホームページを公開しました</h2>
-        <p class="mt-1 text-lg"></p>
+  <div class="zen-kaku-gothic-new relative w-full group py-2">
+  
+    <button id="prevBtn" class="absolute left-2 md:left-[250px] top-1/2 -translate-y-1/2 z-20 bg-white text-black p-3 rounded-full backdrop-blur-sm border-2 border-black transition-transform duration-300 hover:scale-110 disabled:opacity-0 disabled:cursor-not-allowed shadow-lg">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-8 h-8">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+      </svg>
+    </button>
+  
+    <div id="slider" class="flex gap-6 overflow-x-auto scroll-smooth no-scrollbar items-center px-4 md:px-72" style="scroll-snap-type: x mandatory;">
+      <div class="flex-shrink-0 snap-center relative rounded-3xl overflow-hidden shadow-lg transition-transform hover:scale-[1.01]">
+        <a class="block h-full" href="/posts/28536014">
+          <img src="/images/westu.jpg" alt="Topic1" class="h-[320px] md:h-[400px] w-auto max-w-none" />
+          <div class="absolute inset-0 pointer-events-none" style="background: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0.6) 100%);"></div>
+          <div class="absolute bottom-4 left-6 text-white z-10 pr-4 pointer-events-none">
+            <h2 class="text-xl md:text-2xl font-bold whitespace-nowrap">ホームページを公開しました</h2>
+          </div>
+        </a>
       </div>
+  
+      <div class="flex-shrink-0 snap-center relative rounded-3xl overflow-hidden shadow-lg transition-transform hover:scale-[1.01]">
+          <a class="block h-full" href="#">
+            <img src="https://placehold.co/600x400/333/FFF?text=test" alt="Topic2" class="h-[320px] md:h-[400px] w-auto max-w-none" />
+            <div class="absolute inset-0 pointer-events-none" style="background: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0.6) 100%);"></div>
+            <div class="absolute bottom-4 left-6 text-white z-10 pr-4 pointer-events-none">
+              <h2 class="text-xl md:text-2xl font-bold whitespace-nowrap">イベント情報</h2>
+            </div>
+          </a>
+        </div>
+    
+        <div class="flex-shrink-0 snap-center relative rounded-3xl overflow-hidden shadow-lg transition-transform hover:scale-[1.01]">
+          <a class="block h-full" href="#">
+            <img src="https://placehold.co/600x400/555/FFF?text=test" alt="Topic3" class="h-[320px] md:h-[400px] w-auto max-w-none" />
+            <div class="absolute inset-0 pointer-events-none" style="background: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0.6) 100%);"></div>
+            <div class="absolute bottom-4 left-6 text-white z-10 pr-4 pointer-events-none">
+              <h2 class="text-xl md:text-2xl font-bold whitespace-nowrap">メンバー募集中</h2>
+            </div>
+          </a>
+        </div>
     </div>
-  </a>
-</div>
+  
+    <button id="nextBtn" class="absolute right-2 md:right-[250px] top-1/2 -translate-y-1/2 z-20 bg-white text-black p-3 rounded-full backdrop-blur-sm border-2 border-black transition-transform duration-300 hover:scale-110 shadow-lg">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-8 h-8">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+      </svg>
+    </button>
+  </div>
   
   </div>
   <div class="max-md:h-[45px] md:h-[66px]" />
@@ -196,7 +227,9 @@ const tagColors: Record<string, string> = {
     <div class="margin-contents text-color zen-kaku-gothic-new" style="padding-bottom: 0rem;">
       <div class="max-md:h-[30px] md:h-[36px]" />
       <div class="zoom-target">
-        <div class="max-md:h-[10px] md:h-[20px]" />
+        <div class="text-center text-[18px] text-black tracking-wider mb-2">
+          ▼ ABOUT
+        </div>
         <div class="text-center max-md:text-[22px] md:text-[35px] font-bold zen-kaku-gothic-new text-black mb-6">
           うぃーすた全国交流会とは？
         </div>
@@ -1485,4 +1518,28 @@ buttons.forEach(btn => {
     targets.forEach(t => observer.observe(t));
   });
   </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+  const slider = document.getElementById('slider');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
   
+  // スクロール量の計算（画面幅の半分程度移動）
+  const getScrollAmount = () => {
+    return slider.clientWidth / 2;
+  };
+
+  // 右ボタンクリック
+  nextBtn.addEventListener('click', () => {
+    const maxScrollLeft = slider.scrollWidth - slider.clientWidth;
+    // 端まで行っていたら最初に戻る挙動を入れる場合は以下を残す
+    // 端で止まりたい場合は if文の中身を削除して slider.scrollBy(...) だけにしてください
+      slider.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+  });
+
+  // 左ボタンクリック
+  prevBtn.addEventListener('click', () => {
+    slider.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
+  });
+});
+</script>
