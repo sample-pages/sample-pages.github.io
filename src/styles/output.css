@@ -5214,6 +5214,10 @@ article h2 {
     width: 3rem;
   }
 
+  .max-md\:w-14{
+    width: 3.5rem;
+  }
+
   .max-md\:px-6{
     padding-left: 1.5rem;
     padding-right: 1.5rem;
