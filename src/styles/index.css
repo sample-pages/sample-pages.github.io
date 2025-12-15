@@ -2420,3 +2420,27 @@ article h2 {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
+
+.btn-gradient {
+  display: inline-block;
+  padding: 16px 32px;
+  background: linear-gradient(90deg, #ff5f6d, #ffc371); /* オレンジ〜赤のグラデーション */
+  /* 赤単色のグラデーションがいい場合は以下を使用してください */
+  /* background: linear-gradient(45deg, #ff3333, #b30000); */
+  
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 9999px;
+  box-shadow: 0 4px 15px rgba(255, 95, 109, 0.4); /* ふんわり光る影 */
+  transition: transform 0.3s;
+}
+
+.btn-gradient:hover {
+  transform: translateY(-2px); /* ホバー時に少し浮く */
+  box-shadow: 0 6px 20px rgba(255, 95, 108, 0.425);
+}
+
+.button-wrapper {
+  text-align: center; /* 中身を中央揃えにする */
+}
