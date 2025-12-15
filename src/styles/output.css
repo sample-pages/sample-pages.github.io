@@ -4914,7 +4914,7 @@ article h2 {
 
 .btn-gradient {
   display: inline-block;
-  padding: 16px 32px;
+  padding: 14px 30px;
   background: linear-gradient(90deg, #ff5f6d, #ffc371);
   /* オレンジ〜赤のグラデーション */
   /* 赤単色のグラデーションがいい場合は以下を使用してください */
