@@ -48,8 +48,10 @@ const ogImageURL = new URL(image, Astro.url);
     <link rel="icon" type="image/png" href="/images/logo.png">
     <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
     <meta property="og:image" content={ogImageURL} />
+    <meta property="og:title" content={title} />
     <meta name="twitter:image" content={ogImageURL} />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
 
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-YF4SGN2B86"></script>
