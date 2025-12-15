@@ -2422,25 +2422,28 @@ article h2 {
 }
 
 .btn-gradient {
-  display: inline-block;
-  padding: 14px 30px;
-  background: linear-gradient(90deg, #ff5f6d, #ffc371); /* オレンジ〜赤のグラデーション */
-  /* 赤単色のグラデーションがいい場合は以下を使用してください */
-  /* background: linear-gradient(45deg, #ff3333, #b30000); */
+  /* display: inline-block; ← これを削除またはコメントアウト */
+  display: inline-flex;      /* ★変更: 子要素を横並びにする */
+  align-items: center;       /* ★追加: 垂直方向の中央揃え */
+  justify-content: center;   /* ★追加: 水平方向の中央揃え */
+  gap: 8px;                  /* ★追加: テキストと矢印の間隔 */
   
+  padding: 14px 30px;
+  background: linear-gradient(90deg, #ff5f6d, #ffc371);
   color: #fff;
   text-decoration: none;
   font-weight: bold;
   border-radius: 9999px;
-  box-shadow: 0 4px 15px rgba(255, 95, 109, 0.4); /* ふんわり光る影 */
+  box-shadow: 0 4px 15px rgba(255, 95, 109, 0.4);
   transition: transform 0.3s;
 }
 
+/* ホバーなどはそのまま */
 .btn-gradient:hover {
-  transform: translateY(-2px); /* ホバー時に少し浮く */
+  transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(255, 95, 108, 0.425);
 }
 
 .button-wrapper {
-  text-align: center; /* 中身を中央揃えにする */
+  text-align: center;
 }

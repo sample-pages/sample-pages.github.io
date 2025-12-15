@@ -4913,30 +4913,34 @@ article h2 {
 }
 
 .btn-gradient {
-  display: inline-block;
+  /* display: inline-block; ← これを削除またはコメントアウト */
+  display: inline-flex;
+  /* ★変更: 子要素を横並びにする */
+  align-items: center;
+  /* ★追加: 垂直方向の中央揃え */
+  justify-content: center;
+  /* ★追加: 水平方向の中央揃え */
+  gap: 8px;
+  /* ★追加: テキストと矢印の間隔 */
   padding: 14px 30px;
   background: linear-gradient(90deg, #ff5f6d, #ffc371);
-  /* オレンジ〜赤のグラデーション */
-  /* 赤単色のグラデーションがいい場合は以下を使用してください */
-  /* background: linear-gradient(45deg, #ff3333, #b30000); */
   color: #fff;
   text-decoration: none;
   font-weight: bold;
   border-radius: 9999px;
   box-shadow: 0 4px 15px rgba(255, 95, 109, 0.4);
-  /* ふんわり光る影 */
   transition: transform 0.3s;
 }
 
+/* ホバーなどはそのまま */
+
 .btn-gradient:hover {
   transform: translateY(-2px);
-  /* ホバー時に少し浮く */
   box-shadow: 0 6px 20px rgba(255, 95, 108, 0.425);
 }
 
 .button-wrapper {
   text-align: center;
-  /* 中身を中央揃えにする */
 }
 
 .hover\:-translate-y-1:hover{
@@ -5167,6 +5171,10 @@ article h2 {
     height: 40px;
   }
 
+  .max-md\:h-\[5px\]{
+    height: 5px;
+  }
+
   .max-md\:h-\[60px\]{
     height: 60px;
   }
@@ -5260,6 +5268,10 @@ article h2 {
     height: 10px;
   }
 
+  .md\:h-\[11px\]{
+    height: 11px;
+  }
+
   .md\:h-\[120px\]{
     height: 120px;
   }
@@ -5292,6 +5304,10 @@ article h2 {
     height: 40px;
   }
 
+  .md\:h-\[41px\]{
+    height: 41px;
+  }
+
   .md\:h-\[46px\]{
     height: 46px;
   }
@@ -5302,10 +5318,6 @@ article h2 {
 
   .md\:h-\[55px\]{
     height: 55px;
-  }
-
-  .md\:h-\[66px\]{
-    height: 66px;
   }
 
   .md\:h-\[70px\]{
