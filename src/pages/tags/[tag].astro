@@ -84,7 +84,9 @@ const tagColors: Record<string, string> = {
       >
     </div>
     <div style="height: 20px;"></div>
-    <span class="midashi">タグ：{tag}</span>
+    <p class="midashi relative inline-block pb-1">
+        タグ：{tag}
+    </p>
     <div style="height: 20px;"></div>
     <ul style="padding-left: 0.25rem">
       {filteredPosts.map((post: any) => (

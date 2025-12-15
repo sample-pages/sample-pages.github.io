@@ -10,7 +10,7 @@ const sortedPosts = nonDraftPosts.sort((a, b) => {
   return bDate.getTime() - aDate.getTime();
 });
 
-const latestPosts = sortedPosts.slice(0, 3);
+const latestPosts = sortedPosts.slice(0, 5);
 
 // タグ名ごとの色を定義
 const tagColors: Record<string, string> = {
@@ -185,7 +185,7 @@ const tagColors: Record<string, string> = {
     <div id="slider" class="flex gap-3 md:gap-6 overflow-x-auto scroll-smooth no-scrollbar items-center md:px-[280px] max-md:px-6" style="scroll-snap-type: x mandatory;">
       
       <div class="slider-card flex-shrink-0 snap-center relative rounded-2xl md:rounded-3xl overflow-hidden shadow-lg transition-transform hover:scale-[1.01]">
-        <a class="block h-full" href="/posts/28536014">
+        <a class="block h-full">
           <img src="/images/westu.jpg" alt="Topic1" class="h-[180px] md:h-[400px] w-auto max-w-none" />
           <div class="absolute inset-0 pointer-events-none" style="background: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0.6) 100%);"></div>
           <div class="absolute bottom-3 left-3 md:bottom-4 md:left-6 text-white z-10 pr-2 pointer-events-none">
@@ -195,7 +195,7 @@ const tagColors: Record<string, string> = {
       </div>
   
       <div class="slider-card flex-shrink-0 snap-center relative rounded-2xl md:rounded-3xl overflow-hidden shadow-lg transition-transform hover:scale-[1.01]">
-        <a class="block h-full" href="#">
+        <a class="block h-full" href="/posts/28536014">
           <img src="/images/westu.jpg" alt="Topic2" class="h-[180px] md:h-[400px] w-auto max-w-none" />
           <div class="absolute inset-0 pointer-events-none" style="background: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0.6) 100%);"></div>
           <div class="absolute bottom-3 left-3 md:bottom-4 md:left-6 text-white z-10 pr-2 pointer-events-none">
@@ -205,7 +205,7 @@ const tagColors: Record<string, string> = {
       </div>
   
       <div class="slider-card flex-shrink-0 snap-center relative rounded-2xl md:rounded-3xl overflow-hidden shadow-lg transition-transform hover:scale-[1.01]">
-        <a class="block h-full" href="#">
+        <a class="block h-full" href="/posts/42593243">
           <img src="/images/img3_.jpg" alt="Topic3" class="h-[180px] md:h-[400px] w-auto max-w-none" />
           <div class="absolute inset-0 pointer-events-none" style="background: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0.6) 100%);"></div>
           <div class="absolute bottom-3 left-3 md:bottom-4 md:left-6 text-white z-10 pr-2 pointer-events-none">
@@ -229,8 +229,8 @@ const tagColors: Record<string, string> = {
     <div class="margin-contents text-color zen-kaku-gothic-new" style="padding-bottom: 0rem;">
       <div class="max-md:h-[30px] md:h-[36px]" />
       <div class="zoom-target">
-        <div class="text-center text-[18px] text-black tracking-wider mb-2">
-          ▼ ABOUT
+        <div class="text-center text-[36px] text-black tracking-wider mb-2">
+          🔰
         </div>
         <div class="text-center max-md:text-[22px] md:text-[35px] font-bold zen-kaku-gothic-new text-black mb-6">
           うぃーすた全国交流会とは？

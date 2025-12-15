@@ -1740,6 +1740,10 @@ html[data-theme="light"] .text-color {
   line-height: 1rem;
 }
 
+.text-\[36px\]{
+  font-size: 36px;
+}
+
 .\!font-bold{
   font-weight: 700 !important;
 }
