@@ -209,7 +209,7 @@ body {
   height: 60%; /* 文字の高さに合わせる */
   
   /* 赤系のグラデーション (上から下へ) */
-  background: linear-gradient(to bottom, #ffaaa2, #d369ae);
+  background: linear-gradient(to bottom, #ffc9c4, #ff8686);
   
   /* 角を少し丸くする場合（お好みで） */
   border-radius: 4px; 
