@@ -99,3 +99,18 @@ const tagColors: Record<string, string> = {
     </div>
   </div>
 </Layout>
+
+<style>
+  /* .blog-width の中にある img タグすべてに適用 */
+  .blog-width :global(img) {
+    border-radius: 0.75rem; /* rounded-xl 相当 */
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); /* shadow-lg 相当 */
+
+    /* 画像がはみ出さないように念のため */
+    max-width: 100%;
+    height: auto;
+    display: block;       /* ブロック要素にする */
+    margin-left: auto;    /* 左側の余白を自動調整 */
+    margin-right: auto;   /* 右側の余白を自動調整 */
+  }
+</style>
