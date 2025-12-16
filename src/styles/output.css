@@ -1086,6 +1086,10 @@ html[data-theme="light"] .text-color {
   width: 100%;
 }
 
+.w-2{
+  width: 0.5rem;
+}
+
 .min-w-\[600px\]{
   min-width: 600px;
 }
@@ -1606,6 +1610,11 @@ html[data-theme="light"] .text-color {
 .py-\[2px\]{
   padding-top: 2px;
   padding-bottom: 2px;
+}
+
+.py-4{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .pb-1{
@@ -4923,7 +4932,7 @@ article h2 {
   gap: 8px;
   /* ★追加: テキストと矢印の間隔 */
   padding: 14px 30px;
-  background: linear-gradient(90deg, #ff5f6d, #ffc371);
+  background: linear-gradient(90deg, #ff7a85, #ffc371);
   color: #fff;
   text-decoration: none;
   font-weight: bold;
@@ -5244,6 +5253,10 @@ article h2 {
     margin-bottom: 0px;
   }
 
+  .md\:ml-\[250px\]{
+    margin-left: 250px;
+  }
+
   .md\:flex{
     display: flex;
   }
@@ -5350,6 +5363,10 @@ article h2 {
 
   .md\:w-auto{
     width: auto;
+  }
+
+  .md\:w-\[250px\]{
+    width: 250px;
   }
 
   .md\:gap-6{
