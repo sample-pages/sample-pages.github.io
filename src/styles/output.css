@@ -5257,6 +5257,10 @@ article h2 {
     margin-left: 250px;
   }
 
+  .md\:ml-\[270px\]{
+    margin-left: 270px;
+  }
+
   .md\:flex{
     display: flex;
   }
