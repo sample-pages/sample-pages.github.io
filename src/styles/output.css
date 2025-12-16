@@ -901,6 +901,10 @@ html[data-theme="light"] .text-color {
   margin-top: 80px;
 }
 
+.ml-4{
+  margin-left: 1rem;
+}
+
 .block{
   display: block;
 }
