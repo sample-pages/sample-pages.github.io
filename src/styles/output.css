@@ -1744,6 +1744,10 @@ html[data-theme="light"] .text-color {
   line-height: 1.625;
 }
 
+.leading-\[\]{
+  line-height: ;
+}
+
 .leading-\[2rem\]{
   line-height: 2rem;
 }
