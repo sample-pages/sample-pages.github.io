@@ -2444,6 +2444,29 @@ article h2 {
   box-shadow: 0 6px 20px rgba(255, 95, 108, 0.425);
 }
 
+.btn-gradient2 {
+  /* display: inline-block; ← これを削除またはコメントアウト */
+  display: inline-flex;      /* ★変更: 子要素を横並びにする */
+  align-items: center;       /* ★追加: 垂直方向の中央揃え */
+  justify-content: center;   /* ★追加: 水平方向の中央揃え */
+  gap: 8px;                  /* ★追加: テキストと矢印の間隔 */
+  
+  padding: 14px 30px;
+  background: linear-gradient(90deg, #7ab1ff, #71dbff);
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 9999px;
+  box-shadow: 0 4px 15px rgba(95, 194, 255, 0.4);
+  transition: transform 0.3s;
+}
+
+/* ホバーなどはそのまま */
+.btn-gradient2:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(95, 194, 255, 0.555);
+}
+
 .button-wrapper {
   text-align: center;
 }

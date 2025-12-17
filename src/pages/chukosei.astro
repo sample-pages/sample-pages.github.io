@@ -103,12 +103,12 @@ import Layout from "../layouts/Layout2.astro";
   <div class="max-xl:h-[10px] xl:h-[60px]"></div>
   <div class="mx-6 flex justify-center items-start relative py-12">
 
-    <div class="hidden md:flex flex-col space-y-8 absolute left-0 top-0 ml-8 lg:ml-16">
-      <div class="rounded-xl w-40 lg:w-48 h-56 mt-64 overflow-hidden border border-gray-100 shadow-sm">
+    <div class="hidden min-[1400px]:flex flex-col space-y-8 absolute left-0 top-0 ml-8 lg:ml-12 xl:ml-16">
+      <div class="rounded-xl w-40 lg:w-44 xl:w-48 h-56 mt-64 overflow-hidden shadow-sm">
         <img src="/images/img5.jpeg" alt="飾り1" class="w-full h-full object-cover">
       </div>
       <div style="height: 750px;"></div>
-      <div class="rounded-xl w-40 lg:w-48 h-56 overflow-hidden border border-gray-100 shadow-sm">
+      <div class="rounded-xl w-40 lg:w-44 xl:w-48 h-56 overflow-hidden shadow-sm">
         <img src="/images/GtFGjmQbgAEuuD_.jpeg" alt="飾り2" class="w-full h-full object-cover">
       </div>
     </div>
@@ -147,6 +147,11 @@ import Layout from "../layouts/Layout2.astro";
                   <p>上手く話す必要はありません。もちろん時間が掛かっても大丈夫。安心して参加して下さい。</p>
                 </div>
               </div>
+            </div>
+
+            <div class="resp-pc-g px-2 md:px-20">
+              <img src="/images/img5.jpeg" class="rounded-xl w-full h-auto object-cover object-center shadow-sm">
+              <br>
             </div>
   
             <div class="m-plus-1p-regular flex flex-col md:flex-row md:items-baseline">
@@ -240,6 +245,11 @@ import Layout from "../layouts/Layout2.astro";
                 </div>
               </div>
             </div>
+
+            <div class="resp-pc-g px-2 md:px-20">
+              <img src="/images/GtFGjmQbgAEuuD_.jpeg" class="rounded-xl w-full h-auto object-cover object-center shadow-sm">
+              <br>
+            </div>
   
             <div class="m-plus-1p-regular flex flex-col md:flex-row md:items-baseline">
               <div class="font-semibold text-lg md:text-xl w-full md:w-40 shrink-0">
@@ -261,13 +271,18 @@ import Layout from "../layouts/Layout2.astro";
                 <div class="text-xl md:text-2xl font-bold md:font-medium mt-1 md:mt-0">昼食（任意参加）</div>
               </div>
             </div>
+
+            <div class="resp-pc-g px-2 md:px-20">
+              <img src="/images/GtFGjmobMAES3Ev.jpeg" class="rounded-xl w-full h-auto object-cover object-center shadow-sm">
+              <br>
+            </div>
   
           </div>
         </div>
       </section>
     </div>
   
-    <div class="hidden md:flex flex-col space-y-8 absolute right-0 top-0 mr-8 lg:mr-16 z-[-1]">
+    <div class="hidden min-[1400px]:flex flex-col space-y-8 absolute right-0 top-0 mr-8 lg:mr-16 z-[-1]">
       <div class="rounded-xl w-40 lg:w-48 h-56 mt-[700px] overflow-hidden border border-gray-100 shadow-sm">
         <img src="/images/Gs4BPAjaEAAd3sg.jpeg" alt="飾り3" class="w-full h-full object-cover">
       </div>
@@ -281,7 +296,7 @@ import Layout from "../layouts/Layout2.astro";
 
   
 
-  <div class="max-md:h-[34px] md:h-[120px]"></div>
+  <div class="max-md:h-[0px] md:h-[120px]"></div>
   <div class="reveal">
     <div class="dela-gothic-one-regular max-w-md mx-auto text-center text-color" style="padding-bottom: 0rem;">
       <h2 class="typing heading-32" data-text="ファシリテーター紹介"></h2>
@@ -372,6 +387,36 @@ import Layout from "../layouts/Layout2.astro";
     </div>
   </div>
   </div> 
+
+  <div class="max-md:h-[64px] md:h-[100px]"></div>
+  <div class="reveal">
+  <div class="dela-gothic-one-regular max-w-md mx-auto text-center text-color" style="padding-bottom: 0rem;">
+    <h2 class="typing heading-32" data-text="参加プラン"></h2>
+  </div>
+  </div>
+  <div class="max-md:h-[30px] md:h-[50px]"></div>
+  <div class="reveal">
+  <div class="pl-6 pr-6 max-w-[800px] mx-auto max-xl:text-base xl:text-xl m-plus-1p-regular leading-relaxed">
+    <p class="mt-2 leading-[3rem]">
+      【学生・中高生プランA】7/18(土)〜7/19(日) 全日程参加（宿泊あり9,400円）
+      <br>
+      【学生・中高生プランB】7/18(土) 1日目BBQまで参加（宿泊なし5,500円）
+      <br>
+      【プランC】7/18(土) 1日目ビンゴ大会まで参加（宿泊なし2,500円）
+      <br>
+【プランD】7/19(日) 2日目のみ参加（宿泊なし1,500円）
+    </p>
+  </div>
+  <div class="max-md:h-[40px] md:h-[50px]"></div>
+  <div class="m-plus-1p-regular lg:text-lg max-lg:text-base button-wrapper">
+    <a href="/application/" class="btn-gradient2 flex items-center justify-center gap-2 whitespace-nowrap">
+      <span>お申し込みはこちら</span>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+      </svg>
+    </a>
+  </div>
+  </div>
 
   <div class="max-md:h-[64px] md:h-[100px]"></div>
   <div class="reveal">
