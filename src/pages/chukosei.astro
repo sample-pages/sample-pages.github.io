@@ -100,169 +100,188 @@ import Layout from "../layouts/Layout2.astro";
     吃音のある大学生や社会人が司会を行い、皆さんのそばでサポートします。
   </div>
   </div>
-  <div class="max-xl:h-[36px] xl:h-[60px]"></div>
-  <div class="mx-6 flex justify-center items-start relative">
+  <div class="max-xl:h-[10px] xl:h-[60px]"></div>
+  <div class="mx-6 flex justify-center items-start relative py-12">
 
-    <!-- 左側の画像群 -->
-    <div class="resp-pc-f hidden md:flex flex-col space-y-8 absolute left-0 top-0 ml-16">
-      <!-- 1枚目 -->
-      <div class="rounded-xl w-48 h-56 mt-64 overflow-hidden">
-        <img src="/images/img5.jpeg" alt="左の飾り1" 
-             class="w-full h-full object-cover object-center">
+    <div class="hidden md:flex flex-col space-y-8 absolute left-0 top-0 ml-8 lg:ml-16">
+      <div class="rounded-xl w-40 lg:w-48 h-56 mt-64 overflow-hidden border border-gray-100 shadow-sm">
+        <img src="/images/img5.jpeg" alt="飾り1" class="w-full h-full object-cover">
       </div>
-      <div style="height: 750px;" />
-      <div class="rounded-xl w-48 h-56 overflow-hidden">
-        <img src="/images/GtFGjmQbgAEuuD_.jpeg" alt="左の飾り1" 
-             class="w-full h-full object-cover object-center">
+      <div style="height: 750px;"></div>
+      <div class="rounded-xl w-40 lg:w-48 h-56 overflow-hidden border border-gray-100 shadow-sm">
+        <img src="/images/GtFGjmQbgAEuuD_.jpeg" alt="飾り2" class="w-full h-full object-cover">
       </div>
     </div>
-    
   
-    <!-- 中央のプログラム本体 -->
-    <div class="max-w-3xl mx-auto z-10">
+    <div class="w-full max-w-3xl mx-auto z-10">
   
       <section class="reveal">
         <div class="schedule-card">
-          <h1 class="font-bold dela-gothic-one-regular mx-auto max-md:text-2xl text-3xl text-center mb-16" style="max-width: 900px;">
-            ー 1日目：7月18日(<span class="text-blue-500">土</span>) ー
+          <h1 class="font-bold dela-gothic-one-regular mx-auto text-2xl md:text-3xl text-center mb-12 md:mb-16">
+            1日目：7月18日(<span class="text-blue-500">土</span>)
           </h1>
   
-          <div class="space-y-12">
-            <div class="m-plus-1p-regular">
-              <div class="flex items-baseline space-x-4">
-                <div class="font-semibold max-md:text-lg text-xl w-40 shrink-0">13:00〜13:15</div>
-                <div class="max-md:text-xl text-2xl font-medium">開会式</div>
+          <div class="space-y-10 md:space-y-12">
+            
+            <div class="m-plus-1p-regular flex flex-col md:flex-row md:items-baseline">
+              <div class="font-semibold text-lg md:text-xl w-full md:w-40 shrink-0 md:text-black">
+                13:00〜13:15
               </div>
-              <div class="ml-44">
-                <p class="mt-2 max-md:text-base text-lg leading-relaxed">楽しい2日間のスタートです！</p>
-                <p class="mt-2 max-md:text-base text-lg leading-relaxed">実行委員長の挨拶や、うぃーすたのご紹介などを行います。</p>
-              </div>
-            </div>
-  
-            <div class="m-plus-1p-regular">
-              <div class="flex items-baseline space-x-4">
-                <div class="font-semibold max-md:text-lg text-xl w-40 shrink-0">13:25〜14:40</div>
-                <div class="max-md:text-xl text-2xl font-medium">グループトーク🗣️</div>
-              </div>
-              <div class="ml-44">
-                <p class="mt-2 max-md:text-base text-lg leading-relaxed">少人数のグループに分かれて、吃音のことや趣味など楽しくお話ししましょう！</p>
-                <p class="mt-2 max-md:text-base text-lg leading-relaxed">上手く話す必要はありません。もちろん時間が掛かっても大丈夫。安心して参加して下さい。</p>
+              <div class="flex-1">
+                <div class="text-xl md:text-2xl font-bold md:font-medium mt-1 md:mt-0">開会式</div>
+                <div class="mt-2 text-base md:text-lg leading-relaxed">
+                  <p>楽しい2日間のスタートです！</p>
+                  <p>実行委員長の挨拶や、うぃーすたのご紹介などを行います。</p>
+                </div>
               </div>
             </div>
   
-            <div class="m-plus-1p-regular">
-              <div class="flex items-baseline space-x-4">
-                <div class="font-semibold max-md:text-lg text-xl w-40 shrink-0">14:50〜15:55</div>
-                <div class="max-md:text-xl text-2xl font-medium">ご講演・対談（ゲスト：重松清さん）</div>
+            <div class="m-plus-1p-regular flex flex-col md:flex-row md:items-baseline">
+              <div class="font-semibold text-lg md:text-xl w-full md:w-40 shrink-0">
+                13:25〜14:40
               </div>
-              <div class="ml-44">
-                <p class="mt-2 max-md:text-base text-lg leading-relaxed">今年は、重松清さんにご講演いただきます。</p>
-                <p class="mt-2 max-md:text-base text-lg leading-relaxed">ご自身も吃音症があり、『青い鳥』、『きよしこ』など、数々の吃音を題材にされた作品を描かれています。</p>
-              </div>
-            </div>
-  
-            <div class="m-plus-1p-regular">
-              <div class="flex items-baseline space-x-4">
-                <div class="font-semibold max-md:text-lg text-xl w-40 shrink-0">17:00〜19:30</div>
-                <div class="max-md:text-xl text-2xl font-medium">BBQ🍖</div>
-              </div>
-              <div class="ml-44">
-                <p class="mt-2 max-md:text-base text-lg leading-relaxed">緑に囲まれながら楽しくバーベキューしましょう！</p>
+              <div class="flex-1">
+                <div class="text-xl md:text-2xl font-bold md:font-medium mt-1 md:mt-0">グループトーク🗣️</div>
+                <div class="mt-2 text-base md:text-lg leading-relaxed">
+                  <p>少人数のグループに分かれて、吃音のことや趣味など楽しくお話ししましょう！</p>
+                  <p>上手く話す必要はありません。もちろん時間が掛かっても大丈夫。安心して参加して下さい。</p>
+                </div>
               </div>
             </div>
   
-            <div class="m-plus-1p-regular">
-              <div class="flex items-baseline space-x-4">
-                <div class="font-semibold max-md:text-lg text-xl w-40 shrink-0">19:30〜21:00</div>
-                <div class="max-md:text-xl text-2xl font-medium">花火🎆</div>
+            <div class="m-plus-1p-regular flex flex-col md:flex-row md:items-baseline">
+              <div class="font-semibold text-lg md:text-xl w-full md:w-40 shrink-0">
+                14:50〜15:55
               </div>
-              <div class="ml-44">
-                <p class="mt-2 max-md:text-base text-lg leading-relaxed">夏の風物詩、花火で、1日の最後を締めくくりましょう！</p>
+              <div class="flex-1">
+                <div class="text-xl md:text-2xl font-bold md:font-medium mt-1 md:mt-0">ご講演・対談（ゲスト：重松清さん）</div>
+                <div class="mt-2 text-base md:text-lg leading-relaxed">
+                  <p>今年は、重松清さんにご講演いただきます。</p>
+                  <p>ご自身も吃音症があり、『青い鳥』、『きよしこ』など、数々の吃音を題材にされた作品を描かれています。</p>
+                </div>
               </div>
             </div>
   
-            <div class="m-plus-1p-regular">
-              <div class="flex items-baseline space-x-4">
-                <div class="font-semibold max-md:text-lg text-xl w-40 shrink-0">〜23:00</div>
-                <div class="max-md:text-xl text-2xl font-medium">入浴・就寝</div>
+            <div class="m-plus-1p-regular flex flex-col md:flex-row md:items-baseline">
+              <div class="font-semibold text-lg md:text-xl w-full md:w-40 shrink-0">
+                17:00〜19:30
+              </div>
+              <div class="flex-1">
+                <div class="text-xl md:text-2xl font-bold md:font-medium mt-1 md:mt-0">BBQ🍖</div>
+                <div class="mt-2 text-base md:text-lg leading-relaxed">
+                  <p>緑に囲まれながら楽しくバーベキューしましょう！</p>
+                </div>
               </div>
             </div>
+  
+            <div class="m-plus-1p-regular flex flex-col md:flex-row md:items-baseline">
+              <div class="font-semibold text-lg md:text-xl w-full md:w-40 shrink-0">
+                19:30〜21:00
+              </div>
+              <div class="flex-1">
+                <div class="text-xl md:text-2xl font-bold md:font-medium mt-1 md:mt-0">花火🎆</div>
+                <div class="mt-2 text-base md:text-lg leading-relaxed">
+                  <p>夏の風物詩、花火で、1日の最後を締めくくりましょう！</p>
+                </div>
+              </div>
+            </div>
+  
+            <div class="m-plus-1p-regular flex flex-col md:flex-row md:items-baseline">
+              <div class="font-semibold text-lg md:text-xl w-full md:w-40 shrink-0">
+                〜23:00
+              </div>
+              <div class="flex-1">
+                <div class="text-xl md:text-2xl font-bold md:font-medium mt-1 md:mt-0">入浴・就寝</div>
+              </div>
+            </div>
+  
           </div>
         </div>
       </section>
   
       <section class="reveal">
         <div class="schedule-card">
-          <h1 class="font-bold dela-gothic-one-regular mx-auto text-3xl text-center mb-16" style="max-width: 900px;">
-            ー 2日目：7月19日(<span class="text-red-500">日</span>) ー
+          <h1 class="font-bold dela-gothic-one-regular mx-auto text-2xl md:text-3xl text-center mb-12 md:mb-16">
+            2日目：7月19日(<span class="text-red-500">日</span>)
           </h1>
   
-          <div class="space-y-12">
-            <div class="m-plus-1p-regular">
-              <div class="flex items-baseline space-x-4">
-                <div class="font-semibold max-md:text-lg text-xl w-40 shrink-0">7:45〜8:25</div>
-                <div class="max-md:text-xl text-2xl font-medium">朝食🍴</div>
+          <div class="space-y-10 md:space-y-12">
+            
+            <div class="m-plus-1p-regular flex flex-col md:flex-row md:items-baseline">
+              <div class="font-semibold text-lg md:text-xl w-full md:w-40 shrink-0">
+                7:45〜8:25
+              </div>
+              <div class="flex-1">
+                <div class="text-xl md:text-2xl font-bold md:font-medium mt-1 md:mt-0">朝食🍴</div>
               </div>
             </div>
   
-            <div class="m-plus-1p-regular">
-              <div class="flex items-baseline space-x-4">
-                <div class="font-semibold max-md:text-lg text-xl w-40 shrink-0">9:05〜10:40</div>
-                <div class="max-md:text-xl text-2xl font-medium">キーホルダー作り</div>
+            <div class="m-plus-1p-regular flex flex-col md:flex-row md:items-baseline">
+              <div class="font-semibold text-lg md:text-xl w-full md:w-40 shrink-0">
+                9:05〜10:40
               </div>
-              <div class="ml-44">
-                <p class="mt-2 max-md:text-base text-lg leading-relaxed">テーマに沿って、みんなでオリジナルのキーホルダーを作ります！</p>
-              </div>
-            </div>
-  
-            <div class="m-plus-1p-regular">
-              <div class="flex items-baseline space-x-4">
-                <div class="font-semibold max-md:text-lg text-xl w-40 shrink-0">10:50〜12:00</div>
-                <div class="max-md:text-xl text-2xl font-medium">クイズ大会🏅</div>
-              </div>
-              <div class="ml-44">
-                <p class="mt-2 max-md:text-base text-lg leading-relaxed">チーム対抗でクイズ大会をします！盛り上がること間違いなし！</p>
-                <p class="mt-2 max-md:text-base text-lg leading-relaxed">ポイントの高かったチームには豪華景品も？</p>
+              <div class="flex-1">
+                <div class="text-xl md:text-2xl font-bold md:font-medium mt-1 md:mt-0">キーホルダー作り</div>
+                <div class="mt-2 text-base md:text-lg leading-relaxed">
+                  <p>テーマに沿って、みんなでオリジナルのキーホルダーを作ります！</p>
+                </div>
               </div>
             </div>
   
-            <div class="m-plus-1p-regular">
-              <div class="flex items-baseline space-x-4">
-                <div class="font-semibold max-md:text-lg text-xl w-40 shrink-0">12:00〜12:20</div>
-                <div class="max-md:text-xl text-2xl font-medium">閉会式</div>
+            <div class="m-plus-1p-regular flex flex-col md:flex-row md:items-baseline">
+              <div class="font-semibold text-lg md:text-xl w-full md:w-40 shrink-0">
+                10:50〜12:00
               </div>
-              <div class="ml-44">
-                <p class="mt-2 max-md:text-base text-lg leading-relaxed">楽しかった2日間も、もう終わり。最後までみんなと同じときを過ごしましょう。</p>
+              <div class="flex-1">
+                <div class="text-xl md:text-2xl font-bold md:font-medium mt-1 md:mt-0">クイズ大会🏅</div>
+                <div class="mt-2 text-base md:text-lg leading-relaxed">
+                  <p>チーム対抗でクイズ大会をします！盛り上がること間違いなし！</p>
+                  <p>ポイントの高かったチームには豪華景品も？</p>
+                </div>
               </div>
             </div>
   
-            <div class="m-plus-1p-regular">
-              <div class="flex items-baseline space-x-4">
-                <div class="font-semibold max-md:text-lg text-xl w-40 shrink-0">13:00〜</div>
-                <div class="max-md:text-xl text-2xl font-medium">昼食（任意参加）</div>
+            <div class="m-plus-1p-regular flex flex-col md:flex-row md:items-baseline">
+              <div class="font-semibold text-lg md:text-xl w-full md:w-40 shrink-0">
+                12:00〜12:20
+              </div>
+              <div class="flex-1">
+                <div class="text-xl md:text-2xl font-bold md:font-medium mt-1 md:mt-0">閉会式</div>
+                <div class="mt-2 text-base md:text-lg leading-relaxed">
+                  <p>楽しかった2日間も、もう終わり。最後までみんなと同じときを過ごしましょう。</p>
+                </div>
               </div>
             </div>
+  
+            <div class="m-plus-1p-regular flex flex-col md:flex-row md:items-baseline">
+              <div class="font-semibold text-lg md:text-xl w-full md:w-40 shrink-0">
+                13:00〜
+              </div>
+              <div class="flex-1">
+                <div class="text-xl md:text-2xl font-bold md:font-medium mt-1 md:mt-0">昼食（任意参加）</div>
+              </div>
+            </div>
+  
           </div>
         </div>
       </section>
-    <div class="hidden md:flex flex-col space-y-8 absolute right-0 top-0 mr-16 z-[-1]">
-      <!-- 1枚目 -->
-      <div class="rounded-xl w-48 h-56 mt-[700px] overflow-hidden">
-        <img src="/images/Gs4BPAjaEAAd3sg.jpeg" alt="左の飾り1" 
-             class="w-full h-full object-cover object-center">
+    </div>
+  
+    <div class="hidden md:flex flex-col space-y-8 absolute right-0 top-0 mr-8 lg:mr-16 z-[-1]">
+      <div class="rounded-xl w-40 lg:w-48 h-56 mt-[700px] overflow-hidden border border-gray-100 shadow-sm">
+        <img src="/images/Gs4BPAjaEAAd3sg.jpeg" alt="飾り3" class="w-full h-full object-cover">
       </div>
-      <div style="height: 500px;" />
-      <div class="rounded-xl w-48 h-56 mt-[700px] overflow-hidden">
-        <img src="/images/GtFGjmobMAES3Ev.jpeg" alt="左の飾り1" 
-             class="w-full h-full object-cover object-center">
+      <div style="height: 500px;"></div>
+      <div class="rounded-xl w-40 lg:w-48 h-56 mt-[700px] overflow-hidden border border-gray-100 shadow-sm">
+        <img src="/images/GtFGjmobMAES3Ev.jpeg" alt="飾り4" class="w-full h-full object-cover">
       </div>
     </div>
-  </div>
+  
   </div>
 
   
 
-  <div class="max-md:h-[54px] md:h-[120px]"></div>
+  <div class="max-md:h-[34px] md:h-[120px]"></div>
   <div class="reveal">
     <div class="dela-gothic-one-regular max-w-md mx-auto text-center text-color" style="padding-bottom: 0rem;">
       <h2 class="typing heading-32" data-text="ファシリテーター紹介"></h2>
