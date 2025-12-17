@@ -1594,6 +1594,11 @@ html[data-theme="light"] .text-color {
   padding-bottom: 2px;
 }
 
+.py-10{
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
 .pb-1{
   padding-bottom: 0.25rem;
 }
@@ -1742,6 +1747,10 @@ html[data-theme="light"] .text-color {
 
 .leading-relaxed{
   line-height: 1.625;
+}
+
+.leading-\[\]{
+  line-height: ;
 }
 
 .leading-\[2rem\]{
@@ -5260,6 +5269,10 @@ article h2 {
     height: 0px;
   }
 
+  .max-md\:h-\[74px\]{
+    height: 74px;
+  }
+
   .max-md\:w-16{
     width: 4rem;
   }
@@ -5411,6 +5424,10 @@ article h2 {
 
   .md\:h-\[90px\]{
     height: 90px;
+  }
+
+  .md\:h-\[60px\]{
+    height: 60px;
   }
 
   .md\:w-16{
