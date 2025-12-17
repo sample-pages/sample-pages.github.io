@@ -8,7 +8,7 @@ import Layout from "../layouts/Layout2.astro";
     <!-- 背景画像 -->
     <div 
       class="absolute inset-0 bg-cover bg-center max-lg:scale-100"
-      style="background-image: url('/images/chukosei__.jpeg');"
+      style="background-image: url('/images/chukosei___.jpeg');"
     ></div>
   
     <!-- 中央に固定するラッパー -->
@@ -100,11 +100,11 @@ import Layout from "../layouts/Layout2.astro";
     吃音のある大学生や社会人が司会を行い、皆さんのそばでサポートします。
   </div>
   </div>
-  <div class="max-xl:h-[10px] xl:h-[30px]"></div>
-  <div class="resp-pc-f flex justify-center items-start relative">
+  <div class="max-xl:h-[36px] xl:h-[60px]"></div>
+  <div class="mx-6 flex justify-center items-start relative">
 
     <!-- 左側の画像群 -->
-    <div class="hidden md:flex flex-col space-y-8 absolute left-0 top-0 ml-28">
+    <div class="resp-pc-f hidden md:flex flex-col space-y-8 absolute left-0 top-0 ml-16">
       <!-- 1枚目 -->
       <div class="rounded-xl w-48 h-56 mt-64 overflow-hidden">
         <img src="/images/img5.jpeg" alt="左の飾り1" 
@@ -119,184 +119,133 @@ import Layout from "../layouts/Layout2.astro";
     
   
     <!-- 中央のプログラム本体 -->
-    <div class="max-w-2xl mx-auto z-10">
+    <div class="max-w-3xl mx-auto z-10">
   
-      <!-- 7月18日 -->
-      <section>
-        <div class="reveal">
-          <!--
-        <div class="text-center my-8">
-          <h2 class="zen-kaku-gothic-new max-xl:text-base xl:text-xl !font-bold inline-block px-6 py-3">
-            〜 1日目：7月18日(<span style="color: #4476ff;">土</span>) 〜
-          </h2>
-        </div>
-        -->
-        <div style="height: 64px;" />
-        <h1 class="font-bold m-plus-1p-regular mx-auto text-3xl text-center" style="max-width: 900px;">
-          ー 1日目：7月18日(<span class="text-blue-500">土</span>) ー
-        </h1>
-        <div style="height: 74px;" />
-        
-        <div class="space-y-8">
-      
-          <!-- 1つ目 -->
-          <div class="m-plus-1p-regular">
-            <div class="flex items-baseline space-x-4">
-              <div class="font-semibold text-xl w-40">13:00〜13:15</div>
-              <div class="text-2xl font-medium">開会式</div>
+      <section class="reveal">
+        <div class="schedule-card">
+          <h1 class="font-bold dela-gothic-one-regular mx-auto max-md:text-2xl text-3xl text-center mb-16" style="max-width: 900px;">
+            ー 1日目：7月18日(<span class="text-blue-500">土</span>) ー
+          </h1>
+  
+          <div class="space-y-12">
+            <div class="m-plus-1p-regular">
+              <div class="flex items-baseline space-x-4">
+                <div class="font-semibold max-md:text-lg text-xl w-40 shrink-0">13:00〜13:15</div>
+                <div class="max-md:text-xl text-2xl font-medium">開会式</div>
+              </div>
+              <div class="ml-44">
+                <p class="mt-2 max-md:text-base text-lg leading-relaxed">楽しい2日間のスタートです！</p>
+                <p class="mt-2 max-md:text-base text-lg leading-relaxed">実行委員長の挨拶や、うぃーすたのご紹介などを行います。</p>
+              </div>
             </div>
-            <p class="ml-44 mt-2 text-lg leading-relaxed">
-              楽しい2日間のスタートです！
-            </p>
-            <p class="ml-44 mt-2 text-lg leading-relaxed">
-              実行委員長の挨拶や、うぃーすたのご紹介などを行います。
-            </p>
-          </div>
-      
-          <!-- 2つ目 -->
-          <div class="m-plus-1p-regular">
-            <div class="flex items-baseline space-x-4">
-              <div class="font-semibold text-xl w-40">13:25〜14:40</div>
-              <div class="text-2xl font-medium">グループトーク🗣️</div>
+  
+            <div class="m-plus-1p-regular">
+              <div class="flex items-baseline space-x-4">
+                <div class="font-semibold max-md:text-lg text-xl w-40 shrink-0">13:25〜14:40</div>
+                <div class="max-md:text-xl text-2xl font-medium">グループトーク🗣️</div>
+              </div>
+              <div class="ml-44">
+                <p class="mt-2 max-md:text-base text-lg leading-relaxed">少人数のグループに分かれて、吃音のことや趣味など楽しくお話ししましょう！</p>
+                <p class="mt-2 max-md:text-base text-lg leading-relaxed">上手く話す必要はありません。もちろん時間が掛かっても大丈夫。安心して参加して下さい。</p>
+              </div>
             </div>
-            <p class="ml-44 mt-2 text-lg leading-relaxed">
-              少人数のグループに分かれて、吃音のことや趣味など楽しくお話ししましょう！
-            </p>
-            <p class="ml-44 mt-2 text-lg leading-relaxed">
-              上手く話す必要はありません。もちろん時間が掛かっても大丈夫。安心して参加して下さい。
-            </p>
-          </div>
-      
-          <!-- 3つ目 -->
-          <div class="m-plus-1p-regular">
-            <div class="flex items-baseline space-x-4">
-              <div class="font-semibold text-xl w-40">14:50〜15:55</div>
-              <div class="text-2xl font-medium">ご講演・対談（ゲスト：重松清さん）</div>
+  
+            <div class="m-plus-1p-regular">
+              <div class="flex items-baseline space-x-4">
+                <div class="font-semibold max-md:text-lg text-xl w-40 shrink-0">14:50〜15:55</div>
+                <div class="max-md:text-xl text-2xl font-medium">ご講演・対談（ゲスト：重松清さん）</div>
+              </div>
+              <div class="ml-44">
+                <p class="mt-2 max-md:text-base text-lg leading-relaxed">今年は、重松清さんにご講演いただきます。</p>
+                <p class="mt-2 max-md:text-base text-lg leading-relaxed">ご自身も吃音症があり、『青い鳥』、『きよしこ』など、数々の吃音を題材にされた作品を描かれています。</p>
+              </div>
             </div>
-            <p class="ml-44 mt-2 text-lg leading-relaxed">
-              今年は、重松清さんにご講演いただきます。
-            </p>
-            <p class="ml-44 mt-2 text-lg leading-relaxed">
-              ご自身も吃音症があり、『青い鳥』、『きよしこ』など、数々の吃音を題材にされた作品を描かれています。
-            </p>
-          </div>
-    
-          <div class="m-plus-1p-regular">
-            <div class="flex items-baseline space-x-4">
-              <div class="font-semibold text-xl w-40">17:00〜19:30</div>
-              <div class="text-2xl font-medium">BBQ🍖</div>
+  
+            <div class="m-plus-1p-regular">
+              <div class="flex items-baseline space-x-4">
+                <div class="font-semibold max-md:text-lg text-xl w-40 shrink-0">17:00〜19:30</div>
+                <div class="max-md:text-xl text-2xl font-medium">BBQ🍖</div>
+              </div>
+              <div class="ml-44">
+                <p class="mt-2 max-md:text-base text-lg leading-relaxed">緑に囲まれながら楽しくバーベキューしましょう！</p>
+              </div>
             </div>
-            <p class="ml-44 mt-2 text-lg leading-relaxed">
-              緑に囲まれながら楽しくバーベキューしましょう！
-            </p>
-          </div>
-    
-          <div class="m-plus-1p-regular">
-            <div class="flex items-baseline space-x-4">
-              <div class="font-semibold text-xl w-40">19:30〜21:00</div>
-              <div class="text-2xl font-medium">花火🎆</div>
+  
+            <div class="m-plus-1p-regular">
+              <div class="flex items-baseline space-x-4">
+                <div class="font-semibold max-md:text-lg text-xl w-40 shrink-0">19:30〜21:00</div>
+                <div class="max-md:text-xl text-2xl font-medium">花火🎆</div>
+              </div>
+              <div class="ml-44">
+                <p class="mt-2 max-md:text-base text-lg leading-relaxed">夏の風物詩、花火で、1日の最後を締めくくりましょう！</p>
+              </div>
             </div>
-            <p class="ml-44 mt-2 text-lg leading-relaxed">
-              夏の風物詩、花火で、1日の最後を締めくくりましょう！
-            </p>
-          </div>
-    
-          <div class="m-plus-1p-regular">
-            <div class="flex items-baseline space-x-4">
-              <div class="font-semibold text-xl w-40">〜23:00</div>
-              <div class="text-2xl font-medium">入浴・就寝</div>
+  
+            <div class="m-plus-1p-regular">
+              <div class="flex items-baseline space-x-4">
+                <div class="font-semibold max-md:text-lg text-xl w-40 shrink-0">〜23:00</div>
+                <div class="max-md:text-xl text-2xl font-medium">入浴・就寝</div>
+              </div>
             </div>
-            <p class="ml-44 mt-2 text-lg leading-relaxed">
-              
-            </p>
           </div>
-      
-        </div>
         </div>
       </section>
   
-      <div style="height: 30px;"></div>
+      <section class="reveal">
+        <div class="schedule-card">
+          <h1 class="font-bold dela-gothic-one-regular mx-auto text-3xl text-center mb-16" style="max-width: 900px;">
+            ー 2日目：7月19日(<span class="text-red-500">日</span>) ー
+          </h1>
   
-      <!-- 7月19日 -->
-      <section>
-        <div class="reveal">
-          <!--
-        <div class="text-center my-8">
-          <h2 class="zen-kaku-gothic-new text-xl !font-bold inline-block px-6 py-3">
-            〜 2日目：7月19日(<span style="color: #ff4444;">日</span>) 〜
-          </h2>
-        </div>
-        -->
-        
-        <div style="height: 70px;" />
-        <h1 class="font-bold m-plus-1p-regular mx-auto text-3xl text-center" style="max-width: 900px;">
-          ー 2日目：7月19日(<span class="text-red-500">日</span>) ー
-        </h1>
-        <div style="height: 74px;" />
-
-        <div class="space-y-8">
-      
-          <!-- 1つ目 -->
-          <div class="m-plus-1p-regular">
-            <div class="flex items-baseline space-x-4">
-              <div class="font-semibold text-xl w-40">7:45〜8:25</div>
-              <div class="text-2xl font-medium">朝食🍴
+          <div class="space-y-12">
+            <div class="m-plus-1p-regular">
+              <div class="flex items-baseline space-x-4">
+                <div class="font-semibold max-md:text-lg text-xl w-40 shrink-0">7:45〜8:25</div>
+                <div class="max-md:text-xl text-2xl font-medium">朝食🍴</div>
               </div>
             </div>
-            <p class="ml-44 mt-2 text-base leading-relaxed">
-              
-            </p>
-          </div>
-      
-          <!-- 2つ目 -->
-          <div class="m-plus-1p-regular">
-            <div class="flex items-baseline space-x-4">
-              <div class="font-semibold text-xl w-40">9:05〜10:40</div>
-              <div class="text-2xl font-medium">キーホルダー作り</div>
+  
+            <div class="m-plus-1p-regular">
+              <div class="flex items-baseline space-x-4">
+                <div class="font-semibold max-md:text-lg text-xl w-40 shrink-0">9:05〜10:40</div>
+                <div class="max-md:text-xl text-2xl font-medium">キーホルダー作り</div>
+              </div>
+              <div class="ml-44">
+                <p class="mt-2 max-md:text-base text-lg leading-relaxed">テーマに沿って、みんなでオリジナルのキーホルダーを作ります！</p>
+              </div>
             </div>
-            <p class="ml-44 mt-2 text-lg leading-relaxed">
-              テーマに沿って、みんなでオリジナルのキーホルダーを作ります！
-            </p>
-          </div>
-      
-          <!-- 3つ目 -->
-          <div class="m-plus-1p-regular">
-            <div class="flex items-baseline space-x-4">
-              <div class="font-semibold text-xl w-40">10:50〜12:00</div>
-              <div class="text-2xl font-medium">クイズ大会🏅</div>
+  
+            <div class="m-plus-1p-regular">
+              <div class="flex items-baseline space-x-4">
+                <div class="font-semibold max-md:text-lg text-xl w-40 shrink-0">10:50〜12:00</div>
+                <div class="max-md:text-xl text-2xl font-medium">クイズ大会🏅</div>
+              </div>
+              <div class="ml-44">
+                <p class="mt-2 max-md:text-base text-lg leading-relaxed">チーム対抗でクイズ大会をします！盛り上がること間違いなし！</p>
+                <p class="mt-2 max-md:text-base text-lg leading-relaxed">ポイントの高かったチームには豪華景品も？</p>
+              </div>
             </div>
-            <p class="ml-44 mt-2 text-lg leading-relaxed">
-              チーム対抗でクイズ大会をします！盛り上がること間違いなし！
-            </p>
-            <p class="ml-44 mt-2 text-lg leading-relaxed">
-              ポイントの高かったチームには豪華景品も？
-            </p>
-          </div>
-    
-          <div class="m-plus-1p-regular">
-            <div class="flex items-baseline space-x-4">
-              <div class="font-semibold text-xl w-40">12:00〜12:20</div>
-              <div class="text-2xl font-medium">閉会式</div>
+  
+            <div class="m-plus-1p-regular">
+              <div class="flex items-baseline space-x-4">
+                <div class="font-semibold max-md:text-lg text-xl w-40 shrink-0">12:00〜12:20</div>
+                <div class="max-md:text-xl text-2xl font-medium">閉会式</div>
+              </div>
+              <div class="ml-44">
+                <p class="mt-2 max-md:text-base text-lg leading-relaxed">楽しかった2日間も、もう終わり。最後までみんなと同じときを過ごしましょう。</p>
+              </div>
             </div>
-            <p class="ml-44 mt-2 text-lg leading-relaxed">
-              楽しかった2日間も、もう終わり。
-            </p>
-            <p class="ml-44 mt-2 text-lg leading-relaxed">
-              最後までみんなと同じときを過ごしましょう。
-            </p>
-          </div>
-
-          <div class="m-plus-1p-regular">
-            <div class="flex items-baseline space-x-4">
-              <div class="font-semibold text-xl w-40">13:00〜</div>
-              <div class="text-2xl font-medium">昼食（任意参加）</div>
+  
+            <div class="m-plus-1p-regular">
+              <div class="flex items-baseline space-x-4">
+                <div class="font-semibold max-md:text-lg text-xl w-40 shrink-0">13:00〜</div>
+                <div class="max-md:text-xl text-2xl font-medium">昼食（任意参加）</div>
+              </div>
             </div>
           </div>
-      
         </div>
-        </div>
-    </section>
-    <div class="hidden md:flex flex-col space-y-8 absolute right-0 top-0 mr-28">
+      </section>
+    <div class="hidden md:flex flex-col space-y-8 absolute right-0 top-0 mr-16 z-[-1]">
       <!-- 1枚目 -->
       <div class="rounded-xl w-48 h-56 mt-[700px] overflow-hidden">
         <img src="/images/Gs4BPAjaEAAd3sg.jpeg" alt="左の飾り1" 
@@ -311,182 +260,9 @@ import Layout from "../layouts/Layout2.astro";
   </div>
   </div>
 
-  <div class="resp-pc-h pl-6 pr-6">
-    <div class="reveal">
   
-    <!-- 7月18日 -->
-     <!-- 
-    <div class="text-center my-8">
-      <h2 class="zen-kaku-gothic-new max-xl:text-lg xl:text-xl !font-bold inline-block px-5 py-2">
-        〜 1日目：7月18日(<span style="color: #4476ff;">土</span>) 〜
-      </h2>
-    </div>
-    -->
 
-    <div style="height: 40px;" />
-    <h1 class="font-bold m-plus-1p-regular mx-auto text-2xl text-center" style="max-width: 900px;">
-      ー 1日目：7月18日(<span class="text-blue-500">土</span>) ー
-    </h1>
-    <div style="height: 40px;" />
-  
-    <!-- スケジュール全体（縦並び） -->
-    <div class="space-y-8">
-  
-      <!-- 1つ目 -->
-      <div class="m-plus-1p-regular">
-        <div class="font-semibold text-lg mb-1">13:00〜13:15</div>
-        <div class="max-xl:text-lg xl:text-xl font-medium">開会式</div>
-        <p class="mt-2 text-base leading-relaxed">
-          楽しい2日間のスタートです！
-        </p>
-        <p class="mt-2 text-base leading-relaxed">
-          実行委員長の挨拶や、うぃーすたのご紹介などを行います。
-        </p>
-      </div>
-  
-      <!-- 2つ目 -->
-      <div class="m-plus-1p-regular">
-        <div class="font-semibold text-lg mb-1">13:25〜14:40</div>
-        <div class="max-xl:text-lg xl:text-xl font-medium">グループトーク🗣️</div>
-        <p class="mt-2 text-base leading-relaxed">
-          少人数のグループに分かれて、吃音のことや趣味など楽しくお話ししましょう！
-        </p>
-        <p class="mt-2 text-base leading-relaxed">
-          上手く話す必要はありません。もちろん時間が掛かっても大丈夫。安心して参加して下さい。
-        </p>
-      </div>
-
-      <div class="px-2 md:px-20">
-        <img src="/images/img5.jpeg" class="rounded-xl w-full h-auto object-cover object-center shadow-sm">
-        <br>
-      </div>
-  
-      <!-- 3つ目 -->
-      <div class="m-plus-1p-regular">
-        <div class="font-semibold text-lg mb-1">14:50〜15:55</div>
-        <div class="max-xl:text-lg xl:text-xl font-medium">
-          ご講演・対談（ゲスト：重松清さん）
-        </div>
-        <p class="mt-2 text-base leading-relaxed">
-          今年は、重松清さんにご講演いただきます。
-        </p>
-        <p class="mt-2 text-base leading-relaxed">
-          ご自身も吃音症があり、『青い鳥』、『きよしこ』など、数々の吃音を題材にされた作品を描かれています。
-        </p>
-      </div>
-  
-      <!-- 4つ目 -->
-      <div class="m-plus-1p-regular">
-        <div class="font-semibold text-lg mb-1">17:00〜19:30</div>
-        <div class="max-xl:text-lg xl:text-xl font-medium">BBQ🍖</div>
-        <p class="mt-2 text-base leading-relaxed">
-          緑に囲まれながら楽しくバーベキューしましょう！
-        </p>
-      </div>
-  
-      <!-- 5つ目 -->
-      <div class="m-plus-1p-regular">
-        <div class="font-semibold text-lg mb-1">19:30〜21:00</div>
-        <div class="max-xl:text-lg xl:text-xl font-medium">花火🎆</div>
-        <p class="mt-2 text-base leading-relaxed">
-          夏の風物詩、花火で、1日の最後を締めくくりましょう！
-        </p>
-      </div>
-  
-      <!-- 6つ目 -->
-      <div class="m-plus-1p-regular">
-        <div class="font-semibold text-lg mb-1">〜23:00</div>
-        <div class="max-xl:text-lg xl:text-xl font-medium">入浴・就寝</div>
-        <p class="mt-2 text-base leading-relaxed"></p>
-      </div>
-  
-    </div>
-    </div>
-  
-    <!-- 間の余白 -->
-    <div style="height: 20px;"></div>
-  
-    <!-- 7月19日 -->
-    <section>
-      <div class="reveal">
-        <!-- 
-      <div class="text-center my-8">
-        <h2 class="zen-kaku-gothic-new max-xl:text-lg xl:text-xl !font-bold inline-block px-5 py-2">
-          〜 2日目：7月19日(<span style="color: #ff4444;">日</span>) 〜
-        </h2>
-      </div>
-      -->
-      <div style="height: 40px;" />
-      <h1 class="font-bold m-plus-1p-regular mx-auto text-2xl text-center" style="max-width: 900px;">
-        ー 2日目：7月19日(<span class="text-red-500">日</span>) ー
-      </h1>
-    <div style="height: 40px;" />
-
-      <div class="space-y-8">
-  
-        <!-- 1つ目 -->
-        <div class="m-plus-1p-regular">
-          <div class="font-semibold text-lg mb-1">7:45〜8:25</div>
-          <div class="max-xl:text-lg xl:text-xl font-medium">朝食🍴</div>
-          <p class="mt-2 text-base leading-relaxed"></p>
-        </div>
-  
-        <!-- 2つ目 -->
-        <div class="m-plus-1p-regular">
-          <div class="font-semibold text-lg mb-1">9:05〜10:40</div>
-          <div class="max-xl:text-lg xl:text-xl font-medium">キーホルダー作り</div>
-          <p class="mt-2 text-base leading-relaxed">
-            テーマに沿って、みんなでオリジナルのキーホルダーを作ります！
-          </p>
-        </div>
-  
-        <!-- 3つ目 -->
-        <div class="m-plus-1p-regular">
-          <div class="font-semibold text-lg mb-1">10:50〜12:00</div>
-          <div class="max-xl:text-lg xl:text-xl font-medium">クイズ大会🏅</div>
-          <p class="mt-2 text-base leading-relaxed">
-            チーム対抗でクイズ大会をします！盛り上がること間違いなし！
-          </p>
-          <p class="mt-2 text-base leading-relaxed">
-            ポイントの高かったチームには豪華景品も？
-          </p>
-        </div>
-
-        <div class="px-2 md:px-20">
-          <img src="/images/GtFGjmQbgAEuuD_.jpeg" class="rounded-xl w-full h-auto object-cover object-center shadow-sm">
-          <br>
-        </div>
-  
-        <!-- 4つ目 -->
-        <div class="m-plus-1p-regular">
-          <div class="font-semibold text-lg mb-1">12:00〜12:20</div>
-          <div class="max-xl:text-lg xl:text-xl font-medium">閉会式</div>
-          <p class="mt-2 text-base leading-relaxed">
-            楽しかった2日間も、もう終わり。
-          </p>
-          <p class="mt-2 text-base leading-relaxed">
-            最後までみんなと同じときを過ごしましょう。
-          </p>
-        </div>
-
-        <div class="m-plus-1p-regular">
-          <div class="font-semibold text-lg mb-1">13:00〜</div>
-          <div class="max-xl:text-lg xl:text-xl font-medium">昼食（任意参加）</div>
-        </div>
-
-        <div class="px-2 md:px-20">
-          <img src="/images/GtFGjmobMAES3Ev.jpeg" class="rounded-xl w-full h-auto object-cover object-center shadow-sm">
-          <br>
-        </div>
-  
-      </div>
-    </div>
-    </section>
-  </div>
-  
-  </div>
-
-  <div class="max-md:h-[64px] md:h-[120px]"></div>
+  <div class="max-md:h-[54px] md:h-[120px]"></div>
   <div class="reveal">
     <div class="dela-gothic-one-regular max-w-md mx-auto text-center text-color" style="padding-bottom: 0rem;">
       <h2 class="typing heading-32" data-text="ファシリテーター紹介"></h2>

@@ -2447,3 +2447,33 @@ article h2 {
 .button-wrapper {
   text-align: center;
 }
+
+/* 背景を白くし、角を丸く、かつ「角以外の直線部分」に縁を付ける設定 */
+.schedule-card {
+  background-color: #ffffff;
+  border-radius: 40px; /* 角丸の大きさ */
+  position: relative;
+  padding: 60px 40px;
+  margin-bottom: 50px;
+  /* 直線部分のみの境界線を表現するために、before/after擬似要素で線を引く手法 */
+}
+
+/* 上下の線（角を避けて配置） */
+.schedule-card::before {
+  content: "";
+  position: absolute;
+  top: 0; bottom: 0; left: 40px; right: 40px;
+  border-top: 2px solid #ffc926;
+  border-bottom: 2px solid #ffc926;
+  pointer-events: none;
+}
+
+/* 左右の線（角を避けて配置） */
+.schedule-card::after {
+  content: "";
+  position: absolute;
+  top: 40px; bottom: 40px; left: 0; right: 0;
+  border-left: 2px solid #ffc926;
+  border-right: 2px solid #ffc926;
+  pointer-events: none;
+}
