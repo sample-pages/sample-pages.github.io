@@ -5104,6 +5104,14 @@ article h2 {
     height: 0px;
   }
 
+  .max-xl\:h-\[px\]{
+    height: px;
+  }
+
+  .max-xl\:h-\[5px\]{
+    height: 5px;
+  }
+
   .max-xl\:text-base{
     font-size: 1rem;
     line-height: 1.5rem;
