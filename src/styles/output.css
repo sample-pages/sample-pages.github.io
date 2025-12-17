@@ -5688,6 +5688,10 @@ article h2 {
     height: 60px;
   }
 
+  .xl\:h-\[10px\]{
+    height: 10px;
+  }
+
   .xl\:w-48{
     width: 12rem;
   }
