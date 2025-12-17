@@ -1745,7 +1745,7 @@ html[data-theme="light"] .text-color {
 }
 
 .leading-\[\]{
-  line-height: ;
+  line-height: 0;
 }
 
 .leading-\[2rem\]{
