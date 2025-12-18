@@ -5281,6 +5281,10 @@ article h2 {
     height: 74px;
   }
 
+  .max-md\:h-\[70px\]{
+    height: 70px;
+  }
+
   .max-md\:w-16{
     width: 4rem;
   }
