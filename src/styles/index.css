@@ -2506,3 +2506,13 @@ article h2 {
   border-right: 2px solid #ffc926;
   pointer-events: none;
 }
+
+.caption {
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .caption {
+    font-size: 12px;
+  }
+}
