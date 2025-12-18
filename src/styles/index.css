@@ -206,7 +206,7 @@ body {
   left: 0;
   transform: translateY(-54%);
   width: 6px; /* 棒の太さ */
-  height: 60%; /* 文字の高さに合わせる */
+  height: 40%; /* 文字の高さに合わせる */
   
   /* 赤系のグラデーション (上から下へ) */
   background: linear-gradient(to bottom, #ffc9c4, #ff8686);
