@@ -1774,6 +1774,14 @@ html[data-theme="light"] .text-color {
   line-height: 2.5rem;
 }
 
+.text-\[42px\]{
+  font-size: 42px;
+}
+
+.text-\[48px\]{
+  font-size: 48px;
+}
+
 .font-bold{
   font-weight: 700;
 }
@@ -1885,6 +1893,10 @@ html[data-theme="light"] .text-color {
 .text-gray-400{
   --tw-text-opacity: 1;
   color: rgb(156 163 175 / var(--tw-text-opacity, 1));
+}
+
+.text-\[4\FF12px\]{
+  color: 4２px;
 }
 
 .underline{
