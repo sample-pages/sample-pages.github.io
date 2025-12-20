@@ -2539,7 +2539,7 @@ h1 {
 
 /* --- ここから新しいカードスタイル --- */
 .flip-card {
-  width: 160px;
+  width: 180px;
   /* 全体の高さは 140px + 隙間 2px = 142px 程度になります */
   display: flex;
   flex-direction: column;
@@ -2551,7 +2551,7 @@ h1 {
   position: relative;
   background: #d34040;
   width: 100%;
-  height: 70px; /* 全体の半分の高さ */
+  height: 90px; /* 全体の半分の高さ */
   overflow: hidden; /* はみ出した文字を隠す */
   box-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
@@ -2579,14 +2579,14 @@ h1 {
 /* 数字のスタイル */
 .number {
   font-family: 'Impact', 'Arial Black', sans-serif;
-  font-size: 5rem;
+  font-size: 5.5rem;
   font-weight: bold;
   color: #ffffff;
   position: absolute;
   left: 0;
   width: 100%;
   text-align: center;
-  line-height: 140px; /* 全体の高さに合わせる */
+  line-height: 180px; /* 全体の高さに合わせる */
 }
 
 /* 数字の位置調整 */
@@ -2601,7 +2601,7 @@ h1 {
 /* ラベル */
 .label {
   margin-top: 20px;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   color: #000000;
   font-weight: 700;
 }
@@ -2628,6 +2628,6 @@ h1 {
       line-height: 100px; /* スマホ時の全体の高さ */
   }
   /* 角丸の比率も少し調整 */
-  .top-half { border-radius: 6px 6px 1px 1px; }
-  .bottom-half { border-radius: 1px 1px 6px 6px; }
+  .top-half { border-radius: 8px 8px 4px 4px; }
+  .bottom-half { border-radius: 4px 4px 8px 8px; }
 }
