@@ -207,7 +207,7 @@ body {
 .midashi::before {
   content: "";
   position: absolute;
-  top: 45%;
+  top: 44%;
   left: 0;
   transform: translateY(-54%);
   width: 6px;
