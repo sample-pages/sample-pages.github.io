@@ -2513,6 +2513,15 @@ article h2 {
 
 .countdown-container {
   text-align: center;
+  background-color: #ffffff; /* 背景色：白 */
+  padding: 2rem 3rem;        /* 内側の余白：上下 左右 */
+  border-radius: 24px;       /* 角丸 */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* ふんわりとした影 */
+  border: 7px solid #ffd2d2; /* 縁取りの色と太さ */
+  /* 画面からはみ出ないように最大幅を設定 */
+  max-width: 42rem;
+  box-sizing: border-box;
+  margin: 10px auto;
 }
 
 h1 {
@@ -2520,7 +2529,7 @@ h1 {
   font-weight: 700;
   font-style: normal;
   font-size: 1.7rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   color: #000000;
   letter-spacing: 0em;
   text-transform: uppercase;
@@ -2528,98 +2537,106 @@ h1 {
 
 .timer-wrapper {
   display: flex;
-  gap: 15px; /* パネルごとの間隔 */
+  gap: 15px;
   justify-content: center;
 }
 
-/* 単位ごとのブロック */
 .time-unit {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* パネル（カード）のスタイル */
+/* --- ここから新しいカードスタイル --- */
 .flip-card {
-  position: relative;
-  background: #d34040;
-  width: 160px;  /* 幅 */
-  height: 140px; /* 高さ */
-  border-radius: 6px;
-  font-size: 5rem;
-  font-weight: bold;
-  line-height: 140px; /* 高さと同じにして垂直中央揃え */
-  color: #ffffff;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.5); /* 影 */
-  overflow: hidden; /* はみ出し防止 */
+  width: 160px;
+  /* 全体の高さは 140px + 隙間 2px = 142px 程度になります */
+  display: flex;
+  flex-direction: column;
+  gap: 2px; /* ★ここで物理的な隙間を作っています */
 }
 
-/* パネルの上半分に光沢感（グラデーション） */
-.flip-card::before {
+/* 上下の共通スタイル */
+.card-half {
+  position: relative;
+  background: #d34040;
+  width: 100%;
+  height: 70px; /* 全体の半分の高さ */
+  overflow: hidden; /* はみ出した文字を隠す */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+/* 上半分 */
+.top-half {
+  border-radius: 8px 8px 4px 4px; /* ★上だけ大きく丸める */
+}
+/* 上半分の光沢 */
+.top-half::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 50%;
-  background: linear-gradient(to bottom, rgba(255,255,255,0.05), rgba(255,255,255,0));
-  z-index: 1;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.1), rgba(255,255,255,0));
 }
 
-/* 真ん中の切れ込み線 */
-.flip-card::after {
-  content: "";
+/* 下半分 */
+.bottom-half {
+  border-radius: 4px 4px 8px 8px; /* ★下だけ大きく丸める */
+}
+
+/* 数字のスタイル */
+.number {
+  font-family: 'Impact', 'Arial Black', sans-serif;
+  font-size: 5rem;
+  font-weight: bold;
+  color: #ffffff;
   position: absolute;
-  top: 50%;
   left: 0;
   width: 100%;
-  height: 2px;
-  background: #fffafa; /* 線の色 */
-  box-shadow: 0 1px 0 rgba(255,255,255,0.1); /* 線の立体感 */
-  z-index: 2;
+  text-align: center;
+  line-height: 140px; /* 全体の高さに合わせる */
 }
 
-/* 数字自体のスタイル */
-.number {
-  position: relative;
-  z-index: 0;
-  font-family: 'Impact', 'Arial Black', sans-serif; /* 太いフォント */
+/* 数字の位置調整 */
+.top-half .number {
+  top: 0; /* 上辺に合わせる */
 }
 
-/* ラベル（DAYS, HOURS...） */
+.bottom-half .number {
+  bottom: 0; /* 下辺に合わせる（これで文字の下半分が表示される） */
+}
+
+/* ラベル */
 .label {
-  margin-top: 10px;
-  font-size: 1.7rem;
+  margin-top: 15px;
+  font-size: 1.5rem;
   color: #000000;
-  letter-spacing: 1px;
+  font-weight: 700;
 }
 
-/* スマホ対応 */
+/* --- スマホ対応 --- */
 @media (max-width: 768px) {
   h1 {
-    font-family: "Zen Kaku Gothic New", "Makinas-4-Flat", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-    color: #000000;
-    letter-spacing: 0em;
-    text-transform: uppercase;
+      font-size: 1.2rem;
   }
   .label {
-    margin-top: 10px;
-    font-size: 1.2rem;
-    color: #000000;
-    letter-spacing: 1px;
+      font-size: 1.2rem;
   }
   
   .flip-card {
       width: 100px;
-      height: 100px;
-      line-height: 100px;
+      gap: 1px;
+  }
+  .card-half {
+      height: 50px; /* 高さ100pxの半分 */
+  }
+  .number {
       font-size: 3rem;
+      line-height: 100px; /* スマホ時の全体の高さ */
   }
-  .timer-wrapper {
-      gap: 15px;
-  }
+  /* 角丸の比率も少し調整 */
+  .top-half { border-radius: 6px 6px 1px 1px; }
+  .bottom-half { border-radius: 1px 1px 6px 6px; }
 }
