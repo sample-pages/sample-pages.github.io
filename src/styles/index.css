@@ -193,33 +193,27 @@ body {
   font-size: 1.4rem;
   @apply max-lg:text-[18px];
 
-  /* --- 以下を追加 --- */
-  position: relative; /* 棒の位置の基準にする */
-  padding-left: 1rem; /* 棒と文字の間の余白 (お好みで調整) */
+  position: relative;
+  padding-left: 1rem;
+  
+  /* --- ★ここを追加（水平線） --- */
+  width: 100%;
+  padding-bottom: 10px; /* 線と文字の間の余白 */
+  border-bottom: 2px solid #ffb4b4; /* 線の色（薄いグレー）と太さ */
+  margin-bottom: 10px;
 }
 
-/* 縦棒の設定 */
+/* 縦棒の設定（変更なし） */
 .midashi::before {
   content: "";
   position: absolute;
   top: 50%;
   left: 0;
   transform: translateY(-54%);
-  width: 6px; /* 棒の太さ */
-  height: 40%; /* 文字の高さに合わせる */
-  
-  /* 赤系のグラデーション (上から下へ) */
+  width: 6px;
+  height: 40%;
   background: linear-gradient(to bottom, #ffc9c4, #ff8686);
-  
-  /* 角を少し丸くする場合（お好みで） */
   border-radius: 4px; 
-}
-
-.midashi2 {
-  font-family: "Zen Kaku Gothic New", sans-serif;
-  font-weight: 500;
-  font-size: 1.3rem;
-  @apply max-lg:text-[19px];
 }
 
 .index-midashi {
