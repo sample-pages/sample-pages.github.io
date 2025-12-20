@@ -5453,6 +5453,26 @@ article h2 {
     height: 2.5rem;
   }
 
+  .max-lg\:h-\[60px\]{
+    height: 60px;
+  }
+
+  .max-lg\:h-\[100px\]{
+    height: 100px;
+  }
+
+  .max-lg\:h-\[120px\]{
+    height: 120px;
+  }
+
+  .max-lg\:h-\[110px\]{
+    height: 110px;
+  }
+
+  .max-lg\:h-12{
+    height: 3rem;
+  }
+
   .max-lg\:w-24{
     width: 6rem;
   }
@@ -5475,6 +5495,22 @@ article h2 {
 
   .max-lg\:w-16{
     width: 4rem;
+  }
+
+  .max-lg\:w-\[60px\]{
+    width: 60px;
+  }
+
+  .max-lg\:w-\[100px\]{
+    width: 100px;
+  }
+
+  .max-lg\:w-\[120px\]{
+    width: 120px;
+  }
+
+  .max-lg\:w-\[110px\]{
+    width: 110px;
   }
 
   .max-lg\:scale-100{
@@ -5548,6 +5584,10 @@ article h2 {
   .max-lg\:text-sm{
     font-size: 0.875rem;
     line-height: 1.25rem;
+  }
+
+  .max-lg\:text-\[13px\]{
+    font-size: 13px;
   }
 
   .max-lg\:font-semibold{
