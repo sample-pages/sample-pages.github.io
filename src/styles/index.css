@@ -2510,3 +2510,116 @@ article h2 {
     font-size: 13px;
   }
 }
+
+.countdown-container {
+  text-align: center;
+}
+
+h1 {
+  font-family: "Zen Kaku Gothic New", "Makinas-4-Flat", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+  color: #000000;
+  letter-spacing: 0em;
+  text-transform: uppercase;
+}
+
+.timer-wrapper {
+  display: flex;
+  gap: 15px; /* パネルごとの間隔 */
+  justify-content: center;
+}
+
+/* 単位ごとのブロック */
+.time-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* パネル（カード）のスタイル */
+.flip-card {
+  position: relative;
+  background: #d34040;
+  width: 160px;  /* 幅 */
+  height: 140px; /* 高さ */
+  border-radius: 6px;
+  font-size: 5rem;
+  font-weight: bold;
+  line-height: 140px; /* 高さと同じにして垂直中央揃え */
+  color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5); /* 影 */
+  overflow: hidden; /* はみ出し防止 */
+}
+
+/* パネルの上半分に光沢感（グラデーション） */
+.flip-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.05), rgba(255,255,255,0));
+  z-index: 1;
+}
+
+/* 真ん中の切れ込み線 */
+.flip-card::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #fffafa; /* 線の色 */
+  box-shadow: 0 1px 0 rgba(255,255,255,0.1); /* 線の立体感 */
+  z-index: 2;
+}
+
+/* 数字自体のスタイル */
+.number {
+  position: relative;
+  z-index: 0;
+  font-family: 'Impact', 'Arial Black', sans-serif; /* 太いフォント */
+}
+
+/* ラベル（DAYS, HOURS...） */
+.label {
+  margin-top: 10px;
+  font-size: 1.7rem;
+  color: #000000;
+  letter-spacing: 1px;
+}
+
+/* スマホ対応 */
+@media (max-width: 768px) {
+  h1 {
+    font-family: "Zen Kaku Gothic New", "Makinas-4-Flat", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #000000;
+    letter-spacing: 0em;
+    text-transform: uppercase;
+  }
+  .label {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    color: #000000;
+    letter-spacing: 1px;
+  }
+  
+  .flip-card {
+      width: 140px;
+      height: 100px;
+      line-height: 100px;
+      font-size: 4rem;
+  }
+  .timer-wrapper {
+      gap: 15px;
+  }
+}

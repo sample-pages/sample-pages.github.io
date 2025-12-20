@@ -259,6 +259,33 @@ const tagColors: Record<string, string> = {
   
   </div>
   <div class="max-md:h-[15px] md:h-[41px]" />
+  <div class="countdown-container">
+    <h1 id="title">第8回うぃーすた全国交流会まで</h1>
+
+    <div id="timer" class="timer-wrapper">
+        <div class="time-unit">
+            <div class="flip-card">
+                <span id="days" class="number">00</span>
+            </div>
+            <span class="label zen-kaku-gothic-new">日</span>
+        </div>
+
+        <div class="time-unit">
+            <div class="flip-card">
+                <span id="hours" class="number">00</span>
+            </div>
+            <span class="label zen-kaku-gothic-new">時間</span>
+        </div>
+
+        <div class="time-unit">
+            <div class="flip-card">
+                <span id="minutes" class="number">00</span>
+            </div>
+            <span class="label zen-kaku-gothic-new">分</span>
+        </div>
+    </div>
+</div>
+<div class="max-md:h-[40px] md:h-[70px]" />
   <section class="bg-[#fae1e1]">
     <div class="margin-contents text-color zen-kaku-gothic-new" style="padding-bottom: 0rem;">
       <div class="max-md:h-[20px] md:h-[36px]" />
@@ -1587,4 +1614,54 @@ buttons.forEach(btn => {
     slider.scrollBy({ left: -amount, behavior: 'smooth' });
   });
 });
+</script>
+
+<script>
+  /* --- JavaScript (TypeScript対応版) --- */
+  
+  // ▼ 設定: 目標日時
+  const targetDateString = '2026-07-18 14:00:00'; 
+
+  function updateCountdown() {
+      const now = new Date().getTime();
+      const target = new Date(targetDateString).getTime();
+      
+      // 差分を計算（letで宣言して再代入可能にする）
+      let diff = target - now;
+
+      // 要素の取得
+      const timerElement = document.getElementById('timer');
+      const titleElement = document.getElementById('title');
+      
+      const daysEl = document.getElementById('days');
+      const hoursEl = document.getElementById('hours');
+      const minutesEl = document.getElementById('minutes');
+
+      // nullチェック (TypeScriptエラー回避用)
+      if (!timerElement || !titleElement || !daysEl || !hoursEl || !minutesEl) {
+          return;
+      }
+
+      // ★変更点: 時間切れの場合、非表示にせず diff を 0 に固定する
+      if (diff < 0) {
+          diff = 0;
+          // ここで文字色を変えたり、タイトルを変更することも可能です
+          // 例: titleElement.textContent = "イベント開催中";
+      }
+
+      // 計算 (diffが0なら、結果もすべて0になります)
+      const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+
+      // 表示の更新
+      daysEl.textContent = String(d).padStart(2, '0');
+      hoursEl.textContent = String(h).padStart(2, '0');
+      minutesEl.textContent = String(m).padStart(2, '0');
+  }
+
+  // 初期実行と定期実行
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+
 </script>
