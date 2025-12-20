@@ -3,7 +3,34 @@ import Layout from "../layouts/Layout2.astro";
 ---
 
 <Layout title="中高生交流会 - 第8回うぃーすた全国交流会" image="/images/chukosei_card.jpeg">
+  <div class="fixed inset-0 -z-10 h-full w-full bg-blue-50">
+    <div class="absolute h-full w-full bg-[linear-gradient(to_right,#3b82f615_1px,transparent_1px),linear-gradient(to_bottom,#3b82f615_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+    
+    <div class="absolute left-0 right-0 top-[-10%] h-[500px] w-[500px] rounded-full bg-blue-200 opacity-50 blur-[80px] animate-blob mix-blend-multiply filter"></div>
+    
+    <div class="absolute top-0 right-0 h-[500px] w-[500px] rounded-full bg-cyan-200 opacity-50 blur-[80px] animate-blob animation-delay-2000 mix-blend-multiply filter"></div>
+    
+    <div class="absolute -bottom-8 left-20 h-[500px] w-[500px] rounded-full bg-sky-200 opacity-50 blur-[80px] animate-blob animation-delay-4000 mix-blend-multiply filter"></div>
+</div>
   
+<style>
+    /* アニメーション定義（変更なし） */
+    @keyframes blob {
+      0% { transform: translate(0px, 0px) scale(1); }
+      33% { transform: translate(30px, -50px) scale(1.1); }
+      66% { transform: translate(-20px, 20px) scale(0.9); }
+      100% { transform: translate(0px, 0px) scale(1); }
+    }
+    .animate-blob {
+      animation: blob 7s infinite;
+    }
+    .animation-delay-2000 {
+      animation-delay: 2s;
+    }
+    .animation-delay-4000 {
+      animation-delay: 4s;
+    }
+</style>
   <div class="overflow-hidden relative border-b-[4px] border-blue-300 max-lg:h-[300px] lg:h-[500px] mt-[80px] w-full">
     <!-- 背景画像 -->
     <div 
@@ -56,11 +83,13 @@ import Layout from "../layouts/Layout2.astro";
       class="resp-pc-f w-40 h-auto max-md:w-20"
     />
   </div>
-  <div class="max-xl:h-[50px] xl:h-[120px]"></div>
+  <div class="max-xl:h-[50px] xl:h-[140px]"></div>
+  <!--
   <section class="bg-section">
   <div class="max-md:h-[100px] max-lg:h-[150px] md:h-[180px]"></div>
   </section>
   <section class="bg-[#bbe2ff]">
+-->
     <div class="dela-gothic-one-regular max-w-base mx-auto text-center text-color" style="padding-bottom: 0rem;">
       <h2 class="typing heading-32" data-text="中高生交流会とは？"></h2>
     </div>
@@ -86,8 +115,11 @@ import Layout from "../layouts/Layout2.astro";
       </p>
   </div>
   </div>
+  <div class="max-xl:h-[30px] xl:h-[50px]"></div>
+  <!--
   <div class="max-md:h-[60px] md:h-[120px]"></div>
   </section>
+-->
 
   <div class="max-md:h-[64px] md:h-[100px]"></div>
   <div class="dela-gothic-one-regular max-w-sm mx-auto text-center text-color" style="padding-bottom: 0rem;">
