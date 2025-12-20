@@ -5156,20 +5156,6 @@ article h2 {
 
 .countdown-container {
   text-align: center;
-  background-color: #ffffff;
-  /* 背景色：白 */
-  padding: 2rem 3rem;
-  /* 内側の余白：上下 左右 */
-  border-radius: 24px;
-  /* 角丸 */
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-  /* ふんわりとした影 */
-  border: 7px solid #ffd2d2;
-  /* 縁取りの色と太さ */
-  /* 画面からはみ出ないように最大幅を設定 */
-  max-width: 42rem;
-  box-sizing: border-box;
-  margin: 10px auto;
 }
 
 h1 {
@@ -5177,7 +5163,6 @@ h1 {
   font-weight: 700;
   font-style: normal;
   font-size: 1.7rem;
-  margin-bottom: 2rem;
   color: #000000;
   letter-spacing: 0em;
   text-transform: uppercase;
@@ -5275,7 +5260,7 @@ h1 {
 /* ラベル */
 
 .label {
-  margin-top: 15px;
+  margin-top: 20px;
   font-size: 1.5rem;
   color: #000000;
   font-weight: 700;
@@ -5289,6 +5274,7 @@ h1 {
   }
 
   .label {
+    margin-top: 14px;
     font-size: 1.2rem;
   }
 
@@ -5624,6 +5610,10 @@ h1 {
     height: 74px;
   }
 
+  .max-md\:h-\[16px\]{
+    height: 16px;
+  }
+
   .max-md\:w-16{
     width: 4rem;
   }
@@ -5727,6 +5717,10 @@ h1 {
 
   .md\:h-\[20px\]{
     height: 20px;
+  }
+
+  .md\:h-\[24px\]{
+    height: 24px;
   }
 
   .md\:h-\[25px\]{
