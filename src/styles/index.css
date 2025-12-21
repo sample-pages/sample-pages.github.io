@@ -2625,7 +2625,7 @@ h1 {
       height: 50px; /* 高さ100pxの半分 */
   }
   .number {
-      font-size: 3.5rem;
+      font-size: 3rem;
       line-height: 100px; /* スマホ時の全体の高さ */
   }
   /* 角丸の比率も少し調整 */
