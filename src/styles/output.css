@@ -1592,12 +1592,6 @@ html[data-theme="light"] .text-color {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
 
-.from-orange-300{
-  --tw-gradient-from: #fdba74 var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(253 186 116 / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
 .from-orange-400{
   --tw-gradient-from: #fb923c var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(251 146 60 / 0) var(--tw-gradient-to-position);
@@ -1610,38 +1604,12 @@ html[data-theme="light"] .text-color {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
-.from-red-400{
-  --tw-gradient-from: #f87171 var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(248 113 113 / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
-.from-red-300{
-  --tw-gradient-from: #fca5a5 var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(252 165 165 / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
-.from-orange-200{
-  --tw-gradient-from: #fed7aa var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(254 215 170 / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
 .to-pink-600{
   --tw-gradient-to: #db2777 var(--tw-gradient-to-position);
 }
 
-.to-red-400{
-  --tw-gradient-to: #f87171 var(--tw-gradient-to-position);
-}
-
 .to-red-500{
   --tw-gradient-to: #ef4444 var(--tw-gradient-to-position);
-}
-
-.to-red-600{
-  --tw-gradient-to: #dc2626 var(--tw-gradient-to-position);
 }
 
 .to-red-700{
@@ -5288,6 +5256,7 @@ h1 {
 /* ラベル */
 
 .label {
+  font-family: "Zen Kaku Gothic New", "Makinas-4-Flat", sans-serif;
   margin-top: 20px;
   font-size: 1.7rem;
   color: #000000;
@@ -6046,9 +6015,9 @@ h1 {
     padding-bottom: 0.5rem;
   }
 
-  .lg\:text-2xl{
-    font-size: 1.5rem;
-    line-height: 2rem;
+  .lg\:text-3xl{
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 
   .lg\:text-\[15px\]{
@@ -6080,11 +6049,6 @@ h1 {
   .lg\:text-xl{
     font-size: 1.25rem;
     line-height: 1.75rem;
-  }
-
-  .lg\:text-3xl{
-    font-size: 1.875rem;
-    line-height: 2.25rem;
   }
 }
 

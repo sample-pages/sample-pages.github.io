@@ -2601,6 +2601,7 @@ h1 {
 
 /* ラベル */
 .label {
+  font-family: "Zen Kaku Gothic New", "Makinas-4-Flat", sans-serif;
   margin-top: 20px;
   font-size: 1.7rem;
   color: #000000;
