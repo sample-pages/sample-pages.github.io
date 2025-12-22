@@ -1631,7 +1631,7 @@ article h2 {
 }
 
 .heading-32 {
-  color: #000000;
+
   font-size: 44px;
   display: inline-block;
   @apply max-xl:text-[30px];
