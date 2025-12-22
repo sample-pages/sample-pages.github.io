@@ -2380,7 +2380,7 @@ body {
 .midashi::before {
   content: "";
   position: absolute;
-  top: 40%;
+  top: 42%;
   left: 0;
   transform: translateY(-54%);
   width: 6px;
