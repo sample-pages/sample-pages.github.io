@@ -773,6 +773,14 @@ html[data-theme="light"] .text-color {
   top: -10%;
 }
 
+.-top-0{
+  top: -0px;
+}
+
+.-top-2{
+  top: -0.5rem;
+}
+
 .-z-10{
   z-index: -10;
 }
