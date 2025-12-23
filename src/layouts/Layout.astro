@@ -32,14 +32,6 @@ const image = frontmatter?.image || Astro.props.image || "/default-ogp.jpg";
 // (以前説明したURL設定)
 const ogImageURL = new URL(image, Astro.url);
 
-// global.d.ts またはファイルの上部
-export {}; // モジュールとして扱うために必要（ファイル内にimport/exportがない場合）
-
-declare global {
-  interface Window {
-    dataLayer: any[];
-  }
-}
 ---
 
 <!doctype html>
@@ -252,14 +244,14 @@ declare global {
       
   </head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-K72QWT4T66"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-K72QWT4T66');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K72QWT4T66" is:inline></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-K72QWT4T66');
+  </script>
   <body class="flex flex-col m-0">
     <Header />
     <main class="flex-grow min-h-0">
