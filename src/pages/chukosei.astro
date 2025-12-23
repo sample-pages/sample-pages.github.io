@@ -49,39 +49,57 @@ import Layout from "../layouts/Layout2.astro";
   </div>
   <div class="max-xl:h-[50px] xl:h-[100px]"></div>
   <div class="flex items-center justify-center gap-8 max-w-8xl mx-auto">
-
-    <!-- 左の画像 -->
+    <!-- 
     <img 
       src="/images/fire.png" 
       alt="左の飾り" 
       class="resp-pc-f w-40 h-auto max-md:w-20"
     />
+  -->
   
     <!-- 真ん中のテキストボックス -->
     <div class="pl-6 pr-6">
       <div class="resp-pc-f text-[48px] dela-gothic-one-regular font-bold chukosei_text mb-6">
-        思春期の困りごと、一緒に乗り越えよう！
+        <span class="bg-[linear-gradient(transparent_0%,#009dff_0%)] px-4">
+          思春期の困りごと、一緒に乗り越えよう！
+        </span>
       </div>
-      <div class="resp-pc-h text-[30px] mx-auto text-center font-medium dela-gothic-one-regular chukosei_text mb-6">
-        思春期の困りごと、<br>
-        一緒に乗り越えよう！
+      
+      <div class="resp-pc-h text-[30px] mx-auto font-medium dela-gothic-one-regular chukosei_text mb-6 flex flex-col items-center gap-0">
+        <span class="bg-[#009dff] px-4 leading-relaxed">
+          思春期の困りごと、
+        </span>
+        <span class="bg-[#009dff] px-4 leading-relaxed">
+          一緒に乗り越えよう！
+        </span>
       </div>
+      <div class="max-xl:h-[40px] xl:h-[40px]"></div>
       <div class="reveal">
-      <div class="text-center max-xl:text-base xl:text-xl m-plus-1p-regular leading-relaxed">
-        <br>
-        吃音のある人は約100人に1人。<br><br>
-        全国には吃音のある中高生がたくさんいます。<br><br>
-        お互いの経験を共有し、悩みや喜びを分かち合う仲間を見つけませんか？
-      </div>
+        <div class="text-center max-xl:text-base xl:text-xl m-plus-1p-regular leading-[3rem]">
+          <span class="bg-white/80 text-slate-800 px-4 py-1 rounded box-decoration-clone">
+            吃音のある人は約100人に1人。
+          </span>
+          <br><br>
+          
+          <span class="bg-white/80 text-slate-800 px-4 py-1 rounded box-decoration-clone">
+            全国には吃音のある中高生がたくさんいます。
+          </span>
+          <br><br>
+        
+          <span class="bg-white/80 text-slate-800 px-4 py-1 rounded box-decoration-clone">
+            お互いの経験を共有し、悩みや喜びを分かち合う<br class="md:hidden">仲間を見つけませんか？
+          </span>
+        </div>
       </div>
     </div>
   
-    <!-- 右の画像 -->
+    <!--
     <img 
       src="/images/heart.png" 
       alt="右の飾り" 
       class="resp-pc-f w-40 h-auto max-md:w-20"
     />
+  -->
   </div>
   <div class="max-xl:h-[80px] xl:h-[140px]"></div>
   <!--
@@ -90,9 +108,12 @@ import Layout from "../layouts/Layout2.astro";
   </section>
   <section class="bg-[#bbe2ff]">
 -->
-    <div class="dela-gothic-one-regular max-w-base mx-auto text-center text-color" style="padding-bottom: 0rem;">
-      <h2 class="typing heading-32" data-text="中高生交流会とは？"></h2>
-    </div>
+<div class="dela-gothic-one-regular max-w-base mx-auto text-center text-white" style="padding-bottom: 0rem;">
+  <h2 
+    class="typing heading-32 relative inline-block z-10 before:absolute before:inset-0 before:-inset-x-6 before:bg-black before:-skew-x-12 before:-z-10" 
+    data-text="中高生交流会とは？">
+  </h2>
+</div>
   <div class="max-xl:h-[30px] xl:h-[50px]"></div>
   <div class="reveal">
     <div class="bg-white rounded-3xl shadow-lg p-6 md:p-10 w-[90%] max-w-[1000px] mx-auto max-xl:text-base xl:text-xl m-plus-1p-regular leading-relaxed">
@@ -121,8 +142,11 @@ import Layout from "../layouts/Layout2.astro";
 -->
 
   <div class="max-md:h-[64px] md:h-[100px]"></div>
-  <div class="dela-gothic-one-regular max-w-sm mx-auto text-center text-color" style="padding-bottom: 0rem;">
-    <h2 class="typing heading-32" data-text="プログラム"></h2>
+  <div class="dela-gothic-one-regular max-w-base mx-auto text-center text-white" style="padding-bottom: 0rem;">
+    <h2 
+      class="typing heading-32 relative inline-block z-10 before:absolute before:inset-0 before:-inset-x-6 before:bg-black before:-skew-x-12 before:-z-10" 
+      data-text="プログラム">
+    </h2>
   </div>
   <div class="max-xl:h-[30px] xl:h-[60px]"></div>
   <div class="reveal">
@@ -131,7 +155,7 @@ import Layout from "../layouts/Layout2.astro";
     吃音のある大学生や社会人が司会を行い、皆さんのそばでサポートします。
   </div>
   </div>
-  <div class="max-xl:h-[5px] xl:h-[50px]"></div>
+  <div class="max-xl:h-[5px] xl:h-[30px]"></div>
   <div class="mx-6 flex justify-center items-start relative py-10">
 
     <div class="hidden min-[1400px]:flex flex-col space-y-8 absolute left-0 top-0 ml-8 lg:ml-12 xl:ml-16">
@@ -327,8 +351,11 @@ import Layout from "../layouts/Layout2.astro";
 
   <div class="max-md:h-[0px] md:h-[40px]"></div>
   <div class="reveal">
-    <div class="dela-gothic-one-regular max-w-md mx-auto text-center text-color" style="padding-bottom: 0rem;">
-      <h2 class="typing heading-32" data-text="ファシリテーター紹介"></h2>
+    <div class="dela-gothic-one-regular max-w-base mx-auto text-center text-white" style="padding-bottom: 0rem;">
+      <h2 
+        class="typing heading-32 relative inline-block z-10 before:absolute before:inset-0 before:-inset-x-6 before:bg-black before:-skew-x-12 before:-z-10" 
+        data-text="ファシリテーター紹介">
+      </h2>
     </div>
     <div class="max-md:h-[30px] md:h-[50px]"></div>
     <div class="text-center pl-6 pr-6 max-w-[800px] mx-auto max-xl:text-base xl:text-xl m-plus-1p-regular leading-relaxed">
@@ -388,9 +415,12 @@ import Layout from "../layouts/Layout2.astro";
   </div>
   <div class="max-md:h-[64px] md:h-[100px]"></div>
   <div class="reveal">
-  <div class="dela-gothic-one-regular max-w-sm mx-auto text-center text-color" style="padding-bottom: 0rem;">
-    <h2 class="typing heading-32" data-text="参加者の声"></h2>
-  </div>
+    <div class="dela-gothic-one-regular max-w-base mx-auto text-center text-white" style="padding-bottom: 0rem;">
+      <h2 
+        class="typing heading-32 relative inline-block z-10 before:absolute before:inset-0 before:-inset-x-6 before:bg-black before:-skew-x-12 before:-z-10" 
+        data-text="参加者の声">
+      </h2>
+    </div>
   </div>
   <div class="max-md:h-[30px] md:h-[50px]"></div>
   <div class="reveal">
@@ -419,9 +449,12 @@ import Layout from "../layouts/Layout2.astro";
 
   <div class="max-md:h-[74px] md:h-[100px]"></div>
   <div class="reveal">
-  <div class="dela-gothic-one-regular max-w-md mx-auto text-center text-color" style="padding-bottom: 0rem;">
-    <h2 class="typing heading-32" data-text="参加プラン"></h2>
-  </div>
+    <div class="dela-gothic-one-regular max-w-base mx-auto text-center text-white" style="padding-bottom: 0rem;">
+      <h2 
+        class="typing heading-32 relative inline-block z-10 before:absolute before:inset-0 before:-inset-x-6 before:bg-black before:-skew-x-12 before:-z-10" 
+        data-text="参加プラン">
+      </h2>
+    </div>
   </div>
   <div class="max-md:h-[30px] md:h-[50px]"></div>
   <div class="reveal">
@@ -440,9 +473,12 @@ import Layout from "../layouts/Layout2.astro";
 
   <div class="max-md:h-[64px] md:h-[100px]"></div>
   <div class="reveal">
-  <div class="dela-gothic-one-regular max-w-md mx-auto text-center text-color" style="padding-bottom: 0rem;">
-    <h2 class="typing heading-32" data-text="参加における注意事項"></h2>
-  </div>
+    <div class="dela-gothic-one-regular max-w-base mx-auto text-center text-white" style="padding-bottom: 0rem;">
+      <h2 
+        class="typing heading-32 relative inline-block z-10 before:absolute before:inset-0 before:-inset-x-6 before:bg-black before:-skew-x-12 before:-z-10" 
+        data-text="参加における注意事項">
+      </h2>
+    </div>
   </div>
   <div class="max-md:h-[30px] md:h-[50px]"></div>
   <div class="reveal">
