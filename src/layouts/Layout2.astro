@@ -53,18 +53,14 @@ const ogImageURL = new URL(image, Astro.url);
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
 
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YF4SGN2B86"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K72QWT4T66"></script>
 <script>
-  // windowをany型にキャストしてTypeScriptのチェックを回避
-(window as any).dataLayer = (window as any).dataLayer || [];
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-function gtag(...args: any[]) {
-  (window as any).dataLayer.push(args);
-}
-
-gtag('js', new Date());
-gtag('config', 'G-YF4SGN2B86');
+  gtag('config', 'G-K72QWT4T66');
 </script>
     
     <title>{title}</title>

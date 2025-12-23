@@ -2424,7 +2424,7 @@ article h2 {
   gap: 8px;                  /* ★追加: テキストと矢印の間隔 */
   
   padding: 14px 30px;
-  background: linear-gradient(90deg, #ff7a85, #ff9971);
+  background: linear-gradient(90deg, #ff5e6b, #ff8383);
   color: #fff;
   text-decoration: none;
   font-weight: bold;
