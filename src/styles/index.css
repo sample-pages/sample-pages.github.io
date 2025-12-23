@@ -2459,7 +2459,7 @@ article h2 {
 /* ホバーなどはそのまま */
 .btn-gradient2:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(95, 194, 255, 0.555);
+  box-shadow: 0 6px 20px rgba(255, 175, 95, 0.555);
 }
 
 .button-wrapper {
