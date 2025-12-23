@@ -31,6 +31,15 @@ const image = frontmatter?.image || Astro.props.image || "/default-ogp.jpg";
 
 // (以前説明したURL設定)
 const ogImageURL = new URL(image, Astro.url);
+
+// global.d.ts またはファイルの上部
+export {}; // モジュールとして扱うために必要（ファイル内にimport/exportがない場合）
+
+declare global {
+  interface Window {
+    dataLayer: any[];
+  }
+}
 ---
 
 <!doctype html>
@@ -52,17 +61,6 @@ const ogImageURL = new URL(image, Astro.url);
     <meta name="twitter:image" content={ogImageURL} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
-
-    <!-- Google tag (gtag.js) -->
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-K72QWT4T66"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-K72QWT4T66');
-</script>
     
     <title>{title}</title>
     <meta name="description" content="「第8回うぃーすた全国交流会」を2026年7月18日(土)〜19日(日)に大阪にて開催します！">
@@ -253,7 +251,15 @@ const ogImageURL = new URL(image, Astro.url);
       
       
   </head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K72QWT4T66"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-K72QWT4T66');
+</script>
   <body class="flex flex-col m-0">
     <Header />
     <main class="flex-grow min-h-0">
