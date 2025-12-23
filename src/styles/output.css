@@ -5857,6 +5857,10 @@ h1 {
     height: 74px;
   }
 
+  .max-md\:h-\[12px\]{
+    height: 12px;
+  }
+
   .max-md\:w-16{
     width: 4rem;
   }
@@ -6020,6 +6024,10 @@ h1 {
 
   .md\:h-\[90px\]{
     height: 90px;
+  }
+
+  .md\:h-\[38px\]{
+    height: 38px;
   }
 
   .md\:w-16{
