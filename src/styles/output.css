@@ -773,14 +773,6 @@ html[data-theme="light"] .text-color {
   top: -10%;
 }
 
-.-top-0{
-  top: -0px;
-}
-
-.-top-2{
-  top: -0.5rem;
-}
-
 .-z-10{
   z-index: -10;
 }
@@ -5276,12 +5268,12 @@ article h2 {
   gap: 8px;
   /* ★追加: テキストと矢印の間隔 */
   padding: 14px 30px;
-  background: linear-gradient(90deg, #ff9142, #ffc94a);
+  background: linear-gradient(90deg, #42a1ff, #4abdff);
   color: #fff;
   text-decoration: none;
   font-weight: bold;
   border-radius: 9999px;
-  box-shadow: 0 4px 15px rgba(255, 170, 95, 0.4);
+  box-shadow: 0 4px 15px rgba(95, 194, 255, 0.4);
   transition: transform 0.3s;
 }
 
@@ -5289,7 +5281,7 @@ article h2 {
 
 .btn-gradient2:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(255, 175, 95, 0.555);
+  box-shadow: 0 6px 20px rgba(95, 178, 255, 0.555);
 }
 
 .button-wrapper {
@@ -5529,35 +5521,6 @@ h1 {
   content: var(--tw-content);
   --tw-skew-x: -12deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.before\:bg-\[\#ffa600\]::before{
-  content: var(--tw-content);
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 166 0 / var(--tw-bg-opacity, 1));
-}
-
-.before\:bg-\[\#ffa\FF17 00\]::before{
-  content: var(--tw-content);
-  background-color: #ffa７00;
-}
-
-.before\:bg-\[\#ffa700\]::before{
-  content: var(--tw-content);
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 167 0 / var(--tw-bg-opacity, 1));
-}
-
-.before\:bg-\[\#ffa800\]::before{
-  content: var(--tw-content);
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 168 0 / var(--tw-bg-opacity, 1));
-}
-
-.before\:bg-\[\#ffa900\]::before{
-  content: var(--tw-content);
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 169 0 / var(--tw-bg-opacity, 1));
 }
 
 .before\:bg-\[\#ffa000\]::before{
@@ -5854,6 +5817,10 @@ h1 {
     height: 10px;
   }
 
+  .max-md\:h-\[12px\]{
+    height: 12px;
+  }
+
   .max-md\:h-\[15px\]{
     height: 15px;
   }
@@ -5892,10 +5859,6 @@ h1 {
 
   .max-md\:h-\[74px\]{
     height: 74px;
-  }
-
-  .max-md\:h-\[12px\]{
-    height: 12px;
   }
 
   .max-md\:w-16{
@@ -6027,16 +5990,16 @@ h1 {
     height: 36px;
   }
 
+  .md\:h-\[38px\]{
+    height: 38px;
+  }
+
   .md\:h-\[400px\]{
     height: 400px;
   }
 
   .md\:h-\[40px\]{
     height: 40px;
-  }
-
-  .md\:h-\[41px\]{
-    height: 41px;
   }
 
   .md\:h-\[46px\]{
@@ -6061,10 +6024,6 @@ h1 {
 
   .md\:h-\[90px\]{
     height: 90px;
-  }
-
-  .md\:h-\[38px\]{
-    height: 38px;
   }
 
   .md\:w-16{
