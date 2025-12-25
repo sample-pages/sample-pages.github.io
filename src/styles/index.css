@@ -299,7 +299,7 @@ body {
   
   /* 【通常時】の下線設定 */
   /* 例: #ccc (薄いグレー) の下線を常に表示 */
-  border-bottom: 2px solid #ccc;
+  border-bottom: 2px solid #ffcdcd;
   
   /* 色の変化を滑らかにする設定 */
   transition: border-color 0.2s ease-in-out;
@@ -308,7 +308,24 @@ body {
 .hover-color:hover {
   /* 【ホバー時】の下線の色 */
   /* 例: currentColor (現在の文字色) に変化 */
-  border-bottom-color: currentColor;
+  border-bottom-color: #eb6262;
+}
+
+.hover-color2 {
+  display: inline-block;
+  
+  /* 【通常時】の下線設定 */
+  /* 例: #ccc (薄いグレー) の下線を常に表示 */
+  border-bottom: 2px solid #c2ddff;
+  
+  /* 色の変化を滑らかにする設定 */
+  transition: border-color 0.2s ease-in-out;
+}
+
+.hover-color2:hover {
+  /* 【ホバー時】の下線の色 */
+  /* 例: currentColor (現在の文字色) に変化 */
+  border-bottom-color: #76b4ff;
 }
 
 

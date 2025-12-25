@@ -1585,19 +1585,14 @@ html[data-theme="light"] .text-color {
   border-color: rgb(239 68 68 / var(--tw-border-opacity, 1));
 }
 
-.border-white{
-  --tw-border-opacity: 1;
-  border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
-}
-
 .border-sky-300{
   --tw-border-opacity: 1;
   border-color: rgb(125 211 252 / var(--tw-border-opacity, 1));
 }
 
-.border-sky-200{
+.border-white{
   --tw-border-opacity: 1;
-  border-color: rgb(186 230 253 / var(--tw-border-opacity, 1));
+  border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
 }
 
 .bg-\[\#009dff\]{
@@ -2017,6 +2012,10 @@ html[data-theme="light"] .text-color {
   font-weight: 600;
 }
 
+.leading-\[2\.5rem\]{
+  line-height: 2.5rem;
+}
+
 .leading-\[3rem\]{
   line-height: 3rem;
 }
@@ -2035,14 +2034,6 @@ html[data-theme="light"] .text-color {
 
 .leading-tight{
   line-height: 1.25;
-}
-
-.leading-\[2rem\]{
-  line-height: 2rem;
-}
-
-.leading-\[2\.5rem\]{
-  line-height: 2.5rem;
 }
 
 .tracking-wide{
@@ -2604,7 +2595,7 @@ body {
   display: inline-block;
   /* 【通常時】の下線設定 */
   /* 例: #ccc (薄いグレー) の下線を常に表示 */
-  border-bottom: 2px solid #ccc;
+  border-bottom: 2px solid #ffcdcd;
   /* 色の変化を滑らかにする設定 */
   transition: border-color 0.2s ease-in-out;
 }
@@ -2612,7 +2603,22 @@ body {
 .hover-color:hover {
   /* 【ホバー時】の下線の色 */
   /* 例: currentColor (現在の文字色) に変化 */
-  border-bottom-color: currentColor;
+  border-bottom-color: #eb6262;
+}
+
+.hover-color2 {
+  display: inline-block;
+  /* 【通常時】の下線設定 */
+  /* 例: #ccc (薄いグレー) の下線を常に表示 */
+  border-bottom: 2px solid #c2ddff;
+  /* 色の変化を滑らかにする設定 */
+  transition: border-color 0.2s ease-in-out;
+}
+
+.hover-color2:hover {
+  /* 【ホバー時】の下線の色 */
+  /* 例: currentColor (現在の文字色) に変化 */
+  border-bottom-color: #76b4ff;
 }
 
 .tag-hover {
@@ -6383,10 +6389,6 @@ h1 {
 
   .xl\:h-\[60px\]{
     height: 60px;
-  }
-
-  .xl\:h-\[90px\]{
-    height: 90px;
   }
 
   .xl\:h-\[70px\]{
