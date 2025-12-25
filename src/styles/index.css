@@ -295,13 +295,20 @@ body {
 }
 
 .hover-color {
-  display: inline-block;           /* 文字幅に沿わせる */
-  border-bottom: 2px solid transparent; /* 初期は下線なし */
+  display: inline-block;
+  
+  /* 【通常時】の下線設定 */
+  /* 例: #ccc (薄いグレー) の下線を常に表示 */
+  border-bottom: 2px solid #ccc;
+  
+  /* 色の変化を滑らかにする設定 */
   transition: border-color 0.2s ease-in-out;
 }
 
 .hover-color:hover {
-  border-bottom-color: currentColor;  /* ホバーで文字色の下線 */
+  /* 【ホバー時】の下線の色 */
+  /* 例: currentColor (現在の文字色) に変化 */
+  border-bottom-color: currentColor;
 }
 
 
