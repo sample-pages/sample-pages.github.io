@@ -965,6 +965,22 @@ html[data-theme="light"] .text-color {
   margin-right: 0.75rem;
 }
 
+.ml-\[\]{
+  margin-left: ;
+}
+
+.ml-\[-1px\]{
+  margin-left: -1px;
+}
+
+.ml-\[-2px\]{
+  margin-left: -2px;
+}
+
+.ml-\[-5px\]{
+  margin-left: -5px;
+}
+
 .block{
   display: block;
 }
