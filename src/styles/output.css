@@ -689,6 +689,10 @@ html[data-theme="light"] .text-color {
   right: -1rem;
 }
 
+.-top-0\.5{
+  top: -0.125rem;
+}
+
 .-top-1{
   top: -0.25rem;
 }
@@ -773,14 +777,6 @@ html[data-theme="light"] .text-color {
   top: -10%;
 }
 
-.-top-0\.5{
-  top: -0.125rem;
-}
-
-.-top-1\/2{
-  top: -50%;
-}
-
 .-z-10{
   z-index: -10;
 }
@@ -857,6 +853,10 @@ html[data-theme="light"] .text-color {
 
 .mb-1{
   margin-bottom: 0.25rem;
+}
+
+.mb-10{
+  margin-bottom: 2.5rem;
 }
 
 .mb-12{
@@ -1515,6 +1515,11 @@ html[data-theme="light"] .text-color {
 
 .border-t-\[3px\]{
   border-top-width: 3px;
+}
+
+.border-\[\#ffc926\]{
+  --tw-border-opacity: 1;
+  border-color: rgb(255 201 38 / var(--tw-border-opacity, 1));
 }
 
 .border-black{
@@ -5276,12 +5281,12 @@ article h2 {
   gap: 8px;
   /* ★追加: テキストと矢印の間隔 */
   padding: 14px 30px;
-  background: linear-gradient(90deg, #42a1ff, #4abdff);
+  background: linear-gradient(90deg, #ff5e6b, #ff7b7b);
   color: #fff;
   text-decoration: none;
   font-weight: bold;
   border-radius: 9999px;
-  box-shadow: 0 4px 15px rgba(95, 194, 255, 0.4);
+  box-shadow: 0 4px 15px rgba(255, 95, 95, 0.4);
   transition: transform 0.3s;
 }
 
@@ -5289,7 +5294,7 @@ article h2 {
 
 .btn-gradient2:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(95, 178, 255, 0.555);
+  box-shadow: 0 6px 20px rgba(255, 95, 95, 0.555);
 }
 
 .button-wrapper {
@@ -5932,6 +5937,10 @@ h1 {
 
   .md\:mb-0{
     margin-bottom: 0px;
+  }
+
+  .md\:mb-14{
+    margin-bottom: 3.5rem;
   }
 
   .md\:mb-16{
