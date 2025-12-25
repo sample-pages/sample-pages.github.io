@@ -6278,6 +6278,10 @@ h1 {
     margin-top: 78px;
   }
 
+  .lg\:mr-3{
+    margin-right: 0.75rem;
+  }
+
   .lg\:h-16{
     height: 4rem;
   }
