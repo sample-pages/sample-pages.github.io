@@ -4357,6 +4357,7 @@ article h2 {
   color: rgb(0, 0, 0);
   background-color: rgb(255, 255, 255);
   border-radius: 1.25rem;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
 }
 
 .speach-balloons-square-rd::after {
@@ -4386,6 +4387,7 @@ article h2 {
   color: rgb(0, 0, 0);
   background-color: rgb(255, 255, 255);
   border-radius: 1.25rem;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
 }
 
 .speach-balloons-square-ld::after {
