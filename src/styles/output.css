@@ -1425,6 +1425,10 @@ html[data-theme="light"] .text-color {
   overflow: hidden;
 }
 
+.overflow-visible{
+  overflow: visible;
+}
+
 .overflow-x-auto{
   overflow-x: auto;
 }
