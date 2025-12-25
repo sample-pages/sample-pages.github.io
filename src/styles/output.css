@@ -4669,7 +4669,7 @@ article h2 {
   pointer-events: none;
   /* クリックを邪魔しない */
   /* --- 設定エリア --- */
-  --border-color: #00aeff;
+  --border-color: #008cff;
   /* 線の色 */
   --border-width: 3px;
   /* 線の太さ */

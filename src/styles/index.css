@@ -1940,7 +1940,7 @@ article h2 {
   pointer-events: none; /* クリックを邪魔しない */
 
   /* --- 設定エリア --- */
-  --border-color: #00aeff; /* 線の色 */
+  --border-color: #008cff; /* 線の色 */
   --border-width: 3px;  /* 線の太さ */
   --corner-len: 40px;   /* 角の長さ */
   --card-radius: 12px;  /* ★重要：親のprofile-itemと同じ数値を指定 */
