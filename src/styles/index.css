@@ -325,7 +325,7 @@ body {
 .hover-color2:hover {
   /* 【ホバー時】の下線の色 */
   /* 例: currentColor (現在の文字色) に変化 */
-  border-bottom-color: #76b4ff;
+  border-bottom-color: #5799ea;
 }
 
 
@@ -1316,7 +1316,7 @@ td:not(:last-child)::after {
 }
 
 .table_color {
-  background-color: #cb5757;
+  background-color: #e26161;
 }
 
 .toggle-button-4 {
