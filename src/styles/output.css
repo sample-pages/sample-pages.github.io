@@ -2027,6 +2027,14 @@ html[data-theme="light"] .text-color {
   line-height: 1.25;
 }
 
+.leading-\[2rem\]{
+  line-height: 2rem;
+}
+
+.leading-\[2\.5rem\]{
+  line-height: 2.5rem;
+}
+
 .tracking-wide{
   letter-spacing: 0.025em;
 }
