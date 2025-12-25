@@ -1605,9 +1605,9 @@ html[data-theme="light"] .text-color {
   background-color: rgb(187 226 255 / var(--tw-bg-opacity, 1));
 }
 
-.bg-\[\#cb5757\]{
+.bg-\[\#e26161\]{
   --tw-bg-opacity: 1;
-  background-color: rgb(203 87 87 / var(--tw-bg-opacity, 1));
+  background-color: rgb(226 97 97 / var(--tw-bg-opacity, 1));
 }
 
 .bg-\[\#fae1e1\]{
@@ -1687,11 +1687,6 @@ html[data-theme="light"] .text-color {
 .bg-yellow-300{
   --tw-bg-opacity: 1;
   background-color: rgb(253 224 71 / var(--tw-bg-opacity, 1));
-}
-
-.bg-\[\#e26161\]{
-  --tw-bg-opacity: 1;
-  background-color: rgb(226 97 97 / var(--tw-bg-opacity, 1));
 }
 
 .bg-opacity-50{
@@ -2615,7 +2610,7 @@ body {
   display: inline-block;
   /* 【通常時】の下線設定 */
   /* 例: #ccc (薄いグレー) の下線を常に表示 */
-  border-bottom: 2px solid #c2ddff;
+  border-bottom: 2px solid #d3d3d3;
   /* 色の変化を滑らかにする設定 */
   transition: border-color 0.2s ease-in-out;
 }
@@ -2623,7 +2618,7 @@ body {
 .hover-color2:hover {
   /* 【ホバー時】の下線の色 */
   /* 例: currentColor (現在の文字色) に変化 */
-  border-bottom-color: #5799ea;
+  border-bottom-color: #000000;
 }
 
 .tag-hover {
