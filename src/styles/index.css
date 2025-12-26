@@ -328,6 +328,23 @@ body {
   border-bottom-color: #000000;
 }
 
+.hover-color3 {
+  display: inline-block;
+  
+  /* 【通常時】の下線設定 */
+  /* 色を transparent (透明) に設定して見えなくします */
+  border-bottom: 2px solid transparent;
+  
+  /* 色の変化を滑らかにする設定 */
+  transition: border-color 0.2s ease-in-out;
+}
+
+.hover-color3:hover {
+  /* 【ホバー時】の下線の色 */
+  /* ここで本来表示したい色を指定します */
+  border-bottom-color: #000000;
+}
+
 
 .tag-hover {
   display: inline-block; /* inlineだとscaleが効かないので */
