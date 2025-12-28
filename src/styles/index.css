@@ -959,6 +959,10 @@ html {
   #fourth {
     scroll-margin-top: 135px; /* 上から80px下にスクロールさせる */
   }
+
+  #zadankai {
+    scroll-margin-top: 65px; /* 上から80px下にスクロールさせる */
+  }
   
 
   .topbar {

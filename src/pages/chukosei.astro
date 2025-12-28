@@ -31,22 +31,35 @@ import Layout from "../layouts/Layout2.astro";
       animation-delay: 4s;
     }
 </style>
-  <div class="overflow-hidden relative border-b-[4px] border-blue-300 max-lg:h-[300px] lg:h-[500px] mt-[80px] w-full">
-    <!-- 背景画像 -->
-    <div 
-      class="absolute inset-0 bg-cover bg-center max-lg:scale-100"
-      style="background-image: url('/images/chukosei____.jpeg');"
-    ></div>
-  
-    <!-- 中央に固定するラッパー -->
-    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-      <!-- <img 
-        src="/images/chukosei_wa.png"
-        alt="重ねる画像"
-        class="highres-img"
-      />-->
-    </div>
+<div class="overflow-hidden relative border-b-[4px] border-blue-300 max-lg:h-[300px] lg:h-[500px] mt-[80px] w-full">
+  <div 
+    class="absolute inset-0 bg-cover bg-center max-lg:scale-100"
+    style="background-image: url('/images/chukosei____.jpeg');"
+  ></div>
+
+  <div class="resp-pc-f absolute bottom-9 right-12 z-10 bg-white/90 pl-8 pr-8 pt-3 pb-4 shadow-lg flex flex-col items-center max-w-[300px]">
+      
+      <div class="absolute -top-1 -left-1 w-12 h-12 border-t-[3px] border-l-[3px] border-blue-500 pointer-events-none"></div>
+      <div class="absolute -top-1 -right-1 w-12 h-12 border-t-[3px] border-r-[3px] border-blue-500 pointer-events-none"></div>
+      <div class="absolute -bottom-1 -left-1 w-12 h-12 border-b-[3px] border-l-[3px] border-blue-500 pointer-events-none"></div>
+      <div class="absolute -bottom-1 -right-1 w-12 h-12 border-b-[3px] border-r-[3px] border-blue-500 pointer-events-none"></div>
+
+      <p class="dela-gothic-one-regular text-blue-500 text-3xl text-center leading-relaxed mt-1">
+        同時開催！
+    </p>
+
+      <p class="dela-gothic-one-regular text-blue-900 font-bold text-[36px] text-center leading-relaxed mb-4">
+          保護者座談会
+      </p>
+      
+      <a href="/chukosei/#zadankai" class="flex items-center gap-1 m-plus-1p-regular border border-black bg-white text-black text-xs font-bold py-2 px-6 hover:bg-black hover:text-white hover:shadow-md transition duration-200 mb-3">
+        詳しくはこちら
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+        </svg>
+    </a>
   </div>
+</div>
   <div class="max-xl:h-[50px] xl:h-[100px]"></div>
   <div class="flex items-center justify-center gap-8 max-w-8xl mx-auto">
     <!-- 
@@ -176,7 +189,7 @@ import Layout from "../layouts/Layout2.astro";
       <section class="reveal">
         <div class="schedule-card shadow-md">
           <h1 class="font-bold m-plus-1p-regular mx-auto text-2xl xl:text-3xl text-center mb-8 xl:mb-14">
-            1日目：7月18日(<span class="text-blue-500">土</span>)
+            〜 1日目：7月18日(<span class="text-blue-500">土</span>) 〜
           </h1>
   
           <div class="space-y-8 xl:space-y-12">
@@ -264,7 +277,7 @@ import Layout from "../layouts/Layout2.astro";
       <section class="reveal">
         <div class="schedule-card shadow-md">
           <h1 class="font-bold m-plus-1p-regular mx-auto text-2xl xl:text-3xl text-center mb-8 xl:mb-14">
-            2日目：7月19日(<span class="text-red-500">日</span>)
+            〜 2日目：7月19日(<span class="text-red-500">日</span>) 〜
           </h1>
   
           <div class="space-y-8 xl:space-y-12">
@@ -479,7 +492,45 @@ import Layout from "../layouts/Layout2.astro";
       </p>
   </div>
   </div>
-  
+  <div class="max-xl:h-[74px] xl:h-[100px]"></div>
+  <div class="reveal">
+    <div class="dela-gothic-one-regular max-w-base mx-auto text-center text-white" style="padding-bottom: 0rem;" id="zadankai">
+      <h2 
+        class="typing heading-32 relative inline-block z-10 before:absolute before:inset-0 before:-inset-x-4 before:bg-[#ffa000] before:-skew-x-12 before:-z-10" 
+        data-text="保護者の方へ">
+      </h2>
+    </div>
+  </div>
+  <div class="max-xl:h-[30px] xl:h-[50px]"></div>
+  <div class="reveal">
+    <div class="relative bg-white rounded-3xl shadow-lg p-6 xl:p-10 w-[90%] max-w-[800px] mx-auto max-xl:text-base xl:text-xl m-plus-1p-regular leading-relaxed">
+    
+      <span class="absolute top-0 left-0 w-14 h-14 border-t-[3px] border-l-[3px] border-gray-500 rounded-tl-3xl pointer-events-none"></span>
+      <span class="absolute top-0 right-0 w-14 h-14 border-t-[3px] border-r-[3px] border-gray-500 rounded-tr-3xl pointer-events-none"></span>
+      <span class="absolute bottom-0 left-0 w-14 h-14 border-b-[3px] border-l-[3px] border-gray-500 rounded-bl-3xl pointer-events-none"></span>
+      <span class="absolute bottom-0 right-0 w-14 h-14 border-b-[3px] border-r-[3px] border-gray-500 rounded-br-3xl pointer-events-none"></span>
+      <p class="mt-2 leading-[2.5rem]">
+        〈保護者座談会のお知らせ〉
+        </p>
+        <p class="mt-2 leading-[2.5rem]">
+        中高生交流会の開催に併せ、別室にて中高生の保護者の方を対象とした座談会を開催します。
+        <br>
+        お子さんが交流会を楽しんでいる間、保護者の方同士で気兼ねなくお話ししましょう。
+        </p>
+        <p class="mt-2 leading-[2.5rem]">
+        日時：1日目 7/18(土) 中高生交流会開始 ～ 17:00頃
+        <br>
+        場所：同会場内 別室
+        <br>
+        参加費：300円 / 1家庭（会場使用費として）
+        </p>
+        <p class="mt-2 leading-[2.5rem]">
+        ※事前申し込みは不要です。
+        <br>
+        ※時間内の出入りは自由ですので、ご都合に合わせてご参加ください。
+      </p>
+  </div>
+  </div>
 
   <div class="max-xl:h-[64px] xl:h-[100px]"></div>
   <div class="reveal">
@@ -507,7 +558,7 @@ import Layout from "../layouts/Layout2.astro";
       </p>
   </div>
   </div>
-  <div class="max-xl:h-[70px] xl:h-[70px]"></div>
+  <div class="max-xl:h-[90px] xl:h-[90px]"></div>
   <div class="m-plus-1p-regular lg:text-lg max-lg:text-base button-wrapper">
     <a href="/application/" class="btn-gradient2 flex items-center justify-center gap-2 whitespace-nowrap">
       <span>お申し込みはこちら</span>
