@@ -711,10 +711,6 @@ html[data-theme="light"] .text-color {
   top: -0.25rem;
 }
 
-.bottom-0{
-  bottom: 0px;
-}
-
 .bottom-10{
   bottom: 2.5rem;
 }
@@ -725,6 +721,10 @@ html[data-theme="light"] .text-color {
 
 .bottom-9{
   bottom: 2.25rem;
+}
+
+.bottom-\[-3px\]{
+  bottom: -3px;
 }
 
 .bottom-\[90\%\]{
@@ -755,6 +755,10 @@ html[data-theme="light"] .text-color {
   left: 0.75rem;
 }
 
+.left-\[-3px\]{
+  left: -3px;
+}
+
 .left-\[44\%\]{
   left: 44%;
 }
@@ -775,6 +779,10 @@ html[data-theme="light"] .text-color {
   right: 1.5rem;
 }
 
+.right-\[-3px\]{
+  right: -3px;
+}
+
 .top-0{
   top: 0px;
 }
@@ -793,6 +801,10 @@ html[data-theme="light"] .text-color {
 
 .top-\[-10\%\]{
   top: -10%;
+}
+
+.top-\[-3px\]{
+  top: -3px;
 }
 
 .-z-10{
@@ -863,6 +875,11 @@ html[data-theme="light"] .text-color {
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
+}
+
+.my-10{
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .mb-0{
@@ -1219,8 +1236,8 @@ html[data-theme="light"] .text-color {
   max-width: 1000px;
 }
 
-.max-w-\[260px\]{
-  max-width: 260px;
+.max-w-\[300px\]{
+  max-width: 300px;
 }
 
 .max-w-\[64rem\]{
@@ -1241,10 +1258,6 @@ html[data-theme="light"] .text-color {
 
 .max-w-sm{
   max-width: 24rem;
-}
-
-.max-w-\[300px\]{
-  max-width: 300px;
 }
 
 .flex-1{
@@ -1489,6 +1502,10 @@ html[data-theme="light"] .text-color {
   border-radius: 0.75rem;
 }
 
+.rounded-\[50px\]{
+  border-radius: 50px;
+}
+
 .rounded-bl-3xl{
   border-bottom-left-radius: 1.5rem;
 }
@@ -1503,6 +1520,26 @@ html[data-theme="light"] .text-color {
 
 .rounded-tr-3xl{
   border-top-right-radius: 1.5rem;
+}
+
+.rounded-tl-\[s\]{
+  border-top-left-radius: s;
+}
+
+.rounded-tl-\[30px\]{
+  border-top-left-radius: 30px;
+}
+
+.rounded-tr-\[30px\]{
+  border-top-right-radius: 30px;
+}
+
+.rounded-bl-\[30px\]{
+  border-bottom-left-radius: 30px;
+}
+
+.rounded-br-\[30px\]{
+  border-bottom-right-radius: 30px;
 }
 
 .border{
@@ -1551,6 +1588,11 @@ html[data-theme="light"] .text-color {
 
 .border-t-\[3px\]{
   border-top-width: 3px;
+}
+
+.border-\[\#ffc926\]{
+  --tw-border-opacity: 1;
+  border-color: rgb(255 201 38 / var(--tw-border-opacity, 1));
 }
 
 .border-black{
@@ -1611,11 +1653,6 @@ html[data-theme="light"] .text-color {
 .border-red-500{
   --tw-border-opacity: 1;
   border-color: rgb(239 68 68 / var(--tw-border-opacity, 1));
-}
-
-.border-sky-300{
-  --tw-border-opacity: 1;
-  border-color: rgb(125 211 252 / var(--tw-border-opacity, 1));
 }
 
 .border-white{
@@ -1999,6 +2036,10 @@ html[data-theme="light"] .text-color {
   font-size: 32px;
 }
 
+.text-\[36px\]{
+  font-size: 36px;
+}
+
 .text-\[48px\]{
   font-size: 48px;
 }
@@ -2030,22 +2071,6 @@ html[data-theme="light"] .text-color {
 .text-xs{
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.text-\[60px\]{
-  font-size: 60px;
-}
-
-.text-\[40px\]{
-  font-size: 40px;
-}
-
-.text-\[36px\]{
-  font-size: 36px;
-}
-
-.text-\[34px\]{
-  font-size: 34px;
 }
 
 .font-black{
@@ -2208,10 +2233,6 @@ html[data-theme="light"] .text-color {
 .text-yellow-100{
   --tw-text-opacity: 1;
   color: rgb(254 249 195 / var(--tw-text-opacity, 1));
-}
-
-.text-\[\]{
-  color: ;
 }
 
 .opacity-0{
@@ -3550,7 +3571,42 @@ html {
   /* 上から80px下にスクロールさせる */
 }
 
-#zadankai {
+#chuabout {
+  scroll-margin-top: 150px;
+  /* 上から80px下にスクロールさせる */
+}
+
+#chuprogram {
+  scroll-margin-top: 130px;
+  /* 上から80px下にスクロールさせる */
+}
+
+#chufacili {
+  scroll-margin-top: 130px;
+  /* 上から80px下にスクロールさせる */
+}
+
+#chuop {
+  scroll-margin-top: 130px;
+  /* 上から80px下にスクロールさせる */
+}
+
+#chuplan {
+  scroll-margin-top: 110px;
+  /* 上から80px下にスクロールさせる */
+}
+
+#chuat {
+  scroll-margin-top: 120px;
+  /* 上から80px下にスクロールさせる */
+}
+
+#chuzadan {
+  scroll-margin-top: 120px;
+  /* 上から80px下にスクロールさせる */
+}
+
+#zadan {
   scroll-margin-top: 65px;
   /* 上から80px下にスクロールさせる */
 }
@@ -4737,7 +4793,7 @@ article h2 {
 
 .profile-item{
   background: #ffffff;
-  border-radius: 40px;
+  border-radius: 30px;
   padding: 1.6rem 1.2rem;
   text-align: center;
   box-shadow: 0 4px 14px rgba(0,0,0,0.08);
@@ -4783,50 +4839,45 @@ article h2 {
 .profile-item {
   position: relative;
   /* 必須 */
-  /* カード自体の角丸設定（もし設定していなければここで指定） */
-  border-radius: 12px;
 }
 
 .profile-item::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  /* --- 変更箇所: 線の太さ分だけ外側に広げる --- */
+  top: calc(var(--border-width) * -1);
+  left: calc(var(--border-width) * -1);
+  right: calc(var(--border-width) * -1);
+  bottom: calc(var(--border-width) * -1);
+  /* ----------------------------------------- */
   pointer-events: none;
-  /* クリックを邪魔しない */
   /* --- 設定エリア --- */
   --border-color: #008cff;
-  /* 線の色 */
   --border-width: 3px;
-  /* 線の太さ */
-  --corner-len: 40px;
-  /* 角の長さ */
-  --card-radius: 12px;
-  /* ★重要：親のprofile-itemと同じ数値を指定 */
-  /* 角丸のボーダーを全体に描く */
+  --corner-len: 60px;
+  --card-radius: 30px;
   border: var(--border-width) solid var(--border-color);
+  /* 補足: 外側に出す場合、角丸の半径も少し大きくした方が自然な場合が多いですが、
+     ピッタリくっつけるだけならそのままでも大丈夫です。
+     もし隙間が気になる場合は以下のように修正してください:
+     border-radius: calc(var(--card-radius) + var(--border-width)); 
+  */
   border-radius: var(--card-radius);
-  /* マスク機能を使って「四隅以外」を見えなくする */
+  /* マスク機能（変更なし） */
   -webkit-mask-image: 
-    linear-gradient(#fff 0 0), /* 左上用 */
-    linear-gradient(#fff 0 0), /* 右上用 */
-    linear-gradient(#fff 0 0), /* 右下用 */
+    linear-gradient(#fff 0 0),
+    linear-gradient(#fff 0 0),
+    linear-gradient(#fff 0 0),
     linear-gradient(#fff 0 0);
-  /* 左下用 */
   mask-image: 
     linear-gradient(#fff 0 0),
     linear-gradient(#fff 0 0),
     linear-gradient(#fff 0 0),
     linear-gradient(#fff 0 0);
-  /* マスクのサイズ（角の長さ） */
   -webkit-mask-size: var(--corner-len) var(--corner-len);
   mask-size: var(--corner-len) var(--corner-len);
-  /* マスクの配置（四隅に置く） */
   -webkit-mask-position: top left, top right, bottom right, bottom left;
   mask-position: top left, top right, bottom right, bottom left;
-  /* 繰り返しを防ぐ */
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
 }
@@ -5451,31 +5502,35 @@ article h2 {
   }
 }
 
-/* 上下の線（角を避けて配置） */
+/* 上下の線（外側に配置） */
 
 .schedule-card::before {
   content: "";
   position: absolute;
-  top: 0;
-  bottom: 0;
+  /* 0 → -10px に変更して外側へ */
+  top: -3px;
+  bottom: -3px;
+  /* 線の長さ（角の空き具合）はここで調整 */
   left: 40px;
   right: 40px;
-  border-top: 2px solid #ffc926;
-  border-bottom: 2px solid #ffc926;
+  border-top: 3px solid #ffc926;
+  border-bottom: 3px solid #ffc926;
   pointer-events: none;
 }
 
-/* 左右の線（角を避けて配置） */
+/* 左右の線（外側に配置） */
 
 .schedule-card::after {
   content: "";
   position: absolute;
+  /* 0 → -10px に変更して外側へ */
+  left: -3px;
+  right: -3px;
+  /* 線の長さ（角の空き具合）はここで調整 */
   top: 40px;
   bottom: 40px;
-  left: 0;
-  right: 0;
-  border-left: 2px solid #ffc926;
-  border-right: 2px solid #ffc926;
+  border-left: 3px solid #ffc926;
+  border-right: 3px solid #ffc926;
   pointer-events: none;
 }
 
