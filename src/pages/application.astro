@@ -39,7 +39,9 @@ import Layout from "../layouts/Layout.astro";
         <div style="height: 10px;"></div>
         <p class="text-sm blog-width lg:text-[17px]"
           style="letter-spacing: .025em; line-height: 2.05;">
-        ※社会人・学生プランの各種プランには食事（BBQ）代も含まれますが、お飲み物の料金は含まれておりません。
+        ※社会人・学生プランの各種プランには食事（BBQ）代も含まれますが、<span class="font-bold bg-yellow-300">お飲み物の料金は含まれておりません。</span>
+        <br>
+        <span class="font-bold bg-yellow-300">1日目BBQでのお飲み物に関する詳細は<a class="hover-color" href="/attention/#alcohol">こちら</a>をご確認ください。</span>
         <br>
         ※プランC、プランDは社会人・学生・中高生一律の料金となります。
         <br>
@@ -353,13 +355,17 @@ import Layout from "../layouts/Layout.astro";
     <div style="height: 50px;"></div>
     
     <div class="lg:text-lg max-lg:text-base button-wrapper">
-      <a href="" class="btn-gradient flex items-center justify-center gap-2 whitespace-nowrap">
+      <a class="btn-gradient3 flex items-center justify-center gap-2 whitespace-nowrap">
         <span>お申し込みフォーム</span>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
           <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
         </svg>
       </a>
     </div>
+    <p class="mt-4 text-center text-red-500 text-sm blog-width lg:text-[17px]"
+                  style="letter-spacing: .025em; line-height: 2.05;">
+                  ※お申し込み期間外です。
+                </p>
     <div style="height: 100px;"></div>
     </div>
     

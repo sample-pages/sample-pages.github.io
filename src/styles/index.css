@@ -993,6 +993,12 @@ html {
     scroll-margin-top: 65px; /* 上から80px下にスクロールさせる */
   }
 
+  #alcohol {
+    scroll-margin-top: 115px; /* 上から80px下にスクロールさせる */
+  }
+
+
+
   .topbar {
     opacity: 0;
     transform: translateY(-20px);
@@ -2549,6 +2555,23 @@ article h2 {
 .btn-gradient2:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(95, 178, 255, 0.555);
+}
+
+.btn-gradient3 {
+  /* display: inline-block; ← これを削除またはコメントアウト */
+  display: inline-flex;      /* ★変更: 子要素を横並びにする */
+  align-items: center;       /* ★追加: 垂直方向の中央揃え */
+  justify-content: center;   /* ★追加: 水平方向の中央揃え */
+  gap: 8px;                  /* ★追加: テキストと矢印の間隔 */
+  
+  padding: 14px 30px;
+  background: #a5a5a5;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 9999px;
+  box-shadow: 0 4px 15px rgba(104, 104, 104, 0.4);
+  transition: transform 0.3s;
 }
 
 .button-wrapper {

@@ -877,11 +877,6 @@ html[data-theme="light"] .text-color {
   margin-right: auto;
 }
 
-.my-10{
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
-}
-
 .mb-0{
   margin-bottom: 0px;
 }
@@ -996,6 +991,10 @@ html[data-theme="light"] .text-color {
 
 .mt-\[80px\]{
   margin-top: 80px;
+}
+
+.mt-4{
+  margin-top: 1rem;
 }
 
 .block{
@@ -1502,28 +1501,12 @@ html[data-theme="light"] .text-color {
   border-radius: 0.75rem;
 }
 
-.rounded-\[50px\]{
-  border-radius: 50px;
+.rounded-bl-\[30px\]{
+  border-bottom-left-radius: 30px;
 }
 
-.rounded-bl-3xl{
-  border-bottom-left-radius: 1.5rem;
-}
-
-.rounded-br-3xl{
-  border-bottom-right-radius: 1.5rem;
-}
-
-.rounded-tl-3xl{
-  border-top-left-radius: 1.5rem;
-}
-
-.rounded-tr-3xl{
-  border-top-right-radius: 1.5rem;
-}
-
-.rounded-tl-\[s\]{
-  border-top-left-radius: s;
+.rounded-br-\[30px\]{
+  border-bottom-right-radius: 30px;
 }
 
 .rounded-tl-\[30px\]{
@@ -1532,14 +1515,6 @@ html[data-theme="light"] .text-color {
 
 .rounded-tr-\[30px\]{
   border-top-right-radius: 30px;
-}
-
-.rounded-bl-\[30px\]{
-  border-bottom-left-radius: 30px;
-}
-
-.rounded-br-\[30px\]{
-  border-bottom-right-radius: 30px;
 }
 
 .border{
@@ -1912,6 +1887,11 @@ html[data-theme="light"] .text-color {
 .py-2\.5{
   padding-top: 0.625rem;
   padding-bottom: 0.625rem;
+}
+
+.py-3{
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 
 .py-6{
@@ -3608,6 +3588,11 @@ html {
 
 #zadan {
   scroll-margin-top: 65px;
+  /* 上から80px下にスクロールさせる */
+}
+
+#alcohol {
+  scroll-margin-top: 115px;
   /* 上から80px下にスクロールさせる */
 }
 
@@ -5480,6 +5465,26 @@ article h2 {
   box-shadow: 0 6px 20px rgba(95, 178, 255, 0.555);
 }
 
+.btn-gradient3 {
+  /* display: inline-block; ← これを削除またはコメントアウト */
+  display: inline-flex;
+  /* ★変更: 子要素を横並びにする */
+  align-items: center;
+  /* ★追加: 垂直方向の中央揃え */
+  justify-content: center;
+  /* ★追加: 水平方向の中央揃え */
+  gap: 8px;
+  /* ★追加: テキストと矢印の間隔 */
+  padding: 14px 30px;
+  background: #a5a5a5;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 9999px;
+  box-shadow: 0 4px 15px rgba(104, 104, 104, 0.4);
+  transition: transform 0.3s;
+}
+
 .button-wrapper {
   text-align: center;
 }
@@ -5746,11 +5751,6 @@ h1 {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.hover\:bg-black:hover{
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
-}
-
 .hover\:bg-orange-500:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(249 115 22 / var(--tw-bg-opacity, 1));
@@ -5769,6 +5769,11 @@ h1 {
 .hover\:bg-red-800:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(153 27 27 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:bg-yellow-300:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(253 224 71 / var(--tw-bg-opacity, 1));
 }
 
 .hover\:text-black:hover{
