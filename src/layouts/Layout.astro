@@ -61,8 +61,17 @@ const ogImageURL = new URL(image, Astro.url);
     // 表示済みチェック
     if (sessionStorage.getItem("welcomeShown")) return;
     sessionStorage.setItem("welcomeShown", "true");
-  
-    // 画像をプリロード
+
+    // ==========================================
+    //  設定
+    // ==========================================
+    const BUBBLE_IMAGES = [
+        '/images/bubble_1.png', 
+        '/images/bubble_2.png', 
+        '/images/bubble_3.png'
+    ];
+
+    // 背景画像をプリロード
     const img = new Image();
     img.src = '/images/p0126_l.png';
 
@@ -82,16 +91,16 @@ const ogImageURL = new URL(image, Astro.url);
         z-index: 9999;
         opacity: 0;
         transition: opacity 0.5s;
+        overflow: hidden;
       }
-
       .intro-container {
         display: flex;
         position: relative;
         top: -20px;
         flex-direction: row-reverse;
         gap: 3rem; 
+        z-index: 2;
       }
-
       .intro-text {
         color: black;
         opacity: 0;
@@ -101,7 +110,6 @@ const ogImageURL = new URL(image, Astro.url);
         font-size: 1.5rem; 
         line-height: 1.8;
       }
-
       .intro-skip-btn {
         position: absolute;
         display: flex;
@@ -123,61 +131,136 @@ const ogImageURL = new URL(image, Astro.url);
         right: 60px;
         font-size: 16px;
       }
-
       .intro-skip-btn:hover {
         background-color: rgba(255,255,255,0.3);
       }
-
       @media (max-width: 768px) {
-        .intro-container {
-          gap: 1.5rem;
+        .intro-container { gap: 1.5rem; }
+        .intro-text { font-size: 1.1rem; line-height: 1.5; }
+        .intro-skip-btn { width: 80px; height: 80px; bottom: 80px; right: 30px; font-size: 14px; }
+      }
+
+      /* --- シャボン玉スタイル --- */
+      .bubble {
+        position: absolute;
+        /* createBubble関数内で bottom を指定するため、ここでは指定なし */
+        z-index: 1;
+        pointer-events: none;
+        opacity: 0;
+        object-fit: contain;
+        animation: floatUp linear forwards;
+      }
+
+      @keyframes floatUp {
+        0% {
+          transform: translateY(0) translateX(0) scale(0.8);
+          opacity: 0;
         }
-        .intro-text {
-          font-size: 1.1rem;
-          line-height: 1.5;
+        5% {
+          opacity: 0.9;
         }
-        .intro-skip-btn {
-          width: 80px;
-          height: 80px;
-          bottom: 80px;
-          right: 30px;
-          font-size: 14px;
+        100% {
+          transform: translateY(-130vh) translateX(var(--wobble)) scale(1.1);
+          opacity: 0;
         }
       }
     `;
     document.head.appendChild(style);
 
     // ==================================================
-    //  オーバーレイを閉じる関数（ヘッダー強制表示付き）
+    //  オーバーレイ制御
     // ==================================================
+    let bubbleInterval;
+
     const removeOverlay = () => {
+      if (bubbleInterval) clearInterval(bubbleInterval);
       overlay.style.opacity = "0";
 
-      // --- ★ヘッダーを強制的に表示させる処理 ---
       const header = document.getElementById("mainHeader");
       if (header) {
-        // スタイルを上書きして即座に見えるようにする
         header.style.opacity = "1";
         header.style.transform = "translateY(0)";
         header.classList.add("slide-in");
       }
 
-      // 要素の削除
       setTimeout(() => {
         if (overlay.parentNode) overlay.remove();
         if (style.parentNode) style.remove();
       }, 1000);
     };
 
-    // --- オーバーレイ作成 ---
     const overlay = document.createElement('div');
     overlay.classList.add('intro-overlay');
     overlay.style.background = `linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('/images/p0126_l.png') no-repeat center center`;
     document.body.appendChild(overlay);
   
     setTimeout(() => overlay.style.opacity = '1', 50);
-  
-    // --- 文字コンテナ作成 ---
+
+    // ==========================================
+    //  シャボン玉生成ロジック
+    // ==========================================
+    // isInitial: trueなら画面全体に散らす
+    const createBubble = (isInitial = false) => {
+      if (BUBBLE_IMAGES.length === 0) return;
+
+      const bubble = document.createElement('img');
+      const randomIndex = Math.floor(Math.random() * BUBBLE_IMAGES.length);
+      bubble.src = BUBBLE_IMAGES[randomIndex] ?? ""; 
+      bubble.classList.add('bubble');
+      
+      // サイズ (80px 〜 230px)
+      const size = Math.random() * 150 + 80; 
+      bubble.style.width = `${size}px`;
+      bubble.style.height = `${size}px`;
+      
+      // 横位置 (0% 〜 100%)
+      bubble.style.left = `${Math.random() * 100}%`;
+
+      // 揺れ幅
+      const wobble = (Math.random() - 0.5) * 250; 
+      bubble.style.setProperty('--wobble', `${wobble}px`);
+
+      // アニメーション時間 (5秒 〜 9秒)
+      const duration = Math.random() * 4 + 5; 
+      bubble.style.animationDuration = `${duration}s`;
+
+      // ★配置ロジック
+      if (isInitial) {
+        // 初期配置：画面全体(-10%〜100%)にランダム配置
+        const randomBottom = Math.random() * 110 - 10;
+        bubble.style.bottom = `${randomBottom}%`;
+        
+        // 最初から見えている状態にするため、アニメーション進行度を少し進めるか、
+        // もしくは透明度を調整する（ここではシンプルに出現させる）
+        bubble.style.opacity = '0.9'; // すぐ見えるように
+      } else {
+        // 通常：画面の下から
+        bubble.style.bottom = '-250px';
+      }
+
+      overlay.appendChild(bubble);
+
+      setTimeout(() => {
+        if(bubble.parentNode) bubble.remove();
+      }, duration * 1000);
+    };
+
+    // ==========================================
+    //  ★初期配置（数を調整）
+    // ==========================================
+    // 画面ロード時に散らばらせる数：6個
+    const initBubbles = () => {
+        for(let i = 0; i < 6; i++) {
+            createBubble(true); // isInitial = true
+        }
+    };
+    initBubbles();
+
+    // その後は定期的に下から追加 (0.6秒間隔)
+    bubbleInterval = setInterval(() => createBubble(false), 600);
+
+
+    // --- テキスト系 ---
     const container = document.createElement('div');
     container.classList.add('intro-container');
   
@@ -197,28 +280,24 @@ const ogImageURL = new URL(image, Astro.url);
     container.appendChild(line3);
     overlay.appendChild(container);
 
-    // ==========================================
-    //  ★Skipボタン作成（修正版）
-    // ==========================================
+    // --- Skipボタン ---
     const skipBtn = document.createElement('button');
     skipBtn.textContent = 'Skip >>';
-    skipBtn.type = 'button'; // ボタンタイプを明示
+    skipBtn.type = 'button';
     skipBtn.classList.add('intro-skip-btn');
 
-    // ★クリック時の処理：移動せずに閉じるだけ
     skipBtn.addEventListener('click', (e) => {
-        e.preventDefault(); // 予期せぬ動作を防止
-        removeOverlay();    // 画面を閉じてヘッダーを表示
+        e.preventDefault();
+        removeOverlay();
     });
 
     overlay.appendChild(skipBtn);
   
-    // --- テキストのアニメーション ---
+    // --- タイマー系 ---
     setTimeout(() => line1.style.opacity = "1", 800);
     setTimeout(() => line2.style.opacity = "1", 2500);
     setTimeout(() => line3.style.opacity = "1", 4000);
   
-    // --- 自動終了タイマー ---
     setTimeout(() => {
         if (overlay.parentNode) {
             removeOverlay();
