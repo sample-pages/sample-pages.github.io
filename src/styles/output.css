@@ -997,6 +997,14 @@ html[data-theme="light"] .text-color {
   margin-top: 80px;
 }
 
+.mt-\[90px\]{
+  margin-top: 90px;
+}
+
+.mt-\[92px\]{
+  margin-top: 92px;
+}
+
 .block{
   display: block;
 }
@@ -1917,6 +1925,10 @@ html[data-theme="light"] .text-color {
 
 .p-\[3px\]{
   padding: 3px;
+}
+
+.p-3{
+  padding: 0.75rem;
 }
 
 .px-0{
