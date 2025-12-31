@@ -1844,6 +1844,10 @@ html[data-theme="light"] .text-color {
   background-position: 42% 50%;
 }
 
+.bg-\[43\%_50\%\]{
+  background-position: 43% 50%;
+}
+
 .object-contain{
   -o-object-fit: contain;
      object-fit: contain;
