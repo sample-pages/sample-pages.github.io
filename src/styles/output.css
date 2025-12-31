@@ -973,6 +973,10 @@ html[data-theme="light"] .text-color {
   margin-top: 0.75rem;
 }
 
+.mt-4{
+  margin-top: 1rem;
+}
+
 .mt-64{
   margin-top: 16rem;
 }
@@ -991,10 +995,6 @@ html[data-theme="light"] .text-color {
 
 .mt-\[80px\]{
   margin-top: 80px;
-}
-
-.mt-4{
-  margin-top: 1rem;
 }
 
 .block{
@@ -1794,6 +1794,10 @@ html[data-theme="light"] .text-color {
 
 .bg-center{
   background-position: center;
+}
+
+.bg-right{
+  background-position: right;
 }
 
 .object-contain{
@@ -6419,6 +6423,10 @@ h1 {
 
   .lg\:gap-3{
     gap: 0.75rem;
+  }
+
+  .lg\:bg-center{
+    background-position: center;
   }
 
   .lg\:p-8{
