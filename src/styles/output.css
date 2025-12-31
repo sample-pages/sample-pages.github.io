@@ -6198,6 +6198,22 @@ h1 {
     height: 67px;
   }
 
+  .max-md\:h-\[17px\]{
+    height: 17px;
+  }
+
+  .max-md\:h-\[44px\]{
+    height: 44px;
+  }
+
+  .max-md\:h-\[45px\]{
+    height: 45px;
+  }
+
+  .max-md\:h-\[22px\]{
+    height: 22px;
+  }
+
   .max-md\:w-16{
     width: 4rem;
   }
@@ -6333,6 +6349,14 @@ h1 {
 
   .md\:h-\[90px\]{
     height: 90px;
+  }
+
+  .md\:h-\[43px\]{
+    height: 43px;
+  }
+
+  .md\:h-\[75px\]{
+    height: 75px;
   }
 
   .md\:w-16{
