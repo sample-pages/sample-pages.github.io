@@ -6038,6 +6038,10 @@ h1 {
     height: 300px;
   }
 
+  .max-lg\:h-\[280px\]{
+    height: 280px;
+  }
+
   .max-lg\:w-24{
     width: 6rem;
   }
