@@ -1800,6 +1800,38 @@ html[data-theme="light"] .text-color {
   background-position: right;
 }
 
+.bg-\[50\%_30\%\]{
+  background-position: 50% 30%;
+}
+
+.bg-\[50\%_50\%\]{
+  background-position: 50% 50%;
+}
+
+.bg-\[70\%_50\%\]{
+  background-position: 70% 50%;
+}
+
+.bg-\[30\%_50\%\]{
+  background-position: 30% 50%;
+}
+
+.bg-\[40\%_50\%\]{
+  background-position: 40% 50%;
+}
+
+.bg-\[38\%_50\%\]{
+  background-position: 38% 50%;
+}
+
+.bg-\[35\%_50\%\]{
+  background-position: 35% 50%;
+}
+
+.bg-\[32\%_50\%\]{
+  background-position: 32% 50%;
+}
+
 .object-contain{
   -o-object-fit: contain;
      object-fit: contain;
