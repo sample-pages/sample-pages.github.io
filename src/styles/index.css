@@ -2743,7 +2743,7 @@ h1 {
 /* 数字のスタイル */
 .number {
   font-family: "Barlow", sans-serif;
-  font-size: 6rem;
+  font-size: 6.5rem;
   font-weight: bold;
   color: #ffffff;
   position: absolute;
@@ -2789,7 +2789,7 @@ h1 {
       height: 50px; /* 高さ100pxの半分 */
   }
   .number {
-      font-size: 3rem;
+      font-size: 3.5rem;
       line-height: 100px; /* スマホ時の全体の高さ */
   }
   /* 角丸の比率も少し調整 */
