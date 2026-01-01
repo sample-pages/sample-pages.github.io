@@ -1275,6 +1275,10 @@ html[data-theme="light"] .text-color {
   width: 420px;
 }
 
+.w-\[440px\]{
+  width: 440px;
+}
+
 .min-w-\[600px\]{
   min-width: 600px;
 }
