@@ -1725,25 +1725,27 @@ buttons.forEach(btn => {
       bubble.classList.add('absolute');
       bubble.alt = ""; 
 
-      // サイズ (80px〜180px)
-      const size = Math.random() * 100 + 80;
+      // ▼ 修正: サイズのばらつきを大きく (40px 〜 240px)
+      const size = Math.random() * 200 + 40;
 
       // ランダムなパラメータ
       const initialX = Math.random() * 100;
       const initialY = Math.random() * window.innerHeight;
-      const speed = Math.random() * 0.4 + 0.1;
+
+      // ▼ 修正: 速度のばらつきを大きく (0.05 〜 0.8)
+      // ※数字が小さいほど遠く（遅く）、大きいほど手前（速く）に見えます
+      const speed = Math.random() * 0.75 + 0.05;
 
       // 初期スタイル適用
       bubble.style.width = `${size}px`;
       bubble.style.height = `auto`;
       bubble.style.left = `${initialX}%`;
       
-      // 透明度
-      bubble.style.opacity = (Math.random() * 0.3 + 0.3).toString();
+      // ▼ 修正: 透明度のばらつきを大きく (0.1 〜 0.7)
+      bubble.style.opacity = (Math.random() * 0.6 + 0.1).toString();
 
       container.appendChild(bubble);
 
-      // ▼▼▼ 修正箇所: このコメントを入れると、次の行の型エラーが強制的に無視されます ▼▼▼
       // @ts-ignore
       bubbles.push({
         element: bubble,
@@ -1759,12 +1761,12 @@ buttons.forEach(btn => {
       const viewportHeight = window.innerHeight;
 
       bubbles.forEach(b => {
-        // ▼▼▼ ここも念のため ts-ignore を入れておくと安心です ▼▼▼
         // @ts-ignore
         let rawY = b.baseY - (scrollY * b.speed);
         
         // @ts-ignore
-        const loopHeight = viewportHeight + b.size + 100; 
+        // ループ計算 (大きな泡が見切れにくくするためバッファを +250 に増加)
+        const loopHeight = viewportHeight + b.size + 250; 
         let displayedY = ((rawY % loopHeight) + loopHeight) % loopHeight;
         
         // @ts-ignore
