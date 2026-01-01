@@ -1125,6 +1125,10 @@ html[data-theme="light"] .text-color {
   height: 280px;
 }
 
+.h-\[270px\]{
+  height: 270px;
+}
+
 .max-h-\[500px\]{
   max-height: 500px;
 }
@@ -1237,6 +1241,10 @@ html[data-theme="light"] .text-color {
 
 .w-\[400px\]{
   width: 400px;
+}
+
+.w-\[390px\]{
+  width: 390px;
 }
 
 .min-w-\[600px\]{
