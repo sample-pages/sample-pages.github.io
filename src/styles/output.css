@@ -1267,6 +1267,14 @@ html[data-theme="light"] .text-color {
   width: max-content;
 }
 
+.w-\[40px\]{
+  width: 40px;
+}
+
+.w-\[420px\]{
+  width: 420px;
+}
+
 .min-w-\[600px\]{
   min-width: 600px;
 }
