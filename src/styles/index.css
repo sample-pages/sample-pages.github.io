@@ -24,6 +24,24 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'craftmincho';
+  src: url('/fonts/craftmincho.woff2') format('woff2'),
+       url('/fonts/craftmincho.woff') format('woff'),
+       url('/fonts/craftmincho.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GenEiKiwamiGo';
+  src: url('/fonts/GenEiKiwamiGo.woff2') format('woff2'),
+       url('/fonts/GenEiKiwamiGo.woff') format('woff'),
+       url('/fonts/GenEiKiwamiGo.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @layer base {
 
   /* デフォルト背景 */
@@ -81,6 +99,18 @@ body {
 .Makinas-4-Flat {
   font-family: "Makinas-4-Flat", sans-serif;
   font-weight: 500;
+  font-style: normal;
+}
+
+.craftmincho {
+  font-family: "craftmincho", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.GenEiKiwamiGo {
+  font-family: "GenEiKiwamiGo", sans-serif;
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -581,6 +611,15 @@ body {
 .resp-pc-g {
     @apply flex;
     @apply xl:hidden;
+}
+
+.resp-pc-a {
+  @apply hidden lg:flex;
+}
+
+.resp-pc-b {
+  @apply flex;
+  @apply lg:hidden;
 }
 
 .resp-pc-x {
