@@ -605,9 +605,17 @@ html[data-theme="light"] .text-color {
   width: 100%;
 }
 
+.\!container{
+  width: 100% !important;
+}
+
 @media (min-width: 640px){
   .container{
     max-width: 640px;
+  }
+
+  .\!container{
+    max-width: 640px !important;
   }
 }
 
@@ -615,11 +623,19 @@ html[data-theme="light"] .text-color {
   .container{
     max-width: 768px;
   }
+
+  .\!container{
+    max-width: 768px !important;
+  }
 }
 
 @media (min-width: 1024px){
   .container{
     max-width: 1024px;
+  }
+
+  .\!container{
+    max-width: 1024px !important;
   }
 }
 
@@ -627,11 +643,19 @@ html[data-theme="light"] .text-color {
   .container{
     max-width: 1280px;
   }
+
+  .\!container{
+    max-width: 1280px !important;
+  }
 }
 
 @media (min-width: 1536px){
   .container{
     max-width: 1536px;
+  }
+
+  .\!container{
+    max-width: 1536px !important;
   }
 }
 
@@ -861,6 +885,14 @@ html[data-theme="light"] .text-color {
 
 .z-\[60\]{
   z-index: 60;
+}
+
+.z-\[\]{
+  z-index: ;
+}
+
+.z-\[-2\]{
+  z-index: -2;
 }
 
 .m-0{

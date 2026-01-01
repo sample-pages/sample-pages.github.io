@@ -57,9 +57,30 @@ const ogImageURL = new URL(image, Astro.url);
     <title>{title}</title>
     <meta name="description" content="「第8回うぃーすた全国交流会」を2026年7月18日(土)〜19日(日)に大阪にて開催します！">
     <script>
-      window.addEventListener('DOMContentLoaded', () => {
-    // 表示済みチェック
+      // ==========================================
+//  ▼▼▼ 修正1：即時実行エリア（ここを追加） ▼▼▼
+//  DOMContentLoadedを待たずに、スクリプトが読み込まれた瞬間にチェックします
+// ==========================================
+(function() {
+    // すでに表示済みなら何もしない（画面はそのまま表示される）
     if (sessionStorage.getItem("welcomeShown")) return;
+
+    // まだ表示していない場合、画面描画が始まる前に「真っ白」にして隠す
+    // これにより「下にある画面が一瞬見える」のを防ぎます
+    document.documentElement.style.visibility = 'hidden';
+    document.documentElement.style.opacity = '0';
+})();
+
+
+window.addEventListener('DOMContentLoaded', () => {
+    // 表示済みチェック
+    // (万が一、上の即時実行関数が動く前にDOM構築が終わった場合などの保険)
+    if (sessionStorage.getItem("welcomeShown")) {
+        document.documentElement.style.visibility = '';
+        document.documentElement.style.opacity = '';
+        return;
+    }
+    
     sessionStorage.setItem("welcomeShown", "true");
 
     // ==========================================
@@ -89,7 +110,7 @@ const ogImageURL = new URL(image, Astro.url);
         align-items: center;
         background-size: cover !important;
         z-index: 9999;
-        opacity: 0;
+        opacity: 1; /* 初期状態で見えるように */
         transition: opacity 0.5s;
         overflow: hidden;
       }
@@ -140,10 +161,8 @@ const ogImageURL = new URL(image, Astro.url);
         .intro-skip-btn { width: 80px; height: 80px; bottom: 80px; right: 30px; font-size: 14px; }
       }
 
-      /* --- シャボン玉スタイル --- */
       .bubble {
         position: absolute;
-        /* createBubble関数内で bottom を指定するため、ここでは指定なし */
         z-index: 1;
         pointer-events: none;
         opacity: 0;
@@ -193,13 +212,10 @@ const ogImageURL = new URL(image, Astro.url);
     overlay.classList.add('intro-overlay');
     overlay.style.background = `linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('/images/p0126_l.png') no-repeat center center`;
     document.body.appendChild(overlay);
-  
-    setTimeout(() => overlay.style.opacity = '1', 50);
 
     // ==========================================
     //  シャボン玉生成ロジック
     // ==========================================
-    // isInitial: trueなら画面全体に散らす
     const createBubble = (isInitial = false) => {
       if (BUBBLE_IMAGES.length === 0) return;
 
@@ -208,33 +224,20 @@ const ogImageURL = new URL(image, Astro.url);
       bubble.src = BUBBLE_IMAGES[randomIndex] ?? ""; 
       bubble.classList.add('bubble');
       
-      // サイズ (80px 〜 230px)
       const size = Math.random() * 150 + 80; 
       bubble.style.width = `${size}px`;
       bubble.style.height = `${size}px`;
-      
-      // 横位置 (0% 〜 100%)
       bubble.style.left = `${Math.random() * 100}%`;
-
-      // 揺れ幅
       const wobble = (Math.random() - 0.5) * 250; 
       bubble.style.setProperty('--wobble', `${wobble}px`);
-
-      // アニメーション時間 (5秒 〜 9秒)
       const duration = Math.random() * 4 + 5; 
       bubble.style.animationDuration = `${duration}s`;
 
-      // ★配置ロジック
       if (isInitial) {
-        // 初期配置：画面全体(-10%〜100%)にランダム配置
         const randomBottom = Math.random() * 110 - 10;
         bubble.style.bottom = `${randomBottom}%`;
-        
-        // 最初から見えている状態にするため、アニメーション進行度を少し進めるか、
-        // もしくは透明度を調整する（ここではシンプルに出現させる）
-        bubble.style.opacity = '0.9'; // すぐ見えるように
+        bubble.style.opacity = '0.9'; 
       } else {
-        // 通常：画面の下から
         bubble.style.bottom = '-250px';
       }
 
@@ -245,18 +248,13 @@ const ogImageURL = new URL(image, Astro.url);
       }, duration * 1000);
     };
 
-    // ==========================================
-    //  ★初期配置（数を調整）
-    // ==========================================
-    // 画面ロード時に散らばらせる数：6個
     const initBubbles = () => {
         for(let i = 0; i < 6; i++) {
-            createBubble(true); // isInitial = true
+            createBubble(true);
         }
     };
     initBubbles();
 
-    // その後は定期的に下から追加 (0.6秒間隔)
     bubbleInterval = setInterval(() => createBubble(false), 600);
 
 
@@ -303,6 +301,14 @@ const ogImageURL = new URL(image, Astro.url);
             removeOverlay();
         }
     }, 7000);
+
+    // ==========================================
+    //  ▼▼▼ 修正2：表示の復帰（ここを追加） ▼▼▼
+    //  オーバーレイの追加が終わったので、画面全体の非表示を解除します。
+    //  これで「オーバーレイで覆われた状態」で画面が表示されます。
+    // ==========================================
+    document.documentElement.style.visibility = '';
+    document.documentElement.style.opacity = '';
 });
 
       // --- トップへ戻るボタン ---

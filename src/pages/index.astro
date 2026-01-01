@@ -1368,7 +1368,7 @@ const tagColors: Record<string, string> = {
 
     <div style="height: 120px;" />
   </div>
-
+  <div id="bubble-container" class="fixed inset-0 pointer-events-none z-[-1] overflow-hidden"></div>
 </Layout>
 
 <link
@@ -1694,4 +1694,96 @@ buttons.forEach(btn => {
   updateCountdown();
   setInterval(updateCountdown, 1000);
 
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const container = document.getElementById('bubble-container');
+    if (!container) return;
+
+    // ▼▼▼ 設定エリア ▼▼▼
+    
+    // 1. ここに使用する3枚の画像のパスを指定してください
+    const IMAGE_PATHS = [
+      '/images/bubble_1.png',
+      '/images/bubble_2.png',
+      '/images/bubble_3.png'
+    ];
+
+    // 2. 数を少なく調整（例: 15 -> 8）
+    const BUBBLE_COUNT = 12;
+    
+    // ▲▲▲ 設定エリア終了 ▲▲▲
+    
+    const bubbles = [];
+
+    // シャボン玉を生成
+    for (let i = 0; i < BUBBLE_COUNT; i++) {
+      const bubble = document.createElement('img');
+      
+      // 画像をランダムに選択して適用
+      const randomImgIndex = Math.floor(Math.random() * IMAGE_PATHS.length);
+      bubble.src = IMAGE_PATHS[randomImgIndex];
+
+      // 基本スタイル
+      bubble.classList.add('absolute');
+      bubble.alt = ""; // 装飾用なのでaltは空
+
+      // ▼▼▼ サイズ調整 ▼▼▼
+      // 80px 〜 180px の範囲でランダムに設定（以前より大きく）
+      const size = Math.random() * 100 + 80;
+      // ▲▲▲ サイズ調整終了 ▲▲▲
+
+      // ランダムなパラメータ
+      const initialX = Math.random() * 100; // 画面横幅の 0% 〜 100%
+      const initialY = Math.random() * window.innerHeight; // 画面縦幅のピクセル位置
+      const speed = Math.random() * 0.4 + 0.1; // スクロールに対する移動速度係数（少しゆっくりめに調整）
+
+      // 初期スタイル適用
+      bubble.style.width = `${size}px`;
+      bubble.style.height = `auto`; // 縦横比維持
+      bubble.style.left = `${initialX}%`;
+      // 透明度も少し下げて背景になじませる (0.3〜0.6)
+      bubble.style.opacity = Math.random() * 0.3 + 0.3;
+
+      container.appendChild(bubble);
+
+      // データとして保持
+      bubbles.push({
+        element: bubble,
+        baseY: initialY, // 基準となるY位置
+        speed: speed,
+        size: size
+      });
+    }
+
+    // スクロール時の描画更新関数
+    function updatePositions() {
+      const scrollY = window.scrollY;
+      const viewportHeight = window.innerHeight;
+
+      bubbles.forEach(b => {
+        // 現在のY位置計算（スクロールに合わせて上下移動）
+        let rawY = b.baseY - (scrollY * b.speed);
+
+        // ループ処理計算
+        // 大きくなった分、バッファも少し大きめに取る (+100)
+        const loopHeight = viewportHeight + b.size + 100; 
+        
+        // 剰余演算でループさせる
+        let displayedY = ((rawY % loopHeight) + loopHeight) % loopHeight;
+
+        // 画面上端から少し上に見切れさせるオフセット
+        displayedY -= b.size;
+
+        // 位置を適用 (Y軸のみ更新)
+        b.element.style.transform = `translate3d(0, ${displayedY}px, 0)`;
+      });
+
+      requestAnimationFrame(updatePositions);
+    }
+
+    // 初回実行
+    updatePositions();
+  });
 </script>
