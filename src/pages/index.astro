@@ -88,7 +88,7 @@ const tagColors: Record<string, string> = {
 </a>
 -->
 
-<div class="resp-pc-f relative border-b-[4px] border-red-100 max-lg:h-[280px] lg:h-[500px] mt-[80px] bg-center flex justify-center items-center overflow-hidden" 
+<div class="resp-pc-f relative border-b-[4px] border-red-100 max-lg:h-[280px] lg:h-[500px] mt-[80px] bg-center flex justify-center items-center overflow-hidden z-10" 
      style="background-image: url('/images/S__182198276_2.jpg'); background-size: cover; width: 100%;">
 
      <img src="/images/title4.png" 
@@ -119,7 +119,7 @@ const tagColors: Record<string, string> = {
   </div>
 </div>
 
-<div class="resp-pc-g relative border-b-[4px] border-red-100 h-[280px] mt-[90px] bg-center" 
+<div class="resp-pc-g relative border-b-[4px] border-red-100 h-[280px] mt-[90px] bg-center z-10" 
      style="background-image: url('/images/S__182198276_2.jpg'); background-size: cover; width: 100%;">
 
      <img src="/images/title5.png" 
@@ -218,13 +218,13 @@ const tagColors: Record<string, string> = {
       </article>
     </div>
   -->
-    <h1 class="headline2 mx-auto text-left" style="max-width: 900px;">
+    <h1 class="headline2 mx-auto text-left relative z-10" style="max-width: 900px;">
       <span class="headline-bg">PICKUP</span>
       <span class="max-lg:ml-6 lg:ml-8 inline-block align-middle pt-2">ピックアップ</span>
     </h1>
   </div>
   <div class="max-md:h-[0px] md:h-[11px]" />
-  <div class="zen-kaku-gothic-new relative w-full group py-2">
+  <div class="zen-kaku-gothic-new relative w-full group py-2 z-10">
   
     <button id="prevBtn" class="absolute left-2 md:left-[250px] top-1/2 -translate-y-1/2 z-20 bg-white text-black p-1.5 md:p-3 rounded-full backdrop-blur-sm border border-black md:border-2 transition-transform duration-300 active:scale-110 md:hover:scale-110 disabled:opacity-0 disabled:cursor-not-allowed shadow-lg">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6 md:w-8 md:h-8">
@@ -275,7 +275,7 @@ const tagColors: Record<string, string> = {
   
   </div>
   <div class="max-md:h-[17px] md:h-[43px]" />
-  <div class="countdown-container">
+  <div class="countdown-container relative z-10">
     <h1 id="title">第8回うぃーすた全国交流会まであと</h1>
     <div class="max-md:h-[16px] md:h-[24px]" />
     <div id="timer" class="timer-wrapper">
@@ -318,6 +318,7 @@ const tagColors: Record<string, string> = {
 </div>
 <div class="max-md:h-[45px] md:h-[75px]" />
   <section class="bg-[#fae1e1]">
+    <div id="bubble-container" class="fixed inset-0 pointer-events-none z-[0] overflow-hidden"></div>
     <div class="margin-contents text-color zen-kaku-gothic-new" style="padding-bottom: 0rem;">
       <div class="max-md:h-[20px] md:h-[36px]" />
       <div class="zoom-target">
@@ -1234,7 +1235,7 @@ const tagColors: Record<string, string> = {
   </div>
     <div class="max-md:h-[30px] md:h-[36px]" />
     </div>
-    <div class="swiper-container-wrapper">
+    <div class="swiper-container-wrapper relative z-10">
     <div class="swiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
@@ -1276,10 +1277,10 @@ const tagColors: Record<string, string> = {
     </div>
     </div>
     <div style="height: 36px;" />
-    <div class="resp-pc-x flex items-center justify-center mb-1">
+    <div class="resp-pc-x flex items-center justify-center mb-1 relative z-10">
       <iframe width="720" height="420" src="https://www.youtube.com/embed/rjl5ssJeaEA?si=BRp80BIwf-duPUUQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
-    <div class="resp-pc-i flex items-center justify-center mb-1">
+    <div class="resp-pc-i flex items-center justify-center mb-1 relative z-10">
       <iframe width="330" height="200" src="https://www.youtube.com/embed/rjl5ssJeaEA?si=BRp80BIwf-duPUUQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
     <div style="height: 30px;" />
@@ -1368,7 +1369,7 @@ const tagColors: Record<string, string> = {
 
     <div style="height: 120px;" />
   </div>
-  <div id="bubble-container" class="fixed inset-0 pointer-events-none z-[-1] overflow-hidden"></div>
+  
 </Layout>
 
 <link

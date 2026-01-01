@@ -46,12 +46,12 @@
 
   /* デフォルト背景 */
   :root,
-  html[data-theme="light"]:not(.chukosei) {
-    background: 
-      linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
-      url('/images/p0126_l.png') center center;
-    background-size: contain;
-  }
+html[data-theme="light"]:not(.chukosei):not(:has(.index)) {
+  background: 
+    linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+    url('/images/p0126_l.png') center center;
+  background-size: contain;
+}
 
   /* 特定ページ背景 */
   html.chukosei[data-theme="light"] {
@@ -60,6 +60,13 @@
       url('/images/chu_blue2.png') center center !important;
     background-size: contain !important;
   }
+
+  /* 特定ページ背景 */
+  /* 意味: data-theme="light" な html の中にある .indexクラス に適用 */
+html[data-theme="light"] .index {
+  background-color: #fae1e1;
+  /* section自体に背景がつくので、background-sizeの挙動は意図と変わるかもしれません */
+}
 
   html[data-theme="light"] .text-color {
     color: #000000;
