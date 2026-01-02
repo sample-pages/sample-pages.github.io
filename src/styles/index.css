@@ -2354,6 +2354,7 @@ article h2 {
 .label {
   margin-top: 5px; /* 棒とラベルの間の隙間 */
   font-weight: bold;
+  color: #d34040;
 }
 
 /* 積み上げ棒用 */

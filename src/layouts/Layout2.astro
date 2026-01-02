@@ -27,7 +27,7 @@ interface Props {
 const { frontmatter } = Astro.props;
 
 // どちらか存在する方から値を取り出す（Markdown優先の記述例）
-const image = frontmatter?.image || Astro.props.image || "/default-ogp.jpg";
+const image = frontmatter?.image || Astro.props.image || "/images/card.png";
 
 // (以前説明したURL設定)
 const ogImageURL = new URL(image, Astro.url);
