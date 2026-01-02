@@ -281,7 +281,7 @@ const tagColors: Record<string, string> = {
         if (scrollContainer && panel) {
           scrollContainer.addEventListener('click', (e) => {
             // クリックされた要素(e.target)が、白い箱(panel)の中に含まれていなければ閉じる
-            if (!panel.contains(e.target)) {
+            if (!panel.contains(e.target as Node)) {
               closeModal();
             }
           });
