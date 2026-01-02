@@ -2631,7 +2631,7 @@ article h2 {
   border-radius: 40px; /* 角丸の大きさ */
   position: relative;
   padding: 60px 40px;
-  margin-bottom: 50px;
+  margin-bottom: 0px;
   /* 直線部分のみの境界線を表現するために、before/after擬似要素で線を引く手法 */
 }
 
