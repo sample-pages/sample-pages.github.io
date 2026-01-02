@@ -252,35 +252,54 @@ const tagColors: Record<string, string> = {
         const trigger = document.getElementById('sns-trigger');
         const modal = document.getElementById('sns-modal');
         const closeBtn = document.getElementById('modal-close-btn');
-        
-        // 新しく追加したIDを取得
         const scrollContainer = document.getElementById('modal-scroll-container');
         const panel = document.getElementById('modal-panel');
       
-        // モーダルを表示
+        // ■ 開く処理
         if (trigger && modal) {
           trigger.addEventListener('click', (e) => {
             e.preventDefault();
+            
+            // 1. まず表示エリアを確保
             modal.classList.remove('hidden');
+      
+            // 2. アニメーション開始（不透明度とぼかしを同時に変化）
+            setTimeout(() => {
+              modal.classList.remove('opacity-0');
+              modal.classList.add('opacity-100');
+              
+              // ★ここを追加：ぼかしのアニメーション
+              modal.classList.remove('backdrop-blur-none'); // ぼかし無しを削除
+              modal.classList.add('backdrop-blur-sm');    // ぼかしを追加
+            }, 10);
           });
         }
       
-        // モーダルを閉じる関数
+        // ■ 閉じる処理
         const closeModal = () => {
           if (modal) {
-            modal.classList.add('hidden');
+            // 1. アニメーション（透明へ、ぼかし無しへ）
+            modal.classList.remove('opacity-100');
+            modal.classList.add('opacity-0');
+            
+            // ★ここを追加：ぼかしを消すアニメーション
+            modal.classList.remove('backdrop-blur-sm');
+            modal.classList.add('backdrop-blur-none');
+      
+            // 2. 完了後に隠す (duration-300に合わせて300ms待つ)
+            setTimeout(() => {
+              modal.classList.add('hidden');
+            }, 300);
           }
         };
       
-        // 1. 「×」ボタンで閉じる
+        // ボタン・背景クリックの処理（変更なし）
         if (closeBtn) {
           closeBtn.addEventListener('click', closeModal);
         }
       
-        // 2. 背景（スクロール領域）クリック時の判定
         if (scrollContainer && panel) {
           scrollContainer.addEventListener('click', (e) => {
-            // クリックされた要素(e.target)が、白い箱(panel)の中に含まれていなければ閉じる
             if (!panel.contains(e.target as Node)) {
               closeModal();
             }
@@ -360,9 +379,9 @@ const tagColors: Record<string, string> = {
         </div>
     </div>
 </div>
-<div id="sns-modal" class="fixed inset-0 z-50 hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
-        
-  <div id="modal-overlay" class="fixed inset-0 bg-gray-900 bg-opacity-75 transition-opacity backdrop-blur-sm"></div>
+<div id="sns-modal" class="fixed inset-0 z-[9999] hidden transition-all duration-300 ease-in-out opacity-0 backdrop-blur-none" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+  
+  <div id="modal-overlay" class="fixed inset-0 bg-white-900 bg-opacity-50 transition-opacity"></div>
 
   <div id="modal-scroll-container" class="fixed inset-0 z-20 overflow-y-auto">
     <div class="flex min-h-full items-center justify-center p-4 text-center sm:p-0">
@@ -371,7 +390,7 @@ const tagColors: Record<string, string> = {
         
         <div class="bg-white px-6 pb-5 pt-6 sm:p-6 sm:pb-4">
           <div class="flex justify-between items-center mb-6">
-            <h3 class="zen-kaku-gothic-new text-base lg:text-lg font-bold leading-6 text-gray-900 ml-1" id="modal-title">ぜひフォローお願いします！</h3>
+            <h3 class="zen-kaku-gothic-new text-base lg:text-lg font-bold leading-6 text-gray-900 ml-1 mr-4" id="modal-title">ぜひフォローお願いします！</h3>
             <button id="modal-close-btn" class="text-gray-400 hover:text-gray-600 transition-colors">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />

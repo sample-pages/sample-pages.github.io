@@ -888,6 +888,10 @@ html[data-theme="light"] .text-color {
   z-index: 60;
 }
 
+.z-\[9999\]{
+  z-index: 9999;
+}
+
 .m-0{
   margin: 0px;
 }
@@ -2350,6 +2354,12 @@ html[data-theme="light"] .text-color {
   backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
+.backdrop-blur-none{
+  --tw-backdrop-blur:  ;
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+
 .transition{
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
@@ -2396,6 +2406,14 @@ html[data-theme="light"] .text-color {
 
 .duration-700{
   transition-duration: 700ms;
+}
+
+.duration-150{
+  transition-duration: 150ms;
+}
+
+.duration-0{
+  transition-duration: 0s;
 }
 
 .ease-\[cubic-bezier\(0\.4\2c 0\2c 0\.2\2c 1\)\]{
