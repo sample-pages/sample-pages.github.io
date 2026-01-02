@@ -1825,6 +1825,14 @@ html[data-theme="light"] .text-color {
   --tw-bg-opacity: 0.75;
 }
 
+.bg-opacity-80{
+  --tw-bg-opacity: 0.8;
+}
+
+.bg-opacity-90{
+  --tw-bg-opacity: 0.9;
+}
+
 .bg-\[linear-gradient\(to_right\2c \#3b82f615_1px\2c transparent_1px\)\2c linear-gradient\(to_bottom\2c \#3b82f615_1px\2c transparent_1px\)\]{
   background-image: linear-gradient(to right,#3b82f615 1px,transparent 1px),linear-gradient(to bottom,#3b82f615 1px,transparent 1px);
 }
