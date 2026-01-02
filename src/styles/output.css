@@ -2178,6 +2178,10 @@ html[data-theme="light"] .text-color {
   font-weight: 600;
 }
 
+.font-extrabold{
+  font-weight: 800;
+}
+
 .leading-6{
   line-height: 1.5rem;
 }
