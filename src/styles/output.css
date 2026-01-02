@@ -1762,6 +1762,10 @@ html[data-theme="light"] .text-color {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
 
+.bg-\[linear-gradient\(to_right\2c \#ffadad\2c \#ffd6a5\2c \#fdffb6\2c \#caffbf\2c \#9bf6ff\2c \#a0c4ff\2c \#bdb2ff\2c \#ffc6ff\)\]{
+  background-image: linear-gradient(to right,#ffadad,#ffd6a5,#fdffb6,#caffbf,#9bf6ff,#a0c4ff,#bdb2ff,#ffc6ff);
+}
+
 .from-orange-400{
   --tw-gradient-from: #fb923c var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(251 146 60 / 0) var(--tw-gradient-to-position);
@@ -1803,6 +1807,11 @@ html[data-theme="light"] .text-color {
 
 .bg-cover{
   background-size: cover;
+}
+
+.bg-clip-text{
+  -webkit-background-clip: text;
+          background-clip: text;
 }
 
 .bg-center{
@@ -2175,6 +2184,15 @@ html[data-theme="light"] .text-color {
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
+.text-transparent{
+  color: transparent;
+}
+
+.text-\[\#ffc0cb\]{
+  --tw-text-opacity: 1;
+  color: rgb(255 192 203 / var(--tw-text-opacity, 1));
+}
+
 .opacity-0{
   opacity: 0;
 }
@@ -2305,6 +2323,22 @@ html[data-theme="light"] .text-color {
 
 .ease-in-out{
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.\[-webkit-text-stroke\:1px_\#d34040\]{
+  -webkit-text-stroke: 1px #d34040;
+}
+
+.\[-webkit-text-stroke\:2px_\#d34040\]{
+  -webkit-text-stroke: 2px #d34040;
+}
+
+.\[-webkit-text-stroke\:2px_\#ffc0cb\]{
+  -webkit-text-stroke: 2px #ffc0cb;
+}
+
+.\[-webkit-text-stroke\:2px_\]{
+  -webkit-text-stroke: 2px;
 }
 
 @font-face {
