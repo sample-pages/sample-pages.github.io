@@ -207,18 +207,28 @@ const venueWidths = [150, 150, 150, 150, 150];
       });
     }
 
-    // モーダル
+    // モーダル設定関数
     function setupModal() {
       const modal = document.getElementById("eventModal")!;
       const modalTitle = document.getElementById("modalTitle")!;
       const modalDescription = document.getElementById("modalDescription")!;
       const modalTime = document.getElementById("modalTime")!;
+      
+      // ▼ ここを追加：場所表示用エレメントの取得
+      const modalVenue = document.getElementById("modalVenue")!;
+      // ▲ 追加ここまで
+
       const modalClose = document.getElementById("modalClose")!;
 
       eventsList.forEach(ev => {
         ev.div.addEventListener("click", () => {
           modalTitle.textContent = ev.name;
           modalDescription.innerHTML = ev.description || "詳細情報なし";
+          
+          // ▼ ここを追加：場所のテキストを設定
+          modalVenue.textContent = `場所：${ev.venue}`;
+          // ▲ 追加ここまで
+
           modalTime.textContent = `時間：${ev.start}〜${ev.end}`;
           modal.classList.remove("hidden");
           modal.classList.add("flex");
@@ -298,7 +308,9 @@ toggle.addEventListener("change", () => {
   <div class="bg-white p-6 rounded-3xl shadow-lg max-w-sm w-2/3 relative">
     <button id="modalClose" class="absolute top-3 right-6 text-gray-500 hover:text-black text-[24px]">&times;</button>
     <h3 id="modalTitle" class="font-bold text-lg mb-2 pr-8"></h3>
+    
     <p id="modalTime" class="text-sm text-black mt-2"></p>
+    <p id="modalVenue" class="text-sm text-black mt-1"></p>
     <div style="height: 10px"></div>
     <p id="modalDescription" class="text-sm text-black whitespace-pre-wrap"></p>
     
