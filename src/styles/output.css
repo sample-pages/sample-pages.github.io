@@ -1280,6 +1280,15 @@ html[data-theme="light"] .text-color {
   min-width: 600px;
 }
 
+.min-w-max{
+  min-width: -moz-max-content;
+  min-width: max-content;
+}
+
+.min-w-\[810px\]{
+  min-width: 810px;
+}
+
 .max-w-3xl{
   max-width: 48rem;
 }
@@ -6370,6 +6379,10 @@ h1 {
     width: 109.5%;
   }
 
+  .max-md\:w-\[100\%\]{
+    width: 100%;
+  }
+
   .max-md\:px-6{
     padding-left: 1.5rem;
     padding-right: 1.5rem;
@@ -6444,6 +6457,18 @@ h1 {
 
   .md\:mb-0{
     margin-bottom: 0px;
+  }
+
+  .md\:ml-4{
+    margin-left: 1rem;
+  }
+
+  .md\:ml-0{
+    margin-left: 0px;
+  }
+
+  .md\:hidden{
+    display: none;
   }
 
   .md\:h-7{

@@ -27,7 +27,9 @@ const venueWidths = [150, 150, 150, 150, 150];
         
         <span class="inline-block w-4 h-4 bg-green-300 ml-4 mr-1 rounded-sm"></span>：学生・社会人
         
-        <span class="inline-block w-4 h-4 bg-blue-300 ml-4 mr-1 rounded-sm"></span>：中高生
+        <span class="w-full block md:hidden h-0"></span>
+        
+        <span class="inline-block w-4 h-4 bg-blue-300 ml-0 md:ml-4 mr-1 rounded-sm"></span>：中高生
         
         <span class="inline-block w-4 h-4 bg-purple-300 ml-4 mr-1 rounded-sm"></span>：中高生保護者の方
       </p>
@@ -54,7 +56,7 @@ const venueWidths = [150, 150, 150, 150, 150];
       <div style="height: 24px;"></div>
       <div class="flex justify-center">
       <div id="tableContainer" class="mx-auto overflow-auto max-h-[500px] max-w-[64rem] border rounded-md shadow-md bg-gray-50 relative">
-        <div class="min-w-[600px] relative z-0">
+        <div class="min-w-[810px] relative z-0">
 
           <table id="timetable" class="border-collapse w-full text-sm relative table-fixed">
             <thead class="table_color sticky top-0 z-[50]">
@@ -85,7 +87,7 @@ const venueWidths = [150, 150, 150, 150, 150];
 
           <!-- 現在時刻バー -->
           <div id="currentTimeBar"
-     class="absolute h-[2px] bg-red-500 z-[0] max-md:w-[109.5%] md:w-[100%]"
+     class="absolute h-[2px] bg-red-500 z-[0] max-md:w-[100%] md:w-[100%]"
      style="left: 0; top: 0;"></div>
           <div id="currentTimeLabel" class="absolute left-[44%] -translate-y-1/2 bg-red-500 text-xs text-white px-2 py-[2px] rounded-full shadow z-[20] zen-kaku-gothic-new" style="top:0;">現在 --</div>
         </div>
@@ -114,7 +116,7 @@ const venueWidths = [150, 150, 150, 150, 150];
       "7/18": [
         // colorプロパティを追加
         { start: "12:00", end: "13:00", venue: "研修室AB", name: "受付", description: "", color: "" },
-        { start: "13:00", end: "16:35", venue: "和室小", name: "保護者座談会", description: "", color: "bg-purple-300" },
+        { start: "13:00", end: "16:35", venue: "和室小", name: "保護者座談会", description: "中高生交流会の開催に併せ、別室にて中高生の保護者の方を対象とした座談会を開催します。<br>お子さんが交流会を楽しんでいる間、保護者の方同士で気兼ねなくお話ししましょう。", color: "bg-purple-300" },
         { start: "13:00", end: "13:15", venue: "研修室AB", name: "開会式", description: "実行委員長の挨拶や、うぃーすたのご紹介などを行います。<br>楽しい2日間の始まりです！", color: "" },
         { start: "13:25", end: "14:40", venue: "研修室AB", name: "グループトーク", description: "グループに分かれてグループトークを行います。<br>吃音のことだけでなく、趣味や仕事の話などさまざま。", color: "bg-green-300" },
         { start: "13:25", end: "14:40", venue: "研修室C", name: "アイスブレイク・グループトーク", description: "", color: "bg-blue-300" },
