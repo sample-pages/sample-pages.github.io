@@ -1574,6 +1574,10 @@ html[data-theme="light"] .text-color {
   border-radius: 0.75rem;
 }
 
+.rounded-\[1\.5rem\]{
+  border-radius: 1.5rem;
+}
+
 .rounded-bl-\[30px\]{
   border-bottom-left-radius: 30px;
 }
