@@ -2,8 +2,8 @@
 import Layout from "../layouts/Layout.astro";
 
 const times = ["7:00","8:00","9:00","10:00","11:00","12:00","13:00","14:00","15:00","16:00","17:00","18:00","19:00","20:00","21:00","22:00","23:00"];
-const venues = ["研修室AB", "研修室C", "羽衣青少年センター", "バーベキューガーデン羽衣"];
-const venueWidths = [150, 150, 150, 150];
+const venues = ["研修室AB", "研修室C", "和室小", "大阪国際ユースホステル", "バーベキューガーデン羽衣"];
+const venueWidths = [150, 150, 150, 150, 150];
 ---
 
 <Layout title="タイムテーブル - 第8回うぃーすた全国交流会">
@@ -20,8 +20,17 @@ const venueWidths = [150, 150, 150, 150];
     <div class="fade-in margin-contents pt-8 md:px-12 max-md:px-6">
     <div class="h-[15px] md:h-[40px]"></div>
     <div class="ml-1">
-      <p>
-      イベントをタップすることで詳細を確認できます。</p>
+      <p class="mb-2">イベントをタップすることで詳細を確認できます。</p>
+      
+      <p class="flex flex-wrap items-center gap-y-1">
+        <span class="inline-block w-4 h-4 bg-yellow-300 mr-1 rounded-sm"></span>：中高生・学生・社会人
+        
+        <span class="inline-block w-4 h-4 bg-green-300 ml-4 mr-1 rounded-sm"></span>：学生・社会人
+        
+        <span class="inline-block w-4 h-4 bg-blue-300 ml-4 mr-1 rounded-sm"></span>：中高生
+        
+        <span class="inline-block w-4 h-4 bg-purple-300 ml-4 mr-1 rounded-sm"></span>：中高生保護者の方
+      </p>
     </div>
         <div class="flex justify-center mt-8">
           <label class="toggle-button-4 relative flex items-center w-[262px] h-[52px] rounded-[25px] border cursor-pointer">
@@ -104,17 +113,25 @@ const venueWidths = [150, 150, 150, 150];
     const eventsData = {
       "7/18": [
         // colorプロパティを追加
-        { start: "12:30", end: "13:30", venue: "研修室AB", name: "受付", description: "", color: "" },
-        { start: "13:30", end: "13:45", venue: "研修室AB", name: "開会式", description: "", color: "" },
-        { start: "13:50", end: "16:00", venue: "研修室AB", name: "グループトーク", description: "", color: "" }, // デフォルト系
-        { start: "16:00", end: "17:00", venue: "羽衣青少年センター", name: "チェックイン", description: "", color: "" },
-        { start: "17:00", end: "20:00", venue: "バーベキューガーデン羽衣", name: "BBQ", description: "", color: "" },
-        { start: "20:00", end: "22:00", venue: "研修室AB", name: "フリータイム", description: "", color: "" },
+        { start: "12:00", end: "13:00", venue: "研修室AB", name: "受付", description: "", color: "" },
+        { start: "13:00", end: "16:35", venue: "和室小", name: "保護者座談会", description: "", color: "bg-purple-300" },
+        { start: "13:00", end: "13:15", venue: "研修室AB", name: "開会式", description: "実行委員長の挨拶や、うぃーすたのご紹介などを行います。<br>楽しい2日間の始まりです！", color: "" },
+        { start: "13:25", end: "14:40", venue: "研修室AB", name: "グループトーク", description: "グループに分かれてグループトークを行います。<br>吃音のことだけでなく、趣味や仕事の話などさまざま。", color: "bg-green-300" },
+        { start: "13:25", end: "14:40", venue: "研修室C", name: "アイスブレイク・グループトーク", description: "", color: "bg-blue-300" },
+        { start: "14:50", end: "15:55", venue: "研修室AB", name: "ビンゴ大会", description: "豪華景品が当たるかも！？", color: "" },
+        { start: "16:40", end: "17:00", venue: "大阪国際ユースホステル", name: "チェックイン", description: "", color: "" },
+        { start: "17:00", end: "19:30", venue: "バーベキューガーデン羽衣", name: "BBQ", description: "みんなでBBQを楽しみましょう！", color: "" },
+        { start: "19:30", end: "20:00", venue: "バーベキューガーデン羽衣", name: "花火@浜寺公園", description: "夏の風物詩、花火で、1日の最後を締めくくりましょう！<br>バーベキューガーデン羽衣横の浜寺公園にて行います。", color: "bg-blue-300" },
+        { start: "20:00", end: "23:00", venue: "大阪国際ユースホステル", name: "フリータイム", description: "入浴やロビーでの歓談など、思い思いにお過ごしください。", color: "" },
       ],
       "7/19": [
-        { start: "08:00", end: "09:00", venue: "羽衣青少年センター", name: "朝食", description: "", color: "" },
-        { start: "09:30", end: "11:00", venue: "研修室C", name: "イベント", description: "", color: "" },
-        { start: "11:00", end: "12:00", venue: "研修室AB", name: "閉会式", description: "", color: "" },
+        { start: "07:45", end: "08:25", venue: "大阪国際ユースホステル", name: "朝食", description: "", color: "" },
+        { start: "08:30", end: "09:00", venue: "大阪国際ユースホステル", name: "チェックアウト", description: "", color: "" },
+        { start: "09:05", end: "10:40", venue: "研修室C", name: "プラ板づくり", description: "テーマに沿って、みんなでオリジナルのプラ板を作ります！<br>プラスチック板を使用する予定です。<br>※希望者はレジン（ハンドメイド工作に使う樹脂）を使用できます。", color: "bg-blue-300" },
+        { start: "09:05", end: "9:35", venue: "研修室AB", name: "グループトーク", description: "グループに分かれてグループトークを行います。<br>吃音のことだけでなく、趣味や仕事の話などさまざま。", color: "bg-green-300" },
+        { start: "09:35", end: "10:40", venue: "研修室AB", name: "マイメッセージ", description: "吃音にまつわる体験、思い、みんなに伝えたいことなどを自由に発表していただくプログラムです。<br><br>※希望者のみ", color: "bg-green-300" },
+        { start: "10:50", end: "12:00", venue: "研修室AB", name: "クイズ大会", description: "チームで対抗してポイントを競い合います！", color: "" },
+        { start: "12:00", end: "12:20", venue: "研修室AB", name: "閉会式", description: "楽しかった2日間もこれでおしまい。<br>最後までみんなと同じときを過ごしましょう。", color: "" },
       ]
     };
 
@@ -132,7 +149,7 @@ const venueWidths = [150, 150, 150, 150];
         const bgColor = ev.color ? ev.color : "bg-yellow-300";
         
         // テンプレートリテラルを使ってクラス名を動的に埋め込みます
-        div.className = `event-block rounded absolute ${bgColor} border border-gray-300 text-black px-2 py-2 z-[0] flex flex-col cursor-pointer hover:opacity-90 transition-opacity`;
+        div.className = `event-block rounded absolute ${bgColor} border border-gray-300 text-black px-2 py-2 z-[0] flex flex-col cursor-pointer hover:opacity-90 transition-opacity hover:z-[30]`;
         // ▲ 修正箇所ここまで ▲
 
         const title = document.createElement("div");
@@ -156,7 +173,7 @@ const venueWidths = [150, 150, 150, 150];
       const rows = [...tbody.querySelectorAll("tr")];
 
       eventsList.forEach(ev => {
-        const venueIndex = ["研修室AB","研修室C","羽衣青少年センター","バーベキューガーデン羽衣"].indexOf(ev.venue);
+        const venueIndex = ["研修室AB","研修室C","和室小","大阪国際ユースホステル","バーベキューガーデン羽衣"].indexOf(ev.venue);
         if (venueIndex === -1) return;
 
         const td = tbody.querySelectorAll("tr:first-child td")[venueIndex + 1]!;
@@ -199,7 +216,7 @@ const venueWidths = [150, 150, 150, 150];
       eventsList.forEach(ev => {
         ev.div.addEventListener("click", () => {
           modalTitle.textContent = ev.name;
-          modalDescription.textContent = ev.description || "詳細情報なし";
+          modalDescription.innerHTML = ev.description || "詳細情報なし";
           modalTime.textContent = `時間：${ev.start}〜${ev.end}`;
           modal.classList.remove("hidden");
           modal.classList.add("flex");
