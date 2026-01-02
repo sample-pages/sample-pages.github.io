@@ -119,7 +119,7 @@ const venueWidths = [150, 150, 150, 150, 150];
         { start: "13:00", end: "16:35", venue: "和室小", name: "保護者座談会", description: "中高生交流会の開催に併せ、別室にて中高生の保護者の方を対象とした座談会を開催します。<br>お子さんが交流会を楽しんでいる間、保護者の方同士で気兼ねなくお話ししましょう。", color: "bg-purple-300" },
         { start: "13:00", end: "13:15", venue: "研修室AB", name: "開会式", description: "実行委員長の挨拶や、うぃーすたのご紹介などを行います。<br>楽しい2日間の始まりです！", color: "" },
         { start: "13:25", end: "14:40", venue: "研修室AB", name: "グループトーク", description: "グループに分かれてグループトークを行います。<br>吃音のことだけでなく、趣味や仕事の話などさまざま。", color: "bg-green-300" },
-        { start: "13:25", end: "14:40", venue: "研修室C", name: "アイスブレイク・グループトーク", description: "", color: "bg-blue-300" },
+        { start: "13:25", end: "14:40", venue: "研修室C", name: "アイスブレイク・グループトーク", description: "少人数のグループに分かれて、吃音のことや趣味など楽しくお話ししましょう！<br>上手く話す必要はありません。もちろん時間が掛かっても大丈夫。<br>安心して参加して下さい。</p>", color: "bg-blue-300" },
         { start: "14:50", end: "15:55", venue: "研修室AB", name: "ビンゴ大会", description: "豪華景品が当たるかも！？", color: "" },
         { start: "16:40", end: "17:00", venue: "大阪国際ユースホステル", name: "チェックイン", description: "", color: "" },
         { start: "17:00", end: "19:30", venue: "バーベキューガーデン羽衣", name: "BBQ", description: "みんなでBBQを楽しみましょう！", color: "" },
@@ -297,7 +297,7 @@ toggle.addEventListener("change", () => {
 <div id="eventModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-[20000] zen-kaku-gothic-new">
   <div class="bg-white p-6 rounded-3xl shadow-lg max-w-sm w-2/3 relative">
     <button id="modalClose" class="absolute top-3 right-6 text-gray-500 hover:text-black text-[24px]">&times;</button>
-    <h3 id="modalTitle" class="font-bold text-lg mb-2"></h3>
+    <h3 id="modalTitle" class="font-bold text-lg mb-2 pr-8"></h3>
     <p id="modalTime" class="text-sm text-black mt-2"></p>
     <div style="height: 10px"></div>
     <p id="modalDescription" class="text-sm text-black whitespace-pre-wrap"></p>
