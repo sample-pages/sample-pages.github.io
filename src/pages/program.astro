@@ -73,191 +73,188 @@ import Layout from "../layouts/Layout.astro";
     </p>
     </div>
     <div class="w-full mx-auto px-0 pt-4 mb-0">
-      <div class="w-full mx-auto max-w-[64rem] md:px-12 px-6 mb-2">
+  
+      <div class="w-full mx-auto max-w-[64rem] md:px-12 px-6 mb-8">
         <div class="flex items-baseline gap-3">
-          <span class="GenEiKiwamiGo lg:text-5xl text-4xl font-black text-red-200 opacity-100 select-none">Day.1&nbsp;</span>
-          <h2 class="relative -top-0.5 GenEiKiwamiGo font-bold text-gray-800 lg:text-4xl text-3xl tracking-wide">
-            7.18 <span class="lg:text-2xl text-lg inline-block relative -top-1 text-blue-500 text-lg border-2 border-blue-500 rounded-full px-3 py-1 ml-1">Sat</span>
+          <h2 class="relative -top-0.5 zen-kaku-gothic-new font-bold text-gray-800 lg:text-4xl text-3xl tracking-wide">
+            Day1 - 7.18 <span class="text-3xl text-blue-500">Sat.</span>
           </h2>
         </div>
       </div>
     
-      <div class="relative group">
-        <button id="prevBtn" class="absolute left-2 md:left-[240px] top-1/2 -translate-y-1/2 z-20 bg-white text-red-500 hover:bg-red-500 hover:text-white p-4 rounded-full shadow-xl border-2 border-red-100 transition-all active:scale-95 focus:outline-none flex items-center justify-center">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-6 h-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-          </svg>
-        </button>
+      <div class="w-full mx-auto max-w-[64rem] md:px-12 px-6 mb-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
     
-        <div id="sliderContainer" class="flex overflow-x-auto snap-x snap-mandatory gap-6 pt-4 pb-6 px-0 scroll-smooth scrollbar-hide">
-          
-          <div class="shrink-0 w-2 md:w-[250px]"></div>
-    
-          <div class="slider-card snap-center shrink-0 w-[85%] md:w-[400px] bg-white p-8 rounded-[2.5rem] shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] border border-gray-100 flex flex-col relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_24px_-10px_rgba(239,68,68,0.15)]">
-            
-          
-            
-            <span class="relative z-10 inline-flex items-center justify-center px-4 py-1 mb-4 text-sm font-bold text-white bg-gradient-to-r from-red-400 to-pink-500 rounded-full w-fit shadow-md tracking-wider">
-              14:00 - 14:05
-            </span>
-            <h3 class="GenEiKiwamiGo text-3xl font-bold text-gray-800 mb-4 relative z-10">開会式</h3>
-            <p class="leading-relaxed relative z-10 font-medium">
-              実行委員長の挨拶や、うぃーすたのご紹介などを行います。<br>
-              楽しい2日間の始まりです！
-            </p>
+          <div class="bg-white rounded-[1rem] shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] border border-gray-100 overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_24px_-10px_rgba(239,68,68,0.15)] flex flex-col">
+            <div class="h-54 w-full bg-gray-100 flex items-center justify-center text-gray-400 relative">
+              <img src="/images/westu.png">
+              
+              <div class="absolute inset-0 bg-black opacity-10"></div>
+            </div>
+            <div class="p-8 flex flex-col flex-grow">
+              <span class="inline-flex items-center justify-center px-4 py-1 mb-4 text-sm font-bold text-white bg-gradient-to-r from-red-400 to-pink-500 rounded-full w-fit shadow-md tracking-wider">
+                14:00 - 14:05
+              </span>
+              <h3 class="zen-kaku-gothic-new text-2xl font-bold text-gray-800 mb-3">開会式</h3>
+              <p class="text-gray-600 leading-relaxed font-medium">
+                実行委員長の挨拶や、うぃーすたのご紹介などを行います。<br>楽しい2日間の始まりです！
+              </p>
+            </div>
           </div>
     
-          <div class="slider-card snap-center shrink-0 w-[85%] md:w-[400px] bg-white p-8 rounded-[2.5rem] shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] border border-gray-100 flex flex-col relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_24px_-10px_rgba(239,68,68,0.15)]">
-            <svg class="absolute -right-4 -bottom-4 w-32 h-32 text-red-100 opacity-80 rotate-12" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-    
-            <span class="relative z-10 inline-flex items-center justify-center px-4 py-1 mb-4 text-sm font-bold text-white bg-gradient-to-r from-red-400 to-pink-500 rounded-full w-fit shadow-md tracking-wider">
-              14:05 - 16:20
-            </span>
-            <h3 class="GenEiKiwamiGo text-3xl font-bold text-gray-800 mb-4 relative z-10">グループトーク</h3>
-            <p class="leading-relaxed relative z-10 font-medium">
-              グループに分かれてグループトークを行います。吃音のことだけでなく、趣味や仕事の話などさまざま。
-            </p>
+          <div class="bg-white rounded-[1rem] shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] border border-gray-100 overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_24px_-10px_rgba(239,68,68,0.15)] flex flex-col">
+            <div class="h-54 w-full bg-gray-100 flex items-center justify-center text-gray-400 relative">
+              <img src="/images/westu.png">
+              
+              <div class="absolute inset-0 bg-black opacity-10"></div>
+            </div>
+            <div class="p-8 flex flex-col flex-grow">
+              <span class="inline-flex items-center justify-center px-4 py-1 mb-4 text-sm font-bold text-white bg-gradient-to-r from-red-400 to-pink-500 rounded-full w-fit shadow-md tracking-wider">
+                14:05 - 16:20
+              </span>
+              <h3 class="zen-kaku-gothic-new text-2xl font-bold text-gray-800 mb-3">グループトーク</h3>
+              <p class="text-gray-600 leading-relaxed font-medium">
+                グループに分かれてグループトークを行います。吃音のことだけでなく、趣味や仕事の話などさまざま。
+              </p>
+            </div>
           </div>
     
-          <div class="slider-card snap-center shrink-0 w-[85%] md:w-[400px] bg-white p-8 rounded-[2.5rem] shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] border border-gray-100 flex flex-col relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_24px_-10px_rgba(239,68,68,0.15)]">
-            <svg class="absolute -right-4 -bottom-4 w-32 h-32 text-rose-100 opacity-80 rotate-12" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-    
-            <span class="relative z-10 inline-flex items-center justify-center px-4 py-1 mb-4 text-sm font-bold text-white bg-gradient-to-r from-red-400 to-pink-500 rounded-full w-fit shadow-md tracking-wider">
-              16:30 - 17:30
-            </span>
-            <h3 class="GenEiKiwamiGo text-3xl font-bold text-gray-800 mb-4 relative z-10">ビンゴ大会</h3>
-            <p class="leading-relaxed relative z-10 font-medium">
-              豪華景品が当たるかも！？
-            </p>
+          <div class="bg-white rounded-[1rem] shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] border border-gray-100 overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_24px_-10px_rgba(239,68,68,0.15)] flex flex-col">
+            <div class="h-54 w-full bg-gray-100 flex items-center justify-center text-gray-400 relative">
+              <img src="/images/westu.png">
+              
+              <div class="absolute inset-0 bg-black opacity-10"></div>
+            </div>
+            <div class="p-8 flex flex-col flex-grow">
+              <span class="inline-flex items-center justify-center px-4 py-1 mb-4 text-sm font-bold text-white bg-gradient-to-r from-red-400 to-pink-500 rounded-full w-fit shadow-md tracking-wider">
+                16:30 - 17:30
+              </span>
+              <h3 class="zen-kaku-gothic-new text-2xl font-bold text-gray-800 mb-3">ビンゴ大会</h3>
+              <p class="text-gray-600 leading-relaxed font-medium">
+                豪華景品が当たるかも！？
+              </p>
+            </div>
           </div>
     
-          <div class="slider-card snap-center shrink-0 w-[85%] md:w-[400px] bg-white p-8 rounded-[2.5rem] shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] border border-gray-100 flex flex-col relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_24px_-10px_rgba(239,68,68,0.15)]">
-            <svg class="absolute -right-4 -bottom-4 w-32 h-32 text-red-200 opacity-80 rotate-12" fill="currentColor" viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
-    
-            <span class="relative z-10 inline-flex items-center justify-center px-4 py-1 mb-4 text-sm font-bold text-white bg-gradient-to-r from-red-400 to-pink-500 rounded-full w-fit shadow-md tracking-wider">
-              19:00 - 21:00
-            </span>
-            <h3 class="GenEiKiwamiGo text-3xl font-bold text-gray-800 mb-4 relative z-10">夕食</h3>
-            <p class="leading-relaxed relative z-10 font-medium">
-              近くの飲食店を利用します。<br>みんなで食事を楽しみましょう！
-            </p>
-          </div>
-          
-           <div class="slider-card snap-center shrink-0 w-[85%] md:w-[400px] bg-white p-8 rounded-[2.5rem] shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] border border-gray-100 flex flex-col relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_24px_-10px_rgba(239,68,68,0.15)]">
-            <svg class="absolute -right-4 -bottom-4 w-32 h-32 text-pink-200 opacity-80 rotate-12" fill="currentColor" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-    
-            <span class="relative z-10 inline-flex items-center justify-center px-4 py-1 mb-4 text-sm font-bold text-white bg-gradient-to-r from-red-400 to-pink-500 rounded-full w-fit shadow-md tracking-wider">
-              21:00 ～
-            </span>
-            <h3 class="GenEiKiwamiGo text-3xl font-bold text-gray-800 mb-4 relative z-10">フリータイム</h3>
-            <p class="leading-relaxed relative z-10 font-medium">
-              入浴やロビーでの歓談など、思い思いにお過ごしください。
-            </p>
+          <div class="bg-white rounded-[1rem] shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] border border-gray-100 overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_24px_-10px_rgba(239,68,68,0.15)] flex flex-col">
+            <div class="h-54 w-full bg-gray-100 flex items-center justify-center text-gray-400 relative">
+              <img src="/images/westu.png">
+              
+              <div class="absolute inset-0 bg-black opacity-10"></div>
+            </div>
+            <div class="p-8 flex flex-col flex-grow">
+              <span class="inline-flex items-center justify-center px-4 py-1 mb-4 text-sm font-bold text-white bg-gradient-to-r from-red-400 to-pink-500 rounded-full w-fit shadow-md tracking-wider">
+                19:00 - 21:00
+              </span>
+              <h3 class="zen-kaku-gothic-new text-2xl font-bold text-gray-800 mb-3">夕食</h3>
+              <p class="text-gray-600 leading-relaxed font-medium">
+                近くの飲食店を利用します。<br>みんなで食事を楽しみましょう！
+              </p>
+            </div>
           </div>
     
-          <div class="shrink-0 w-2 md:w-[250px]"></div>
+          <div class="bg-white rounded-[1rem] shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] border border-gray-100 overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_24px_-10px_rgba(239,68,68,0.15)] flex flex-col">
+            <div class="h-54 w-full bg-gray-100 flex items-center justify-center text-gray-400 relative">
+              <img src="/images/westu.png">
+              
+              <div class="absolute inset-0 bg-black opacity-10"></div>
+            </div>
+            <div class="p-8 flex flex-col flex-grow">
+              <span class="inline-flex items-center justify-center px-4 py-1 mb-4 text-sm font-bold text-white bg-gradient-to-r from-red-400 to-pink-500 rounded-full w-fit shadow-md tracking-wider">
+                21:00 ～
+              </span>
+              <h3 class="zen-kaku-gothic-new text-2xl font-bold text-gray-800 mb-3">フリータイム</h3>
+              <p class="text-gray-600 leading-relaxed font-medium">
+                入浴やロビーでの歓談など、思い思いにお過ごしください。
+              </p>
+            </div>
+          </div>
+    
         </div>
-    
-        <button id="nextBtn" class="absolute right-2 md:right-[240px] top-1/2 -translate-y-1/2 z-20 bg-white text-red-500 hover:bg-red-500 hover:text-white p-4 rounded-full shadow-xl border-2 border-red-100 transition-all active:scale-95 focus:outline-none flex items-center justify-center">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-6 h-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-          </svg>
-        </button>
       </div>
-    </div>
-    <div style="height: 30px;"></div>
-    <div class="w-full mx-auto px-0 py-0">
-      <div class="w-full mx-auto max-w-[64rem] md:px-12 px-6 mb-2">
+    
+    
+      <div class="w-full mx-auto max-w-[64rem] md:px-12 px-6 mb-8 mt-12">
         <div class="flex items-baseline gap-3">
-            <span class="GenEiKiwamiGo lg:text-5xl text-4xl font-black text-orange-200 opacity-100 select-none">Day.2&nbsp;</span>
-            <h2 class="relative -top-0.5 GenEiKiwamiGo font-bold text-gray-800 lg:text-4xl text-3xl tracking-wide">
-              7.19 <span class="lg:text-2xl text-lg inline-block relative -top-1 text-red-500 text-lg border-2 border-red-500 rounded-full px-3 py-1 ml-1">Sun</span>
-            </h2>
+          <h2 class="relative -top-0.5 zen-kaku-gothic-new font-bold text-gray-800 lg:text-4xl text-3xl tracking-wide">
+            Day2 - 7.19 <span class="text-3xl text-red-500">Sun.</span>
+          </h2>
           </div>
       </div>
     
-      <div class="relative group">
-        <button id="prevBtn2" class="absolute left-2 md:left-[240px] top-1/2 -translate-y-1/2 z-20 bg-white text-orange-500 hover:bg-orange-500 hover:text-white p-4 rounded-full shadow-xl border-2 border-orange-100 transition-all active:scale-95 focus:outline-none flex items-center justify-center">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-6 h-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-          </svg>
-        </button>
-      
-        <div id="sliderContainer2" class="flex overflow-x-auto snap-x snap-mandatory gap-6 pt-4 pb-6 px-0 scroll-smooth scrollbar-hide">
-          
-          <div class="shrink-0 w-2 md:w-[250px]"></div>
-          
-          <div class="slider-card snap-center shrink-0 w-[85%] md:w-[400px] bg-white p-8 rounded-[2.5rem] shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] border border-gray-100 flex flex-col relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_24px_-10px_rgba(249,115,22,0.15)]">
-            <svg class="absolute -right-4 -bottom-4 w-32 h-32 text-orange-100 opacity-80 rotate-12" fill="currentColor" viewBox="0 0 24 24"><path d="M12 3v18"/><path d="M6 8l-4-4"/><path d="M18 8l4-4"/><path d="M22 16l-4 4"/><path d="M6 16l-4 4"/></svg>
+      <div class="w-full mx-auto max-w-[64rem] md:px-12 px-6 mb-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
     
-            <span class="relative z-10 inline-flex items-center justify-center px-4 py-1 mb-4 text-sm font-bold text-white bg-gradient-to-r from-orange-400 to-amber-500 rounded-full w-fit shadow-md tracking-wider">
-              7:00 - 8:30
-            </span>
-            <h3 class="GenEiKiwamiGo text-3xl font-bold text-gray-800 mb-4 relative z-10">朝食</h3>
-            <p class="leading-relaxed relative z-10 font-medium">
-              ホテルのビュッフェ形式です！
-            </p>
+          <div class="bg-white rounded-[1rem] shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] border border-gray-100 overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_24px_-10px_rgba(249,115,22,0.15)] flex flex-col">
+            <div class="h-54 w-full bg-gray-100 flex items-center justify-center text-gray-400 relative">
+              <img src="/images/westu.png">
+              
+              <div class="absolute inset-0 bg-black opacity-10"></div>
+            </div>
+            <div class="p-8 flex flex-col flex-grow">
+              <span class="inline-flex items-center justify-center px-4 py-1 mb-4 text-sm font-bold text-white bg-gradient-to-r from-orange-400 to-amber-500 rounded-full w-fit shadow-md tracking-wider">
+                7:00 - 8:30
+              </span>
+              <h3 class="zen-kaku-gothic-new text-2xl font-bold text-gray-800 mb-3">朝食</h3>
+              <p class="text-gray-600 leading-relaxed font-medium">
+                ホテルのビュッフェ形式です！
+              </p>
+            </div>
           </div>
-      
-          <div class="slider-card snap-center shrink-0 w-[85%] md:w-[400px] bg-white p-8 rounded-[2.5rem] shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] border border-gray-100 flex flex-col relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_24px_-10px_rgba(249,115,22,0.15)]">
-            <svg class="absolute -right-4 -bottom-4 w-32 h-32 text-amber-100 opacity-80 rotate-12" fill="currentColor" viewBox="0 0 24 24"><path d="M12 19c-4.418 0-8-3.134-8-7s3.582-7 8-7 8 3.134 8 7-3.582 7-8 7z"/><path d="M12 19v3"/></svg>
     
-            <span class="relative z-10 inline-flex items-center justify-center px-4 py-1 mb-4 text-sm font-bold text-white bg-gradient-to-r from-orange-400 to-amber-500 rounded-full w-fit shadow-md tracking-wider">
-              9:00 - 10:00
-            </span>
-            <h3 class="GenEiKiwamiGo text-3xl font-bold text-gray-800 mb-4 relative z-10">マイメッセージ</h3>
-            <p class="leading-relaxed relative z-10 font-medium">
-              吃音にまつわる体験、吃音への思い、みんなに伝えたいことなどを、参加者の方の前で自由に発表していただくプログラムです。<br>
-              <span class="text-orange-400">※希望者のみ</span>
-            </p>
+          <div class="bg-white rounded-[1rem] shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] border border-gray-100 overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_24px_-10px_rgba(249,115,22,0.15)] flex flex-col">
+            <div class="h-54 w-full bg-gray-100 flex items-center justify-center text-gray-400 relative">
+              <img src="/images/westu.png">
+              
+              <div class="absolute inset-0 bg-black opacity-10"></div>
+            </div>
+            <div class="p-8 flex flex-col flex-grow">
+              <span class="inline-flex items-center justify-center px-4 py-1 mb-4 text-sm font-bold text-white bg-gradient-to-r from-orange-400 to-amber-500 rounded-full w-fit shadow-md tracking-wider">
+                9:00 - 10:00
+              </span>
+              <h3 class="zen-kaku-gothic-new text-2xl font-bold text-gray-800 mb-3">マイメッセージ</h3>
+              <p class="text-gray-600 leading-relaxed font-medium">
+                吃音にまつわる体験、思い、みんなに伝えたいことなどを自由に発表していただくプログラムです。<br>
+                <span class="text-orange-400">※希望者のみ</span>
+              </p>
+            </div>
           </div>
-      
-          <div class="slider-card snap-center shrink-0 w-[85%] md:w-[400px] bg-white p-8 rounded-[2.5rem] shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] border border-gray-100 flex flex-col relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_24px_-10px_rgba(249,115,22,0.15)]">
-            <svg class="absolute -right-4 -bottom-4 w-32 h-32 text-yellow-100 opacity-80 rotate-12" fill="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
     
-            <span class="relative z-10 inline-flex items-center justify-center px-4 py-1 mb-4 text-sm font-bold text-white bg-gradient-to-r from-orange-400 to-amber-500 rounded-full w-fit shadow-md tracking-wider">
-              10:10 - 11:10
-            </span>
-            <h3 class="GenEiKiwamiGo text-3xl font-bold text-gray-800 mb-4 relative z-10">クイズ大会</h3>
-            <p class="leading-relaxed relative z-10 font-medium">
-              チームで対抗してポイントを競い合います！
-            </p>
+          <div class="bg-white rounded-[1rem] shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] border border-gray-100 overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_24px_-10px_rgba(249,115,22,0.15)] flex flex-col">
+            <div class="h-54 w-full bg-gray-100 flex items-center justify-center text-gray-400 relative">
+              <img src="/images/westu.png">
+              
+              <div class="absolute inset-0 bg-black opacity-10"></div>
+            </div>
+            <div class="p-8 flex flex-col flex-grow">
+              <span class="inline-flex items-center justify-center px-4 py-1 mb-4 text-sm font-bold text-white bg-gradient-to-r from-orange-400 to-amber-500 rounded-full w-fit shadow-md tracking-wider">
+                10:10 - 11:10
+              </span>
+              <h3 class="zen-kaku-gothic-new text-2xl font-bold text-gray-800 mb-3">クイズ大会</h3>
+              <p class="text-gray-600 leading-relaxed font-medium">
+                チームで対抗してポイントを競い合います！
+              </p>
+            </div>
           </div>
-      
-          <div class="slider-card snap-center shrink-0 w-[85%] md:w-[400px] bg-white p-8 rounded-[2.5rem] shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] border border-gray-100 flex flex-col relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_24px_-10px_rgba(249,115,22,0.15)]">
-            
     
-            <span class="relative z-10 inline-flex items-center justify-center px-4 py-1 mb-4 text-sm font-bold text-white bg-gradient-to-r from-orange-400 to-amber-500 rounded-full w-fit shadow-md tracking-wider">
-              11:20 - 11:40
-            </span>
-            <h3 class="GenEiKiwamiGo text-3xl font-bold text-gray-800 mb-4 relative z-10">閉会式</h3>
-            <p class="leading-relaxed relative z-10 font-medium">
-              楽しかった時間もこれでおしまい。<br>最後までみんなと同じときを過ごしましょう。
-            </p>
+          <div class="bg-white rounded-[1rem] shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] border border-gray-100 overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_24px_-10px_rgba(249,115,22,0.15)] flex flex-col">
+            <div class="h-54 w-full bg-gray-100 flex items-center justify-center text-gray-400 relative">
+              <img src="/images/westu.png">
+              
+              <div class="absolute inset-0 bg-black opacity-10"></div>
+            </div>
+            <div class="p-8 flex flex-col flex-grow">
+              <span class="inline-flex items-center justify-center px-4 py-1 mb-4 text-sm font-bold text-white bg-gradient-to-r from-orange-400 to-amber-500 rounded-full w-fit shadow-md tracking-wider">
+                11:20 - 11:40
+              </span>
+              <h3 class="zen-kaku-gothic-new text-2xl font-bold text-gray-800 mb-3">閉会式</h3>
+              <p class="text-gray-600 leading-relaxed font-medium">
+                楽しかった時間もこれでおしまい。<br>最後までみんなと同じときを過ごしましょう。
+              </p>
+            </div>
           </div>
-      
-          <div class="slider-card snap-center shrink-0 w-[85%] md:w-[400px] bg-white p-8 rounded-[2.5rem] shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] border border-gray-100 flex flex-col relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_24px_-10px_rgba(249,115,22,0.15)]">
-            <svg class="absolute -right-4 -bottom-4 w-32 h-32 text-orange-100 opacity-80 rotate-12" fill="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
     
-            <span class="relative z-10 inline-flex items-center justify-center px-4 py-1 mb-4 text-sm font-bold text-white bg-gradient-to-r from-orange-400 to-amber-500 rounded-full w-fit shadow-md tracking-wider">
-              13:00 ～
-            </span>
-            <h3 class="GenEiKiwamiGo text-3xl font-bold text-gray-800 mb-4 relative z-10">昼食</h3>
-            <p class="leading-relaxed relative z-10 font-medium">
-              <span class="text-orange-400">※任意参加</span>
-            </p>
-          </div>
-          
-          <div class="shrink-0 w-2 md:w-[250px]"></div>
-      
         </div>
-        
-        <button id="nextBtn2" class="absolute right-2 md:right-[240px] top-1/2 -translate-y-1/2 z-20 bg-white text-orange-500 hover:bg-orange-500 hover:text-white p-4 rounded-full shadow-xl border-2 border-orange-100 transition-all active:scale-95 focus:outline-none flex items-center justify-center">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-6 h-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-          </svg>
-        </button>
-      
       </div>
     </div>
       <div style="height: 120px"></div>
