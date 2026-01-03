@@ -55,7 +55,7 @@ const venueWidths = [150, 150, 150, 150, 150];
 
       <div style="height: 24px;"></div>
       <div class="flex justify-center">
-      <div id="tableContainer" class="mx-auto overflow-auto max-h-[500px] max-w-[64rem] border rounded-md shadow-md bg-gray-50 relative">
+      <div id="tableContainer" class="mx-auto overflow-auto max-h-[640px] max-w-[64rem] border rounded-md shadow-md bg-gray-50 relative">
         <div class="min-w-[810px] relative z-0">
 
           <table id="timetable" class="border-collapse w-full text-sm relative table-fixed">
@@ -114,26 +114,26 @@ const venueWidths = [150, 150, 150, 150, 150];
     // 🔸 日付ごとのイベント一覧
     const eventsData = {
       "7/18": [
-        // colorプロパティを追加
-        { start: "12:00", end: "13:00", venue: "研修室AB", name: "受付", description: "", color: "" },
-        { start: "13:00", end: "16:35", venue: "和室小", name: "保護者座談会", description: "中高生交流会の開催に併せ、別室にて中高生の保護者の方を対象とした座談会を開催します。<br>お子さんが交流会を楽しんでいる間、保護者の方同士で気兼ねなくお話ししましょう。", color: "bg-purple-300" },
-        { start: "13:00", end: "13:15", venue: "研修室AB", name: "開会式", description: "実行委員長の挨拶や、うぃーすたのご紹介などを行います。<br>楽しい2日間の始まりです！", color: "" },
-        { start: "13:25", end: "14:40", venue: "研修室AB", name: "グループトーク", description: "グループに分かれてグループトークを行います。<br>吃音のことだけでなく、趣味や仕事の話などさまざま。", color: "bg-green-300" },
-        { start: "13:25", end: "14:40", venue: "研修室C", name: "アイスブレイク・グループトーク", description: "少人数のグループに分かれて、吃音のことや趣味など楽しくお話ししましょう！<br>上手く話す必要はありません。もちろん時間が掛かっても大丈夫。", color: "bg-blue-300" },
-        { start: "14:50", end: "15:55", venue: "研修室AB", name: "ビンゴ大会", description: "豪華景品が当たるかも！？", color: "" },
-        { start: "16:40", end: "17:00", venue: "大阪国際ユースホステル", name: "チェックイン", description: "", color: "" },
-        { start: "17:00", end: "19:30", venue: "バーベキューガーデン羽衣", name: "BBQ", description: "みんなでBBQを楽しみましょう！", color: "" },
-        { start: "19:30", end: "20:00", venue: "バーベキューガーデン羽衣", name: "花火@浜寺公園", description: "夏の風物詩、花火で、1日の最後を締めくくりましょう！<br>バーベキューガーデン羽衣横の浜寺公園にて行います。", color: "bg-blue-300" },
-        { start: "20:00", end: "23:00", venue: "大阪国際ユースホステル", name: "フリータイム", description: "入浴やロビーでの歓談など、思い思いにお過ごしください。", color: "" },
+        { start: "12:00", end: "13:00", venue: "研修室AB", name: "受付", description: "", color: "", target: "中高生・学生・社会人" },
+        { start: "12:30", end: "13:00", venue: "和室小", name: "受付", description: "", color: "bg-purple-300", target: "中高生保護者の方" },
+        { start: "13:00", end: "16:35", venue: "和室小", name: "保護者座談会", description: "中高生交流会の開催に併せ、別室にて中高生の保護者の方を対象とした座談会を開催します。<br>お子さんが交流会を楽しんでいる間、保護者の方同士で気兼ねなくお話ししましょう。", color: "bg-purple-300", target: "中高生保護者の方" },
+        { start: "13:00", end: "13:15", venue: "研修室AB", name: "開会式", description: "実行委員長の挨拶や、うぃーすたのご紹介などを行います。<br>楽しい2日間の始まりです！", color: "", target: "中高生・学生・社会人" },
+        { start: "13:25", end: "14:40", venue: "研修室AB", name: "グループトーク", description: "グループに分かれてグループトークを行います。<br>吃音のことだけでなく、趣味や仕事の話などさまざま。", color: "bg-green-300", target: "学生・社会人" },
+        { start: "13:25", end: "14:40", venue: "研修室C", name: "アイスブレイク・グループトーク", description: "少人数のグループに分かれて、吃音のことや趣味など楽しくお話ししましょう！<br>上手く話す必要はありません。もちろん時間が掛かっても大丈夫。", color: "bg-blue-300", target: "中高生" },
+        { start: "14:50", end: "15:55", venue: "研修室AB", name: "ビンゴ大会", description: "豪華景品が当たるかも！？", color: "", target: "中高生・学生・社会人" },
+        { start: "16:40", end: "17:00", venue: "大阪国際ユースホステル", name: "チェックイン", description: "", color: "", target: "中高生・学生・社会人" },
+        { start: "17:00", end: "19:30", venue: "バーベキューガーデン羽衣", name: "BBQ", description: "みんなでBBQを楽しみましょう！", color: "", target: "中高生・学生・社会人" },
+        { start: "19:30", end: "20:00", venue: "バーベキューガーデン羽衣", name: "花火@浜寺公園", description: "夏の風物詩、花火で、1日の最後を締めくくりましょう！<br>バーベキューガーデン羽衣横の浜寺公園にて行います。", color: "bg-blue-300", target: "中高生" },
+        { start: "20:00", end: "23:00", venue: "大阪国際ユースホステル", name: "フリータイム", description: "入浴やロビーでの歓談など、思い思いにお過ごしください。", color: "", target: "中高生・学生・社会人" },
       ],
       "7/19": [
-        { start: "07:45", end: "08:25", venue: "大阪国際ユースホステル", name: "朝食", description: "", color: "" },
-        { start: "08:30", end: "09:00", venue: "大阪国際ユースホステル", name: "チェックアウト", description: "", color: "" },
-        { start: "09:05", end: "10:40", venue: "研修室C", name: "プラ板づくり", description: "テーマに沿って、みんなでオリジナルのプラ板を作ります！<br>プラスチック板を使用する予定です。<br>※希望者はレジン（ハンドメイド工作に使う樹脂）を使用できます。", color: "bg-blue-300" },
-        { start: "09:05", end: "9:35", venue: "研修室AB", name: "グループトーク", description: "グループに分かれてグループトークを行います。<br>吃音のことだけでなく、趣味や仕事の話などさまざま。", color: "bg-green-300" },
-        { start: "09:35", end: "10:40", venue: "研修室AB", name: "マイメッセージ", description: "吃音にまつわる体験、思い、みんなに伝えたいことなどを自由に発表していただくプログラムです。<br>※希望者のみ", color: "bg-green-300" },
-        { start: "10:50", end: "12:00", venue: "研修室AB", name: "クイズ大会", description: "チームで対抗してポイントを競い合います！", color: "" },
-        { start: "12:00", end: "12:20", venue: "研修室AB", name: "閉会式", description: "楽しかった2日間もこれでおしまい。<br>最後までみんなと同じときを過ごしましょう。", color: "" },
+        { start: "07:45", end: "08:25", venue: "大阪国際ユースホステル", name: "朝食", description: "", color: "", target: "中高生・学生・社会人" },
+        { start: "08:30", end: "09:00", venue: "大阪国際ユースホステル", name: "チェックアウト", description: "", color: "", target: "中高生・学生・社会人" },
+        { start: "09:05", end: "10:40", venue: "研修室C", name: "プラ板づくり", description: "テーマに沿って、みんなでオリジナルのプラ板を作ります！<br>プラスチック板を使用する予定です。<br>※希望者はレジン（ハンドメイド工作に使う樹脂）を使用できます。", color: "bg-blue-300", target: "中高生" },
+        { start: "09:05", end: "9:35", venue: "研修室AB", name: "グループトーク", description: "グループに分かれてグループトークを行います。<br>吃音のことだけでなく、趣味や仕事の話などさまざま。", color: "bg-green-300", target: "学生・社会人" },
+        { start: "09:35", end: "10:40", venue: "研修室AB", name: "マイメッセージ", description: "吃音にまつわる体験、思い、みんなに伝えたいことなどを自由に発表していただくプログラムです。<br>※希望者のみ", color: "bg-green-300", target: "学生・社会人" },
+        { start: "10:50", end: "12:00", venue: "研修室AB", name: "クイズ大会", description: "チームで対抗してポイントを競い合います！", color: "", target: "中高生・学生・社会人" },
+        { start: "12:00", end: "12:20", venue: "研修室AB", name: "閉会式", description: "楽しかった2日間もこれでおしまい。<br>最後までみんなと同じときを過ごしましょう。", color: "", target: "中高生・学生・社会人" },
       ]
     };
 
@@ -214,9 +214,8 @@ const venueWidths = [150, 150, 150, 150, 150];
       const modalDescription = document.getElementById("modalDescription")!;
       const modalTime = document.getElementById("modalTime")!;
       
-      // ▼ ここを追加：場所表示用エレメントの取得
       const modalVenue = document.getElementById("modalVenue")!;
-      // ▲ 追加ここまで
+      const modalTarget = document.getElementById("modalTarget")!;
 
       const modalClose = document.getElementById("modalClose")!;
 
@@ -224,10 +223,8 @@ const venueWidths = [150, 150, 150, 150, 150];
         ev.div.addEventListener("click", () => {
           modalTitle.textContent = ev.name;
           modalDescription.innerHTML = ev.description || "詳細情報なし";
-          
-          // ▼ ここを追加：場所のテキストを設定
           modalVenue.textContent = `場所：${ev.venue}`;
-          // ▲ 追加ここまで
+          modalTarget.textContent = ev.target ? `対象：${ev.target}` : "";
 
           modalTime.textContent = `時間：${ev.start}〜${ev.end}`;
           modal.classList.remove("hidden");
@@ -311,6 +308,7 @@ toggle.addEventListener("change", () => {
     
     <p id="modalTime" class="text-sm text-black mt-2"></p>
     <p id="modalVenue" class="text-sm text-black mt-1"></p>
+    <p id="modalTarget" class="text-sm text-black mt-1 font-medium"></p>
     <div style="height: 10px"></div>
     <p id="modalDescription" class="text-sm text-black whitespace-pre-wrap"></p>
     

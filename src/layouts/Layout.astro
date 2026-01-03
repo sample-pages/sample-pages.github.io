@@ -88,10 +88,6 @@ window.addEventListener('DOMContentLoaded', () => {
         '/images/bubble_3.png'
     ];
 
-    // 背景画像をプリロード
-    const img = new Image();
-    img.src = '/images/p0126_l.png';
-
     // ==========================================
     //  CSSスタイル定義
     // ==========================================
@@ -100,7 +96,7 @@ window.addEventListener('DOMContentLoaded', () => {
       .intro-overlay {
         position: fixed;
         top: 0; left: 0;
-        width: 100vw; height: 100vh;
+        width: 100vw; height: 100svh;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -113,10 +109,14 @@ window.addEventListener('DOMContentLoaded', () => {
       .intro-container {
         display: flex;
         position: relative;
-        top: -20px;
+        justify-content: center;
+  align-items: flex-start;
         flex-direction: row-reverse;
         gap: 3rem; 
         z-index: 2;
+        height: 100svh;
+        padding-top: 120px; /* 数値は調整してください */
+  box-sizing: border-box; /* paddingを含めて高さを計算させるおまじない */
       }
       .intro-text {
         color: black;
@@ -152,9 +152,9 @@ window.addEventListener('DOMContentLoaded', () => {
         background-color: rgba(255,255,255,0.3);
       }
       @media (max-width: 768px) {
-        .intro-container { gap: 1.5rem; }
+        .intro-container { gap: 1.5rem; padding-top: 130px;}
         .intro-text { font-size: 1.1rem; line-height: 1.5; }
-        .intro-skip-btn { width: 80px; height: 80px; bottom: 80px; right: 30px; font-size: 14px; }
+        .intro-skip-btn { width: 80px; height: 80px; bottom: 60px; right: 40px; font-size: 14px; }
       }
 
       .bubble {
@@ -206,7 +206,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const overlay = document.createElement('div');
     overlay.classList.add('intro-overlay');
-    overlay.style.background = `linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('/images/p0126_l.png') no-repeat center center`;
+    
+    
+    overlay.style.backgroundColor = "#fff2f2";
     document.body.appendChild(overlay);
 
     // ==========================================
@@ -319,14 +321,23 @@ window.addEventListener('DOMContentLoaded', () => {
 
   </head>
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K72QWT4T66" is:inline></script>
-  <script is:inline>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J7TW1M281F"></script>
+<script is:inline>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-J7TW1M281F');
+</script>
+<script>
+  // ユーザーエージェントを取得
+  var userAgent = window.navigator.userAgent.toLowerCase();
   
-    gtag('config', 'G-K72QWT4T66');
-  </script>
+  // Chromeかどうか判定（EdgeやOperaを除外するための条件も含める）
+  if (userAgent.indexOf('chrome') != -1 && userAgent.indexOf('edge') == -1 && userAgent.indexOf('opr') == -1) {
+    document.body.classList.add('is-chrome');
+  }
+</script>
   <body class="flex flex-col m-0">
     <Header />
     <main class="flex-grow min-h-0">
