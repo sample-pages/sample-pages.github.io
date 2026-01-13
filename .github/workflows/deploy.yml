@@ -5,6 +5,10 @@ on:
     branches: [main]
   workflow_dispatch:
 
+concurrency:
+  group: "pages-fix"        # 名前を変えて強制的に新しいレーンで作ります
+  cancel-in-progress: true  # 古いのが動いていたら強制キャンセルする設定
+
 permissions:
   contents: read
   pages: write
