@@ -158,30 +158,6 @@ dropdownLinks.forEach(link => {
 
   observer.observe(hero);
 });
-
-document.addEventListener("DOMContentLoaded", () => {
-  const header = document.getElementById("mainHeader");
-  if (!header) return;
-
-  // sessionStorage にフラグがない場合のみアニメーション
-  if (!sessionStorage.getItem("headerAnimated")) {
-    // 初期状態を隠す
-    header.style.opacity = "0";
-    header.style.transform = "translateY(-50px)";
-
-    // アニメーション開始（遅延は必要に応じて変更）
-    setTimeout(() => {
-      header.classList.add("slide-in");
-    }, 7000);
-
-    // フラグを保存して二度目以降はアニメーションしない
-    sessionStorage.setItem("headerAnimated", "true");
-  } else {
-    // 二度目以降は静止状態
-    header.style.opacity = "1";
-    header.style.transform = "translateY(0)";
-  }
-});
     </script>
 
     <nav class="ml-auto flex flex-wrap items-center text-base justify-center max-xl:mr-2.5 max-xl:mt-0.5 xl:mr-8 xl:mt-1">
