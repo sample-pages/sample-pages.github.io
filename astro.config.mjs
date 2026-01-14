@@ -3,7 +3,6 @@ import mdx from '@astrojs/mdx';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 
-// https://astro.build/config
 export default defineConfig({
     site: 'https://sample-pages.github.io/',
     integrations: [mdx()],
