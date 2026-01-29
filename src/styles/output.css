@@ -6678,6 +6678,10 @@ h1 {
     height: 80px;
   }
 
+  .md\:h-\[0px\]{
+    height: 0px;
+  }
+
   .md\:w-16{
     width: 4rem;
   }
