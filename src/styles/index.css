@@ -57,9 +57,7 @@
   /* デフォルト背景 */
   :root,
 html[data-theme="light"]:not(.chukosei):not(:has(.index)) {
-  background: 
-    linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
-    url('/images/p0126_l.png') center center;
+  background-color: #fff3f3;
   background-size: contain;
 }
 
@@ -74,7 +72,7 @@ html[data-theme="light"]:not(.chukosei):not(:has(.index)) {
   /* 特定ページ背景 */
   /* 意味: data-theme="light" な html の中にある .indexクラス に適用 */
 html[data-theme="light"] .index {
-  background-color: #fae1e1;
+  background-color: #fff3f3;
   /* section自体に背景がつくので、background-sizeの挙動は意図と変わるかもしれません */
 }
 
@@ -438,6 +436,86 @@ body {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
 }
+
+@media (max-width: 1024px) {
+.margin-contents {
+  max-width: 64rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+}
+
+@media (max-width: 768px) {
+  .margin-contents {
+    max-width: 64rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  }
+
+  .margin-title {
+    max-width: 64rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+.margin-title {
+  max-width: 64rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+}
+
+@media (max-width: 768px) {
+  .margin-title {
+    max-width: 64rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2rem;
+    padding-right: 1.5rem;
+  }
+  }
+
+  .margin-contents2 {
+    max-width: 64rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+.margin-contents2 {
+  max-width: 64rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+}
+
+@media (max-width: 768px) {
+  .margin-contents2 {
+    max-width: 64rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  }
 
 .margin-default {
   max-width: 56rem;
@@ -1166,6 +1244,20 @@ html {
 .reveal.slide-left.is-visible {
   transform: none;
 }
+
+.reveal2 {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 600ms ease, transform 600ms ease;
+  will-change: opacity, transform;
+}
+
+/* 発火時のクラス */
+.reveal2.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
 
 /* ゆっくりにしたい・速くしたいは transition-duration を変更 */
 
@@ -2036,7 +2128,7 @@ article h2 {
 
 /* カード本体（縦レイアウト） */
 .profile-item{
-  background: #ffffff;
+  background: #ffffffb3;
   border-radius: 30px;
   padding: 1.6rem 1.2rem;
   text-align: center;
@@ -2143,7 +2235,7 @@ article h2 {
 /* ========= CSS Variables ========= */
 :root {
   --img-size: 280px;
-  --gap: 100px;
+  --gap: 90px;
   --bubble-bg: #fff;
   --bubble-color: #111;
   --bubble-radius: 16px;
@@ -2154,7 +2246,7 @@ article h2 {
 .face-board {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: var(--gap);
+  gap: var(--gap) 60px;
   width: min(720px, calc(2 * var(--img-size) + var(--gap) + 40px));
   margin: 0 auto;
 }
@@ -2315,6 +2407,122 @@ article h2 {
   }
 }
 
+/* X (Twitter) アプリ内ブラウザの場合、このクラスがついた要素を非表示にする */
+body.is-x-browser .hide-on-x {
+  display: none !important;
+}
+
+/* デフォルトでは非表示にする */
+.show-on-x-only {
+  display: none;
+}
+
+/* Xアプリ内ブラウザの時だけ、強制的に表示する */
+body.is-x-browser .show-on-x-only {
+  display: block !important;
+}
+  /* --- A. X限定表示の制御 --- */
+  
+  /* デフォルトではこのブロック全体を非表示にする */
+  .twitter-only-zoom-block {
+    display: none;
+    
+  }
+
+  /* Xアプリ内ブラウザと判定された時だけ表示する */
+  body.is-x-browser .twitter-only-zoom-block {
+    display: block !important;
+    text-align: center;
+  }
+
+
+  /* --- B. 画像とボタンのデザイン --- */
+  .image-container {
+    position: relative;
+    display: inline-block;
+    max-width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    
+  }
+  
+  .image-container img.main-image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .image-container img.main-image2 {
+    display: block;
+    width: 100%;
+    height: 400px;        /* 好みの高さ（px）を指定してください */
+    object-fit: cover;    /* 画像を押しつぶさずに、枠に合わせてトリミングする */
+    object-position: center;
+  }
+
+  /* 中央の「タップで拡大」ボタン */
+  .zoom-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    /* スマホで見やすいよう、最初から表示しておく */
+    opacity: 0.9; 
+  }
+
+  /* --- C. モーダル（全画面表示）のデザイン --- */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;  /* 幅の指定を解除（左右固定で自動で広がる） */
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999; /* 最前面 */
+    background-color: rgba(0, 0, 0, 0.6);
+    /* アニメーション用 */
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+
+  /* 表示時のクラス */
+  .modal-overlay.is-open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* 閉じるボタン（×） */
+  .close-modal-btn {
+    position: absolute;
+    top: 20px; right: 20px;
+    background: none;
+    border: none;
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    line-height: 1;
+    cursor: pointer;
+    padding: 10px;
+  }
+
+  /* モーダル内の画像 */
+  .modal-content img {
+    max-width: 95vw;
+    max-height: 80vh;
+    object-fit: contain;
+  }
+
 .chart-wrapper {
   width: 100%;
   overflow-x: auto; /* 横スクロールを可能に */
@@ -2340,6 +2548,7 @@ article h2 {
   border-bottom: 2px solid #333;
   padding-left: 10px;
   padding-bottom: 0px;
+  
 }
 
 .bar-chart-mf {
@@ -2513,7 +2722,13 @@ article h2 {
   z-index: 10;      /* 棒グラフより前面に出す */
   background: white; /* 背景を白にすると棒が重なっても見やすい */
   padding-right: 10px; /* 棒と少し間隔 */
+  padding-bottom: 0;
   border-right: 2px solid #333; /* 軸線をここで固定 */
+  align-items: flex-end;
+  position: -webkit-sticky; /* iOS (Safari/X) 用にこれを必ず先頭に追加 */
+  line-height: 1;
+  top: auto !important;
+  bottom: 0;
 }
 
 .x-axis {
@@ -2523,9 +2738,12 @@ article h2 {
   position: sticky; /* ← ここで固定 */
   left: 0;          /* 左端に固定 */
   z-index: 10;      /* 棒グラフより前面に出す */
-  background: white; /* 背景を白にすると棒が重なっても見やすい */
+  background: rgb(255, 255, 255); /* 背景を白にすると棒が重なっても見やすい */
   padding-right: 10px; /* 棒と少し間隔 */
+  padding-bottom: 0;
   border-right: 2px solid #ffffff; /* 軸線をここで固定 */
+  margin-bottom: 0px;
+  position: -webkit-sticky; /* iOS (Safari/X) 用にこれを必ず先頭に追加 */
 }
 
 .box {
@@ -2653,7 +2871,7 @@ article h2 {
 
 /* 背景を白くし、角を丸く、かつ「角以外の直線部分」に縁を付ける設定 */
 .schedule-card {
-  background-color: #ffffff;
+  background-color: #ffffffb3;
   border-radius: 40px; /* 角丸の大きさ */
   position: relative;
   padding: 60px 40px;
@@ -2726,8 +2944,8 @@ article h2 {
 h1 {
   font-family: "Zen Kaku Gothic New", "Makinas-4-Flat", sans-serif;
   font-weight: 700;
-  font-size: 2.8rem;
-  color: #636363;
+  font-size: 2.6rem;
+  color: #535353;
   letter-spacing: 0em;
   text-transform: uppercase;
 }
@@ -2750,7 +2968,7 @@ h1 {
 /* --- 数字のスタイル --- */
 .number {
   font-family: "Lobster", sans-serif; /* お好みのフォントで */
-  font-size: 8rem; /* ★数字を大きく */
+  font-size: 7.5rem; /* ★数字を大きく */
   font-weight: bold;
   color: #a66767; /* 黒文字に変更 */
   line-height: 1; /* 行間を詰める */
@@ -2759,19 +2977,18 @@ h1 {
 /* --- 単位（日・時間・分）のスタイル --- */
 .label {
   font-family: "Zen Kaku Gothic New", "Makinas-4-Flat", sans-serif;
-  font-size: 4rem; /* ★単位のサイズ */
+  font-size: 3.5rem; /* ★単位のサイズ */
   font-weight: 600;
-  color: #636363;
+  color: #535353;
 }
 
-/* --- スマホ対応 --- */
 @media (max-width: 1024px) {
   h1 {
-      font-size: 2rem;
+      font-size: 2.2rem;
   }
   .label {
-    margin-top: 13px;
-      font-size: 2.5rem;
+    margin-top: 10px;
+    font-size: 3rem;
   }
   
   .flip-card {
@@ -2782,17 +2999,17 @@ h1 {
       height: 50px; /* 高さ100pxの半分 */
   }
   .number {
-      font-size: 5rem;
-      line-height: 100px; /* スマホ時の全体の高さ */
+      font-size: 6.5rem;
+      line-height: 80px; /* スマホ時の全体の高さ */
   }
 
   .timer-wrapper {
-    gap: 10px; /* 「日」「時間」「分」の各グループの間隔 */
+    gap: 20px; /* 「日」「時間」「分」の各グループの間隔 */
   }
 
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   h1 {
       font-size: 1.2rem;
   }
