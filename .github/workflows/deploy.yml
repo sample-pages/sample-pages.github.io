@@ -4,6 +4,10 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  schedule:
+    # UTC（世界標準時）で記述します
+    # 日本時間 9:00 → UTC 0:00
+    - cron: '15 2 * * *'
 
 concurrency:
   group: "pages"        # 名前を変えて強制的に新しいレーンで作ります
