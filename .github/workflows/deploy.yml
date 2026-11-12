@@ -22,7 +22,8 @@ jobs:
         uses: actions/checkout@v4
       - name: Install, build, and upload your site
         uses: withastro/action@v3
-        # with:
+        with:
+          node-version: 22 # ← この行を追加してNode.js 22を指定します
           # package-manager: pnpm@latest # npm以外（pnpmやyarn）を使っている場合はこのコメントアウトを外して指定します
 
   deploy:
