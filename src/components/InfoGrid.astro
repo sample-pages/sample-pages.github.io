@@ -1,0 +1,66 @@
+---
+import { information } from '../data/home';
+import { url } from '../lib/url';
+---
+
+<ul class="grid">
+  {information.map((item) => (
+    <li>
+      <a href={url(item.href)}>
+        <span class="en" aria-hidden="true">{item.en}</span>
+        <span class="ja">{item.label}</span>
+      </a>
+    </li>
+  ))}
+</ul>
+
+<style>
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  @media (min-width: 768px) {
+    .grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  a {
+    display: grid;
+    align-content: center;
+    gap: 4px;
+    height: 100%;
+    min-height: 112px;
+    padding: 16px 12px;
+    border: 2px solid var(--c-line);
+    border-radius: var(--radius);
+    background: var(--c-surface);
+    text-align: center;
+    text-decoration: none;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+
+  a:hover {
+    border-color: var(--c-primary);
+    transform: translateY(-3px);
+  }
+
+  .en {
+    font-family: var(--font-display);
+    font-size: 0.8rem;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--c-primary);
+  }
+
+  .ja {
+    font-weight: 700;
+    line-height: 1.5;
+  }
+</style>

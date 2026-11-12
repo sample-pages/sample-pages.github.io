@@ -1,0 +1,64 @@
+---
+import { quickLinks } from '../data/navigation';
+import { url } from '../lib/url';
+
+const icons: Record<string, string> = {
+  map: 'M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z',
+  clock: 'M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 10.4 3.6 2.1-.8 1.4L11 13V6h2z',
+  user: 'M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm0 2c-4.42 0-8 2.24-8 5v3h16v-3c0-2.76-3.58-5-8-5z',
+};
+---
+
+<ul class="quick">
+  {quickLinks.map((item) => (
+    <li>
+      <a href={url(item.href)}>
+        {item.icon && (
+          <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true">
+            <path d={icons[item.icon]} fill="currentColor" fill-rule="evenodd" />
+          </svg>
+        )}
+        <span>{item.label}</span>
+      </a>
+    </li>
+  ))}
+</ul>
+
+<style>
+  .quick {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(8px, 2vw, 20px);
+    margin: 0 0 clamp(48px, 7vw, 72px);
+    padding: 0;
+    list-style: none;
+  }
+
+  a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    height: 100%;
+    padding: clamp(12px, 3vw, 22px) 8px;
+    border-radius: var(--radius);
+    background: var(--c-primary);
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 4px 0 var(--c-primary-dark);
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+
+  a:hover {
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 var(--c-primary-dark);
+  }
+
+  @media (min-width: 640px) {
+    a {
+      flex-direction: row;
+    }
+  }
+</style>

@@ -1,0 +1,15 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import NewsList from '../../components/NewsList.astro';
+import { url } from '../../lib/url';
+---
+
+<BaseLayout title="お知らせ">
+  <div class="container page">
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+      <a href={url('/')}>トップ</a> / お知らせ
+    </nav>
+    <h1 class="page-title">お知らせ</h1>
+    <NewsList />
+  </div>
+</BaseLayout>

@@ -1,0 +1,83 @@
+---
+import { news } from '../data/news';
+import { url } from '../lib/url';
+
+interface Props {
+  limit?: number;
+}
+
+const { limit } = Astro.props;
+const items = limit ? news.slice(0, limit) : news;
+---
+
+<ul class="list">
+  {items.map((item) => (
+    <li>
+      <a href={url(`/news/${item.slug}/`)}>
+        <span class="title">
+          {item.title}
+          {item.isNew && <span class="badge">NEW</span>}
+        </span>
+        <span class="summary">{item.summary}</span>
+      </a>
+    </li>
+  ))}
+</ul>
+
+<style>
+  .list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li + li {
+    border-top: 1px dashed var(--c-line);
+  }
+
+  a {
+    position: relative;
+    display: grid;
+    gap: 2px;
+    padding: 14px 44px 14px 8px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+
+  a::after {
+    content: '›';
+    position: absolute;
+    top: 50%;
+    right: 14px;
+    font-size: 1.5rem;
+    color: var(--c-primary);
+    translate: 0 -50%;
+  }
+
+  a:hover {
+    background: #fff4e6;
+  }
+
+  .title {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+  }
+
+  .summary {
+    font-size: 0.9rem;
+    color: var(--c-muted);
+  }
+
+  .badge {
+    padding: 0 8px;
+    border-radius: 999px;
+    background: var(--c-accent);
+    color: #fff;
+    font-size: 0.7rem;
+    line-height: 1.8;
+  }
+</style>

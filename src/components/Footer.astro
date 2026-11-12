@@ -1,0 +1,129 @@
+---
+import { footerLinks } from '../data/navigation';
+import { site } from '../data/site';
+import { url } from '../lib/url';
+
+const { organizer, sns } = site;
+
+// 簡略化したSNSアイコン（正式ロゴを使う場合は各社のブランドガイドラインに従う）
+const icons: Record<string, string> = {
+  instagram:
+    '<rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2" /><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2" /><circle cx="17.5" cy="6.5" r="1.3" fill="currentColor" />',
+  x: '<path fill="currentColor" d="M18.9 1.15h3.68l-8.04 9.19L24 22.85h-7.41l-5.8-7.58-6.64 7.58H.47l8.6-9.83L0 1.15h7.59l5.24 6.93zm-1.29 19.5h2.04L6.49 3.24H4.3z" />',
+  line: '<path fill="currentColor" d="M12 3C6.48 3 2 6.58 2 11c0 3.96 3.6 7.27 8.47 7.9.33.07.78.22.89.5.1.26.07.66.03.92l-.14.86c-.04.26-.2 1 .88.55 1.08-.46 5.8-3.42 7.92-5.85C21.5 14.32 22 12.72 22 11c0-4.42-4.48-8-10-8z" />',
+  youtube:
+    '<path fill="currentColor" fill-rule="evenodd" d="M5 5h14a4 4 0 0 1 4 4v6a4 4 0 0 1-4 4H5a4 4 0 0 1-4-4V9a4 4 0 0 1 4-4zm5 4v6l5-3z" />',
+};
+---
+
+<footer class="footer">
+  <div class="container inner">
+    <div>
+      <h2>{organizer.name}</h2>
+      <h3>お問い合わせ</h3>
+      <address>
+        {organizer.address}<br />
+        TEL: {organizer.tel}<br />
+        Email: {organizer.email}（[at]を@に変えてください）
+      </address>
+    </div>
+    <ul class="sns">
+      {sns.map((item) => (
+        <li>
+          <a href={item.href} target="_blank" rel="noopener noreferrer" aria-label={item.name}>
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" set:html={icons[item.icon]}></svg>
+          </a>
+        </li>
+      ))}
+    </ul>
+    <ul class="links">
+      {footerLinks.map((item) => (
+        <li><a href={url(item.href)}>{item.label}</a></li>
+      ))}
+    </ul>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    padding-block: 56px 40px;
+    border-top: 6px solid var(--c-primary);
+    background: #4a3420;
+    color: #fdf1e2;
+  }
+
+  .inner {
+    display: grid;
+    gap: 28px;
+  }
+
+  h2 {
+    margin: 0 0 16px;
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+  }
+
+  h3 {
+    margin: 0 0 4px;
+    font-size: 0.95rem;
+    color: #ffc580;
+  }
+
+  address {
+    font-size: 0.9rem;
+    font-style: normal;
+  }
+
+  .sns {
+    display: flex;
+    align-self: start;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .sns a {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgb(255 255 255 / 0.12);
+    color: #fff;
+    transition: background 0.2s;
+  }
+
+  .sns a:hover {
+    background: var(--c-primary);
+  }
+
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+    margin: 0;
+    padding: 24px 0 0;
+    border-top: 1px solid rgb(255 255 255 / 0.15);
+    font-size: 0.85rem;
+    list-style: none;
+  }
+
+  .links a {
+    text-decoration: none;
+  }
+
+  .links a:hover {
+    text-decoration: underline;
+  }
+
+  @media (min-width: 768px) {
+    .inner {
+      grid-template-columns: 1fr auto;
+    }
+
+    .links {
+      grid-column: 1 / -1;
+    }
+  }
+</style>

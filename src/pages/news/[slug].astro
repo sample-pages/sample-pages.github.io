@@ -1,0 +1,26 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { news, type News } from '../../data/news';
+import { url } from '../../lib/url';
+
+export function getStaticPaths() {
+  return news.map((item) => ({ params: { slug: item.slug }, props: { item } }));
+}
+
+interface Props {
+  item: News;
+}
+
+const { item } = Astro.props;
+---
+
+<BaseLayout title={item.title} description={item.summary}>
+  <article class="container page">
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+      <a href={url('/')}>トップ</a> / <a href={url('/news/')}>お知らせ</a>
+    </nav>
+    <h1 class="page-title">{item.title}</h1>
+    <p>{item.body ?? item.summary}</p>
+    <p><a class="btn" href={url('/news/')}>お知らせ一覧へ</a></p>
+  </article>
+</BaseLayout>

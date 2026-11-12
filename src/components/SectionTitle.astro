@@ -1,0 +1,41 @@
+---
+interface Props {
+  anchor: string;
+}
+
+const { anchor } = Astro.props;
+const ornament =
+  '<path d="M2 8h28M52 8h28" stroke="currentColor" stroke-width="2" stroke-linecap="round" /><path d="M41 1l7 7-7 7-7-7z" fill="currentColor" />';
+---
+
+<h2 class="title">
+  <svg class="ornament" viewBox="0 0 82 16" aria-hidden="true" set:html={ornament}></svg>
+  <a href={`#${anchor}`}><slot /></a>
+  <svg class="ornament" viewBox="0 0 82 16" aria-hidden="true" set:html={ornament}></svg>
+</h2>
+
+<style>
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(10px, 3vw, 24px);
+    margin: 0 0 clamp(32px, 5vw, 48px);
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 4.5vw, 2.2rem);
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    text-align: center;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .ornament {
+    flex-shrink: 0;
+    width: clamp(44px, 9vw, 82px);
+    height: auto;
+    color: var(--c-primary);
+  }
+</style>

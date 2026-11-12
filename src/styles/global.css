@@ -1,0 +1,151 @@
+/* File: src/styles/global.css */
+:root {
+  --c-primary: #f5962a;
+  --c-primary-dark: #d9771a;
+  --c-accent: #e8618c;
+  --c-bg: #fffaf2;
+  --c-surface: #ffffff;
+  --c-text: #3b2a1a;
+  --c-muted: #7a6650;
+  --c-line: #f0dcc0;
+  --radius: 16px;
+  --shadow: 0 8px 24px rgb(120 70 20 / 0.12);
+  --font-base: 'Noto Sans JP', system-ui, sans-serif;
+  --font-display: 'Zen Maru Gothic', 'Noto Sans JP', sans-serif;
+  --header-h: 64px;
+  --container: 1100px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-h) + 16px);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-base);
+  color: var(--c-text);
+  background: var(--c-bg);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 文節単位の改行（原典の ZWSP による改行制御を自動化） */
+@supports (word-break: auto-phrase) {
+  body {
+    word-break: auto-phrase;
+  }
+}
+
+:where(h1, h2, h3) {
+  line-height: 1.4;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--c-primary);
+  outline-offset: 3px;
+}
+
+.container {
+  width: min(100% - 32px, var(--container));
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: clamp(56px, 9vw, 104px);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6em;
+  padding: 0.8em 2.2em;
+  border-radius: 999px;
+  background: var(--c-primary);
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 4px 0 var(--c-primary-dark);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.btn::after {
+  content: '→';
+}
+
+.btn:hover {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 var(--c-primary-dark);
+}
+
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 8px;
+  z-index: 1000;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.skip-link:focus {
+  top: 8px;
+}
+
+.clone-notice {
+  margin: 0;
+  padding: 6px 16px;
+  background: var(--c-text);
+  color: #fff;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+/* 下層ページ共通 */
+.page {
+  min-height: 60vh;
+  padding-block: clamp(48px, 8vw, 96px);
+}
+
+.page-title {
+  margin: 0 0 32px;
+  padding-bottom: 12px;
+  border-bottom: 3px solid var(--c-primary);
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 5vw, 2.6rem);
+}
+
+.breadcrumb {
+  margin: 0 0 16px;
+  font-size: 0.85rem;
+  color: var(--c-muted);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

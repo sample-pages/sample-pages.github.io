@@ -1,16 +1,196 @@
 ---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import SectionTitle from '../components/SectionTitle.astro';
+import QuickLinks from '../components/QuickLinks.astro';
+import NewsList from '../components/NewsList.astro';
+import RecommendedGrid from '../components/RecommendedGrid.astro';
+import OfficialCarousel from '../components/OfficialCarousel.astro';
+import InfoGrid from '../components/InfoGrid.astro';
+import SponsorList from '../components/SponsorList.astro';
+import { site } from '../data/site';
+import { assets } from '../data/home';
+import { url } from '../lib/url';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout>
+  <Hero />
+
+  <section class="news container" aria-labelledby="news-heading">
+    <h2 id="news-heading" class="news-label">お知らせ</h2>
+    <div>
+      <NewsList limit={5} />
+      <p class="news-more"><a class="btn" href={url('/news/')}>一覧を見る</a></p>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <div class="container">
+      <SectionTitle anchor="projects">企画情報</SectionTitle>
+      <QuickLinks />
+      <h3 class="sub-title"><a href={url('/recommended/')}>おすすめ企画</a></h3>
+      <RecommendedGrid />
+      <p class="more"><a class="btn" href={url('/recommended/')}>詳しくはこちら</a></p>
+    </div>
+  </section>
+
+  <section id="official-contents" class="section tinted">
+    <div class="container">
+      <SectionTitle anchor="official-contents">公式コンテンツ</SectionTitle>
+      <OfficialCarousel />
+    </div>
+  </section>
+
+  <section id="information" class="section">
+    <div class="container">
+      <SectionTitle anchor="information">ご案内</SectionTitle>
+      <InfoGrid />
+    </div>
+  </section>
+
+  <section id="theme" class="section tinted">
+    <div class="container theme">
+      <SectionTitle anchor="theme">テーマ</SectionTitle>
+      {assets.themeLogo ? (
+        <img class="theme-img" src={url(assets.themeLogo)} alt={`テーマ「${site.theme}」ロゴ`} />
+      ) : (
+        <p class="theme-text">{site.theme}</p>
+      )}
+      <a class="btn" href={url('/theme/')}>詳しくはこちら</a>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="container">
+      <SectionTitle anchor="about">駒場祭とは</SectionTitle>
+      <div class="about">
+        {assets.aboutImage ? (
+          <img class="about-visual" src={url(assets.aboutImage)} alt="駒場祭の様子" loading="lazy" />
+        ) : (
+          <div class="about-visual" aria-hidden="true"></div>
+        )}
+        <div>
+          <p class="about-lead">駒場祭は、毎年11月下旬に駒場Iキャンパスで開催される東京大学の学園祭です。</p>
+          <a class="btn" href={url('/about/')}>詳しくはこちら</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sponsors" class="section tinted">
+    <div class="container">
+      <SectionTitle anchor="sponsors">ご協賛</SectionTitle>
+      <SponsorList />
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .news {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: clamp(16px, 3vw, 40px);
+    margin-top: clamp(-96px, -8vw, -56px);
+    padding: clamp(20px, 4vw, 40px);
+    border-radius: 24px;
+    background: var(--c-surface);
+    box-shadow: var(--shadow);
+  }
+
+  .news-label {
+    margin: 0;
+    padding-right: clamp(12px, 2vw, 28px);
+    border-right: 2px solid var(--c-line);
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    letter-spacing: 0.3em;
+    color: var(--c-primary);
+    writing-mode: vertical-rl;
+  }
+
+  .news-more {
+    margin: 16px 0 0;
+    text-align: right;
+  }
+
+  .sub-title {
+    margin: 0 0 32px;
+    font-family: var(--font-display);
+    font-size: clamp(1.2rem, 3.5vw, 1.6rem);
+    text-align: center;
+  }
+
+  .sub-title a {
+    text-decoration: none;
+  }
+
+  .more {
+    margin: 48px 0 0;
+    text-align: center;
+  }
+
+  .tinted {
+    background: linear-gradient(180deg, #fff0db 0%, var(--c-bg) 100%);
+  }
+
+  .theme {
+    display: grid;
+    justify-items: center;
+    gap: 32px;
+    text-align: center;
+  }
+
+  .theme-text {
+    margin: 0;
+    padding-left: 0.25em;
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 12vw, 6.5rem);
+    font-weight: 900;
+    letter-spacing: 0.25em;
+    line-height: 1.2;
+    background: linear-gradient(120deg, var(--c-primary), var(--c-accent) 60%, #8a6fd1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .theme-img {
+    width: min(100%, 520px);
+  }
+
+  .about {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+    align-items: center;
+    gap: clamp(24px, 5vw, 56px);
+  }
+
+  .about-visual {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 24px;
+    background: linear-gradient(135deg, #ffd29a, var(--c-primary) 55%, var(--c-accent));
+    box-shadow: var(--shadow);
+  }
+
+  .about-lead {
+    margin: 0 0 24px;
+    font-size: 1.1rem;
+  }
+
+  @media (max-width: 640px) {
+    .news {
+      grid-template-columns: 1fr;
+    }
+
+    .news-label {
+      padding: 0 0 8px;
+      border-right: 0;
+      border-bottom: 2px solid var(--c-line);
+      writing-mode: horizontal-tb;
+    }
+  }
+</style>

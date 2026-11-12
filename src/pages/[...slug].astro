@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { navigation, footerLinks } from '../data/navigation';
+import { recommended } from '../data/home';
+import { url } from '../lib/url';
+
+export function getStaticPaths() {
+  const pages = [
+    ...navigation.flatMap((group) => group.items.map((item) => ({ ...item, group: group.title }))),
+    ...recommended.map((cat) => ({ label: cat.label, href: `/recommended/${cat.slug}/`, group: 'おすすめ企画' })),
+    ...footerLinks.map((item) => ({ ...item, group: 'サイト情報' })),
+    { label: 'English', href: '/en/', group: 'Language' },
+  ];
+  const unique = new Map(pages.map((page) => [page.href, page]));
+
+  return [...unique.values()].map((page) => ({
+    params: { slug: page.href.replace(/^\/|\/$/g, '') },
+    props: { label: page.label, group: page.group },
+  }));
+}
+
+interface Props {
+  label: string;
+  group: string;
+}
+
+const { label, group } = Astro.props;
+---
+
+<BaseLayout title={label}>
+  <div class="container page">
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+      <a href={url('/')}>トップ</a> / {group}
+    </nav>
+    <h1 class="page-title">{label}</h1>
+    <p>このページは準備中です（トップページの構造のみ複製しています）。</p>
+    <p><a class="btn" href={url('/')}>トップページへ戻る</a></p>
+  </div>
+</BaseLayout>
