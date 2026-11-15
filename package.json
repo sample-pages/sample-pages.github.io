@@ -1,0 +1,15 @@
+{
+  "name": "westu-zenkoku-redesign",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check:routes": "node scripts/check-routes.mjs"
+  },
+  "dependencies": {
+    "astro": "5.18.2"
+  }
+}

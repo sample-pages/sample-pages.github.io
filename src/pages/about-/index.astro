@@ -1,0 +1,134 @@
+
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="うぃーすた全国交流会とは" currentPath="/about/">
+
+  <main class="about-page">
+
+    <header class="about-header">
+      <h1>うぃーすた全国交流会について</h1>
+    </header>
+
+    <article class="about-article">
+
+      <section id="#kitsuon">
+        <h2>吃音とは</h2>
+
+        <p>
+          
+&emsp;吃音とは、言葉が流暢に出ず、つかえてしまう言語障害の一種です。吃音の有症率は全人口のおよそ1%と言われ、国や地域を問わず、多くの吃音者がいます。</p>
+<p>
+&emsp;吃音については、長年たくさんの研究や調査が行われ、明らかにされてきたことも多々あります。しかし、その原因や本態については分からないことも多く、治すための確実な治療法は確立されていません。
+        </p>
+      </section>
+
+      <section id="#westu">
+        <h2>うぃーすたとは</h2>
+
+        <p>
+        &emsp;うぃーすたプロジェクトは、そんな吃音で悩んでいる人のために、お互いに悩みを話したり、何気ない会話に花を咲かすことができるような、お互いに「分かち合う」ことができる「居場所」を提供することを目指しています。具体的には定期的に例会やカフェ会などを開催しています。当サークルを通して、少しでも吃音のある人同士の交流を広がることを心より願っています。
+        </p>
+
+        <p>
+          &emsp;うぃーすたプロジェクトHPは<a href="">こちら</a>
+        </p>
+
+      </section>
+
+      <section id="#westu-zenkoku">
+        <h2>うぃーすた全国交流会とは</h2>
+
+        <p>
+          &emsp;うぃーすた全国交流会とは、うぃーすたプロジェクトの主催する交流会イベントです。毎年全国から多くの吃音当事者が集まります。吃音のある同年代の仲間たちと悩みや夢を語り合う、かけがえのない時間を過ごしてみませんか？
+        </p>
+      </section>
+
+    </article>
+
+  </main>
+
+</BaseLayout>
+
+<style>
+  .about-page {
+    padding: 70px 24px 100px;
+  }
+
+  /* ページタイトル */
+  .about-header {
+    max-width: 900px;
+    margin: 0 auto 70px;
+    text-align: center;
+  }
+
+  .about-header h1 {
+    margin: 0;
+    color: #333;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.6;
+  }
+
+  /* 本文 */
+  .about-article {
+    max-width: 850px;
+    margin: 0 auto;
+    color: #333;
+  }
+
+  .about-article section {
+    margin-bottom: 48px;
+  }
+
+  /* 見出し */
+  .about-article h2 {
+    margin: 0 0 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #c95f60;
+    color: #333;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.6;
+  }
+
+  /* 段落 */
+  .about-article p {
+    margin: 0 0 18px;
+    font-size: 16px;
+    line-height: 2;
+  }
+
+  .about-article p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* スマートフォン */
+  @media (max-width: 700px) {
+    .about-page {
+      padding: 45px 20px 70px;
+    }
+
+    .about-header {
+      margin-bottom: 48px;
+    }
+
+    .about-header h1 {
+      font-size: 25px;
+    }
+
+    .about-article section {
+      margin-bottom: 38px;
+    }
+
+    .about-article h2 {
+      font-size: 20px;
+    }
+
+    .about-article p {
+      font-size: 14px;
+      line-height: 2;
+    }
+  }
+</style>

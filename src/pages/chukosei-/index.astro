@@ -1,0 +1,37 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const pageTitle = "中高生交流会";
+---
+
+<BaseLayout title={pageTitle} currentPath="/chukosei/">
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <p class="page-hero-kicker">JUNIOR & HIGH SCHOOL</p>
+      <h1 set:html={"思春期の悩みも、<br />喜びも、分かち合う。"}></h1>
+      <p>吃音のある中高生が、似た経験を持つ仲間と出会い、安心して交流できる場をつくっています。</p>
+    </div>
+    <div class="page-hero-mark" aria-hidden="true">CH</div>
+  </section>
+
+  <section class="content-section">
+    <div class="content-inner">
+      <section class="content-block" data-reveal>
+        <h2>どんな交流会？</h2>
+        <p>グループトークを中心に、定期的なオンライン交流会や対面でのイベントを開催しています。吃音のことだけでなく、趣味や学校生活のことを話したり、ゲームをしたりして過ごします。</p>
+      </section>
+      <section class="content-block" data-reveal>
+        <h2>一人ひとりのペースを大切に</h2>
+        <p>上手く話す必要はありません。話すまでに時間がかかっても、聞いているだけでも大丈夫です。吃音のある大学生や社会人が進行・サポートを行います。</p>
+      </section>
+      <section class="content-block" data-reveal>
+        <h2>保護者の方へ</h2>
+        <p>保護者向けの情報や座談会については、開催回ごとの案内をご確認ください。</p>
+      </section>
+      <div class="page-cta" data-reveal>
+        <strong>不安なことやご質問がありましたら、お気軽にご相談ください。</strong>
+        <a href="/contact/">お問い合わせ <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

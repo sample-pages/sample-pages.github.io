@@ -1,0 +1,32 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { faqs } from "../../data/faq";
+---
+
+<BaseLayout title="よくある質問" currentPath="/faq/">
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <p class="page-hero-kicker">FREQUENTLY ASKED QUESTIONS</p>
+      <h1>気になることに、<br />お答えします。</h1>
+      <p>参加前に気になることや、不安に思うことをまとめました。</p>
+    </div>
+    <div class="page-hero-mark" aria-hidden="true">Q&amp;A</div>
+  </section>
+
+  <section class="content-section">
+    <div class="content-inner">
+      <div class="faq-list">
+        {faqs.map((faq) => (
+          <details class="faq-item" data-reveal>
+            <summary>{faq.question}</summary>
+            <div class="faq-answer">{faq.answer}</div>
+          </details>
+        ))}
+      </div>
+      <div class="page-cta" data-reveal>
+        <strong>掲載されていない質問や不安があれば、お問い合わせください。</strong>
+        <a href="/contact/">お問い合わせ <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

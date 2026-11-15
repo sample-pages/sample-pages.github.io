@@ -1,0 +1,37 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const pageTitle = "交流会の開催記録";
+---
+
+<BaseLayout title={pageTitle} currentPath="/event/">
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <p class="page-hero-kicker">GATHERING ARCHIVE</p>
+      <h1 set:html={"同じ時間を過ごした、<br />かけがえのない記録。"}></h1>
+      <p>全国から集まった仲間と、話したり、聴いたり、一緒に楽しんだり。第8回うぃーすた全国交流会の開催概要を紹介します。</p>
+    </div>
+    <div class="page-hero-mark" aria-hidden="true">EV</div>
+  </section>
+
+  <section class="content-section">
+    <div class="content-inner">
+      <section class="content-block" data-reveal>
+        <h2>開催概要</h2>
+        <p>2026年7月18日（土）から19日（日）まで、大阪国際ユースホステル・羽衣青少年センターで開催しました。</p>
+      </section>
+      <section class="content-block" data-reveal>
+        <h2>会場</h2>
+        <p>大阪国際ユースホステル・羽衣青少年センター（大阪府高石市羽衣公園丁）。</p>
+      </section>
+      <section class="content-block" data-reveal>
+        <h2>主催・共催</h2>
+        <p>主催：うぃーすた全国交流会実行委員会。共催：全国言友会 吃音のある中高生交流会。</p>
+      </section>
+      <div class="page-cta" data-reveal>
+        <strong>不安なことやご質問がありましたら、お気軽にご相談ください。</strong>
+        <a href="/contact/">お問い合わせ <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,51 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const pageTitle = "参加・申し込み";
+---
+
+<BaseLayout title={pageTitle} currentPath="/application/">
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <p class="page-hero-kicker">PARTICIPATION</p>
+      <h1 set:html={"参加のかたちも、<br />自分に合ったものを。"}></h1>
+      <p>開催回によって、宿泊・日帰り、学生・社会人など複数の参加プランを設けています。次回の募集要項が公開されたら、このページで案内します。</p>
+    </div>
+    <div class="page-hero-mark" aria-hidden="true">AP</div>
+  </section>
+
+  <section class="content-section">
+    <div class="content-inner">
+      <section class="content-block" data-reveal>
+        <h2>次回開催について</h2>
+        <p>次回の開催日程・会場・参加費・申し込み方法は、決まり次第こちらでお知らせします。現在、次回の募集は行っていません。</p>
+      </section>
+      <section class="content-block" data-reveal>
+        <h2>参加に不安がある方へ</h2>
+        <p>初めての方や一人で参加する方もいらっしゃいます。会話のペースや参加方法について心配なことがあれば、事前にお問い合わせください。</p>
+      </section>
+      <section class="content-block" data-reveal>
+        <h2>過去の開催について</h2>
+        <p>第8回は2026年7月18日（土）〜19日（日）に開催しました。過去の参加プランは当時の情報です。次回の募集条件とは異なる場合があります。</p>
+      </section>
+      <div class="info-grid" data-reveal>
+        <article class="info-card">
+          <small>BEFORE JOINING</small>
+          <h3>参加にあたって</h3>
+          <p>安心して交流会に参加するためのお願いをまとめています。</p>
+          <a href="/attention/">注意事項を見る ↗</a>
+        </article>
+        <article class="info-card">
+          <small>QUESTIONS</small>
+          <h3>よくある質問</h3>
+          <p>初参加や一人での参加など、よくいただく質問をまとめています。</p>
+          <a href="/faq/">FAQを見る ↗</a>
+        </article>
+      </div>
+      <div class="page-cta" data-reveal>
+        <strong>不安なことやご質問がありましたら、お気軽にご相談ください。</strong>
+        <a href="/contact/">お問い合わせ <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

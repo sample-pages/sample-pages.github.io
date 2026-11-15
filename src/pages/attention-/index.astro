@@ -1,0 +1,37 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const pageTitle = "参加にあたって";
+---
+
+<BaseLayout title={pageTitle} currentPath="/attention/">
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <p class="page-hero-kicker">GUIDELINES</p>
+      <h1 set:html={"安心して過ごせる時間を、<br />みんなでつくる。"}></h1>
+      <p>参加する一人ひとりが安心して過ごせるよう、互いのペースや考え方を尊重しましょう。</p>
+    </div>
+    <div class="page-hero-mark" aria-hidden="true">AT</div>
+  </section>
+
+  <section class="content-section">
+    <div class="content-inner">
+      <section class="content-block" data-reveal>
+        <h2>施設のルールを守る</h2>
+        <p>施設内では、会場の利用ルールやスタッフの案内に従ってください。</p>
+      </section>
+      <section class="content-block" data-reveal>
+        <h2>相手を尊重する</h2>
+        <p>特定の方に執拗に話しかけること、価値観を押しつけたり否定したりすること、宗教・マルチ商法などへの勧誘、その他の迷惑行為は禁止しています。</p>
+      </section>
+      <section class="content-block" data-reveal>
+        <h2>個人情報と写真について</h2>
+        <p>参加者同士の連絡先交換は自己責任でお願いします。イベントの記録として撮影を行う場合があります。写真の掲載について不安がある方は事前にご相談ください。</p>
+      </section>
+      <div class="page-cta" data-reveal>
+        <strong>不安なことやご質問がありましたら、お気軽にご相談ください。</strong>
+        <a href="/contact/">お問い合わせ <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

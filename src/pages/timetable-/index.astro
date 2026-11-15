@@ -1,0 +1,39 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { programItems } from "../../data/program";
+---
+
+<BaseLayout title="タイムテーブル">
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <p class="page-hero-kicker">TIME TABLE / ARCHIVE</p>
+      <h1>2日間の流れを、<br />振り返る。</h1>
+      <p>第8回の主なプログラムを時間順にまとめています。</p>
+    </div>
+    <div class="page-hero-mark" aria-hidden="true">TIME</div>
+  </section>
+
+  <section class="content-section">
+    <div class="content-inner">
+      <div class="archive-note" data-reveal>
+        <strong>DAY 1</strong>
+        <span>2026年7月18日（土）の主なプログラムです。実際の進行内容は当日の運営により変更される場合があります。</span>
+      </div>
+      <div class="timeline timeline--spaced">
+        {programItems.map((item) => (
+          <article class="timeline-item" data-reveal>
+            <div class="timeline-time">{item.time}</div>
+            <div>
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+      <div class="archive-note archive-note--spaced" data-reveal>
+        <strong>DAY 2</strong>
+        <span>2日目は朝食、体験プログラム、閉会式などを行いました。次回のタイムテーブルは開催回ごとに更新します。</span>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

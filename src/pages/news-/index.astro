@@ -1,0 +1,34 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { newsItems } from "../../data/news";
+---
+
+<BaseLayout title="お知らせ" currentPath="/news/">
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <p class="page-hero-kicker">NEWS & UPDATES</p>
+      <h1>お知らせ。</h1>
+      <p>交流会に関するお知らせや、過去の開催情報を掲載しています。</p>
+    </div>
+    <div class="page-hero-mark" aria-hidden="true">NEWS</div>
+  </section>
+
+  <section class="content-section">
+    <div class="content-inner">
+      <div class="archive-note" data-reveal>
+        <strong>ARCHIVE</strong>
+        <span>掲載している日付・内容は第8回開催時の過去情報です。現在の募集情報ではありません。</span>
+      </div>
+      <div class="news-list news-list--spaced">
+        {newsItems.map((item) => (
+          <article class="news-item" data-reveal>
+            <time class="news-date">{item.date}</time>
+            <span class="news-category">{item.category}</span>
+            <span class="news-title">{item.title}</span>
+            <span class="news-arrow" aria-hidden="true">↗</span>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

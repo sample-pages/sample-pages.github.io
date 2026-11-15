@@ -1,0 +1,44 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { programItems } from "../../data/program";
+---
+
+<BaseLayout title="プログラム" currentPath="/program/">
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <p class="page-hero-kicker">PROGRAM / MOMENTS</p>
+      <h1>話す時間も、<br />楽しむ時間も。</h1>
+      <p>第8回の交流会で行ったプログラムの一部を紹介します。次回の内容は開催回ごとに更新します。</p>
+    </div>
+    <div class="page-hero-mark" aria-hidden="true">03</div>
+  </section>
+
+  <section class="content-section">
+    <div class="content-inner">
+      <div class="archive-note" data-reveal>
+        <strong>ARCHIVE</strong>
+        <span>以下は2026年7月開催・第8回のプログラムです。次回の開催内容・時間は変更となる場合があります。</span>
+      </div>
+      <div class="timeline timeline--spaced">
+        {programItems.map((item) => (
+          <article class="timeline-item" data-reveal>
+            <div class="timeline-time">{item.time}</div>
+            <div>
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+              <span class="news-category program-badge">{item.type}</span>
+            </div>
+          </article>
+        ))}
+      </div>
+      <div class="page-cta" data-reveal>
+        <strong>一日の流れを一覧で見たい方はこちら。</strong>
+        <a href="/timetable/">タイムテーブルを見る <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="content-block program-notes" data-reveal>
+        <h2>プログラムについて</h2>
+        <p>プログラムの目的は、上手に話すことではありません。参加者それぞれが安心できるペースで関わり、交流のきっかけを見つけることを大切にしています。</p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

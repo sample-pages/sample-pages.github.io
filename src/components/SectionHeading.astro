@@ -1,0 +1,16 @@
+---
+const {
+  number,
+  eyebrow,
+  title,
+  description,
+  light = false,
+} = Astro.props;
+---
+
+<div class:list={["section-heading", { "section-heading-light": light }]} data-reveal>
+  <div class="section-heading-copy">
+    <h2 set:html={title}></h2>
+    {description && <p>{description}</p>}
+  </div>
+</div>

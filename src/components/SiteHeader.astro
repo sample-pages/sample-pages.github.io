@@ -1,0 +1,82 @@
+---
+import { navigation, site } from "../data/site";
+
+const { currentPath = "/" } = Astro.props;
+---
+
+<header class="site-header">
+  <a class="brand" href="/" aria-label={`${site.name} トップページ`}>
+    <img
+  src="/images/brand-symbol.png"
+  alt=""
+  class="brand-symbol"
+  aria-hidden="true"
+/>
+    <span class="brand-wordmark">
+      <strong>第9回</strong>
+      <strong>うぃーすた全国交流会</strong>
+    </span>
+  </a>
+
+  <nav class="desktop-nav" aria-label="メインナビゲーション">
+  {navigation.map((item) => (
+    <div class="nav-item">
+      {item.href ? (
+  <a
+    href={item.href}
+    class:list={[
+      "nav-link",
+      { active: currentPath === item.href },
+    ]}
+  >
+    {item.label}
+    {item.children}
+  </a>
+) : (
+  <span class="nav-link nav-trigger">
+    {item.label}
+  </span>
+)}
+
+      {item.children && (
+        <div class="nav-dropdown">
+          <ul>
+            {item.children.map((child) => (
+              <li>
+                <a href={child.href}>
+                  {child.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </div>
+  ))}
+</nav>
+
+  <details class="mobile-menu">
+    <summary aria-label="メニューを開く">
+      <span></span>
+      <span></span>
+    </summary>
+    <nav aria-label="モバイルナビゲーション">
+      {navigation.map((item) => (
+        <div class="mobile-nav-group">
+          {item.href ? (
+            <a class="mobile-nav-link" href={item.href}>{item.label}</a>
+          ) : (
+            <span class="mobile-nav-heading">{item.label}</span>
+          )}
+          {item.children && (
+            <div class="mobile-subnav">
+              {item.children.map((child) => (
+                <a href={child.href}>{child.label}</a>
+              ))}
+            </div>
+          )}
+        </div>
+      ))}
+    </nav>
+  </details>
+</header>

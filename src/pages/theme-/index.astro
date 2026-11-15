@@ -1,0 +1,255 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const pageTitle = "テーマ";
+---
+
+<BaseLayout title={pageTitle} currentPath="/about/">
+  <div class="about-experience">
+    <div class="about-visual-stage" data-about-stage data-scene="voice" aria-hidden="true">
+      <div class="about-visual-layer about-visual-layer--voice"></div>
+      <div class="about-visual-layer about-visual-layer--place"></div>
+      <div class="about-visual-layer about-visual-layer--connect"></div>
+      <div class="about-visual-layer about-visual-layer--nation"></div>
+      <div class="about-visual-checker"></div>
+      <div class="about-visual-grain"></div>
+      <div class="about-visual-vignette"></div>
+    </div>
+
+    <div class="about-splash" data-about-splash aria-hidden="true">
+      <div class="about-splash-mark">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <p>WESTU / ABOUT</p>
+    </div>
+
+    <div class="about-scroll-hint" data-about-scroll-hint aria-hidden="true">
+      <span>SCROLL TO EXPLORE</span>
+      <span class="about-scroll-arrow">⌄</span>
+    </div>
+
+    <section class="about-story-scene about-story-hero" data-about-scene="voice">
+      <div class="about-story-hero-inner">
+        <p class="about-story-kicker">ABOUT WESTU / 01</p>
+        <h1>
+          話すことも、<br />
+          <span>聴くことも。</span><br />
+          <em>そのままで。</em>
+        </h1>
+        <p class="about-story-lead">
+          ことばの速さや形にとらわれず、<br class="desktop-break" />
+          一人ひとりのペースを大切にできる場所。
+        </p>
+      </div>
+      <div class="about-hero-side" aria-hidden="true">
+        <span>LISTEN</span>
+        <span>SHARE</span>
+        <span>CONNECT</span>
+      </div>
+      <div class="about-hero-number" aria-hidden="true">01</div>
+    </section>
+
+    <section class="about-story-poem" data-about-scene="place">
+      <div class="about-poem-inner">
+        <p class="about-story-kicker">A PLACE TO BE YOURSELF / 02</p>
+        <p class="about-poem-line">言葉がすぐに出る日も。</p>
+        <p class="about-poem-line">ゆっくりになる日も。</p>
+        <p class="about-poem-line about-poem-emphasis">話してもいい。</p>
+        <p class="about-poem-line about-poem-emphasis">聴いていてもいい。</p>
+        <p class="about-poem-line">少し休んだっていい。</p>
+        <p class="about-poem-note">
+          ここでは、どんな過ごし方もその人らしさのひとつ。<br />
+          無理に言葉を探さず、自分のペースでいられることを大切にしています。
+        </p>
+      </div>
+      <div class="about-poem-stamp" aria-hidden="true">
+        <span>YOUR</span>
+        <strong>PACE</strong>
+        <span>IS YOUR PACE</span>
+      </div>
+    </section>
+
+    <section class="about-story-scene about-story-community" data-about-scene="connect">
+      <div class="about-scene-inner">
+        <p class="about-story-kicker">MEET & SHARE / 03</p>
+        <p class="about-scene-number">01 — 03</p>
+        <h2>
+          ひとりで抱えていたことを、<br />
+          <em>分かち合える。</em>
+        </h2>
+        <p class="about-scene-copy">
+          吃音についての悩みや経験はもちろん、日々の出来事や好きなことも。
+          同じような経験を持つ人と話すことで、気づいたり、ほっとしたり。
+          うまく話すことだけを目標にしない交流を大切にしています。
+        </p>
+        <div class="about-scene-caption">
+          <span>話す</span>
+          <span>聴く</span>
+          <span>ともに過ごす</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-story-scene about-story-national" data-about-scene="nation">
+      <div class="about-scene-inner about-scene-inner--right">
+        <p class="about-story-kicker">FROM EVERYWHERE / 04</p>
+        <p class="about-scene-number">02 — 03</p>
+        <h2>
+          いつもの場所を越えて、<br />
+          <em>仲間と出会う。</em>
+        </h2>
+        <p class="about-scene-copy">
+          うぃーすた全国交流会には、全国各地から吃音のある同年代の仲間が集まります。
+          普段の生活ではなかなか出会えない人と、同じ時間を過ごす。
+          その出会いが、新しい視点やつながりのきっかけになります。
+        </p>
+        <div class="about-scene-caption">
+          <span>LOCAL</span>
+          <span class="caption-cross">×</span>
+          <span>NATIONAL</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-story-scene about-story-activity" data-about-scene="place">
+      <div class="about-scene-inner">
+        <p class="about-story-kicker">TIME TOGETHER / 05</p>
+        <p class="about-scene-number">03 — 03</p>
+        <h2>
+          話す時間も、<br />
+          <em>楽しむ時間も。</em>
+        </h2>
+        <p class="about-scene-copy">
+          グループトークや交流企画、食事やレクリエーション。
+          プログラムに参加しても、少し離れてゆっくり過ごしても。
+          それぞれに合った関わり方で、一緒の時間を楽しめます。
+        </p>
+        <a class="about-scene-link" href="/program/">
+          プログラムを見る
+          <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="about-details">
+      <div class="about-details-inner">
+        <div class="about-detail-heading" data-reveal>
+          <p class="about-story-kicker">ABOUT / DETAILS</p>
+          <h2>うぃーすたのことを、<br /><em>もう少し。</em></h2>
+        </div>
+
+        <article class="about-detail-row" data-reveal>
+          <span class="about-detail-index">01</span>
+          <div>
+            <h3>吃音について</h3>
+            <p>
+              吃音は、話すときに音や言葉が繰り返されたり、引き伸ばされたり、
+              言葉が出にくくなったりすることがある状態です。現れ方や感じ方、
+              日々の困りごとは一人ひとり異なります。
+            </p>
+          </div>
+        </article>
+
+        <article class="about-detail-row" data-reveal>
+          <span class="about-detail-index">02</span>
+          <div>
+            <h3>うぃーすたプロジェクトについて</h3>
+            <p>
+              うぃーすたプロジェクトは、吃音のある人たちが悩みや経験を話したり、
+              何気ない会話を楽しんだりできる居場所を目指して活動しています。
+              例会やカフェ会などを通して、交流の機会をつくっています。
+            </p>
+          </div>
+        </article>
+
+        <article class="about-detail-row" data-reveal>
+          <span class="about-detail-index">03</span>
+          <div>
+            <h3>うぃーすた全国交流会について</h3>
+            <p>
+              全国交流会は、うぃーすたプロジェクトが主催する交流イベントです。
+              全国から集まった仲間と、語り合ったり、一緒に体験したりしながら、
+              かけがえのない時間を過ごします。
+            </p>
+          </div>
+        </article>
+
+        <div class="about-last-message" data-reveal>
+          <p>あなたのペースで、<br />つながっていこう。</p>
+          <a href="/contact/">
+            お問い合わせ
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    const aboutStage = document.querySelector("[data-about-stage]");
+    const aboutScenes = document.querySelectorAll("[data-about-scene]");
+    const aboutSplash = document.querySelector("[data-about-splash]");
+    const aboutScrollHint = document.querySelector("[data-about-scroll-hint]");
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (aboutSplash && !reducedMotion) {
+      document.documentElement.classList.add("about-splash-lock");
+
+      window.setTimeout(() => {
+        aboutSplash.classList.add("is-leaving");
+        document.documentElement.classList.remove("about-splash-lock");
+      }, 1700);
+
+      window.setTimeout(() => {
+        aboutSplash.remove();
+      }, 2500);
+    } else {
+      aboutSplash?.remove();
+    }
+
+    const setActiveScene = (scene) => {
+      if (aboutStage && aboutStage.dataset.scene !== scene) {
+        aboutStage.dataset.scene = scene;
+      }
+    };
+
+    if ("IntersectionObserver" in window && aboutScenes.length > 0) {
+      const sceneObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const scene = entry.target.dataset.aboutScene;
+
+              if (scene) {
+                setActiveScene(scene);
+              }
+            }
+          });
+        },
+        {
+          rootMargin: "-43% 0px -43% 0px",
+          threshold: 0,
+        },
+      );
+
+      aboutScenes.forEach((scene) => sceneObserver.observe(scene));
+    } else {
+      aboutScenes.forEach((scene) => {
+        if (scene.getBoundingClientRect().top < window.innerHeight * 0.5) {
+          setActiveScene(scene.dataset.aboutScene ?? "voice");
+        }
+      });
+    }
+
+    const updateAboutScrollHint = () => {
+      const shouldHide = window.scrollY > window.innerHeight * 0.45;
+      aboutScrollHint?.classList.toggle("is-hidden", shouldHide);
+    };
+
+    updateAboutScrollHint();
+    window.addEventListener("scroll", updateAboutScrollHint, { passive: true });
+  </script>
+</BaseLayout>

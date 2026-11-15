@@ -1,0 +1,14 @@
+---
+const { variant = "hero" } = Astro.props;
+---
+
+<div class:list={["geometric-mark", `geometric-mark-${variant}`]} aria-hidden="true">
+  <span class="shape shape-circle shape-one"></span>
+  <span class="shape shape-quarter shape-two"></span>
+  <span class="shape shape-half shape-three"></span>
+  <span class="shape shape-diamond shape-four"></span>
+  <span class="shape shape-arc shape-five"></span>
+  <span class="shape shape-circle shape-six"></span>
+  <span class="shape shape-block shape-seven"></span>
+  <span class="shape shape-ring shape-eight"></span>
+</div>
