@@ -1997,9 +1997,8 @@ ruby rt {
   }
 
   .hero {
-    min-height: auto;
     padding-top: calc(var(--header-height) + 54px);
-    padding-bottom: 100px;
+    padding-bottom: 0px;
     transform: translateY(-82px);
   }
 
@@ -2261,7 +2260,7 @@ body {
 }
 
 .hero {
-  min-height: min(920px, 100svh);
+  min-height: min(600px, 54svh);
   padding-top: calc(var(--header-height) + 7.5vh);
   padding-bottom: 10vh;
 }
@@ -3018,9 +3017,7 @@ body {
 
 @media (max-width: 640px) {
   .hero {
-    min-height: auto;
     padding-top: calc(var(--header-height) + 58px);
-    padding-bottom: 40px;
     transform: translateY(-72px);
   }
 
@@ -3030,7 +3027,6 @@ body {
     flex-direction: column;
     align-items: stretch;
     gap: 28px;
-    padding-bottom: 30px;
   }
 
   .hero h1 {
@@ -4311,11 +4307,6 @@ svg {
     height: 44px;
   }
 
-  /* トップページのメインビジュアル */
-  .hero {
-    min-height: auto;
-  }
-
   .hero-inner {
     display: flex;
     min-height: 0;
@@ -5215,15 +5206,6 @@ svg {
   }
 }
 
-.hero {
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
-.pickup-section {
-  margin-top: 0;
-}
-
 /* HEROとPICKUPの隙間を解消 */
 .hero {
   transform: none;
@@ -5272,4 +5254,20 @@ svg {
 
 .footer-social a:hover {
   opacity: 0.7;
+}
+
+@media (max-width: 640px) {
+  .hero {
+    min-height: 0 !important;
+    height: auto;
+    padding-bottom: 0 !important;
+  }
+
+  .hero-inner {
+    min-height: 0 !important;
+    height: auto;
+    margin-bottom: 0;
+    padding-top: 65px;
+    padding-bottom: 25px;
+  }
 }
