@@ -366,7 +366,7 @@ textarea {
   position: relative;
   min-height: min(1000px, 120svh);
   overflow: hidden;
-  padding: calc(var(--header-height) + 72px) clamp(24px, 8vw, 120px) 92px;
+  padding: calc(var(--header-height) + 72px) clamp(20px, 4vw, 120px) 92px;
   background-image: url("/images/noimage.png");
   background-size: cover;
   background-position: center;
