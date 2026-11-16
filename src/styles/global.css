@@ -3024,7 +3024,7 @@ body {
 
 @media (max-width: 640px) {
   .hero {
-    padding: calc(var(--header-height) + 58px) clamp(20px, 4vw, 120px) 92px;
+    padding: calc(var(--header-height) + 50px) clamp(20px, 4vw, 120px) 92px;
     transform: translateY(-72px);
   }
 
