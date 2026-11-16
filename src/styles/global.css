@@ -1209,12 +1209,17 @@ ruby rt {
 }
 
 .section-more {
-  display: inline-flex;
+  display: flex;
+  width: fit-content;
   align-items: center;
   gap: 24px;
+
   margin-top: 42px;
+  margin-left: auto;
+
   padding-bottom: 8px;
   border-bottom: 1px solid currentColor;
+
   color: var(--black);
   font-size: 0.82rem;
   font-weight: 800;
@@ -2110,8 +2115,8 @@ ruby rt {
   }
 
   .section {
-    padding-top: 78px;
-    padding-bottom: 78px;
+    padding-top: 90px;
+    padding-bottom: 90px;
   }
 
   .section-heading {
@@ -4104,7 +4109,6 @@ svg {
   .site-header {
     min-height: var(--header-height);
     padding: 10px 18px;
-    background: rgba(247, 242, 232, 0.94);
     backdrop-filter: blur(12px);
   }
 
@@ -4361,7 +4365,7 @@ svg {
 
   /* セクション共通 */
   .section {
-    padding: 28px 28px;
+    padding: 40px 28px;
   }
 
   .section-inner {
@@ -4887,7 +4891,7 @@ svg {
   }
 
   .countdown-value {
-    font-size: 1.75rem;
+    font-size: 2.4rem;
   }
 
   .feature-heading .icon {
@@ -5176,7 +5180,7 @@ svg {
   }
 
   .intro-section .countdown-heading {
-    font-size: clamp(1.2rem, 5vw, 1.6rem);
+    font-size: clamp(1.5rem, 5vw, 1.6rem);
   }
 
   .intro-section .countdown-units {

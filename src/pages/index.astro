@@ -1408,13 +1408,14 @@ if (extra) {
   </section>
 
   <section class="section">
-    <div class="pickup-heading">
+    
+    <div class="section-inner">
+      <div class="pickup-heading">
     <h2>
       <span class="pickup-heading-en">NEWS</span>
       <span class="pickup-heading-ja">お知らせ</span>
     </h2>
   </div>
-    <div class="section-inner">
       <div class="news-list">
         {newsItems.slice(0, 3).map((item) => (
           <a class="news-item" href="/news/">
@@ -1432,12 +1433,14 @@ if (extra) {
   </section>
 
   <section class="section event-section">
-    <div class="pickup-heading">
+    
+    <div class="section-inner">
+      <div class="pickup-heading">
     <h2>
-      <span class="pickup-heading-en">開催概要</span>
+      <span class="pickup-heading-en">EVENT</span>
+      <span class="pickup-heading-ja">開催概要</span>
     </h2>
   </div>
-    <div class="section-inner">
       <div class="event-panel" data-reveal>
         <div class="event-panel-content">
           <dl class="event-fact">
