@@ -95,15 +95,17 @@ import { newsItems } from "../data/news";
   ========================= */
 
   .pickup-section {
-    width: 100%;
-    padding: 30px 0 40px;
-    overflow: hidden;
-  }
+  --pickup-side-padding: 150px;
+
+  width: 100%;
+  padding: 30px 0 40px;
+  overflow: hidden;
+}
 
   /* 見出し */
   .pickup-heading {
   width: 100%;
-  padding-left: 150px;
+  padding-left: var(--pickup-side-padding);
   padding-right: 5%;
   margin-bottom: 20px;
 }
@@ -136,21 +138,21 @@ import { newsItems } from "../data/news";
   }
 
   .pickup-slider {
-    display: flex;
-    align-items: center;
-    gap: 24px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
 
-    overflow-x: auto;
-    overflow-y: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
 
-    padding: 24px 150px 30px;
+  padding: 24px var(--pickup-side-padding) 30px;
 
-    scroll-behavior: smooth;
-    scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
 
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
 
   .pickup-slider::-webkit-scrollbar {
     display: none;
@@ -301,32 +303,33 @@ import { newsItems } from "../data/news";
 
   @media (max-width: 767px) {
 
-    .pickup-section {
-      padding: 20px 0 30px;
-    }
+  .pickup-section {
+    --pickup-side-padding: 44px;
+    padding: 20px 0 30px;
+  }
 
-    .pickup-heading {
-      padding-left: 20px;
-      padding-right: 20px;
-      margin-bottom: 10px;
-    }
+  .pickup-heading {
+    padding-left: var(--pickup-side-padding);
+    padding-right: 20px;
+    margin-bottom: 10px;
+  }
 
-    .pickup-heading h2 {
-      gap: 16px;
-    }
+  .pickup-heading h2 {
+    gap: 16px;
+  }
 
-    .pickup-heading-en {
-      font-size: 30px;
-    }
+  .pickup-heading-en {
+    font-size: 30px;
+  }
 
-    .pickup-heading-ja {
-      font-size: 16px;
-    }
+  .pickup-heading-ja {
+    font-size: 16px;
+  }
 
-    .pickup-slider {
-      gap: 12px;
-      padding: 15px 44px 20px;
-    }
+  .pickup-slider {
+    gap: 12px;
+    padding: 15px var(--pickup-side-padding) 20px;
+  }
 
     .pickup-card {
       width: min(78vw, 320px);
@@ -366,6 +369,12 @@ import { newsItems } from "../data/news";
       right: 8px;
     }
   }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+  .pickup-section {
+    --pickup-side-padding: clamp(48px, 10vw, 100px);
+  }
+}
 </style>
 
 <script>
