@@ -366,7 +366,7 @@ textarea {
   position: relative;
   min-height: min(1000px, 120svh);
   overflow: hidden;
-  padding: calc(var(--header-height) + 72px) clamp(20px, 4vw, 120px) 92px;
+  padding: calc(var(--header-height) + 72px) clamp(40px, 6vw, 120px) 92px;
   background-image: url("/images/noimage.png");
   background-size: cover;
   background-position: center;
@@ -1507,7 +1507,6 @@ ruby rt {
 }
 
 .footer-top {
-  display: grid;
   grid-template-columns: 1fr 1fr auto;
   align-items: center;
   gap: 30px;
@@ -1998,7 +1997,6 @@ ruby rt {
 
   .hero {
     padding-top: calc(var(--header-height) + 54px);
-    padding-bottom: 0px;
     transform: translateY(-82px);
   }
 
@@ -2262,7 +2260,6 @@ body {
 .hero {
   min-height: min(600px, 54svh);
   padding-top: calc(var(--header-height) + 7.5vh);
-  padding-bottom: 10vh;
 }
 
 .hero-inner {
@@ -3018,6 +3015,7 @@ body {
 @media (max-width: 640px) {
   .hero {
     padding-top: calc(var(--header-height) + 58px);
+    padding: calc(var(--header-height) + 72px) clamp(20px, 4vw, 120px) 92px;
     transform: translateY(-72px);
   }
 
@@ -4934,16 +4932,21 @@ svg {
 /* 641px以上 */
 @media (min-width: 641px) {
   .hero {
-    min-height: clamp(800px, 76svh, 760px);
+    min-height: clamp(440px, 110svh, 800px);
     padding-top: calc(var(--header-height) + clamp(24px, 4vh, 44px));
   }
 
+  .hero {
+    height: auto;
+    padding-bottom: 0 !important;
+  }
+
   .hero-inner {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  height: auto;
-}
+    height: auto;
+    margin-bottom: 0;
+    padding-top: 70px;
+    padding-bottom: 0px;
+  }
 }
 
 /* 詳細レイアウト */
@@ -5272,11 +5275,10 @@ svg {
   }
 }
 
-@media (max-width: 640px) {
   /* SNSアイコン */
   .footer-social {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     width: 100%;
   }
 
@@ -5299,4 +5301,47 @@ svg {
   .footer-bottom > :not(a) {
     align-self: flex-start;
   }
+
+/* 中高生交流会の写真 */
+.junior-photo {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  position: relative;
 }
+
+.junior-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.6s ease;
+}
+
+/* ホバー時に少し拡大 */
+.junior-photo:hover img {
+  transform: scale(1.04);
+}
+
+.footer-social {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 12px;
+    margin-left: 5px;
+  }
+
+  .footer-social-links {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .footer-back-top {
+    margin-left: auto;
+    white-space: nowrap;
+    font-size: 0.78rem !important;
+    margin-right: 5px;
+  }
