@@ -4443,7 +4443,7 @@ svg {
 }
 
   .countdown-value {
-    font-size: clamp(1.8rem, 9vw, 2.6rem);
+    font-size: clamp(2rem, 12vw, 2.8rem);
     line-height: 1.1;
     letter-spacing: -0.06em;
   }
