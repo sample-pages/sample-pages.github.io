@@ -9,9 +9,31 @@ import { site } from "../data/site";
     <p class="footer-message">
     </p>
     <div class="footer-social">
-      <a href={site.social.x} target="_blank" rel="noreferrer">X ↗</a>
-      <a href={site.social.youtube} target="_blank" rel="noreferrer">YouTube ↗</a>
-    </div>
+  <a href={site.social.x} target="_blank" rel="noreferrer" aria-label="X">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path fill="currentColor" d="M18.901 1.153h3.68l-8.04 9.19 9.46 12.86h-7.406l-5.8-7.584-6.64 7.584H.47l8.6-9.83L.0 1.153h7.594l5.243 6.932zm-1.29 19.785h2.039L6.486 3.299H4.298z"/>
+    </svg>
+  </a>
+  <a
+  href={site.social.instagram}
+  target="_blank"
+  rel="noreferrer"
+  aria-label="Instagram"
+>
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path
+      fill="currentColor"
+      d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm0 2A3.8 3.8 0 0 0 4 7.8v8.4A3.8 3.8 0 0 0 7.8 20h8.4a3.8 3.8 0 0 0 3.8-3.8V7.8A3.8 3.8 0 0 0 16.2 4H7.8Zm4.2 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm5.2-3.5a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4Z"
+    />
+  </svg>
+</a>
+
+  <a href={site.social.youtube} target="_blank" rel="noreferrer" aria-label="YouTube">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path fill="currentColor" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.532 12 3.532 12 3.532s-7.505 0-9.376.518A3.016 3.016 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.518 9.376.518 9.376.518s7.505 0 9.376-.518a3.016 3.016 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814ZM9.6 15.5v-7l6.3 3.5-6.3 3.5Z"/>
+    </svg>
+  </a>
+</div>
   </div>
 
   <div class="footer-bottom">

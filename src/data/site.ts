@@ -17,6 +17,7 @@ export const site = {
   },
   social: {
     x: "https://x.com/westu__2026",
+    instagram: "https://instagram.com/westu_zenkoku",
     youtube: "https://www.youtube.com/@westu_kansai",
   },
   contact: {
