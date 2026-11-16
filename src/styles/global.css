@@ -2045,6 +2045,7 @@ ruby rt {
   .intro-grid,
   .junior-layout {
     grid-template-columns: 1fr;
+    gap: clamp(5px, 1vw, 25px);
   }
 
   .intro-stamp {
