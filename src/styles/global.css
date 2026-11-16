@@ -894,10 +894,34 @@ ruby rt {
   letter-spacing: 0.18em;
 }
 
+.countdown-wrap {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  box-sizing: border-box;
+  column-gap: clamp(20px, 4vw, 48px);
+  row-gap: 5px;
+}
+
+.countdown-heading {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
 .countdown-units {
   display: grid;
-  grid-template-columns: repeat(4, max-content);
-  column-gap: 30px;
+  grid-template-columns:
+    max-content
+    minmax(5.5rem, max-content)
+    max-content
+    max-content;
+
+  column-gap: 20px;
+  width: max-content;
+}
+
+.countdown-unit:nth-child(2) {
   justify-content: center;
 }
 
@@ -908,6 +932,20 @@ ruby rt {
   gap: 18px;
   padding: 0;
   border: none;
+}
+
+/* 日数の数字幅を常に3桁分確保 */
+.countdown-unit:first-child .countdown-value {
+  display: inline-block;
+  width: 3ch;
+  flex-shrink: 0;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+/* 数字の幅を安定させる */
+.countdown-value {
+  font-variant-numeric: tabular-nums;
 }
 
 @media (max-width: 560px) {
@@ -958,7 +996,7 @@ ruby rt {
   }
 
   .countdown-unit {
-    padding: 0 9px;
+    padding: 0px 0 0 10px;
   }
 
   .countdown-value {
@@ -966,7 +1004,7 @@ ruby rt {
   }
 
   .countdown-label {
-    font-size: 0.53rem;
+    font-size: 1rem;
     letter-spacing: 0.08em;
   }
 }
@@ -1033,19 +1071,6 @@ ruby rt {
   height: 60%;
   width: auto;
   display: block;
-}
-
-/* 番号 */
-.speech-num {
-  position: absolute;
-  top: -102px;
-  left: 20px;
-
-  color: #000;
-  font-weight: bold;
-  font-size: 48px;
-
-  z-index: 15;
 }
 
 /* 吹き出し */
@@ -3341,7 +3366,6 @@ body {
 @media (max-width: 640px) {
   .face-board {
     grid-template-columns: 1fr;
-    gap: 30px;
     padding: 15px;
   }
 
@@ -4339,7 +4363,7 @@ svg {
 
   /* セクション共通 */
   .section {
-    padding: 58px 18px;
+    padding: 28px 28px;
   }
 
   .section-inner {
@@ -4354,9 +4378,11 @@ svg {
   }
 
   .section-heading-copy h2 {
-    font-size: clamp(1.7rem, 7.4vw, 2.45rem);
+    font-size: clamp(1rem, 6.4vw, 2.45rem);
     line-height: 1.25;
     overflow-wrap: anywhere;
+    text-align: center;
+    padding: 20px 0;
   }
 
   .section-heading-copy p {
@@ -4371,35 +4397,54 @@ svg {
   }
 
   .countdown-heading {
-    justify-content: center;
-    margin-bottom: 14px;
-    font-size: clamp(1.7rem, 7vw, 2.4rem);
+    margin-bottom: 0px;
+    font-size: clamp(1rem, 7vw, 2.4rem);
   }
 
   .countdown-units {
-    width: 100%;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    column-gap: 6px;
-  }
+  width: 100%;
+
+  display: grid;
+  grid-template-columns:
+    max-content
+    minmax(3.5rem, max-content)
+    max-content
+    max-content;
+
+  column-gap: 6px;
+  justify-content: center;
+}
 
   .countdown-unit {
-    min-width: 0;
-    flex-direction: column;
-    align-items: center;
-    gap: 0;
-    padding: 0;
-  }
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: center;
+  gap: 3px;
+  min-width: 0;
+  white-space: nowrap;
+}
+
+/* 数字 */
+.countdown-unit > :first-child {
+  flex-shrink: 0;
+}
+
+/* 単位 */
+.countdown-label {
+  flex-shrink: 0;
+  writing-mode: horizontal-tb;
+  text-orientation: mixed;
+  white-space: nowrap;
+  font-size: clamp(1rem, 3.2vw, 1rem);
+  line-height: 1;
+  margin: 0;
+}
 
   .countdown-value {
     font-size: clamp(1.8rem, 9vw, 2.6rem);
     line-height: 1.1;
     letter-spacing: -0.06em;
-  }
-
-  .countdown-label {
-    margin-top: 3px;
-    font-size: 0.78rem;
-    line-height: 1.2;
   }
 
   .countdown-status {
@@ -4410,7 +4455,7 @@ svg {
   /* 4つの紹介カード */
   .face-board {
     grid-template-columns: minmax(0, 1fr);
-    gap: 28px;
+    gap: 44px;
     padding: 10px 4px;
   }
 
@@ -4427,8 +4472,8 @@ svg {
   }
 
   .tag-hover .speech-num {
-    top: -27px;
-    left: 12px;
+    top: -20px;
+    left: -7px;
     font-size: 2rem;
     line-height: 1;
   }
@@ -4439,9 +4484,7 @@ svg {
   }
 
   .feature-heading .icon {
-    flex: 0 0 72px;
     width: 72px;
-    height: 72px;
   }
 
   .feature-title {
@@ -4459,10 +4502,10 @@ svg {
 
   .feature-modal .modal-content {
     width: 100% !important;
-    max-width: 100% !important;
-    max-height: calc(100svh - 24px);
+    max-width: 90% !important;
+    max-height: calc(100svh - 80px);
     margin: auto 0;
-    padding: 34px 18px 22px;
+    padding: 40px 30px 22px;
     border-radius: 18px;
     overflow-x: hidden;
     overflow-y: auto;
@@ -4892,4 +4935,54 @@ svg {
     min-height: clamp(420px, 58svh, 560px);
     height: auto;
   }
+}
+
+/* 詳細レイアウト */
+.detail-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+
+  grid-template-areas:
+    "description chart"
+    "extra       chart";
+
+  gap: 20px 30px;
+  align-items: start;
+}
+
+.detail-description {
+  grid-area: description;
+}
+
+.detail-chart-content {
+  grid-area: chart;
+  min-width: 0;
+}
+
+.detail-description-extra {
+  grid-area: extra;
+}
+
+.detail-description-extra p {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+@media (max-width: 640px) {
+
+  .detail-layout {
+    grid-template-columns: minmax(0, 1fr);
+
+    grid-template-areas:
+      "description"
+      "chart"
+      "extra";
+
+    gap: 20px;
+  }
+
+  .detail-description-extra {
+    margin-top: 0;
+  }
+
 }

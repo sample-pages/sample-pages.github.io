@@ -304,7 +304,7 @@ import { newsItems } from "../data/news";
   @media (max-width: 767px) {
 
   .pickup-section {
-    --pickup-side-padding: 44px;
+    --pickup-side-padding: 20px;
     padding: 20px 0 30px;
   }
 
@@ -466,7 +466,7 @@ import { newsItems } from "../data/news";
 
   <div class="countdown-unit">
     <span class="countdown-value" data-hours>00</span>
-    <span class="countdown-label">時</span>
+    <span class="countdown-label">時間</span>
   </div>
 
   <div class="countdown-unit">
@@ -671,28 +671,21 @@ import { newsItems } from "../data/news";
   <!-- 01 全国から吃音当事者が集まる -->
 <template id="detail-01">
 
-  <!-- 左側に表示する文章 -->
-  <div class="detail-description">
+  <div class="detail-layout">
 
-    <p>
-      うぃーすた全国交流会とは、うぃーすたプロジェクトの主催する、
-      年に一度の交流会イベントです。
-      <br>
-      毎年全国から多くの吃音当事者が集まります。
-      昨年は全国各地より、計94名の方にご参加いただきました。
-      <br><br>
-      その他：岐阜県（2名）、滋賀県（2名）、愛媛県（2名）、福岡県（2名）など
-      <br><br>
-      ※横スクロールで全体を見ることができます。
-      <br>
-      ※崩れて見える場合はSafariやChromeなどのブラウザをお使いください。
-    </p>
+    <!-- 最初の説明文 -->
+    <div class="detail-description">
+      <p>
+        うぃーすた全国交流会とは、うぃーすたプロジェクトの主催する、
+        年に一度の交流会イベントです。
+        <br>
+        毎年全国から多くの吃音当事者が集まります。
+        昨年は全国各地より、計94名の方にご参加いただきました。
+      </p>
+    </div>
 
-  </div>
-
-
-  <!-- 右側に表示するグラフ -->
-  <div class="detail-chart-content">
+    <!-- グラフ：元のHTMLを丸ごと維持 -->
+    <div class="detail-chart-content">
 
     <div class="chart-wrapper">
 
@@ -808,6 +801,19 @@ import { newsItems } from "../data/news";
 
     </div>
 
+    <div class="detail-description-extra">
+      <p>
+        その他：岐阜県（2名）、滋賀県（2名）、愛媛県（2名）、福岡県（2名）など
+      </p>
+
+      <p>
+        ※横スクロールで全体を見ることができます。
+        <br>
+        ※崩れて見える場合はSafariやChromeなどのブラウザをお使いください。
+      </p>
+    </div>
+
+    </div>
   </div>
 
 </template>
