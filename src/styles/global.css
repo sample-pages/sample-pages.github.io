@@ -3659,7 +3659,6 @@ body {
   width: 100%;
   overflow-x: auto; /* 横スクロールを可能に */
   -webkit-overflow-scrolling: touch;
-  text-align: center; /* スクロール可能領域ごと中央に */
   box-sizing: border-box;
   padding-top: 10px;
 }
@@ -3928,7 +3927,6 @@ body {
   -webkit-overflow-scrolling: touch;
   box-sizing: border-box;
   padding: 10px 0 0px;
-  text-align: center;
 }
 
 /* グラフ全体の横幅 */
@@ -4457,13 +4455,14 @@ svg {
     grid-template-columns: minmax(0, 1fr);
     gap: 44px;
     padding: 10px 4px;
+    margin-left: 5px;
   }
 
   .tag-hover {
     width: 100%;
     min-width: 0;
     min-height: 112px;
-    padding: 28px 16px 18px;
+    padding: 18px 18px 18px;
     border-radius: 18px;
   }
 
@@ -4893,8 +4892,8 @@ svg {
 
   .feature-heading .icon {
     flex-basis: 62px;
-    width: 62px;
-    height: 62px;
+    width: 70px;
+
   }
 
   .feature-title {
@@ -4985,4 +4984,214 @@ svg {
     margin-top: 0;
   }
 
+}
+
+/* ======================================
+   モーダルのPC・スマホ配置
+====================================== */
+
+.feature-modal .modal-layout {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.85fr)
+    minmax(0, 1.5fr);
+
+  grid-template-areas:
+    "left right"
+    "extra right";
+
+  gap: 24px 40px;
+  align-items: start;
+  width: 100%;
+}
+
+.feature-modal .modal-left {
+  grid-area: left;
+  min-width: 0;
+}
+
+.feature-modal .modal-right {
+  grid-area: right;
+  min-width: 0;
+  width: 100%;
+}
+
+.feature-modal .modal-extra {
+  grid-area: extra;
+  min-width: 0;
+  line-height: 1.9;
+}
+
+.feature-modal .modal-extra p {
+  margin: 0 0 18px;
+}
+
+/* グラフの横スクロール */
+.feature-modal .chart-wrapper {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* スマートフォン */
+@media (max-width: 760px) {
+
+  .feature-modal .modal-layout {
+    grid-template-columns: minmax(0, 1fr);
+
+    grid-template-areas:
+      "left"
+      "right"
+      "extra";
+
+    gap: 20px;
+  }
+
+  .feature-modal .modal-extra {
+    margin-top: 0;
+  }
+
+}
+
+/* モーダルタイトルの重なり防止 */
+.feature-modal .modal-content #modalTitle {
+  display: block;
+  height: auto;
+  min-height: 1.5em;
+
+  margin: 0 24px 22px 0;
+
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 760px) {
+  .feature-modal .modal-content #modalTitle {
+    margin-bottom: 14px;
+    font-size: 1.15rem;
+    line-height: 1.45;
+  }
+}
+
+/* ======================================
+   グラフがないモーダルは全幅表示
+====================================== */
+
+.feature-modal .modal-layout:has(> .modal-right:empty) {
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas: "left";
+  gap: 0;
+}
+
+/* 空のグラフ領域・補足領域を非表示 */
+.feature-modal .modal-layout:has(> .modal-right:empty) .modal-right,
+.feature-modal .modal-layout:has(> .modal-right:empty) .modal-extra {
+  display: none;
+}
+
+/* 文章を全幅に */
+.feature-modal .modal-layout:has(> .modal-right:empty) .modal-left {
+  width: 100%;
+  max-width: none;
+  grid-column: 1 / -1;
+}
+
+/* ===================================
+   カウントダウンの配置統一
+=================================== */
+
+/* 全体 */
+.intro-section .countdown-wrap {
+  display: grid;
+  grid-template-columns: max-content;
+  grid-template-rows: auto auto;
+
+  width: fit-content;
+  max-width: 100%;
+
+  margin: 0 auto;
+  padding: 0;
+
+  justify-items: start;
+  align-items: start;
+  row-gap: 8px;
+}
+
+/* 「開催まで」 */
+.intro-section .countdown-heading {
+  grid-column: 1;
+  grid-row: 1;
+
+  display: block;
+  width: max-content;
+
+  margin: 0;
+  padding: 0;
+
+  justify-self: start;
+  text-align: left;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+/* カウントダウン本体 */
+.intro-section .countdown-units {
+  grid-column: 1;
+  grid-row: 2;
+
+  display: grid;
+  grid-template-columns:
+    max-content
+    minmax(5.5rem, max-content)
+    max-content
+    max-content;
+
+  width: max-content;
+  max-width: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  justify-self: start;
+  justify-content: start;
+  column-gap: clamp(6px, 1.5vw, 20px);
+}
+
+/* 各数字 */
+.intro-section .countdown-unit {
+  justify-content: center;
+  min-width: 0;
+}
+
+/* スマートフォン */
+@media (max-width: 640px) {
+  .intro-section .countdown-wrap {
+    width: fit-content;
+    max-width: 100%;
+    margin-inline: auto;
+    row-gap: 5px;
+  }
+
+  .intro-section .countdown-heading {
+    font-size: clamp(1.2rem, 5vw, 1.6rem);
+  }
+
+  .intro-section .countdown-units {
+    width: max-content;
+    grid-template-columns:
+      max-content
+      minmax(4.5rem, max-content)
+      max-content
+      max-content;
+
+    column-gap: clamp(2px, 1vw, 8px);
+  }
+
+  .intro-section .countdown-unit {
+    gap: 3px;
+    padding: 0;
+  }
 }
