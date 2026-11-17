@@ -4353,7 +4353,7 @@ svg {
   .hero-date-main {
     justify-content: flex-end;
     flex-wrap: wrap;
-    gap: 4px 8px;
+    gap: 4px 4px;
   }
 
   .hero-date-number {
